@@ -1,0 +1,5 @@
+{
+  "PLATFORM_BASE_URL": "expo.bit.camp",
+  "EXPO_SCHEDULE": "platform-prd-expo-schedule",
+  "EXPO_TOKENS": "platform-prd-expo-token"
+}
