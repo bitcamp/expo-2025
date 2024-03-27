@@ -44,7 +44,7 @@ provider:
 
 # upload_schedule POST (Example)
 # get_schedule GET (Example)
-# python vs js configuration file
+# note: python vs js configuration file
 functions:
   getSchedule:
     handler: schedule.get # GET placeholder for schedule.py
@@ -113,7 +113,7 @@ custom:
   updateEnabled:
     prd: true
     other: false
-  sentry:
+  sentry: # if using sentry plugin then add to config else remove this
     dsn: ${file(./config/${self:provider.stage}.json):SENTRY_DSN}
   serverless-layers:
     dependenciesPath: ./package.json
