@@ -42,8 +42,6 @@ provider:
           Resource:
             - "arn:aws:s3:::*"
 
-# upload_schedule POST (Example)
-# get_schedule GET (Example)
 # note: python vs js configuration file
 functions:
   getSchedule:
@@ -113,7 +111,7 @@ custom:
   updateEnabled:
     prd: true
     other: false
-  sentry: # if using sentry plugin then add to config else remove this
-    dsn: ${file(./config/${self:provider.stage}.json):SENTRY_DSN}
+  # sentry: # if using sentry plugin then add to config else remove this
+  #   dsn: ${file(./config/${self:provider.stage}.json):SENTRY_DSN}
   serverless-layers:
     dependenciesPath: ./package.json
