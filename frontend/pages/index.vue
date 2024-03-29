@@ -1,12 +1,12 @@
 <template>
     <div class="app-container">
-        <SaiBad />
+        <Background />
     </div>
 </template>
 
 <script lang="ts">
 export default {
-    name: 'SaiBad',
+    name: 'Background',
 };
 
 
