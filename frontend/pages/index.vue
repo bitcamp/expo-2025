@@ -10,6 +10,7 @@ export default {
     name: 'SaiBad',
 };
 
+
 </script>
 
 <style scoped lang="scss"></style>
