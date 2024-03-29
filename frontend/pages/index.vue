@@ -1,14 +1,15 @@
 <template>
     <div class="app-container">
-        <ProjectComponent />
+        <FilterComponent />
     </div>
 </template>
 
 <script lang="ts">
 // import ProjectComponent from './components/ProjectComponent.vue';
 export default {
-    name: 'ProjectComponent',
+    name: 'FilterComponent',
 };
+
 
 </script>
 
