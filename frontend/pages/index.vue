@@ -1,13 +1,13 @@
 <template>
     <div class="app-container">
-        <SaiBad />
+        <Background />
     </div>
 </template>
 
 <script lang="ts">
 // import ProjectComponent from './components/ProjectComponent.vue';
 export default {
-    name: 'SaiBad',
+    name: 'Background',
 };
 
 
