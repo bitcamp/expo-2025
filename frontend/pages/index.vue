@@ -1,13 +1,14 @@
 <template>
     <div class="app-container">
-        <ProjectTitleComponent />
+        <FilterComponent />
     </div>
 </template>
 
 <script lang="ts">
 export default {
-    name: 'ProjectTitleComponent',
+    name: 'FilterComponent',
 };
+
 
 </script>
 
