@@ -1,12 +1,12 @@
 <template>
     <div class="app-container">
-        <FilterComponent />
+        <SaiBad />
     </div>
 </template>
 
 <script lang="ts">
 export default {
-    name: 'FilterComponent',
+    name: 'SaiBad',
 };
 
 
