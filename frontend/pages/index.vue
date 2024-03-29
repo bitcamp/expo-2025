@@ -1,13 +1,12 @@
 <template>
     <div class="app-container">
-        <ProjectComponent />
+        <ProjectTitleComponent />
     </div>
 </template>
 
 <script lang="ts">
-// import ProjectComponent from './components/ProjectComponent.vue';
 export default {
-    name: 'ProjectComponent',
+    name: 'ProjectTitleComponent',
 };
 
 </script>
