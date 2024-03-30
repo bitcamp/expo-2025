@@ -9,12 +9,12 @@
     </div>
     <div class="filters">
       <div class="filter-item">
-        <label for="challenge">Challenge Name</label>
+        <label for="challenge">{{ challengeName }}</label>
         <select name="challenge" id="challenge">
           <option value="none">None</option>
-          <option value="1">Challenge 1</option>
-          <option value="2">Challenge 2</option>
-          <option value="3">Challenge 3</option>
+          <option v-for="(name, index) in challengeName" :key="index" :value="index">
+            {{ name }}
+          </option>
         </select>
       </div>
       <div class="filter-item">
@@ -30,7 +30,16 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script>
+export default {
+    name: 'FilterComponent',
+    props: {
+    challengeName: {
+        type: Array,
+        required: true,
+    },
+    },
+};
 </script>
 
 <style lang="scss">
