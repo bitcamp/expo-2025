@@ -1,16 +1,16 @@
 <template>
-  <div class="entire-container">
+  <div class="entire-container-filter">
     <div class="top-row">
       <div class="UI-header">Filter</div>
     </div>
-    <div class="search">
-      <div class="search-title">Name</div>
-      <input class="search-box" type="text" placeholder="Search..." />
-    </div>
     <div class="filters">
       <div class="filter-item">
-        <label for="challenge">{{ challengeName }}</label>
-        <select name="challenge" id="challenge">
+        <div class="filter-title">Name</div>
+        <input class="search-box" type="text" placeholder="Search for the Project Name" />
+      </div>
+      <div class="filter-item">
+        <div class="filter-title">Challenges</div>
+        <select name="challenge" class="select-box" id="challenge">
           <option value="none">None</option>
           <option v-for="(name, index) in challengeName" :key="index" :value="index">
             {{ name }}
@@ -18,8 +18,8 @@
         </select>
       </div>
       <div class="filter-item">
-        <label for="project-type">Project Type</label>
-        <select name="project-type" id="project-type">
+        <div class="filter-title">Project Type</div>
+        <select name="project-type" class="select-box" id="project-type">
           <option value="all">All Projects</option>
           <option value="in-person">In-Person Projects</option>
           <option value="virtual">Virtual Projects</option>
@@ -32,56 +32,71 @@
 
 <script>
 export default {
-    name: 'FilterComponent',
-    props: {
+  name: 'FilterComponent',
+  props: {
     challengeName: {
-        type: Array,
-        required: true,
+      type: Array,
+      required: true,
     },
-    },
+  },
+  mounted() {
+    console.log(this.challengeName);
+  },
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-.entire-container {
+.entire-container-filter {
   background-color: #F6EBCC;
-  width: 17rem;
+  width: 15rem;
   height: 30rem;
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
-  padding: 2rem; 
+  padding: 2rem;
+  margin-inline: 2rem;
 }
 
 .UI-header {
   font-family: 'Aleo';
   color: #FA9747;
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
 }
 
-.top-row,
-.bottom-row {
-  height: 5rem;
-  display: flex;
-  flex-direction: row;
+.top-row {
+  margin-bottom: 1.5rem;
 }
 
 .search-box {
   width: 90%;
   padding: 0.5rem;
-  border-radius: 15px;
+  border-radius: 2rem;
   border: 2px solid #FF8E3F;
   background-color: #FFF9ED;
   font-family: 'Inter';
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  padding-inline: 1rem;
 }
 
-.search-title {
-  margin-bottom: 0.5rem; 
+.select-box {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  border: 0.1rem solid #FF8E3F;
+  background-color: #FF8E3F;
+  font-family: 'Inter';
+  margin-bottom: 1rem;
+  color: white;
+  padding-inline: 1rem;
+}
+
+.filter-title {
+  margin-bottom: 0.5rem;
+  margin-left: 1.5rem;
 }
 
 .filters {
@@ -92,12 +107,6 @@ export default {
 
 .filter-item {
   margin-bottom: 1rem;
-}
-
-select {
   width: 100%;
-  padding: 0.5rem;
-  border-radius: 15px;
-  border: 0.1rem solid #ccc; 
 }
 </style>

@@ -1,15 +1,19 @@
 <template>
     <div class="entire-container">
         <div class="top-row">
-            <div class="table-header">AI</div>
+            <div class="table-header">{{ teamDetails[0][0] }}</div>
             <div class="project-info-container">
-                <div class="project-header">Project</div>
+                <div class="project-header"> {{ teamDetails[0][1] }}</div>
                 <button class="challenges-button" @click="toggleButton">
-                    show challenges
+                    <div class="button-text">
+                        show challenges
+                    </div>
+                    <img src="../assets/images/openChallengesArrow.svg" class="arrow-image"
+                        :class="{ 'arrow-right': !showChallenges, 'arrow-down': showChallenges }" alt="Bitcamp sign" />
                 </button>
 
                 <div :class="{ 'challenges-hidden': !showChallenges, 'challenges-shown': showChallenges }">
-                    deez
+                    <JudgingRow categoryName="deez" companyName="nutz" judgeName="69" timing="times" />
                 </div>
             </div>
         </div>
@@ -18,7 +22,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-
 const showChallenges = ref<Boolean>();
 function toggleButton() {
     if (showChallenges.value === true) {
@@ -28,35 +31,43 @@ function toggleButton() {
     }
 }
 
+const props = defineProps({
+    teamDetails: {
+        type: Array,
+        required: true,
+    },
+});
 </script>
-
-<style lang="scss">
+<style scoped lang="scss">
 .entire-container {
     background-color: #F6EBCC;
     border-radius: 2rem;
-    padding: 3rem;
 }
 
 .top-row {
     display: flex;
     flex-direction: row;
+    padding: 1rem;
 }
 
 .project-info-container {
-    height: 5rem;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding-inline: 1rem;
+    position: relative;
+    flex-grow: 1;
 }
 
 .table-header {
     font-size: 1.5rem;
-    margin-inline: 1rem;
+    width: 6rem;
+    text-align: center;
+    color: #FFC226;
 }
 
 .project-header {
     font-size: 1.5rem;
+    color: #E34E30;
 }
 
 .challenges-button {
@@ -64,6 +75,12 @@ function toggleButton() {
     margin: 0;
     border: none;
     background: none;
+    text-align: left;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
 }
 
 .challenges-hidden {
@@ -71,6 +88,26 @@ function toggleButton() {
 }
 
 .challenges-shown {
-    display: inline;
+    display: flex;
+    width: 100%;
+}
+
+.button-text {
+    justify-content: center;
+    align-content: center;
+}
+
+.arrow-image {
+    margin-inline: 0.35rem;
+    width: 0.69rem;
+    transition: transform 0.3s ease;
+}
+
+.arrow-right {
+    transform: rotate(0deg);
+}
+
+.arrow-down {
+    transform: rotate(90deg);
 }
 </style>
