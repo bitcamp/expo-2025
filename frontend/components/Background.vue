@@ -24,11 +24,11 @@ import ProjectComponent from "./ProjectComponent.vue";
 .hero {
     display: flex;
     justify-content: center;
-    margin: 4rem 0;
+    margin-bottom: 3rem;
 
     img {
         width: 25%;
-        
+        min-width: 20rem;
     }
 }
 
@@ -38,8 +38,8 @@ import ProjectComponent from "./ProjectComponent.vue";
     top: 0;
     left: 0; 
     width: 100%;
-    height: 100%;
-    
+    height: 100vh;
+    padding: 4rem 0 7rem;
 }
 
 .filter-and-competitions-content {

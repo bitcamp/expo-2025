@@ -1,7 +1,7 @@
 <template>
   <div class="entire-container-filter">
     <div class="top-row">
-      <div class="UI-header">Filter</div>
+      <div class="filter-header">Filter</div>
     </div>
     <div class="filters">
       <div class="filter-item">
@@ -51,16 +51,17 @@ export default {
 
 .entire-container-filter {
   background-color: #F6EBCC;
-  width: 15rem;
+  width: calc(5rem + 10vw);
+  min-width: 10rem;
   height: 30rem;
   border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
-  padding: 2rem;
-  margin-inline: 2rem;
+  padding: 1.5rem 1.5rem 3.3rem;
+  margin-right: 2rem;
 }
 
-.UI-header {
+.filter-header {
   font-family: 'Aleo';
   color: #FA9747;
   font-weight: 400;
@@ -72,7 +73,7 @@ export default {
 }
 
 .search-box {
-  width: 90%;
+  width: 80%;
   padding: 0.5rem;
   border-radius: 2rem;
   border: 2px solid #FF8E3F;
@@ -101,6 +102,7 @@ export default {
 
 .filters {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: flex-start;
 }
@@ -109,4 +111,5 @@ export default {
   margin-bottom: 1rem;
   width: 100%;
 }
+
 </style>
