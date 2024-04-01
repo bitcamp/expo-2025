@@ -1,7 +1,7 @@
 <template>
-    <div class="all-content-container">
+    <div class="wrapper">      
         <div class="hero">
-            <img src="../assets/images/background/HeroSign.svg" class="svgStyle" alt="Bitcamp sign" />
+            <img src="../assets/images/background/HeroSign.svg" class="svgStyle" alt="Bitcamp sign" />      
         </div>
         <div class="filter-and-competitions-content">
             <div class="filter-component">
@@ -12,36 +12,41 @@
             </div>
         </div>
     </div>
-</template>
+    
+</template>  
 
-<script setup lang="ts">
+<script setup lang="ts">  
 import FilterComponent from "./FilterComponent.vue";
 import ProjectComponent from "./ProjectComponent.vue";
-
 </script>
 
 <style scoped lang="scss">
 .hero {
     display: flex;
     justify-content: center;
+    margin: 4rem 0;
 
     img {
-        width: 30%;
-        margin: 4rem;
+        width: 25%;
+        
     }
 }
 
-.all-content-container {
+.wrapper {
+    position: absolute;
+    background-image: linear-gradient(180deg, #7C3B35, #E26F3C, #F0984C);
+    top: 0;
+    left: 0; 
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(180deg, #7C3B35, #E26F3C, #F0984C);
-    flex-direction: column;
-    padding-bottom: 3rem;
+    
 }
 
 .filter-and-competitions-content {
+    
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center;   
 }
 </style>
+
