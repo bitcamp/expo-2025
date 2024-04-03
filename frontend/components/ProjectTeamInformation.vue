@@ -1,6 +1,7 @@
 <template>
     <div class="entire-container" v-for="(teamDetail, index) in teamDetails" :key="index">
-        <div class="top-row" v-if="filtered.includes(teamDetail[1])">
+        <div class="top-row"
+            v-if="filtered.includes(teamDetail[1]) && teamDetail[2].some(challenge => challengeDetails.includes(challenge[0]))">
             <div class="table-header">{{ teamDetail[0] }}</div>
             <div class="project-info-container">
                 <div class="button-container">
@@ -42,6 +43,7 @@ function toggleButton(name: string) {
     } else {
         showChallenges.value.push(name);
     }
+
 }
 
 const updateWindowWidth = () => {
@@ -63,6 +65,10 @@ const props = defineProps({
         required: true,
     },
     teamDetails: {
+        type: Array,
+        required: true,
+    },
+    challengeDetails: {
         type: Array,
         required: true,
     },

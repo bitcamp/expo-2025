@@ -10,9 +10,9 @@
       </div>
       <div class="filter-item">
         <div class="filter-title">Challenges</div>
-        <select name="challenge" class="select-box" id="challenge">
+        <select name="challenge" class="select-box" id="challenge" v-on:change="searchChallengeNames($event)">
           <option value="none">None</option>
-          <option v-for="(name, index) in challengeName" :key="index" :value="index">
+          <option v-for="(name, index) in challengeNames" :key="index" :value="index">
             {{ name }}
           </option>
         </select>
@@ -36,7 +36,7 @@ import { inject } from 'vue';
 export default {
   name: 'FilterComponent',
   props: {
-    challengeName: {
+    challengeNames: {
       type: Array,
       required: true,
     },
@@ -50,6 +50,7 @@ export default {
 
     onMounted(() => {
       state.filteredTeamNames = props.teamNames;
+      state.filteredChallengeNames = props.challengeNames;
     });
 
     const searchTeamNames = (event) => {
@@ -63,9 +64,19 @@ export default {
         );
       }
     };
-    console.log("filtered" + state.filteredTeamNames);
-    console.log("search" + searchTeamNames);
-    return { searchTeamNames };
+    const searchChallengeNames = (event) => {
+
+      const selectedChallengeIndex = event.target.value;
+      const selectedChallenge = selectedChallengeIndex !== "none" ? props.challengeNames[selectedChallengeIndex] : "";
+      if (!selectedChallenge) {
+        state.filteredChallengeNames = props.challengeNames;
+      } else {
+        state.filteredChallengeNames = props.challengeNames.filter(name =>
+          name.includes(selectedChallenge)
+        );
+      }
+    };
+    return { searchTeamNames, searchChallengeNames };
   },
 };
 </script>
