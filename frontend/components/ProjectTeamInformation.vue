@@ -1,7 +1,7 @@
 <template>
     <div class="entire-container" v-for="(teamDetail, index) in teamDetails" :key="index">
         <div class="top-row"
-            v-if="filtered.includes(teamDetail[1]) && teamDetail[2].some(challenge => challengeDetails.includes(challenge[0]))">
+            v-if="filtered.includes(teamDetail[1]) && (challengeDetails === '' || teamDetail[2].some(challenge => challengeDetails.includes(challenge[0])))">
             <div class="table-header">{{ teamDetail[0] }}</div>
             <div class="project-info-container">
                 <div class="button-container">
@@ -69,7 +69,7 @@ const props = defineProps({
         required: true,
     },
     challengeDetails: {
-        type: Array,
+        type: String,
         required: true,
     },
 });

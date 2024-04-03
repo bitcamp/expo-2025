@@ -69,11 +69,11 @@ export default {
       const selectedChallengeIndex = event.target.value;
       const selectedChallenge = selectedChallengeIndex !== "none" ? props.challengeNames[selectedChallengeIndex] : "";
       if (!selectedChallenge) {
-        state.filteredChallengeNames = props.challengeNames;
+        state.filteredChallengeNames = "";
       } else {
         state.filteredChallengeNames = props.challengeNames.filter(name =>
           name.includes(selectedChallenge)
-        );
+        ).toString();
       }
     };
     return { searchTeamNames, searchChallengeNames };
