@@ -49,7 +49,8 @@ provide('state', state);
     padding: 4rem 0 7rem;
 
     @media (max-width: 800px) {
-        height: 180vh;
+        padding: 3rem 0 7rem;
+        height: 175vh;
     }
 }
 

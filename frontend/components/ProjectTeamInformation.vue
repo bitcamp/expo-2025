@@ -3,19 +3,20 @@
         <div class="top-row" v-if="filtered.includes(teamDetail[1])">
             <div class="table-header">{{ teamDetail[0] }}</div>
             <div class="project-info-container">
-                <div class="project-header"> {{ teamDetail[1] }}</div>
-                <!-- <button class="challenges-button" @click="toggleButton(teamDetail[1])">
-                    <div class="button-text">
-                        show challenges
-                    </div>
-                    <img src="../assets/images/openChallengesArrow.svg" class="arrow-image"
-                        :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
-                        alt="Bitcamp sign" /> -->
-                <button class="challenges-button" @click="toggleButton(teamDetail[1])">
-                    <img src="../assets/images/openChallengesArrow.svg" class="arrow-image"
-                        :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
-                        alt="Bitcamp sign" />
-                </button>
+                <div class="button-container">
+                    <div class="project-header"> {{ teamDetail[1] }}</div>
+                    <button v-if="windowWidth > 800" class="challenges-button" @click="toggleButton(teamDetail[1])">
+                        <div class="button-text">
+                            show challenges
+                        </div>
+                        <img src="../assets/images/openChallengesArrow.svg" class="arrow-image"
+                            :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
+                            alt="Bitcamp sign" />
+
+                    </button>
+                    <VueToggle v-if="windowWidth < 800" class="toggle-size" name="VueToggle" activeColor=#FFC226
+                        @toggle="toggleButton(teamDetail[1])" />
+                </div>
                 <div
                     :class="{ 'challenges-hidden': !showChallenges.includes(teamDetail[1]), 'challenges-shown': showChallenges.includes(teamDetail[1]) }">
                     <JudgingRow v-for="(challenge, challengeIndex) in teamDetail[2]"
@@ -28,8 +29,12 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
+import VueToggle from "vue-toggle-component";
+
 const showChallenges = ref<string[]>([]);
+const windowWidth = ref(0);
+
 function toggleButton(name: string) {
     const index = showChallenges.value.indexOf(name);
     if (index !== -1) {
@@ -38,6 +43,19 @@ function toggleButton(name: string) {
         showChallenges.value.push(name);
     }
 }
+
+const updateWindowWidth = () => {
+    windowWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+    updateWindowWidth();
+    window.addEventListener('resize', updateWindowWidth);
+});
+
+onUnmounted(() => {
+    window.removeEventListener('resize', updateWindowWidth);
+});
 
 const props = defineProps({
     filtered: {
@@ -56,6 +74,7 @@ console.log("filtered" + props.filtered);
 </script>
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
+
 .entire-container {
     background-color: #F6EBCC;
     border-radius: 2rem;
@@ -86,8 +105,8 @@ console.log("filtered" + props.filtered);
     font-family: 'Aleo';
 
     @media (max-width: 800px) {
-      text-align: left;
-      margin-right: 0;
+        text-align: left;
+        margin-right: 0;
     }
 }
 
@@ -123,10 +142,26 @@ console.log("filtered" + props.filtered);
     font-family: 'Inter';
 }
 
+.button-container {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 800px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.toggle-size {
+    transform: scale(0.8);
+    transform-origin: center;
+}
+
 .button-text {
     align-content: center;
     justify-content: space-evenly;
-  }
+}
 
 .arrow-image {
     margin-inline: 0.35rem;
