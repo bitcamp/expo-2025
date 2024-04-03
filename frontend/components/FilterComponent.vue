@@ -117,7 +117,6 @@ export default {
   width: 100%;
   padding: 0.5rem;
   border-radius: 2rem;
-  border: 0.1rem solid #FF8E3F;
   background-color: #FF8E3F;
   font-family: 'Inter';
   margin-bottom: 1rem;
