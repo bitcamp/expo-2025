@@ -6,7 +6,7 @@
     <div class="filters">
       <div class="filter-item">
         <div class="filter-title">Name</div>
-        <input class="search-box" type="text" placeholder="Search for Project" @input="searchTeamNames($event)" />
+        <input class="search-box" type="text" placeholder="Search..." @input="searchTeamNames($event)" />
       </div>
       <div class="filter-item">
         <div class="filter-title">Challenges</div>
@@ -111,19 +111,21 @@ export default {
   font-family: 'Inter';
   margin-bottom: 1rem;
   padding-inline: 1rem;
+  outline: none;
 }
 
 .select-box {
   width: 100%;
   padding: 0.5rem;
   border-radius: 2rem;
-  border: 0.1rem solid #FF8E3F;
   background-color: #FF8E3F;
+  border: 2px solid #FF8E3F;
   font-family: 'Inter';
   margin-bottom: 1rem;
   color: white;
   padding-inline: 1rem;
-  border-right: 0.75rem solid transparent
+  border-right: 0.75rem solid transparent;
+  cursor: pointer;
 }
 
 .filter-title {
