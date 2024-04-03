@@ -6,8 +6,10 @@
         </div>
         <div class="content-row">
             <ProjectTeamInformation :filtered="state.filteredTeamNames"
-                :teamDetails="[['Table', 'Lakers', [['deez', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['your', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
-            ['A1', 'Clippers', [['deez', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['your', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]]]" />
+                :challengeDetails="['deez','doze','your','everyone']"
+                :teamDetails="[['Table', 'Lakers', [[ 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['your', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
+            ['A1', 'Clippers', [['deez', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['your', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]]]"/>
+                
         </div>
         <div class="bottom-row">
         </div>
@@ -29,8 +31,14 @@ export default {
             console.log(state.filteredTeamNames);
         });
 
+        watchEffect(() => {
+            if (state.filteredChallengeNames.length > 0) {
+                console.log(state.filteredChallengeNames);
+            }
+        });
+
         return { state };
-    }
+    },
 };
 </script>
 

@@ -5,7 +5,7 @@
         </div>
         <div class="filter-and-competitions-content">
             <div class="filter-component">
-                <FilterComponent :teamNames="['Lakers', 'Clippers']" :challengeName="['LA', 'BS']" />
+                <FilterComponent :teamNames="['Lakers', 'Clippers']" :challengeNames="['deez', 'doze', 'your', 'everyone']" />
             </div>
             <div class="competitions-component">
                 <TeamContainer />
@@ -21,7 +21,8 @@ import FilterComponent from "./FilterComponent.vue";
 import TeamContainer from "./TeamContainer.vue";
 
 const state = reactive({
-    filteredTeamNames: []
+    filteredTeamNames: [],
+    filteredChallengeNames: []
 });
 
 provide('state', state);
