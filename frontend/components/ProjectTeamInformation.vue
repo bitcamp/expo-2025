@@ -6,7 +6,8 @@
             <div class="project-info-container">
                 <div class="button-container">
                     <div class="project-header"> {{ teamDetail[1] }}</div>
-                    <button v-if="windowWidth > 800" class="challenges-button" @click="toggleButton(teamDetail[1])">
+                    <button v-if="windowWidth > 800 && challengeDetails === ''" class="challenges-button"
+                        @click="toggleButton(teamDetail[1])">
                         <div class="button-text">
                             show challenges
                         </div>
@@ -15,12 +16,18 @@
                             alt="Bitcamp sign" />
 
                     </button>
-                    <VueToggle v-if="windowWidth < 800" class="toggle-size" name="VueToggle" activeColor=#FFC226
-                        @toggle="toggleButton(teamDetail[1])" />
+                    <VueToggle v-if="windowWidth < 800 && challengeDetails === ''" class="toggle-size" name="VueToggle"
+                        activeColor=#FFC226 @toggle="toggleButton(teamDetail[1])" />
                 </div>
-                <div
+                <div v-if="challengeDetails === ''"
                     :class="{ 'challenges-hidden': !showChallenges.includes(teamDetail[1]), 'challenges-shown': showChallenges.includes(teamDetail[1]) }">
                     <JudgingRow v-for="(challenge, challengeIndex) in teamDetail[2]"
+                        :key="`challenge-${index}-${challengeIndex}`" :categoryName="challenge[0]"
+                        :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
+                </div>
+                <div v-if="challengeDetails !== ''" class="challenges-shown">
+                    <JudgingRow
+                        v-for="(challenge, challengeIndex) in teamDetail[2].filter(challenge => challengeDetails.includes(challenge[0]))"
                         :key="`challenge-${index}-${challengeIndex}`" :categoryName="challenge[0]"
                         :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
                 </div>
@@ -53,6 +60,7 @@ const updateWindowWidth = () => {
 onMounted(() => {
     updateWindowWidth();
     window.addEventListener('resize', updateWindowWidth);
+    console.log(props.challengeDetails)
 });
 
 onUnmounted(() => {
@@ -69,7 +77,7 @@ const props = defineProps({
         required: true,
     },
     challengeDetails: {
-        type: String,
+        type: Array,
         required: true,
     },
 });
