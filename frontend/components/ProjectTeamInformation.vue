@@ -51,6 +51,7 @@ console.log("filtered" + props.filtered);
 
 </script>
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
 .entire-container {
     background-color: #F6EBCC;
     border-radius: 2rem;
@@ -59,7 +60,7 @@ console.log("filtered" + props.filtered);
 .top-row {
     display: flex;
     flex-direction: row;
-    padding: 1rem;
+    padding: 1rem 0 0;
     margin-inline: 2rem;
 }
 
@@ -69,6 +70,7 @@ console.log("filtered" + props.filtered);
     flex-direction: column;
     position: relative;
     flex-grow: 1;
+    color: #484241;
 }
 
 .table-header {
@@ -77,11 +79,18 @@ console.log("filtered" + props.filtered);
     margin-right: 2rem;
     text-align: center;
     color: #FFC226;
+    font-family: 'Aleo';
+
+    @media (max-width: 800px) {
+      text-align: left;
+      margin-right: 0;
+    }
 }
 
 .project-header {
     font-size: 1.5rem;
     color: #E34E30;
+    font-family: 'Aleo';
 }
 
 .challenges-button {
@@ -95,6 +104,8 @@ console.log("filtered" + props.filtered);
     display: flex;
     flex-direction: row;
     width: fit-content;
+    font-family: 'Inter';
+    color: #A49B83;
 }
 
 .challenges-hidden {
@@ -105,12 +116,13 @@ console.log("filtered" + props.filtered);
     display: flex;
     flex-direction: column;
     width: 100%;
+    font-family: 'Inter';
 }
 
 .button-text {
-    justify-content: center;
     align-content: center;
-}
+    justify-content: space-evenly;
+  }
 
 .arrow-image {
     margin-inline: 0.35rem;

@@ -78,16 +78,16 @@ export default {
   background-color: #F6EBCC;
   width: calc(5rem + 10vw);
   min-width: 10rem;
-  height: 30rem;
+  height: 25.1rem;
   border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
   padding: 1.5rem 1.5rem 3.3rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
 
-  @media (max-width: 850px) {
-    width: calc(15rem + 50vw);
-    margin-right: 0;
+  @media (max-width: 800px) {
+    width: calc(2rem + 65vw);
+    margin: 0 2rem;
   }
 }
 
@@ -123,11 +123,14 @@ export default {
   margin-bottom: 1rem;
   color: white;
   padding-inline: 1rem;
+  border-right: 0.75rem solid transparent
 }
 
 .filter-title {
   margin-bottom: 0.5rem;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
+  font-family: 'Inter';
+  font-weight: 300;
 }
 
 .filters {
@@ -140,5 +143,11 @@ export default {
 .filter-item {
   margin-bottom: 1rem;
   width: 100%;
+}
+
+@media (max-width: 800px) {
+  .search-box {
+    width: calc(45% + 32vw);
+  }
 }
 </style>
