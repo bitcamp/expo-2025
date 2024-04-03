@@ -6,7 +6,7 @@
     <div class="filters">
       <div class="filter-item">
         <div class="filter-title">Name</div>
-        <input class="search-box" type="text" placeholder="Search for Project" @input="searchTeamNames($event)" />
+        <input class="search-box" type="text" placeholder="Search..." @input="searchTeamNames($event)" />
       </div>
       <div class="filter-item">
         <div class="filter-title">Challenges</div>
@@ -91,16 +91,16 @@ export default {
   background-color: #F6EBCC;
   width: calc(5rem + 10vw);
   min-width: 10rem;
-  height: 30rem;
+  height: 25.1rem;
   border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
   padding: 1.5rem 1.5rem 3.3rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
 
-  @media (max-width: 850px) {
-    width: calc(15rem + 50vw);
-    margin-right: 0;
+  @media (max-width: 800px) {
+    width: calc(2rem + 65vw);
+    margin: 0 2rem;
   }
 }
 
@@ -124,23 +124,28 @@ export default {
   font-family: 'Inter';
   margin-bottom: 1rem;
   padding-inline: 1rem;
+  outline: none;
 }
 
 .select-box {
   width: 100%;
   padding: 0.5rem;
   border-radius: 2rem;
-  border: 0.1rem solid #FF8E3F;
   background-color: #FF8E3F;
+  border: 2px solid #FF8E3F;
   font-family: 'Inter';
   margin-bottom: 1rem;
   color: white;
   padding-inline: 1rem;
+  border-right: 0.75rem solid transparent;
+  cursor: pointer;
 }
 
 .filter-title {
   margin-bottom: 0.5rem;
-  margin-left: 1.5rem;
+  margin-left: 1rem;
+  font-family: 'Inter';
+  font-weight: 300;
 }
 
 .filters {
@@ -153,5 +158,11 @@ export default {
 .filter-item {
   margin-bottom: 1rem;
   width: 100%;
+}
+
+@media (max-width: 800px) {
+  .search-box {
+    width: calc(45% + 32vw);
+  }
 }
 </style>

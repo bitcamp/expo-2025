@@ -52,15 +52,10 @@ export default {
     height: 30rem;
 
 
-    @media (max-width: 850px) {
-        width: calc(15rem + 55vw);
-        margin-top: 2rem;
+    @media (max-width: 800px) {
+        width: calc(5rem + 65vw);
+        margin: 2rem auto;
     }
-}
-
-.row-header-project,
-.row-header-table {
-    font-family: 'Aleo';
 }
 
 .top-row {
@@ -68,7 +63,7 @@ export default {
     display: flex;
     flex-direction: row;
     margin-inline: 2rem;
-    padding: 1rem;
+    padding:  1.5rem 0 0;
     padding-bottom: 0.5rem;
     border-bottom-color: #FF8F28;
     border-bottom-width: 0.069rem;
@@ -81,10 +76,17 @@ export default {
     margin-right: 2rem;
     text-align: center;
     color: #FF8F28;
+    font-family: 'Aleo';
+
+    @media (max-width: 800px) {
+      text-align: left;
+      margin-right: 0;
+    }
 }
 
 .row-header-project {
     font-size: 1.5rem;
     color: #FF8F28;
+    font-family: 'Aleo';
 }
 </style>

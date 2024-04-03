@@ -49,7 +49,7 @@ provide('state', state);
     height: 110vh;
     padding: 4rem 0 7rem;
 
-    @media (max-width: 850px) {
+    @media (max-width: 800px) {
         height: 180vh;
     }
 }
@@ -59,7 +59,7 @@ provide('state', state);
     flex-direction: row;
     justify-content: center;
 
-    @media (max-width: 850px) {
+    @media (max-width: 800px) {
         display: flex;
         flex-direction: column;
         justify-content: center;
