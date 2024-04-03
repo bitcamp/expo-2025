@@ -1,19 +1,22 @@
 <template>
-    <div class="entire-container">
-        <div class="top-row">
-            <div class="table-header">{{ teamDetails[0][0] }}</div>
+    <div class="entire-container" v-for="(teamDetail, index) in teamDetails" :key="index">
+        <div class="top-row" v-if="filtered.includes(teamDetail[1])">
+            <div class="table-header">{{ teamDetail[0] }}</div>
             <div class="project-info-container">
-                <div class="project-header"> {{ teamDetails[0][1] }}</div>
-                <button class="challenges-button" @click="toggleButton">
+                <div class="project-header"> {{ teamDetail[1] }}</div>
+                <button class="challenges-button" @click="toggleButton(teamDetail[1])">
                     <div class="button-text">
                         show challenges
                     </div>
                     <img src="../assets/images/openChallengesArrow.svg" class="arrow-image"
-                        :class="{ 'arrow-right': !showChallenges, 'arrow-down': showChallenges }" alt="Bitcamp sign" />
+                        :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
+                        alt="Bitcamp sign" />
                 </button>
-
-                <div :class="{ 'challenges-hidden': !showChallenges, 'challenges-shown': showChallenges }">
-                    <JudgingRow categoryName="deez" companyName="nutz" judgeName="69" timing="times" />
+                <div
+                    :class="{ 'challenges-hidden': !showChallenges.includes(teamDetail[1]), 'challenges-shown': showChallenges.includes(teamDetail[1]) }">
+                    <JudgingRow v-for="(challenge, challengeIndex) in teamDetail[2]"
+                        :key="`challenge-${index}-${challengeIndex}`" :categoryName="challenge[0]"
+                        :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
                 </div>
             </div>
         </div>
@@ -22,21 +25,30 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-const showChallenges = ref<Boolean>();
-function toggleButton() {
-    if (showChallenges.value === true) {
-        showChallenges.value = false;
+const showChallenges = ref<string[]>([]);
+function toggleButton(name: string) {
+    const index = showChallenges.value.indexOf(name);
+    if (index !== -1) {
+        showChallenges.value.splice(index, 1);
     } else {
-        showChallenges.value = true;
+        showChallenges.value.push(name);
     }
 }
 
 const props = defineProps({
+    filtered: {
+        type: Array,
+        required: true,
+    },
     teamDetails: {
         type: Array,
         required: true,
     },
 });
+
+
+console.log("filtered" + props.filtered);
+
 </script>
 <style scoped lang="scss">
 .entire-container {
@@ -48,6 +60,7 @@ const props = defineProps({
     display: flex;
     flex-direction: row;
     padding: 1rem;
+    margin-inline: 2rem;
 }
 
 .project-info-container {
@@ -61,6 +74,7 @@ const props = defineProps({
 .table-header {
     font-size: 1.5rem;
     width: 6rem;
+    margin-right: 2rem;
     text-align: center;
     color: #FFC226;
 }
@@ -89,6 +103,7 @@ const props = defineProps({
 
 .challenges-shown {
     display: flex;
+    flex-direction: column;
     width: 100%;
 }
 

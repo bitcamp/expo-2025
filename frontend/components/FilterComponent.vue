@@ -6,7 +6,7 @@
     <div class="filters">
       <div class="filter-item">
         <div class="filter-title">Name</div>
-        <input class="search-box" type="text" placeholder="Search for the Project Name" />
+        <input class="search-box" type="text" placeholder="Search for Project" @input="searchTeamNames($event)" />
       </div>
       <div class="filter-item">
         <div class="filter-title">Challenges</div>
@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import { inject } from 'vue';
+
 export default {
   name: 'FilterComponent',
   props: {
@@ -38,9 +40,32 @@ export default {
       type: Array,
       required: true,
     },
+    teamNames: {
+      type: Array,
+      required: true,
+    },
   },
-  mounted() {
-    console.log(this.challengeName);
+  setup(props) {
+    const state = inject('state');
+
+    onMounted(() => {
+      state.filteredTeamNames = props.teamNames;
+    });
+
+    const searchTeamNames = (event) => {
+      const searchTerm = event.target.value.toLowerCase();
+      if (searchTerm === "") {
+        state.filteredTeamNames = props.teamNames;
+      }
+      else {
+        state.filteredTeamNames = props.teamNames.filter(name =>
+          name.toLowerCase().includes(searchTerm)
+        );
+      }
+    };
+    console.log("filtered" + state.filteredTeamNames);
+    console.log("search" + searchTeamNames);
+    return { searchTeamNames };
   },
 };
 </script>
@@ -59,6 +84,11 @@ export default {
   flex-direction: column;
   padding: 1.5rem 1.5rem 3.3rem;
   margin-right: 2rem;
+
+  @media (max-width: 850px) {
+    width: calc(15rem + 50vw);
+    margin-right: 0;
+  }
 }
 
 .filter-header {
@@ -111,5 +141,4 @@ export default {
   margin-bottom: 1rem;
   width: 100%;
 }
-
 </style>

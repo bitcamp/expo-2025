@@ -1,33 +1,40 @@
 <template>
-    <div class="wrapper">      
+    <div class="wrapper">
         <div class="hero">
-            <img src="../assets/images/background/HeroSign.svg" class="svgStyle" alt="Bitcamp sign" />      
+            <img src="../assets/images/background/HeroSign.svg" class="svgStyle" alt="Bitcamp sign" />
         </div>
         <div class="filter-and-competitions-content">
             <div class="filter-component">
-                <FilterComponent :challengeName="['LA', 'BS']" />
+                <FilterComponent :teamNames="['Lakers', 'Clippers']" :challengeName="['LA', 'BS']" />
             </div>
             <div class="competitions-component">
-                <ProjectComponent />
+                <TeamContainer />
             </div>
         </div>
     </div>
-    
-</template>  
 
-<script setup lang="ts">  
+</template>
+
+<script setup lang="ts">
+import { reactive, provide } from 'vue';
 import FilterComponent from "./FilterComponent.vue";
-import ProjectComponent from "./ProjectComponent.vue";
+import TeamContainer from "./TeamContainer.vue";
+
+const state = reactive({
+    filteredTeamNames: []
+});
+
+provide('state', state);
 </script>
 
 <style scoped lang="scss">
 .hero {
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 
     img {
-        width: 25%;
+        width: 30%;
         min-width: 20rem;
     }
 }
@@ -36,17 +43,27 @@ import ProjectComponent from "./ProjectComponent.vue";
     position: absolute;
     background-image: linear-gradient(180deg, #7C3B35, #E26F3C, #F0984C);
     top: 0;
-    left: 0; 
+    left: 0;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     padding: 4rem 0 7rem;
+
+    @media (max-width: 850px) {
+        height: 180vh;
+    }
 }
 
 .filter-and-competitions-content {
-    
     display: flex;
     flex-direction: row;
-    justify-content: center;   
+    justify-content: center;
+
+    @media (max-width: 850px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
 }
 </style>
-
