@@ -4,10 +4,14 @@
             <div class="table-header">{{ teamDetail[0] }}</div>
             <div class="project-info-container">
                 <div class="project-header"> {{ teamDetail[1] }}</div>
-                <button class="challenges-button" @click="toggleButton(teamDetail[1])">
+                <!-- <button class="challenges-button" @click="toggleButton(teamDetail[1])">
                     <div class="button-text">
                         show challenges
                     </div>
+                    <img src="../assets/images/openChallengesArrow.svg" class="arrow-image"
+                        :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
+                        alt="Bitcamp sign" /> -->
+                <button class="challenges-button" @click="toggleButton(teamDetail[1])">
                     <img src="../assets/images/openChallengesArrow.svg" class="arrow-image"
                         :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
                         alt="Bitcamp sign" />

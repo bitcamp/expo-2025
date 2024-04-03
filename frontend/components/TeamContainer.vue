@@ -6,7 +6,7 @@
         </div>
         <div class="content-row">
             <ProjectTeamInformation :filtered="state.filteredTeamNames"
-                :teamDetails="[['Table', 'Lakers', [['deez', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['your', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
+                :teamDetails="[['Table', 'Lakers', [['oh', 'my', '20', 'times'], ['glorious', 'king', '69', 'times'], ['lebron', 'james', '69', 'times'], ['the', 'goat', '69', 'times']]],
             ['A1', 'Clippers', [['deez', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['your', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]]]" />
         </div>
         <div class="bottom-row">
