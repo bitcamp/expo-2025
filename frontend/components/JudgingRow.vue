@@ -43,12 +43,13 @@ export default {
   align-items: center;
   background-color: #f8eccc;
   justify-content: space-between;
-  width: 100%;
+  width: 95%;
 
   .project-description {
     display: flex;
     padding-top: 0.2rem;
     font-size: 14px;
+    font-weight: 400;
 
     .category-name {
       font-weight: 600;
@@ -59,6 +60,7 @@ export default {
     display: flex;
     padding-top: 0.2rem;
     font-size: 14px;
+    font-weight: 400;
   }
 }
 
