@@ -5,9 +5,10 @@
             <div class="row-header-project">Project</div>
         </div>
         <div class="content-row">
-            <ProjectTeamInformation :filtered="state.filteredTeamNames"
-                :teamDetails="[['Table', 'Lakers', [['deez', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['your', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
-            ['A1', 'Clippers', [['deez', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['your', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]]]" />
+            <ProjectTeamInformation :filtered="state.filteredTeamNames" :challengeDetails="state.filteredChallengeNames"
+                :teamDetails="[['Table', 'Lakers', [['my', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['your', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
+            ['A1', 'Clippers', [['deez', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]]]" />
+
         </div>
         <div class="bottom-row">
         </div>
@@ -29,8 +30,14 @@ export default {
             console.log(state.filteredTeamNames);
         });
 
+        watchEffect(() => {
+            if (state.filteredChallengeNames.length > 0) {
+                console.log(state.filteredChallengeNames);
+            }
+        });
+
         return { state };
-    }
+    },
 };
 </script>
 
@@ -55,7 +62,7 @@ export default {
     display: flex;
     flex-direction: row;
     margin-inline: 2rem;
-    padding:  1.5rem 0 0;
+    padding: 1.5rem 0 0;
     padding-bottom: 0.5rem;
     border-bottom-color: #FF8F28;
     border-bottom-width: 0.069rem;
@@ -71,8 +78,8 @@ export default {
     font-family: 'Aleo';
 
     @media (max-width: 800px) {
-      text-align: left;
-      margin-right: 0;
+        text-align: left;
+        margin-right: 0;
     }
 }
 
