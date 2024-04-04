@@ -51,7 +51,7 @@ def process(csv_file):
                 hc[i][j] = category_names.index(hc[i][j])
 
 
-csv_file = "bitcamp-2023-projects.csv"
+csv_file = "backend/bitcamp-2023-projects.csv"
 process(csv_file)
 print(hc)
 # print(cap)
