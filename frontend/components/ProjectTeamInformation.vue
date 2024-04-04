@@ -1,8 +1,11 @@
 <template>
     <div class="entire-container" v-for="(teamDetail, index) in teamDetails" :key="index">
-        <div class="top-row"
-            v-if="filtered.includes(teamDetail[1]) && (challengeDetails === '' || teamDetail[2].some(challenge => challengeDetails.includes(challenge[0])))">
-            <div class="table-header">{{ teamDetail[0] }}</div>
+        <div class="top-row" v-if="filtered.includes(teamDetail[1]) && (challengeDetails === '' || teamDetail[2].some(challenge => challengeDetails.includes(challenge[0]))) &&
+        (projectType === 'all' ||
+            (projectType === 'virtual' && teamDetail[0] === 'virtual') ||
+            (projectType === 'in-person' && teamDetail[0] !== 'virtual'))">
+            <div v-if="teamDetail[0] !== 'virtual'" class="table-header">{{ teamDetail[0] }}</div>
+            <div v-if="teamDetail[0] === 'virtual'" class="table-header">{{ teamDetail[0] }}</div>
             <div class="project-info-container">
                 <div class="button-container">
                     <div class="project-header"> {{ teamDetail[1] }}</div>
@@ -11,13 +14,18 @@
                         <div class="button-text">
                             show challenges
                         </div>
-                        <img src="../assets/images/openChallengesArrow.svg" class="arrow-image"
+                        <img src="../assets/images/openChallengesArrow.svg" class="arrow-image-small"
                             :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
                             alt="Bitcamp sign" />
 
                     </button>
-                    <VueToggle v-if="windowWidth < 800 && challengeDetails === ''" class="toggle-size" name="VueToggle"
-                        activeColor=#FFC226 @toggle="toggleButton(teamDetail[1])" />
+                    <button v-if="windowWidth < 800 && challengeDetails === ''" class="challenges-button-large"
+                        @click="toggleButton(teamDetail[1])">
+                        <img src="../assets/images/openChallengesArrowLarge.svg" class="arrow-image-large"
+                            :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
+                            alt="Bitcamp sign" />
+
+                    </button>
                 </div>
                 <div v-if="challengeDetails === ''"
                     :class="{ 'challenges-hidden': !showChallenges.includes(teamDetail[1]), 'challenges-shown': showChallenges.includes(teamDetail[1]) }">
@@ -37,20 +45,25 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue';
-import VueToggle from "vue-toggle-component";
+import { ref, watch, computed, onMounted, onUnmounted } from 'vue';
 
 const showChallenges = ref<string[]>([]);
 const windowWidth = ref(0);
+
+const toggleStates = ref([]);
 
 function toggleButton(name: string) {
     const index = showChallenges.value.indexOf(name);
     if (index !== -1) {
         showChallenges.value.splice(index, 1);
+        toggleStates.value[index] = false;
     } else {
         showChallenges.value.push(name);
+        const teamIndex = props.teamDetails.findIndex(team => team[1] === name);
+        if (teamIndex !== -1) {
+            toggleStates.value[teamIndex] = true;
+        }
     }
-
 }
 
 const updateWindowWidth = () => {
@@ -60,7 +73,7 @@ const updateWindowWidth = () => {
 onMounted(() => {
     updateWindowWidth();
     window.addEventListener('resize', updateWindowWidth);
-    console.log(props.challengeDetails)
+    toggleStates.value = props.teamDetails.map(team => showChallenges.value.includes(team[1]));
 });
 
 onUnmounted(() => {
@@ -80,11 +93,15 @@ const props = defineProps({
         type: Array,
         required: true,
     },
+    projectType: {
+        type: Array,
+        required: true,
+    },
 });
 
-
-console.log("filtered" + props.filtered);
-
+watch([() => props.filtered, () => props.challengeDetails, () => props.projectType], () => {
+    showChallenges.value = [];
+}, { deep: true });
 </script>
 <style scoped lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
@@ -145,6 +162,20 @@ console.log("filtered" + props.filtered);
     color: #A49B83;
 }
 
+.challenges-button-large {
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: fit-content;
+    font-family: 'Inter';
+    color: #FF8F28;
+}
+
 .challenges-hidden {
     display: none;
 }
@@ -177,10 +208,17 @@ console.log("filtered" + props.filtered);
     justify-content: space-evenly;
 }
 
-.arrow-image {
+.arrow-image-small {
     margin-inline: 0.35rem;
     width: 0.69rem;
     transition: transform 0.3s ease;
+}
+
+.arrow-image-large {
+    margin-inline: 0.35rem;
+    width: 1rem;
+    transition: transform 0.2s ease;
+    color: #FF8F28;
 }
 
 .arrow-right {
@@ -189,5 +227,9 @@ console.log("filtered" + props.filtered);
 
 .arrow-down {
     transform: rotate(90deg);
+}
+
+.arrow-half {
+    transform: rotate(45deg);
 }
 </style>

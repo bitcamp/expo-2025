@@ -6,34 +6,20 @@
     <div class="filters">
       <div class="filter-item">
         <div class="filter-title">Name</div>
-        <input
-          class="search-box"
-          type="text"
-          placeholder="Search..."
-          @input="searchTeamNames($event)"
-        />
+        <input class="search-box" type="text" placeholder="Search..." @input="searchTeamNames($event)" />
       </div>
       <div class="filter-item">
         <div class="filter-title">Challenges</div>
-        <select
-          name="challenge"
-          class="select-box"
-          id="challenge"
-          v-on:change="searchChallengeNames($event)"
-        >
-          <option value="none">None</option>
-          <option
-            v-for="(name, index) in challengeNames"
-            :key="index"
-            :value="index"
-          >
+        <select name="challenge" class="select-box" id="challenge" v-on:change="searchChallengeNames($event)">
+          <option value="none">All Challenges</option>
+          <option v-for="(name, index) in challengeNames" :key="index" :value="index">
             {{ name }}
           </option>
         </select>
       </div>
       <div class="filter-item">
         <div class="filter-title">Project Type</div>
-        <select name="project-type" class="select-box" id="project-type">
+        <select name="project-type" class="select-box" id="project-type" v-on:change="searchProjectType($event)">
           <option value="all">All Projects</option>
           <option value="in-person">In-Person Projects</option>
           <option value="virtual">Virtual Projects</option>
@@ -64,7 +50,8 @@ export default {
 
     onMounted(() => {
       state.filteredTeamNames = props.teamNames;
-      state.filteredChallengeNames = props.challengeNames;
+      state.filteredChallengeNames = '';
+      state.projectType = 'all';
     });
 
     const searchTeamNames = (event) => {
@@ -91,7 +78,13 @@ export default {
           .toString();
       }
     };
-    return { searchTeamNames, searchChallengeNames };
+    const searchProjectType = (event) => {
+      const selectedProjectTypeIndex = event.target.value;
+      const selectedProjectType = selectedProjectTypeIndex;
+      state.projectType = selectedProjectType;
+      console.log(state.projectType);
+    };
+    return { searchTeamNames, searchChallengeNames, searchProjectType };
   },
 };
 </script>

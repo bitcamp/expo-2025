@@ -5,7 +5,8 @@
         </div>
         <div class="filter-and-competitions-content">
             <div class="filter-component">
-                <FilterComponent :teamNames="['Lakers', 'Clippers']" :challengeNames="['deez', 'doze', 'your', 'everyone']" />
+                <FilterComponent :teamNames="['Lakers', 'Clippers', 'Grizzlies', 'Cavs']"
+                    :challengeNames="['deez', 'doze', 'your', 'everyone']" />
             </div>
             <div class="competitions-component">
                 <TeamContainer />
@@ -22,7 +23,8 @@ import TeamContainer from "./TeamContainer.vue";
 
 const state = reactive({
     filteredTeamNames: [],
-    filteredChallengeNames: []
+    filteredChallengeNames: "",
+    projectType: "",
 });
 
 provide('state', state);

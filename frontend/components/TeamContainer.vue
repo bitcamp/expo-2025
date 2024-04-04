@@ -6,8 +6,10 @@
         </div>
         <div class="content-row">
             <ProjectTeamInformation :filtered="state.filteredTeamNames" :challengeDetails="state.filteredChallengeNames"
-                :teamDetails="[['Table', 'Lakers', [['my', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['your', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
-            ['A1', 'Clippers', [['deez', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]]]" />
+                :projectType="state.projectType" :teamDetails="[['A0', 'Lakers', [['my', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['your', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
+            ['A1', 'Clippers', [['deez', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
+            ['virtual', 'Grizzlies', [['deez', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
+            ['virtual', 'Cavs', [['everyone', 'nutz', '69', 'times']]]]" />
 
         </div>
         <div class="bottom-row">
@@ -26,15 +28,15 @@ export default {
     setup() {
         const state = inject('state');
 
-        watchEffect(() => {
-            console.log(state.filteredTeamNames);
-        });
+        // watchEffect(() => {
+        //     console.log(state.filteredTeamNames);
+        // });
 
-        watchEffect(() => {
-            if (state.filteredChallengeNames.length > 0) {
-                console.log(state.filteredChallengeNames);
-            }
-        });
+        // watchEffect(() => {
+        //     if (state.filteredChallengeNames.length > 0) {
+        //         console.log(state.filteredChallengeNames);
+        //     }
+        // });
 
         return { state };
     },
@@ -87,5 +89,10 @@ export default {
     font-size: 1.5rem;
     color: #FF8F28;
     font-family: 'Aleo';
+}
+
+.content-row {
+    overflow-y: auto;
+    max-height: 81%;
 }
 </style>
