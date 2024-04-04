@@ -6,13 +6,27 @@
     <div class="filters">
       <div class="filter-item">
         <div class="filter-title">Name</div>
-        <input class="search-box" type="text" placeholder="Search..." @input="searchTeamNames($event)" />
+        <input
+          class="search-box"
+          type="text"
+          placeholder="Search..."
+          @input="searchTeamNames($event)"
+        />
       </div>
       <div class="filter-item">
         <div class="filter-title">Challenges</div>
-        <select name="challenge" class="select-box" id="challenge" v-on:change="searchChallengeNames($event)">
+        <select
+          name="challenge"
+          class="select-box"
+          id="challenge"
+          v-on:change="searchChallengeNames($event)"
+        >
           <option value="none">None</option>
-          <option v-for="(name, index) in challengeNames" :key="index" :value="index">
+          <option
+            v-for="(name, index) in challengeNames"
+            :key="index"
+            :value="index"
+          >
             {{ name }}
           </option>
         </select>
@@ -31,10 +45,10 @@
 </template>
 
 <script>
-import { inject } from 'vue';
+import { inject } from "vue";
 
 export default {
-  name: 'FilterComponent',
+  name: "FilterComponent",
   props: {
     challengeNames: {
       type: Array,
@@ -46,7 +60,7 @@ export default {
     },
   },
   setup(props) {
-    const state = inject('state');
+    const state = inject("state");
 
     onMounted(() => {
       state.filteredTeamNames = props.teamNames;
@@ -57,23 +71,24 @@ export default {
       const searchTerm = event.target.value.toLowerCase();
       if (searchTerm === "") {
         state.filteredTeamNames = props.teamNames;
-      }
-      else {
-        state.filteredTeamNames = props.teamNames.filter(name =>
+      } else {
+        state.filteredTeamNames = props.teamNames.filter((name) =>
           name.toLowerCase().includes(searchTerm)
         );
       }
     };
     const searchChallengeNames = (event) => {
-
       const selectedChallengeIndex = event.target.value;
-      const selectedChallenge = selectedChallengeIndex !== "none" ? props.challengeNames[selectedChallengeIndex] : "";
+      const selectedChallenge =
+        selectedChallengeIndex !== "none"
+          ? props.challengeNames[selectedChallengeIndex]
+          : "";
       if (!selectedChallenge) {
         state.filteredChallengeNames = "";
       } else {
-        state.filteredChallengeNames = props.challengeNames.filter(name =>
-          name.includes(selectedChallenge)
-        ).toString();
+        state.filteredChallengeNames = props.challengeNames
+          .filter((name) => name.includes(selectedChallenge))
+          .toString();
       }
     };
     return { searchTeamNames, searchChallengeNames };
@@ -82,11 +97,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
 .entire-container-filter {
-  background-color: #F6EBCC;
+  background-color: #f6ebcc;
   width: calc(5rem + 10vw);
   min-width: 10rem;
   height: 25.1rem;
@@ -103,8 +118,8 @@ export default {
 }
 
 .filter-header {
-  font-family: 'Aleo';
-  color: #FA9747;
+  font-family: "Aleo";
+  color: #fa9747;
   font-weight: 400;
   font-size: 1.5rem;
 }
@@ -117,21 +132,22 @@ export default {
   width: 80%;
   padding: 0.5rem;
   border-radius: 2rem;
-  border: 2px solid #FF8E3F;
-  background-color: #FFF9ED;
-  font-family: 'Inter';
+  border: 2px solid #ff8e3f;
+  background-color: #fff9ed;
+  font-family: "Inter";
   margin-bottom: 1rem;
   padding-inline: 1rem;
   outline: none;
 }
 
+// to do make dropdown look nicer
 .select-box {
   width: 100%;
   padding: 0.5rem;
   border-radius: 2rem;
-  background-color: #FF8E3F;
-  border: 2px solid #FF8E3F;
-  font-family: 'Inter';
+  background-color: #ff8e3f;
+  border: 2px solid #ff8e3f;
+  font-family: "Inter";
   margin-bottom: 1rem;
   color: white;
   padding-inline: 1rem;
@@ -142,7 +158,7 @@ export default {
 .filter-title {
   margin-bottom: 0.5rem;
   margin-left: 1rem;
-  font-family: 'Inter';
+  font-family: "Inter";
   font-weight: 300;
 }
 
@@ -161,6 +177,20 @@ export default {
 @media (max-width: 800px) {
   .search-box {
     width: calc(45% + 32vw);
+  }
+
+  .filter-item {
+    margin-bottom: 0;
+  }
+
+  .filter-title {
+    display: none;
+    margin-bottom: 0;
+  }
+
+  .entire-container-filter {
+    height: auto;
+    padding-bottom: 1rem;
   }
 }
 </style>
