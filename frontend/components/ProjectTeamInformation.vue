@@ -134,9 +134,9 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     text-align: center;
     color: #FFC226;
     font-family: 'Aleo';
+    min-width: 100px;
 
     @media (max-width: 800px) {
-        text-align: left;
         margin-right: 0;
     }
 }
