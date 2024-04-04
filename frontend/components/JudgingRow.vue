@@ -13,6 +13,7 @@
   </div>
 </template>
 
+
 <script>
 export default {
   name: 'JudgingRow',
@@ -41,15 +42,17 @@ export default {
 .entry {
   display: flex;
   align-items: center;
-  background-color: #f8eccc;
   justify-content: space-between;
+  flex-wrap: wrap; 
+  background-color: #f8eccc;
   width: 95%;
+  padding-top: 0.6rem;
 
   .project-description {
     display: flex;
-    padding-top: 0.2rem;
     font-size: 14px;
     font-weight: 400;
+    padding-right: 2rem;
 
     .category-name {
       font-weight: 600;
@@ -58,7 +61,6 @@ export default {
 
   .judging-description {
     display: flex;
-    padding-top: 0.2rem;
     font-size: 14px;
     font-weight: 400;
   }

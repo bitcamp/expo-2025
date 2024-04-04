@@ -76,10 +76,10 @@ export default {
     text-align: center;
     color: #FF8F28;
     font-family: 'Aleo';
+    min-width: 100px;
 
-    @media (max-width: 800px) {
-        text-align: left;
-        margin-right: 0;
+    @media screen and (max-width: 800px) {
+      margin-right: 0rem;
     }
 }
 
