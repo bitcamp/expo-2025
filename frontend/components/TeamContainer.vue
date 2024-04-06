@@ -8,6 +8,7 @@
             <ProjectTeamInformation :filtered="state.filteredTeamNames" :challengeDetails="state.filteredChallengeNames"
                 :projectType="state.projectType" :teamDetails="[['A0', 'Lakers', [['my', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['your', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
             ['A1', 'Clippers', [['deez', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
+            ['A4', 'Shared Spaces', [['Best Accessibility Hack sponsored by Fidelity', 'Major League Hacking', 'Judge 1', '4:20'], ['doze', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
             ['virtual', 'Grizzlies', [['deez', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
             ['virtual', 'Cavs', [['everyone', 'nutz', '69', 'times']]]]" />
 
@@ -81,7 +82,7 @@ export default {
     min-width: 100px;
 
     @media screen and (max-width: 800px) {
-      margin-right: 0rem;
+        margin-right: 0rem;
     }
 }
 

@@ -5,7 +5,9 @@
             (projectType === 'virtual' && teamDetail[0] === 'virtual') ||
             (projectType === 'in-person' && teamDetail[0] !== 'virtual'))">
             <div v-if="teamDetail[0] !== 'virtual'" class="table-header">{{ teamDetail[0] }}</div>
-            <div v-if="teamDetail[0] === 'virtual'" class="table-header">{{ teamDetail[0] }}</div>
+            <div v-if="teamDetail[0] === 'virtual'" class="table-header">
+                <img src="../assets/images/filmCamera.svg" class="camera-style">
+            </div>
             <div class="project-info-container">
                 <div class="button-container">
                     <div class="project-header"> {{ teamDetail[1] }}</div>
@@ -135,6 +137,10 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     color: #FFC226;
     font-family: 'Aleo';
     min-width: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
 
     @media (max-width: 800px) {
         margin-right: 0;
@@ -185,6 +191,10 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     flex-direction: column;
     width: 100%;
     font-family: 'Inter';
+}
+
+.camera-style {
+    width: 1.5rem;
 }
 
 .button-container {

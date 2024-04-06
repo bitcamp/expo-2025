@@ -5,7 +5,7 @@
         </div>
         <div class="filter-and-competitions-content">
             <div class="filter-component">
-                <FilterComponent :teamNames="['Lakers', 'Clippers', 'Grizzlies', 'Cavs']"
+                <FilterComponent :teamNames="['Lakers', 'Clippers', 'Shared Spaces', 'Grizzlies', 'Cavs']"
                     :challengeNames="['deez', 'doze', 'your', 'everyone']" />
             </div>
             <div class="competitions-component">
