@@ -111,6 +111,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 .entire-container {
     background-color: #F6EBCC;
     border-radius: 2rem;
+    overflow-x: hidden;
 }
 
 .top-row {
@@ -118,6 +119,10 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     flex-direction: row;
     padding: 1rem 0 0;
     margin-inline: 2rem;
+    @media (max-width: 800px) {
+        display: inline-block;        
+        padding: 4rem 0 0;
+    }
 }
 
 .project-info-container {
@@ -127,6 +132,9 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     position: relative;
     flex-grow: 1;
     color: #484241;
+    @media (max-width: 800px) {        
+        align-items: center;
+    }
 }
 
 .table-header {
@@ -141,9 +149,14 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
-
     @media (max-width: 800px) {
         margin-right: 0;
+        background-color: #FF8F28;
+        color: #FFFFFF;
+        border-radius: 7%;  
+        height: 6rem; 
+        align-content: center; 
+        margin-inline: 24vw;
     }
 }
 
@@ -151,9 +164,13 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     font-size: 1.5rem;
     color: #E34E30;
     font-family: 'Aleo';
+    @media (max-width: 800px) {        
+        padding: 3rem 0 0;
+    }
 }
 
 .challenges-button {
+    
     padding: 0;
     margin: 0;
     border: none;
@@ -161,7 +178,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     text-align: left;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    display: flex;
+    dispy: flex;
     flex-direction: row;
     width: fit-content;
     font-family: 'Inter';
@@ -202,9 +219,10 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     flex-direction: column;
 
     @media (max-width: 800px) {
-        display: flex;
+        display: flex;        
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-end;
     }
 }
 

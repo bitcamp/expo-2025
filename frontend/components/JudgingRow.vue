@@ -2,14 +2,15 @@
   <div class="entry">
     <div class="project-description">
       <div class="category-name">{{ categoryName }}</div>
-      <div class="middle-char">|</div>
+      <div class="middle-char"></div>
       <div>{{ companyName }}</div>
+      <div class="judging-description">
+        <div>{{ judgeName }}</div>
+        <div class="middle-char">-</div>
+        <div>{{ timing }}</div>
     </div>
-    <div class="judging-description">
-      <div>{{ judgeName }}</div>
-      <div class="middle-char">-</div>
-      <div>{{ timing }}</div>
     </div>
+    
   </div>
 </template>
 
@@ -43,19 +44,33 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap; 
+  flex-wrap: nowrap; 
   background-color: #f8eccc;
   width: 95%;
   padding-top: 0.6rem;
+  
+  
 
   .project-description {
     display: flex;
     font-size: 14px;
     font-weight: 400;
     padding-right: 2rem;
-
+    @media (max-width: 800px) {        
+      display: inline-block !important;
+    }
     .category-name {
       font-weight: 600;
+    }
+
+    .middle-char::before {
+    content: "|";
+    }
+
+    @media screen and (max-width: 800px) {
+        .middle-char {
+            display: none;
+        }
     }
   }
 
@@ -63,6 +78,8 @@ export default {
     display: flex;
     font-size: 14px;
     font-weight: 400;
+    
+    
   }
 }
 

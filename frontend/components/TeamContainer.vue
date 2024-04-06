@@ -1,8 +1,8 @@
 <template>
     <div class="entire-container">
         <div class="top-row">
-            <div class="row-header-table">Table</div>
-            <div class="row-header-project">Project</div>
+            <div class="row-header-table"></div>
+            <div class="row-header-project"></div>
         </div>
         <div class="content-row">
             <ProjectTeamInformation :filtered="state.filteredTeamNames" :challengeDetails="state.filteredChallengeNames"
@@ -80,9 +80,8 @@ export default {
     color: #FF8F28;
     font-family: 'Aleo';
     min-width: 100px;
-
     @media screen and (max-width: 800px) {
-        margin-right: 0rem;
+        margin-right: 0;
     }
 }
 
@@ -90,6 +89,26 @@ export default {
     font-size: 1.5rem;
     color: #FF8F28;
     font-family: 'Aleo';
+    @media screen and (max-width: 800px) {
+        margin: auto;
+    }
+}
+
+.row-header-table::before {
+    content: "Table";
+}
+
+.row-header-project::before {
+    content: "Project";
+}
+@media screen and (max-width: 800px) {
+    .row-header-table {
+        display: none;
+    }
+
+    .top-row .row-header-project::before {
+        content: "Project Information";
+    }
 }
 
 .content-row {
