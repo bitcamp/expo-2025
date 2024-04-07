@@ -16,9 +16,11 @@
                         <div class="button-text">
                             show challenges
                         </div>
-                        <img src="../assets/images/openChallengesArrow.svg" class="arrow-image-small"
-                            :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
-                            alt="Bitcamp sign" />
+                        <div class="image-container">
+                            <img src="../assets/images/openChallengesArrow.svg" class="arrow-image-small"
+                                :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
+                                alt="Bitcamp sign" />
+                        </div>
 
                     </button>
                     <button v-if="windowWidth < 800 && challengeDetails === ''" class="challenges-button-large"
@@ -118,9 +120,10 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     display: flex;
     flex-direction: row;
     padding: 1rem 0 0;
-    margin-inline: 2rem;
+    margin-inline: 1.25rem;
+
     @media (max-width: 800px) {
-        display: inline-block;        
+        display: inline-block;
         padding: 4rem 0 0;
     }
 }
@@ -132,15 +135,16 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     position: relative;
     flex-grow: 1;
     color: #484241;
-    @media (max-width: 800px) {        
+
+    @media (max-width: 800px) {
         align-items: center;
     }
 }
 
 .table-header {
     font-size: 1.5rem;
-    width: 6rem;
-    margin-right: 2rem;
+    width: 4rem;
+    margin-right: 1.5rem;
     text-align: center;
     color: #FFC226;
     font-family: 'Aleo';
@@ -149,13 +153,14 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: center;
+
     @media (max-width: 800px) {
         margin-right: 0;
         background-color: #FF8F28;
         color: #FFFFFF;
-        border-radius: 7%;  
-        height: 6rem; 
-        align-content: center; 
+        border-radius: 7%;
+        height: 6rem;
+        align-content: center;
         margin-inline: 24vw;
     }
 }
@@ -164,13 +169,13 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     font-size: 1.5rem;
     color: #E34E30;
     font-family: 'Aleo';
-    @media (max-width: 800px) {        
+
+    @media (max-width: 800px) {
         padding: 3rem 0 0;
     }
 }
 
 .challenges-button {
-    
     padding: 0;
     margin: 0;
     border: none;
@@ -178,7 +183,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     text-align: left;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    dispy: flex;
+    display: flex;
     flex-direction: row;
     width: fit-content;
     font-family: 'Inter';
@@ -219,7 +224,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     flex-direction: column;
 
     @media (max-width: 800px) {
-        display: flex;        
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-end;
@@ -229,6 +234,11 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 .toggle-size {
     transform: scale(0.8);
     transform-origin: center;
+}
+
+.image-container {
+    display: flex;
+
 }
 
 .button-text {

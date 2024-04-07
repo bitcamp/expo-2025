@@ -21,7 +21,6 @@
 <script>
 import { inject, watchEffect } from "vue";
 import ProjectTeamInformation from "./ProjectTeamInformation.vue";
-import JudgingRow from "./JudgingRow.vue";
 
 
 export default {
@@ -50,7 +49,7 @@ export default {
 .entire-container {
     background-color: #F6EBCC;
     border-radius: 1.5rem;
-    width: calc(20rem + 25vw);
+    width: calc(20rem + 30vw);
     height: 30rem;
 
 
@@ -64,8 +63,8 @@ export default {
     height: fit-content;
     display: flex;
     flex-direction: row;
-    margin-inline: 2rem;
-    padding: 1.5rem 0 0;
+    margin-inline: 1.25rem;
+    padding: 1rem 0 0;
     padding-bottom: 0.5rem;
     border-bottom-color: #FF8F28;
     border-bottom-width: 0.069rem;
@@ -75,11 +74,12 @@ export default {
 .row-header-table {
     font-size: 1.5rem;
     width: 6rem;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
     text-align: center;
     color: #FF8F28;
     font-family: 'Aleo';
     min-width: 100px;
+
     @media screen and (max-width: 800px) {
         margin-right: 0;
     }
@@ -89,6 +89,7 @@ export default {
     font-size: 1.5rem;
     color: #FF8F28;
     font-family: 'Aleo';
+
     @media screen and (max-width: 800px) {
         margin: auto;
     }
@@ -101,6 +102,7 @@ export default {
 .row-header-project::before {
     content: "Project";
 }
+
 @media screen and (max-width: 800px) {
     .row-header-table {
         display: none;
