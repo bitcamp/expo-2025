@@ -7,19 +7,24 @@ from scipy import optimize
 import itertools
 from typing import List, Dict, Tuple, Optional
 import random
+import json
 
 hc = []
 cap = []
 #1 refers to index 0 (bloomberg), 2 refers to index 1 (costar)...
 category_names = []
+team_names = []
 
 def process(csv_file):
-    global category_names
+    global category_names, team_names
     with open(csv_file, 'r', newline='', encoding='utf-8') as file:
         reader = csv.reader(file)
         next(reader)
         #for every each category row in the csv, split by commas to get each category
         for row in reader:
+            team_name = row[0].strip()
+            team_names.append(team_name)
+            
             categories = row[9].split(',')
             append = []
             for category in categories:
@@ -51,11 +56,13 @@ def process(csv_file):
                 hc[i][j] = category_names.index(hc[i][j])
 
 
-csv_file = "backend/bitcamp-2023-projects.csv"
+csv_file = "bitcamp-2023-projects.csv"
 process(csv_file)
-print(hc)
+# print(hc)
 # print(cap)
-print()
+# print()
+
+# print(team_names)
 
 def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
     # extracting sizes
@@ -153,14 +160,32 @@ def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
     return (t, H, J)
 
 t, H, J = abstract_expo_alg(hc, cap, 50)
-print(t)
-print()
-print(H)
-print()
-print(J)
+# print(t)
+# print()
+# print(H)
+# print()
+# print(J)
 
 for i in range(len(H)):
     for j in range(len(H[i])):
         H[i][j] = (category_names[H[i][j][0]], j)
 
-print(H)
+# print(H)
+
+final_cat_names = []
+
+# print(category_names)
+
+for val in category_names:
+    final_cat_names.append(val[val.index("- ") + 2: ] + " - " + val[0:val.index(" -")])
+
+data = {
+    "t": t,
+    "H": H,
+    "J": J,
+    "category_names": final_cat_names,
+    "team_names": team_names
+}
+
+with open('../frontend/public/expo_algorithm_results.json', 'w') as json_file:
+    json.dump(data, json_file, indent=4)
