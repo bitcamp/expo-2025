@@ -1,6 +1,6 @@
 <template>
     <div class="entire-container" v-for="(teamDetail, index) in teamDetails" :key="index">
-        <div class="top-row" v-if="filtered.length > 0 && filtered.includes(teamDetail[1]) && (challengeDetails === '' || teamDetail[2].some(challenge => challengeDetails.includes(challenge[0]))) &&
+        <div class="top-row" v-if="filtered.includes(teamDetail[1]) && (challengeDetails === '' || teamDetail[2].some(challenge => challengeDetails.includes(challenge[0]))) &&
         (projectType === 'all' ||
             (projectType === 'virtual' && teamDetail[0] === 'virtual') ||
             (projectType === 'in-person' && teamDetail[0] !== 'virtual'))">
@@ -44,9 +44,6 @@
                         :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
                 </div>
             </div>
-        </div>
-        <div class="top-row" v-if="filtered.length == 0">
-            no display
         </div>
     </div>
 </template>
