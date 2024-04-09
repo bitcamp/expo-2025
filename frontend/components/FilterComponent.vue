@@ -122,7 +122,7 @@ export default {
 }
 
 .search-box {
-  width: 80%;
+  width: 100%;
   padding: 0.5rem;
   border-radius: 2rem;
   border: 2px solid #ff8e3f;
@@ -131,6 +131,7 @@ export default {
   margin-bottom: 1rem;
   padding-inline: 1rem;
   outline: none;
+  box-sizing: border-box;
 }
 
 // to do make dropdown look nicer
