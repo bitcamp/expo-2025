@@ -179,6 +179,14 @@ final_cat_names = []
 for val in category_names:
     final_cat_names.append(val[val.index("- ") + 2: ] + " - " + val[0:val.index(" -")])
 
+combined = []
+for i in range(len(team_names)):
+    data = [
+        team_names[i],
+        H[i]
+    ]
+    combined.append(data)
+
 data = {
     "t": t,
     "H": H,
