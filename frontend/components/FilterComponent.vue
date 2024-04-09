@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { inject } from "vue";
+import { inject, onMounted } from "vue";
 
 export default {
   name: "FilterComponent",
@@ -48,8 +48,11 @@ export default {
   setup(props) {
     const state = inject("state");
 
+    watch(() => props.teamNames, (newTeamNames) => {
+      state.filteredTeamNames = newTeamNames;
+    }, { immediate: true });
+
     onMounted(() => {
-      state.filteredTeamNames = props.teamNames;
       state.filteredChallengeNames = '';
       state.projectType = 'all';
     });
@@ -63,6 +66,7 @@ export default {
           name.toLowerCase().includes(searchTerm)
         );
       }
+      console.log("after change" + state.filteredTeamNames);
     };
     const searchChallengeNames = (event) => {
       const selectedChallengeIndex = event.target.value;
@@ -82,7 +86,6 @@ export default {
       const selectedProjectTypeIndex = event.target.value;
       const selectedProjectType = selectedProjectTypeIndex;
       state.projectType = selectedProjectType;
-      console.log(state.projectType);
     };
     return { searchTeamNames, searchChallengeNames, searchProjectType };
   },

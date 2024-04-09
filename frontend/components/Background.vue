@@ -5,8 +5,7 @@
         </div>
         <div class="filter-and-competitions-content">
             <div class="filter-component">
-                <FilterComponent :teamNames="['Lakers', 'Clippers', 'Shared Spaces', 'Grizzlies', 'Cavs']"
-                    :challengeNames="['deez', 'doze', 'your', 'everyone']" />
+                <FilterComponent :teamNames="state.teamNames" :challengeNames="state.categoryNames" />
             </div>
             <div class="competitions-component">
                 <TeamContainer />
@@ -17,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, provide } from 'vue';
+import { reactive, provide, onMounted } from 'vue';
 import FilterComponent from "./FilterComponent.vue";
 import TeamContainer from "./TeamContainer.vue";
 
@@ -25,7 +24,20 @@ const state = reactive({
     filteredTeamNames: [],
     filteredChallengeNames: "",
     projectType: "",
+    challenges: [],
+    categoryNames: [],
+    teamNames: [],
 });
+
+const fetchData = async () => {
+    const response = await fetch("/expo_algorithm_results.json");
+    const data = await response.json();
+    state.categoryNames = data.category_names;
+    state.teamNames = data.team_names;
+    console.log("data" + state.teamNames);
+};
+
+onMounted(fetchData);
 
 provide('state', state);
 </script>

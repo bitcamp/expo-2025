@@ -56,7 +56,7 @@ def process(csv_file):
                 hc[i][j] = category_names.index(hc[i][j])
 
 
-csv_file = "backend/bitcamp-2023-projects.csv"
+csv_file = "bitcamp-2023-projects.csv"
 process(csv_file)
 # print(hc)
 # print(cap)
@@ -177,13 +177,26 @@ final_cat_names = []
 # print(category_names)
 
 for val in category_names:
-    final_cat_names.append(val[val.index("- ") + 2: ] + " - " + val[0:val.index(" -")])
+    if (val[val.index("- ") + 2: ] != "Bitcamp"):
+        final_cat_names.append(val[val.index("- ") + 2: ] + " - " + val[0:val.index(" -")])
+    else:
+        final_cat_names.append(val)
 
 combined = []
+
+judge = "Judge"
 for i in range(len(team_names)):
+    H_new = []
+    if (H[i] != []):
+        for j in range(len(H[i])):
+            if (H[i][j][0][H[i][j][0].index("- ") + 2: ] == "Bitcamp"):
+                H_new.append([H[i][j][0][0:H[i][j][0].index(" -")], H[i][j][0][H[i][j][0].index("- ") + 2: ], judge, H[i][j][1]])
+            else:
+                H_new.append([H[i][j][0][H[i][j][0].index("- ") + 2: ], H[i][j][0][0:H[i][j][0].index(" -")], judge, H[i][j][1]])
     data = [
+        "A9",
         team_names[i],
-        H[i]
+        H_new,
     ]
     combined.append(data)
 
@@ -192,8 +205,9 @@ data = {
     "H": H,
     "J": J,
     "category_names": final_cat_names,
-    "team_names": team_names
+    "team_names": team_names,
+    "combined_values": combined
 }
 
-with open('frontend/public/expo_algorithm_results.json', 'w') as json_file:
+with open('../frontend/public/expo_algorithm_results.json', 'w') as json_file:
     json.dump(data, json_file, indent=4)
