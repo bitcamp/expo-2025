@@ -56,7 +56,7 @@ def process(csv_file):
                 hc[i][j] = category_names.index(hc[i][j])
 
 
-csv_file = "bitcamp-2023-projects.csv"
+csv_file = "backend/bitcamp-2023-projects.csv"
 process(csv_file)
 # print(hc)
 # print(cap)
@@ -187,5 +187,5 @@ data = {
     "team_names": team_names
 }
 
-with open('../frontend/public/expo_algorithm_results.json', 'w') as json_file:
+with open('frontend/public/expo_algorithm_results.json', 'w') as json_file:
     json.dump(data, json_file, indent=4)
