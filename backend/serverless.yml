@@ -1,16 +1,14 @@
 org: bitcamp
-app: portal
-service: portal-backend
+app: expo
+service: expo-backend
 
 provider:
   name: aws
   region: us-east-1
-  runtime: nodejs16.x
+  runtime: python3.9
   stage: ${opt:stage, 'dev'}
-  deploymentBucket:
-    name: bitcamp-portal-backend-${self:provider.stage}-layers-deploymentbucket
   environment:
-    SCHEDULE_TABLE: ${file(./config/${self:provider.stage}.json):SCHEDULE_TABLE}
+    EXPO_TABLE: ${file(./config/${self:provider.stage}.json):EXPO_TABLE}
 
   iam:
     role:
@@ -45,7 +43,7 @@ provider:
 # note: python vs js configuration file
 functions:
   getSchedule:
-    handler: schedule.get # GET placeholder for schedule.py
+    handler: schedule.get_schedule # GET placeholder for schedule.py
     description: Pulls all scheduling data
     events:
       - http:
@@ -57,8 +55,8 @@ functions:
     provisionedConcurrency: ${self:custom.provisionedConcurrency.${opt:stage},
     self:custom.provisionedConcurrency.other}
   postSchedule:
-    handler: schedule.post # POST placeholder for schedule.py
-    description: Posts scheduling data
+    handler: schedule.post_schedule # POST placeholder for schedule.py
+    description: Posts all scheduling data
     events:
       - http:
           path: schedule
@@ -75,33 +73,18 @@ resources: # define DynamoDB tables within serverless
     scheduleTable:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: ${file(./config/${self:provider.stage}.json):SCHEDULE_TABLE}
+        TableName: ${file(./config/${self:provider.stage}.json):EXPO_TABLE}
         BillingMode: PAY_PER_REQUEST
         AttributeDefinitions:
-          - AttributeName: email
-            AttributeType: S
-          - AttributeName: referral_id
+          - AttributeName: id
             AttributeType: S
         KeySchema:
-          - AttributeName: email
+          - AttributeName: id
             KeyType: HASH
-        GlobalSecondaryIndexes: # we want to be able to get users by referral_id
-          - IndexName: referralsIndex
-            KeySchema:
-              - AttributeName: referral_id
-                KeyType: HASH
-            Projection:
-              NonKeyAttributes:
-                - name
-              ProjectionType: INCLUDE
       DeletionPolicy: Retain
 
 package:
   exclude: node_modules/**
-
-plugins:
-  - serverless-sentry
-  - serverless-layers
 
 custom:
   provisionedConcurrency:
@@ -111,7 +94,5 @@ custom:
   updateEnabled:
     prd: true
     other: false
-  # sentry: # if using sentry plugin then add to config else remove this
-  #   dsn: ${file(./config/${self:provider.stage}.json):SENTRY_DSN}
-  serverless-layers:
-    dependenciesPath: ./package.json
+  # serverless-layers:
+  #   dependenciesPath: ./package.json
