@@ -168,9 +168,9 @@ t, H, J = abstract_expo_alg(hc, cap, 50)
 
 for i in range(len(H)):
     for j in range(len(H[i])):
-        H[i][j] = (category_names[H[i][j][0]], j)
+        H[i][j] = (category_names[H[i][j][0]], H[i][j][1])
 
-# print(H)
+print(H)
 
 final_cat_names = []
 
@@ -186,6 +186,8 @@ for i in range(len(team_names)):
         H[i]
     ]
     combined.append(data)
+
+# print(combined)
 
 data = {
     "t": t,
