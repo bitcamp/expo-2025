@@ -10,18 +10,6 @@ import random
 import json
 
 
-tables = []
-for i in range(20):
-    letter = chr(ord('A') + i)
-    if letter == 'K' or letter == 'L':
-        tables.extend([letter + str(j) for j in range(1, 9) if j not in (3, 4)])
-    else:
-        tables.extend([letter + str(j) for j in range(1, 9)])
-for i in range(25, 0, -1):
-    tables.insert(0, "Z" + str(i))
-print(tables)
-
-
 hc = []
 cap = []
 #1 refers to index 0 (bloomberg), 2 refers to index 1 (costar)...
@@ -68,13 +56,13 @@ def process(csv_file):
             for j in range(0, len(hc[i])):
                 hc[i][j] = category_names.index(hc[i][j])
 
-csv_file = "backend/bitcamp-2023-projects.csv"
+csv_file = "./bitcamp-2023-projects.csv"
 process(csv_file)
 # print(hc)
 # print(cap)
 # print()
 
-print(category_names)
+# print(category_names)
 cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 2, 4, 4, 1, 4, 4, 1, 4]
 # print(team_names)
 
@@ -173,7 +161,7 @@ def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
     H, J = solve_expo(t)
     return (t, H, J)
 
-t, H, J = abstract_expo_alg(hc, cap, 30)
+t, H, J = abstract_expo_alg(hc, cap, 35)
 # print(t)
 # print()
 # print(H)
@@ -184,7 +172,7 @@ for i in range(len(H)):
     for j in range(len(H[i])):
         H[i][j] = (category_names[H[i][j][0]], H[i][j][1])
 
-print(H)
+# print(H)
 
 final_cat_names = []
 
@@ -198,7 +186,16 @@ for val in category_names:
 
 combined = []
 
+tables = []
+for i in range(20):
+    letter = chr(ord('A') + i)
+    if letter == 'K' or letter == 'L':
+        tables.extend([letter + str(j) for j in range(1, 13) if j not in (3, 4, 5)])
+    else:
+        tables.extend([letter + str(j) for j in range(1, 13)])
+
 judge = "Judge"
+max = 0
 for i in range(len(team_names)):
     H_new = []
     if (H[i] != []):
@@ -207,20 +204,18 @@ for i in range(len(team_names)):
                 H_new.append([H[i][j][0][0:H[i][j][0].index(" -")], H[i][j][0][H[i][j][0].index("- ") + 2: ], judge, H[i][j][1]])
             else:
                 H_new.append([H[i][j][0][H[i][j][0].index("- ") + 2: ], H[i][j][0][0:H[i][j][0].index(" -")], judge, H[i][j][1]])
+            
+            if H[i][j][1] > max:
+                max = H[i][j][1]
+    
+    H_new.sort(key=lambda x: x[-1])
     data = [
-        "A9",
+        tables[i],
         team_names[i],
         H_new,
     ]
     combined.append(data)
-
-# print(combined)
-
-two_d_array = [[j for j in range(1, 9)] for i in range(20)]
-two_d_array[10].remove(3)
-two_d_array[10].remove(4)
-two_d_array[11].remove(3)
-two_d_array[11].remove(4)
+print(max)
 
 data = {
     "t": t,
@@ -228,8 +223,9 @@ data = {
     "J": J,
     "category_names": final_cat_names,
     "team_names": team_names,
-    "combined_values": combined
+    "combined_values": combined,
+    "total_times" : max
 }
 
-with open('frontend/public/expo_algorithm_results.json', 'w') as json_file:
+with open('../frontend/public/expo_algorithm_results.json', 'w') as json_file:
     json.dump(data, json_file, indent=4)
