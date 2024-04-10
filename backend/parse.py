@@ -202,6 +202,12 @@ for i in range(len(team_names)):
 
 # print(combined)
 
+two_d_array = [[j for j in range(1, 9)] for i in range(20)]
+two_d_array[10].remove(3)
+two_d_array[10].remove(4)
+two_d_array[11].remove(3)
+two_d_array[11].remove(4)
+
 data = {
     "t": t,
     "H": H,
