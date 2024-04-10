@@ -9,6 +9,16 @@ from typing import List, Dict, Tuple, Optional
 import random
 import json
 
+
+tables = []
+for i in range(20):
+    letter = chr(ord('A') + i)
+    if letter == 'K' or letter == 'L':
+        tables.extend([letter + str(j) for j in range(1, 9) if j not in (3, 4)])
+    else:
+        tables.extend([letter + str(j) for j in range(1, 9)])
+
+
 hc = []
 cap = []
 #1 refers to index 0 (bloomberg), 2 refers to index 1 (costar)...
@@ -55,13 +65,14 @@ def process(csv_file):
             for j in range(0, len(hc[i])):
                 hc[i][j] = category_names.index(hc[i][j])
 
-
-csv_file = "bitcamp-2023-projects.csv"
+csv_file = "backend/bitcamp-2023-projects.csv"
 process(csv_file)
 # print(hc)
 # print(cap)
 # print()
 
+print(category_names)
+cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 2, 4, 4, 1, 4, 4, 1, 4]
 # print(team_names)
 
 def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
@@ -159,7 +170,7 @@ def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
     H, J = solve_expo(t)
     return (t, H, J)
 
-t, H, J = abstract_expo_alg(hc, cap, 50)
+t, H, J = abstract_expo_alg(hc, cap, 30)
 # print(t)
 # print()
 # print(H)
@@ -217,5 +228,5 @@ data = {
     "combined_values": combined
 }
 
-with open('../frontend/public/expo_algorithm_results.json', 'w') as json_file:
+with open('frontend/public/expo_algorithm_results.json', 'w') as json_file:
     json.dump(data, json_file, indent=4)
