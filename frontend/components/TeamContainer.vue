@@ -3,15 +3,11 @@
         <div class="top-row">
             <div class="row-header-table"></div>
             <div class="row-header-project"></div>
+            <div>{{ category_names }}</div>
         </div>
         <div class="content-row">
             <ProjectTeamInformation :filtered="state.filteredTeamNames" :challengeDetails="state.filteredChallengeNames"
-                :projectType="state.projectType" :teamDetails="[['A0', 'Lakers', [['my', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['your', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
-            ['A1', 'Clippers', [['deez', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
-            ['A4', 'Shared Spaces', [['Best Accessibility Hack sponsored by Fidelity', 'Major League Hacking', 'Judge 1', '4:20'], ['doze', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
-            ['virtual', 'Grizzlies', [['deez', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
-            ['virtual', 'Cavs', [['everyone', 'nutz', '69', 'times']]]]" />
-
+                :projectType="state.projectType" :teamDetails="combinedValues" />
         </div>
         <div class="bottom-row">
         </div>
@@ -21,24 +17,27 @@
 <script>
 import { inject, watchEffect } from "vue";
 import ProjectTeamInformation from "./ProjectTeamInformation.vue";
-
-
 export default {
     name: 'TeamContainer',
     setup() {
+        const combinedValues = ref([]);
         const state = inject('state');
 
-        // watchEffect(() => {
-        //     console.log(state.filteredTeamNames);
-        // });
+        const fetchData = async () => {
+            const response = await fetch("/expo_algorithm_results.json");
+            const data = await response.json();
+            combinedValues.value = data.combined_values.filter((entry) => {
+                const title = entry[1];
+                return title !== "Untitled";
+            });
+        };
 
-        // watchEffect(() => {
-        //     if (state.filteredChallengeNames.length > 0) {
-        //         console.log(state.filteredChallengeNames);
-        //     }
-        // });
+        onMounted(() => {
+            fetchData();
+        });
 
-        return { state };
+        return { state, combinedValues };
+
     },
 };
 </script>
