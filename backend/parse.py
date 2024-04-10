@@ -17,6 +17,9 @@ for i in range(20):
         tables.extend([letter + str(j) for j in range(1, 9) if j not in (3, 4)])
     else:
         tables.extend([letter + str(j) for j in range(1, 9)])
+for i in range(25, 0, -1):
+    tables.insert(0, "Z" + str(i))
+print(tables)
 
 
 hc = []
