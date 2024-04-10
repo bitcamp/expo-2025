@@ -6,8 +6,12 @@
         </div>
         <div class="content-row">
             <ProjectTeamInformation :filtered="state.filteredTeamNames" :challengeDetails="state.filteredChallengeNames"
-                :projectType="state.projectType" :teamDetails="[['A0', 'Lakers', [['my', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['your', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
-            ['A1', 'Clippers', [['deez', 'nutz', '69', 'times'], ['doze', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
+            :projectType="state.projectType" :teamDetails="[['A0', 'Lakers',
+            [['Best Use of CockroachDB Serverless', 'Cockroach Labs', '10:30 AM', '10:40 AM'], ['Best Use of Microsoft Cloud for Your Community', 'Major League Hacking', '10:30 AM',
+            '10:55 AM'], ['Best First Time Hack', 'Bitcamp', 'Judge 1', '10:45 AM'], ['Best Bitcamp Hack', 'Bitcamp',
+            'Judge 1', '10:50 AM']]],
+            ['A1', 'Clippers', [['Best Accessibility Hack sponsored by Fidelity', 'Major League Hacking', '10:45 AM', '10:55 AM'], ['Bloomberg Industry Group',
+            'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
             ['A4', 'Shared Spaces', [['Best Accessibility Hack sponsored by Fidelity', 'Major League Hacking', 'Judge 1', '4:20'], ['doze', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
             ['virtual', 'Grizzlies', [['deez', 'nutz', '69', 'times'], ['everyone', 'nutz', '69', 'times']]],
             ['virtual', 'Cavs', [['everyone', 'nutz', '69', 'times']]]]" />
@@ -108,7 +112,7 @@ export default {
         display: none;
     }
 
-    .top-row .row-header-project::before {
+    .row-header-project::before {
         content: "Project Information";
     }
 }

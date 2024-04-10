@@ -48,8 +48,6 @@ export default {
   width: 96%;
   padding-top: 0.6rem;
 
-
-
   .project-description {
     display: flex;
     font-size: 0.75rem;
@@ -79,8 +77,7 @@ export default {
     display: flex;
     font-size: 0.75rem;
     font-weight: 400;
-
-
+    text-align: center;
   }
 }
 

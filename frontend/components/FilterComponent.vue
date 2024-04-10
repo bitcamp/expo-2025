@@ -170,7 +170,7 @@ export default {
 
 @media (max-width: 800px) {
   .search-box {
-    width: calc(45% + 32vw);
+    width: calc(54% + 32vw);
   }
 
   .filter-item {

@@ -124,7 +124,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 
     @media (max-width: 800px) {
         display: inline-block;
-        padding: 4rem 0 0;
+        padding: 3rem 0 0 3vw;
     }
 }
 
@@ -171,7 +171,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     font-family: 'Aleo';
 
     @media (max-width: 800px) {
-        padding: 3rem 0 0;
+        padding: 1.5rem 0.5rem 0;
     }
 }
 
@@ -202,6 +202,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     width: fit-content;
     font-family: 'Inter';
     color: #FF8F28;
+    padding-bottom: 0.3rem;
 }
 
 .challenges-hidden {
@@ -213,6 +214,10 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     flex-direction: column;
     width: 100%;
     font-family: 'Inter';
+
+    @media (max-width: 800px) {
+      padding-top: 1rem;
+    }
 }
 
 .camera-style {
