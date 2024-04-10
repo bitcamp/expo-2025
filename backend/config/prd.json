@@ -1,4 +1,4 @@
 {
   "PLATFORM_BASE_URL": "expo.bit.camp",
-  "SCHEDULE_TABLE": "platform-prd-expo-schedule"
+  "SCHEDULE_TABLE": "expo-prd-schedule"
 }
