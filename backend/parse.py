@@ -15,9 +15,11 @@ cap = []
 #1 refers to index 0 (bloomberg), 2 refers to index 1 (costar)...
 category_names = []
 team_names = []
+links = []
+all_mlh = []
 
 def process(csv_file):
-    global category_names, team_names
+    global category_names, team_names, links
     with open(csv_file, 'r', newline='', encoding='utf-8') as file:
         reader = csv.reader(file)
         next(reader)
@@ -25,9 +27,12 @@ def process(csv_file):
         for row in reader:
             team_name = row[0].strip()
             team_names.append(team_name)
+            link = row[1].strip()
+            links.append(link)
             
             categories = row[9].split(',')
             append = []
+            mlh = []
             for category in categories:
                 if category.strip():
                     #for every category, ignore MLH
@@ -37,7 +42,10 @@ def process(csv_file):
                         #if it isn't in the cap array, add it
                         if category.strip() not in cap:
                             cap.append(category.strip())
+                    else:
+                        mlh.append(category.strip())
             hc.append(append)
+            all_mlh.append(mlh)
         category_names = cap.copy()
         #assume one judging group for each category
         for i in range(0, len(cap)):
@@ -56,7 +64,7 @@ def process(csv_file):
             for j in range(0, len(hc[i])):
                 hc[i][j] = category_names.index(hc[i][j])
 
-csv_file = "./bitcamp-2023-projects.csv"
+csv_file = "backend/bitcamp-2023-projects.csv"
 process(csv_file)
 # print(hc)
 # print(cap)
@@ -209,6 +217,14 @@ for i in range(len(team_names)):
                 max = H[i][j][1]
     
     H_new.sort(key=lambda x: x[-1])
+
+    for category in all_mlh[i]:
+        append = []
+        print(category)
+        print(category.split(" - "))
+        append.append(category.split(" - "))
+        H_new.append(append[0])
+    
     data = [
         tables[i],
         team_names[i],
@@ -217,15 +233,19 @@ for i in range(len(team_names)):
     combined.append(data)
 print(max)
 
+names_links = []
+for i in range(len(team_names)):
+    names_links.append([team_names[i], links[i]])
+
 data = {
     "t": t,
     "H": H,
     "J": J,
     "category_names": final_cat_names,
-    "team_names": team_names,
+    "team_names": names_links,
     "combined_values": combined,
     "total_times" : max
 }
 
-with open('../frontend/public/expo_algorithm_results.json', 'w') as json_file:
+with open('frontend/public/expo_algorithm_results.json', 'w') as json_file:
     json.dump(data, json_file, indent=4)
