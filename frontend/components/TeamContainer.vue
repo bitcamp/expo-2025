@@ -40,11 +40,9 @@ export default {
 
         onMounted(() => {
             fetchData();
-            console.log("initial" + state.filteredTeamNames.length);
         });
 
         watch(() => state.filteredTeamNames, (newValue) => {
-            console.log(newValue.length);
         }, { immediate: true });
 
         return { state, combinedValues };
@@ -152,7 +150,7 @@ export default {
 
 .content-row {
     overflow-x: hidden;
-    overflow-y: auto;
+    // overflow-y: auto;
     max-height: 81%;
 }
 

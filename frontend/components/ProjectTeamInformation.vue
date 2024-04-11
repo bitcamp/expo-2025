@@ -1,7 +1,7 @@
 <template>
     <div class="entire-container">
 
-        <div v-for="(teamDetail, index) in teamDetails" :key="index">
+        <div v-for="(teamDetail, index) in sortedTeamDetails" :key="index">
             <div class="top-row" v-if="filtered.includes(teamDetail[1]) && (challengeDetails === '' || teamDetail[2].some(challenge => challengeDetails.includes(challenge[0]))) &&
             (projectType === 'all' ||
                 (projectType === 'virtual' && teamDetail[0][0] === 'No') ||
@@ -56,6 +56,44 @@
 <script setup lang="ts">
 import { ref, watch, computed, onMounted, onUnmounted } from 'vue';
 
+const props = defineProps({
+    filtered: {
+        type: Array,
+        required: true,
+    },
+    teamDetails: {
+        type: Array,
+        required: true,
+    },
+    challengeDetails: {
+        type: Array,
+        required: true,
+    },
+    projectType: {
+        type: Array,
+        required: true,
+    },
+});
+
+const sortedTeamDetails = computed(() => {
+    if (props.challengeDetails !== "") {
+        // Create a deep copy to avoid mutating original props
+        return [...props.teamDetails].sort((a, b) => {
+            // Find the relevant challenge based on challengeDetails for both teams
+            const aChallenge = a[2].find(challenge => props.challengeDetails.includes(challenge[0]));
+            const bChallenge = b[2].find(challenge => props.challengeDetails.includes(challenge[0]));
+
+            if (!aChallenge || !bChallenge) {
+                return !aChallenge ? 1 : -1;
+            }
+
+            // Sort based on the numeric value of challenge[3]
+            return parseFloat(aChallenge[3]) - parseFloat(bChallenge[3]);
+        });
+    }
+    return props.teamDetails;
+});
+
 const showChallenges = ref<string[]>([]);
 const windowWidth = ref(0);
 
@@ -103,25 +141,6 @@ onMounted(() => {
 
 onUnmounted(() => {
     window.removeEventListener('resize', updateWindowWidth);
-});
-
-const props = defineProps({
-    filtered: {
-        type: Array,
-        required: true,
-    },
-    teamDetails: {
-        type: Array,
-        required: true,
-    },
-    challengeDetails: {
-        type: Array,
-        required: true,
-    },
-    projectType: {
-        type: Array,
-        required: true,
-    },
 });
 
 watch([() => props.filtered, () => props.challengeDetails, () => props.projectType], () => {
