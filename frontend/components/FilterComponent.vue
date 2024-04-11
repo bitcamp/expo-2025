@@ -103,6 +103,7 @@ export default {
   flex-direction: column;
   padding: 1.5rem 1.5rem 3.3rem;
   margin-right: 1rem;
+  overflow-x: hidden;
 
   @media (max-width: 800px) {
     width: calc(2rem + 65vw);
