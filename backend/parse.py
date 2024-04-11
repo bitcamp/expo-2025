@@ -209,6 +209,14 @@ for i in range(20):
 
 judge = "Judge"
 max = 0
+
+tableCounter = 0
+in_person_count = 0
+for i in range(0, len(in_person)):
+    if in_person[i] == "Yes":
+        in_person_count += 1
+in_person_arr = random.sample(range(in_person_count), in_person_count)
+
 for i in range(len(team_names)):
     H_new = []
     if (H[i] != []):
@@ -227,13 +235,21 @@ for i in range(len(team_names)):
         append = []
         append.append(category.split(" - "))
         H_new.append(append[0])
-    
-    data = [
-        tables[i],
-        team_names[i],
-        H_new,
-        in_person[i],
-    ]
+
+
+    if in_person[i] == "Yes":
+        data = [
+            ["Yes", tables[in_person_arr[tableCounter]]],
+            team_names[i],
+            H_new,
+        ]
+        tableCounter += 1
+    else:
+        data = [
+            ["No"],
+            team_names[i],
+            H_new,
+        ]
     combined.append(data)
 print(max)
 
