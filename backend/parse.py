@@ -17,6 +17,7 @@ category_names = []
 team_names = []
 links = []
 all_mlh = []
+in_person = []
 
 def process(csv_file):
     global category_names, team_names, links
@@ -31,6 +32,8 @@ def process(csv_file):
             team_names.append(team_name)
             link = row[1].strip()
             links.append(link)
+
+            in_person.append(row[15].strip())
             
             categories = row[9].split(',')
             append = []
@@ -171,7 +174,7 @@ def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
     H, J = solve_expo(t)
     return (t, H, J)
 
-t, H, J = abstract_expo_alg(hc, cap, 35)
+t, H, J = abstract_expo_alg(hc, cap, 32)
 # print(t)
 # print()
 # print(H)
@@ -210,6 +213,14 @@ for i in range(20):
 
 judge = "Judge"
 max = 0
+
+tableCounter = 0
+in_person_count = 0
+for i in range(0, len(in_person)):
+    if in_person[i] == "Yes":
+        in_person_count += 1
+in_person_arr = random.sample(range(in_person_count), in_person_count)
+
 for i in range(len(team_names)):
     H_new = []
     if (H[i] != []):
@@ -228,12 +239,21 @@ for i in range(len(team_names)):
         append = []
         append.append(category.split(" - "))
         H_new.append(append[0])
-    
-    data = [
-        tables[i],
-        team_names[i],
-        H_new,
-    ]
+
+
+    if in_person[i] == "Yes":
+        data = [
+            ["Yes", tables[in_person_arr[tableCounter]]],
+            team_names[i],
+            H_new,
+        ]
+        tableCounter += 1
+    else:
+        data = [
+            ["No"],
+            team_names[i],
+            H_new,
+        ]
     combined.append(data)
 
 names_links = []
