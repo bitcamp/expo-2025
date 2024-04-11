@@ -48,6 +48,7 @@
             </div>
         </div>
     </div>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -131,6 +132,10 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     background-color: #F6EBCC;
     border-radius: 2rem;
     overflow-x: hidden;
+
+
+
+
 }
 
 .top-row {
@@ -141,11 +146,12 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 
     @media (max-width: 800px) {
         display: inline-block;
-        padding: 4rem 0 0;
+        padding: 3rem 0 0 calc(10vw - 2.5rem);
     }
 }
 
 .project-info-container {
+
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -172,7 +178,6 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     justify-content: center;
 
     @media (max-width: 800px) {
-        margin-right: 0;
         background-color: #FF8F28;
         color: #FFFFFF;
         border-radius: 7%;
@@ -188,7 +193,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     font-family: 'Aleo';
 
     @media (max-width: 800px) {
-        padding: 3rem 0 0;
+        padding: 1.5rem 0.5rem 0;
     }
 }
 
@@ -199,7 +204,6 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     background: none;
     text-align: left;
     padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -219,6 +223,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     width: fit-content;
     font-family: 'Inter';
     color: #FF8F28;
+    padding-bottom: 0.3rem;
 }
 
 .challenges-hidden {
@@ -230,6 +235,10 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     flex-direction: column;
     width: 100%;
     font-family: 'Inter';
+
+    @media (max-width: 800px) {
+        padding-top: 1rem;
+    }
 }
 
 .camera-style {

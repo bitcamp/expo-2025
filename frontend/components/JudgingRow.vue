@@ -2,8 +2,6 @@
   <div class="entry">
     <div class="project-description">
       <div class="category-name">{{ categoryName }}</div>
-      <div class="middle-char"></div>
-      <div>{{ companyName }}</div>
     </div>
     <div class="judging-description" v-if="companyName !== 'Major League Hacking'">
       <div>{{ judgeName }}</div>
@@ -77,15 +75,9 @@ export default {
 
 <style scoped lang="scss">
 .entry {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: nowrap;
   background-color: #f8eccc;
   width: 96%;
-  padding-top: 0.6rem;
-
-
+  padding-top: 1rem;
 
   .project-description {
     display: flex;
@@ -114,6 +106,8 @@ export default {
 
   .judging-description {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
     font-size: 0.75rem;
     font-weight: 400;
   }

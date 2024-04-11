@@ -1,6 +1,9 @@
 <template>
     <div class="entire-container">
-        <div class="top-row">
+        <div class="no-submission-container" v-if="state.filteredTeamNames.length == 0">
+            <div class="no-submission">No Submissions</div>
+        </div>
+        <div v-if="state.filteredTeamNames.length > 0" class="top-row">
             <div class="row-header-table"></div>
             <div class="row-header-project"></div>
             <div>{{ category_names }}</div>
@@ -15,7 +18,7 @@
 </template>
 
 <script>
-import { inject, watchEffect } from "vue";
+import { inject } from "vue";
 import ProjectTeamInformation from "./ProjectTeamInformation.vue";
 export default {
     name: 'TeamContainer',
@@ -43,18 +46,40 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
-
 .entire-container {
     background-color: #F6EBCC;
     border-radius: 1.5rem;
     width: calc(20rem + 30vw);
-    height: 30rem;
-
+    height: 100%;
+    overflow-y: hidden;
 
     @media (max-width: 800px) {
         width: calc(5rem + 65vw);
         margin: 2rem auto;
+    }
+
+    .no-submission-container {
+        height: 100%;
+
+        .no-submission {
+            color: #FFFF;
+            font-family: 'Aleo';
+            align-content: center;
+            text-align: center;
+            font-size: 3rem;
+            margin: 2.5rem 3rem -3rem 3rem;
+            border-radius: 2rem;
+            padding: 5rem;
+            height: 15rem;
+            background-color: #FF8F28;
+
+            @media (max-width: 800px) {
+                font-size: 2em;
+                height: 10rem;
+                margin: 2rem 2rem -2rem 2rem;
+
+            }
+        }
     }
 }
 
@@ -107,13 +132,18 @@ export default {
         display: none;
     }
 
-    .top-row .row-header-project::before {
+    .row-header-project::before {
         content: "Project Information";
     }
 }
 
 .content-row {
+    overflow-x: hidden;
     overflow-y: auto;
     max-height: 81%;
+}
+
+.no-submission-active .row-header-project::before {
+    content: "";
 }
 </style>
