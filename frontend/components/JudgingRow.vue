@@ -5,10 +5,13 @@
       <div class="middle-char"></div>
       <div>{{ companyName }}</div>
     </div>
-    <div class="judging-description">
+    <div class="judging-description" v-if="companyName !== 'Major League Hacking'">
       <div>{{ judgeName }}</div>
       <div class="middle-char">-</div>
-      <div>{{ timing }}</div>
+      <div>{{ newTime }}</div>
+    </div>
+    <div class="judging-description-mlh" v-if="companyName === 'Major League Hacking'">
+      <div>Consult MLH</div>
     </div>
   </div>
 </template>
@@ -34,6 +37,40 @@ export default {
       type: String,
       required: true,
     },
+  },
+  setup(props) {
+    const totalBlocks = ref(0);
+    const newTime = ref(0);
+
+    const fetchData = async () => {
+      const response = await fetch("/expo_algorithm_results.json");
+      const data = await response.json();
+      totalBlocks.value = Number(props.timing) * Math.floor(150 / data.total_times);
+      const baseTime = "10:45";
+      newTime.value = addMinutesToTime(baseTime, totalBlocks.value);
+      const [hours, minutes] = newTime.value.split(":").map(Number);
+      if (Number(hours) < 12) {
+        newTime.value = newTime.value + " AM";
+      }
+      else {
+        newTime.value = newTime.value + " PM";
+      }
+    };
+
+    const addMinutesToTime = (baseTime, minutesToAdd) => {
+      const [hours, minutes] = baseTime.split(":").map(Number);
+      const totalMinutes = hours * 60 + minutes + minutesToAdd;
+      const resultHours = Math.floor(totalMinutes / 60);
+      const resultMinutes = totalMinutes % 60;
+      return `${resultHours}:${resultMinutes.toString().padStart(2, '0')}`;
+    };
+
+    onMounted(() => {
+      fetchData();
+    });
+
+    return { totalBlocks, newTime };
+
   },
 };
 </script>
@@ -79,8 +116,12 @@ export default {
     display: flex;
     font-size: 0.75rem;
     font-weight: 400;
+  }
 
-
+  .judging-description-mlh {
+    display: flex;
+    font-size: 0.75rem;
+    font-weight: 400;
   }
 }
 

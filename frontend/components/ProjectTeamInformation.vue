@@ -2,15 +2,17 @@
     <div class="entire-container" v-for="(teamDetail, index) in teamDetails" :key="index">
         <div class="top-row" v-if="filtered.includes(teamDetail[1]) && (challengeDetails === '' || teamDetail[2].some(challenge => challengeDetails.includes(challenge[0]))) &&
         (projectType === 'all' ||
-            (projectType === 'virtual' && teamDetail[0] === 'virtual') ||
-            (projectType === 'in-person' && teamDetail[0] !== 'virtual'))">
-            <div v-if="teamDetail[0] !== 'virtual'" class="table-header">{{ teamDetail[0] }}</div>
-            <div v-if="teamDetail[0] === 'virtual'" class="table-header">
+            (projectType === 'virtual' && teamDetail[0][0] === 'No') ||
+            (projectType === 'in-person' && teamDetail[0][0] !== 'No'))">
+            <div v-if="teamDetail[0][0] !== 'No'" class="table-header">{{ teamDetail[0][1] }}</div>
+            <div v-if="teamDetail[0][0] === 'No'" class="table-header">
                 <img src="../assets/images/filmCamera.svg" class="camera-style">
             </div>
             <div class="project-info-container">
                 <div class="button-container">
-                    <div class="project-header"> {{ teamDetail[1] }}</div>
+                    <a :href="findTeamUrl(teamDetail[1])" target="_blank" class="team-url-style">
+                        <div class="project-header"> {{ teamDetail[1] }}</div>
+                    </a>
                     <button v-if="windowWidth > 800 && challengeDetails === ''" class="challenges-button"
                         @click="toggleButton(teamDetail[1])">
                         <div class="button-text">
@@ -70,12 +72,27 @@ function toggleButton(name: string) {
     }
 }
 
+var teamURL = ref("");
+
+const fetchData = async () => {
+    const response = await fetch("/expo_algorithm_results.json");
+    const data = await response.json();
+    teamURL = data.team_names;
+    console.log("urls" + teamURL[3][1]);
+};
+
+const findTeamUrl = (teamName: string) => {
+    const match = teamURL.find(team => team[0] === teamName);
+    return match[1];
+};
+
 const updateWindowWidth = () => {
     windowWidth.value = window.innerWidth;
 };
 
 onMounted(() => {
     updateWindowWidth();
+    fetchData();
     window.addEventListener('resize', updateWindowWidth);
     toggleStates.value = props.teamDetails.map(team => showChallenges.value.includes(team[1]));
 });
@@ -238,7 +255,12 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 
 .image-container {
     display: flex;
+}
 
+
+.team-url-style {
+    text-decoration: none;
+    color: inherit;
 }
 
 .button-text {
