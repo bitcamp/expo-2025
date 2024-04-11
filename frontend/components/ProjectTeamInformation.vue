@@ -1,53 +1,55 @@
 <template>
-    <div class="entire-container" v-for="(teamDetail, index) in teamDetails" :key="index">
-        <div class="top-row" v-if="filtered.includes(teamDetail[1]) && (challengeDetails === '' || teamDetail[2].some(challenge => challengeDetails.includes(challenge[0]))) &&
-        (projectType === 'all' ||
-            (projectType === 'virtual' && teamDetail[0][0] === 'No') ||
-            (projectType === 'in-person' && teamDetail[0][0] !== 'No'))">
-            <div v-if="teamDetail[0][0] !== 'No'" class="table-header">{{ teamDetail[0][1] }}</div>
-            <div v-if="teamDetail[0][0] === 'No'" class="table-header">
-                <img src="../assets/images/filmCamera.svg" class="camera-style">
-            </div>
-            <div class="project-info-container">
-                <div class="button-container">
-                    <a :href="findTeamUrl(teamDetail[1])" target="_blank" class="team-url-style">
-                        <div class="project-header"> {{ teamDetail[1] }}</div>
-                    </a>
-                    <button v-if="windowWidth > 800 && challengeDetails === ''" class="challenges-button"
-                        @click="toggleButton(teamDetail[1])">
-                        <div class="button-text">
-                            show challenges
-                        </div>
-                        <div class="image-container">
-                            <img src="../assets/images/openChallengesArrow.svg" class="arrow-image-small"
+    <div class="entire-container">
+
+        <div v-for="(teamDetail, index) in teamDetails" :key="index">
+            <div class="top-row" v-if="filtered.includes(teamDetail[1]) && (challengeDetails === '' || teamDetail[2].some(challenge => challengeDetails.includes(challenge[0]))) &&
+            (projectType === 'all' ||
+                (projectType === 'virtual' && teamDetail[0][0] === 'No') ||
+                (projectType === 'in-person' && teamDetail[0][0] !== 'No'))">
+                <div v-if="teamDetail[0][0] !== 'No'" class="table-header">{{ teamDetail[0][1] }}</div>
+                <div v-if="teamDetail[0][0] === 'No'" class="table-header">
+                    <img src="../assets/images/filmCamera.svg" class="camera-style">
+                </div>
+                <div class="project-info-container">
+                    <div class="button-container">
+                        <a :href="findTeamUrl(teamDetail[1])" target="_blank" class="team-url-style">
+                            <div class="project-header"> {{ teamDetail[1] }}</div>
+                        </a>
+                        <button v-if="windowWidth > 800 && challengeDetails === ''" class="challenges-button"
+                            @click="toggleButton(teamDetail[1])">
+                            <div class="button-text">
+                                show challenges
+                            </div>
+                            <div class="image-container">
+                                <img src="../assets/images/openChallengesArrow.svg" class="arrow-image-small"
+                                    :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
+                                    alt="Bitcamp sign" />
+                            </div>
+
+                        </button>
+                        <button v-if="windowWidth < 800 && challengeDetails === ''" class="challenges-button-large"
+                            @click="toggleButton(teamDetail[1])">
+                            <img src="../assets/images/openChallengesArrowLarge.svg" class="arrow-image-large"
                                 :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
                                 alt="Bitcamp sign" />
-                        </div>
 
-                    </button>
-                    <button v-if="windowWidth < 800 && challengeDetails === ''" class="challenges-button-large"
-                        @click="toggleButton(teamDetail[1])">
-                        <img src="../assets/images/openChallengesArrowLarge.svg" class="arrow-image-large"
-                            :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
-                            alt="Bitcamp sign" />
-
-                    </button>
-                </div>
-                <div v-if="challengeDetails === ''"
-                    :class="{ 'challenges-hidden': !showChallenges.includes(teamDetail[1]), 'challenges-shown': showChallenges.includes(teamDetail[1]) }">
-                    <JudgingRow v-for="(challenge, challengeIndex) in teamDetail[2]"
-                        :key="`challenge-${index}-${challengeIndex}`" :categoryName="challenge[0]"
-                        :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
-                </div>
-                <div v-if="challengeDetails !== ''" class="challenges-shown">
-                    <JudgingRow
-                        v-for="(challenge, challengeIndex) in teamDetail[2].filter(challenge => challengeDetails.includes(challenge[0]))"
-                        :key="`challenge-${index}-${challengeIndex}`" :categoryName="challenge[0]"
-                        :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
+                        </button>
+                    </div>
+                    <div v-if="challengeDetails === ''"
+                        :class="{ 'challenges-hidden': !showChallenges.includes(teamDetail[1]), 'challenges-shown': showChallenges.includes(teamDetail[1]) }">
+                        <JudgingRow v-for="(challenge, challengeIndex) in teamDetail[2]"
+                            :key="`challenge-${index}-${challengeIndex}`" :categoryName="challenge[0]"
+                            :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
+                    </div>
+                    <div v-if="challengeDetails !== ''" class="challenges-shown">
+                        <JudgingRow
+                            v-for="(challenge, challengeIndex) in teamDetail[2].filter(challenge => challengeDetails.includes(challenge[0]))"
+                            :key="`challenge-${index}-${challengeIndex}`" :categoryName="challenge[0]"
+                            :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
     </div>
 </template>
 
@@ -132,10 +134,6 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     background-color: #F6EBCC;
     border-radius: 2rem;
     overflow-x: hidden;
-
-
-
-
 }
 
 .top-row {
