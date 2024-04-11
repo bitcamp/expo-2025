@@ -1,17 +1,20 @@
 <template>
     <div class="entire-container">
-        <div class="no-submission-container" v-if="state.filteredTeamNames.length == 0">
+        <div class="no-submission-container" v-if="state.filteredTeamNames.length === 0">
             <div class="no-submission">No Submissions</div>
         </div>
-        <div v-if="state.filteredTeamNames.length > 0" class="top-row">
+        <!-- <div v-if="state.filteredTeamNames.length !== 0"> -->
+        <div class="top-row" v-if="state.filteredTeamNames.length > 0">
             <div class="row-header-table"></div>
             <div class="row-header-project"></div>
             <div>{{ category_names }}</div>
         </div>
-        <div class="content-row">
+        <!-- <div class="content-row" v-if="state.filteredTeamNames.length > 0"> -->
+        <div class="content-row" :class="{ 'content-row-hidden': state.filteredTeamNames.length === 0 }">
             <ProjectTeamInformation :filtered="state.filteredTeamNames" :challengeDetails="state.filteredChallengeNames"
                 :projectType="state.projectType" :teamDetails="combinedValues" />
         </div>
+        <!-- </div> -->
         <div class="bottom-row">
         </div>
     </div>
@@ -37,7 +40,12 @@ export default {
 
         onMounted(() => {
             fetchData();
+            console.log("initial" + state.filteredTeamNames.length);
         });
+
+        watch(() => state.filteredTeamNames, (newValue) => {
+            console.log(newValue.length);
+        }, { immediate: true });
 
         return { state, combinedValues };
 
@@ -50,8 +58,7 @@ export default {
     background-color: #F6EBCC;
     border-radius: 1.5rem;
     width: calc(20rem + 30vw);
-    height: 100%;
-    overflow-y: hidden;
+    height: 30rem;
 
     @media (max-width: 800px) {
         width: calc(5rem + 65vw);
@@ -60,6 +67,11 @@ export default {
 
     .no-submission-container {
         height: 100%;
+        width: 100%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
 
         .no-submission {
             color: #FFFF;
@@ -67,16 +79,17 @@ export default {
             align-content: center;
             text-align: center;
             font-size: 3rem;
-            margin: 2.5rem 3rem -3rem 3rem;
-            border-radius: 2rem;
+            border-radius: 1.5rem;
             padding: 5rem;
             height: 15rem;
+            width: calc(4rem + 30vw);
             background-color: #FF8F28;
 
             @media (max-width: 800px) {
                 font-size: 2em;
-                height: 10rem;
-                margin: 2rem 2rem -2rem 2rem;
+                height: calc(4rem + 30vw);
+                width: 44vw;
+                // margin: 2rem 2rem -2rem 2rem;
 
             }
         }
@@ -141,6 +154,10 @@ export default {
     overflow-x: hidden;
     overflow-y: auto;
     max-height: 81%;
+}
+
+.content-row-hidden {
+    height: 0%;
 }
 
 .no-submission-active .row-header-project::before {

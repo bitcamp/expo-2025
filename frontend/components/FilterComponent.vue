@@ -66,7 +66,6 @@ export default {
           name.toLowerCase().includes(searchTerm)
         );
       }
-      console.log("after change" + state.filteredTeamNames);
     };
     const searchChallengeNames = (event) => {
       const selectedChallengeIndex = event.target.value;

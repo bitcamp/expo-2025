@@ -2,13 +2,18 @@
   <div class="entry">
     <div class="project-description">
       <div class="category-name">{{ categoryName }}</div>
+      <!-- <div class="middle-char"></div> -->
     </div>
     <div class="judging-description" v-if="companyName !== 'Major League Hacking'">
-      <div>{{ judgeName }}</div>
-      <div class="middle-char">-</div>
-      <div>{{ newTime }}</div>
+      <div>{{ companyName }}</div>
+      <div class="judging-description-inner">
+        <div>{{ judgeName }}</div>
+        <div class="middle-char">-</div>
+        <div>{{ newTime }}</div>
+      </div>
     </div>
     <div class="judging-description-mlh" v-if="companyName === 'Major League Hacking'">
+      <div>{{ companyName }}</div>
       <div>Consult MLH</div>
     </div>
   </div>
@@ -78,6 +83,9 @@ export default {
   background-color: #f8eccc;
   width: 96%;
   padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .project-description {
     display: flex;
@@ -112,10 +120,16 @@ export default {
     font-weight: 400;
   }
 
+  .judging-description-inner {
+    display: flex;
+    flex-direction: row;
+  }
+
   .judging-description-mlh {
     display: flex;
     font-size: 0.75rem;
     font-weight: 400;
+    justify-content: space-between;
   }
 }
 

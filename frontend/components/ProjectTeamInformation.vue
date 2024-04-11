@@ -81,12 +81,13 @@ const fetchData = async () => {
     const response = await fetch("/expo_algorithm_results.json");
     const data = await response.json();
     teamURL = data.team_names;
-    console.log("urls" + teamURL[3][1]);
 };
 
 const findTeamUrl = (teamName: string) => {
-    const match = teamURL.find(team => team[0] === teamName);
-    return match[1];
+    if (teamName != "") {
+        const match = teamURL.find(team => team[0] === teamName);
+        return match[1];
+    }
 };
 
 const updateWindowWidth = () => {
