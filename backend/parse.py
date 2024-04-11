@@ -25,6 +25,8 @@ def process(csv_file):
         next(reader)
         #for every each category row in the csv, split by commas to get each category
         for row in reader:
+            if (row[2].strip() == "Draft"):
+                continue
             team_name = row[0].strip()
             team_names.append(team_name)
             link = row[1].strip()
@@ -220,8 +222,6 @@ for i in range(len(team_names)):
 
     for category in all_mlh[i]:
         append = []
-        print(category)
-        print(category.split(" - "))
         append.append(category.split(" - "))
         H_new.append(append[0])
     
