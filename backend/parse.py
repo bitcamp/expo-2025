@@ -66,7 +66,7 @@ def process(csv_file):
             for j in range(0, len(hc[i])):
                 hc[i][j] = category_names.index(hc[i][j])
 
-csv_file = "backend/bitcamp-2023-projects.csv"
+csv_file = "./bitcamp-2023-projects.csv"
 process(csv_file)
 # print(hc)
 # print(cap)
@@ -193,6 +193,10 @@ for val in category_names:
         final_cat_names.append(val[val.index("- ") + 2: ] + " - " + val[0:val.index(" -")])
     else:
         final_cat_names.append(val)
+        
+mlh_challenges = list(set([item for sublist in all_mlh for item in sublist]))
+final_cat_names = final_cat_names + mlh_challenges
+print(final_cat_names)
 
 combined = []
 
@@ -231,7 +235,6 @@ for i in range(len(team_names)):
         H_new,
     ]
     combined.append(data)
-print(max)
 
 names_links = []
 for i in range(len(team_names)):
@@ -247,5 +250,5 @@ data = {
     "total_times" : max
 }
 
-with open('frontend/public/expo_algorithm_results.json', 'w') as json_file:
+with open('../frontend/public/expo_algorithm_results.json', 'w') as json_file:
     json.dump(data, json_file, indent=4)
