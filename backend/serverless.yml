@@ -52,8 +52,7 @@ functions:
           cors: true
     memorySize: 256
     timeout: 15
-    provisionedConcurrency: ${self:custom.provisionedConcurrency.${opt:stage},
-    self:custom.provisionedConcurrency.other}
+    provisionedConcurrency: ${self:custom.provisionedConcurrency.${opt:stage}, self:custom.provisionedConcurrency.other}
   postSchedule:
     handler: schedule.post_schedule # POST placeholder for schedule.py
     description: Posts all scheduling data
@@ -64,8 +63,7 @@ functions:
           cors: true
     memorySize: 256
     timeout: 15
-    provisionedConcurrency: ${self:custom.provisionedConcurrency.${opt:stage},
-    self:custom.provisionedConcurrency.other}
+    provisionedConcurrency: ${self:custom.provisionedConcurrency.${opt:stage}, self:custom.provisionedConcurrency.other}
 
 # portal stuff
 resources: # define DynamoDB tables within serverless
