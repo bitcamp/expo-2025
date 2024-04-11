@@ -7,7 +7,7 @@
         <div class="content-row">
             <ProjectTeamInformation :filtered="state.filteredTeamNames" :challengeDetails="state.filteredChallengeNames"
             :projectType="state.projectType" :teamDetails="[['A0', 'Lakers',
-            [['Best Use of CockroachDB Serverless', 'Cockroach Labs', '10:30 AM', '10:40 AM'], ['Best Use of Microsoft Cloud for Your Community', 'Major League Hacking', '10:30 AM',
+            [['Best Use of CockroachDB Serverless', 'Cockroach Labs', 'Judge 1', '10:40 AM'], ['Best Use of Microsoft Cloud for Your Community', 'Major League Hacking', 'Judge 1',
             '10:55 AM'], ['Best First Time Hack', 'Bitcamp', 'Judge 1', '10:45 AM'], ['Best Bitcamp Hack', 'Bitcamp',
             'Judge 1', '10:50 AM']]],
             ['A1', 'Clippers', [['Best Accessibility Hack sponsored by Fidelity', 'Major League Hacking', '10:45 AM', '10:55 AM'], ['Bloomberg Industry Group',

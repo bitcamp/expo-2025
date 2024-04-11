@@ -124,7 +124,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 
     @media (max-width: 800px) {
         display: inline-block;
-        padding: 3rem 0 0 3vw;
+        padding: 3rem 0 0 calc(10vw - 2.5rem);
     }
 }
 
@@ -155,7 +155,6 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     justify-content: center;
 
     @media (max-width: 800px) {
-        margin-right: 0;
         background-color: #FF8F28;
         color: #FFFFFF;
         border-radius: 7%;
@@ -182,7 +181,6 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     background: none;
     text-align: left;
     padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
     display: flex;
     flex-direction: row;
     width: fit-content;
