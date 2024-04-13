@@ -86,10 +86,11 @@ export default {
         background-color: #FF8F28;
         margin: auto; 
 
-        @media (max-width: 800px) {
-            width: calc(4rem + 28vw);
-            font-size: 2rem;
-            padding: 3rem;
+            @media (max-width: 800px) {
+                font-size: 2em;
+                height: calc(4rem + 30vw);
+                width: 44vw;
+            }
         }
     }
 }
@@ -155,12 +156,15 @@ export default {
 
 .content-row {
     overflow-x: hidden;
-    // overflow-y: auto;
+    overflow-y: auto;
     max-height: 81%;
+    // height: 30rem;
 }
 
 .content-row-hidden {
-    height: 0%;
+    display: none;
+    height: 0;
+    overflow: hidden;
 }
 
 .no-submission-active .row-header-project::before {
