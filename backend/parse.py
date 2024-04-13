@@ -52,6 +52,7 @@ def process(csv_file):
             hc.append(append)
             all_mlh.append(mlh)
         category_names = cap.copy()
+        print(len(category_names))
         #assume one judging group for each category
         for i in range(0, len(cap)):
             cap[i] = 1
@@ -76,8 +77,8 @@ process(csv_file)
 # print()
 
 # print(category_names)
-cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 2, 4, 4, 1, 4, 4, 1, 4]
-# print(team_names)
+cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 2, 4, 4, 1, 4, 4, 1, 4, 1]
+print(len(cap))
 
 def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
     # extracting sizes
@@ -199,7 +200,6 @@ for val in category_names:
         
 mlh_challenges = list(set([item for sublist in all_mlh for item in sublist]))
 final_cat_names = final_cat_names + mlh_challenges
-print(final_cat_names)
 
 combined = []
 
