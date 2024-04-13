@@ -52,7 +52,6 @@ def process(csv_file):
             hc.append(append)
             all_mlh.append(mlh)
         category_names = cap.copy()
-        print(len(category_names))
         #assume one judging group for each category
         for i in range(0, len(cap)):
             cap[i] = 1
@@ -76,9 +75,9 @@ process(csv_file)
 # print(cap)
 # print()
 
-for val in category_names:
-    print(val)
-cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 2, 4, 4, 1, 4, 4, 1, 4, 1]
+
+cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 4, 2, 4, 1, 4, 4, 1, 4, 1]
+
 # print(len(cap))
 
 def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
@@ -260,6 +259,42 @@ for i in range(len(team_names)):
 names_links = []
 for i in range(len(team_names)):
     names_links.append([team_names[i], links[i]])
+    
+repeats = {}    
+
+for value in combined:
+    if value != []:
+        for challenge in value[2]:
+            if challenge[1] != "Major League Hacking":
+                challenge_key = str(challenge[0]) + " - " + str(challenge[1])
+                if challenge_key not in repeats:
+                    repeats[challenge_key] = [[challenge[3]]]
+                else:
+                    repeats[challenge_key].append([challenge[3]])
+
+for key, lists in repeats.items():
+    repeats[key] = sorted(lists, key=lambda x: x[0])
+
+for key in repeats:
+    curr = final_cat_names.index(key)
+    judgeCount = cap[curr]
+    inc = 0
+    for lst in repeats[key]:
+        lst.append((inc % judgeCount) + 1)
+        inc+=1
+
+for value in combined:
+    if value != []:
+        for challenge in value[2]:
+            if challenge[1] != "Major League Hacking":
+                challenge_key = str(challenge[0]) + " - " + str(challenge[1])
+                for idx, inner_list in enumerate(repeats[challenge_key]):
+                    if inner_list[0] == challenge[3]:
+                        challenge[2] = challenge[2] + " " + str(inner_list[1])
+                        del repeats[challenge_key][idx]
+                        break
+
+print(combined)
 
 data = {
     "t": t,

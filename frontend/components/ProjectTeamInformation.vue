@@ -154,7 +154,6 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     background-color: #F6EBCC;
     border-radius: 2rem;
     overflow-x: hidden;
-    overflow-y: auto;
 }
 
 .top-row {
