@@ -87,8 +87,6 @@ export default {
                 font-size: 2em;
                 height: calc(4rem + 30vw);
                 width: 44vw;
-                // margin: 2rem 2rem -2rem 2rem;
-
             }
         }
     }
@@ -150,12 +148,15 @@ export default {
 
 .content-row {
     overflow-x: hidden;
-    // overflow-y: auto;
+    overflow-y: auto;
     max-height: 81%;
+    // height: 30rem;
 }
 
 .content-row-hidden {
-    height: 0%;
+    display: none;
+    height: 0;
+    overflow: hidden;
 }
 
 .no-submission-active .row-header-project::before {

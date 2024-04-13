@@ -76,9 +76,10 @@ process(csv_file)
 # print(cap)
 # print()
 
-# print(category_names)
+for val in category_names:
+    print(val)
 cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 2, 4, 4, 1, 4, 4, 1, 4, 1]
-print(len(cap))
+# print(len(cap))
 
 def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
     # extracting sizes
