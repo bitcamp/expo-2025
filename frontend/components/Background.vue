@@ -60,7 +60,7 @@ provide('state', state);
     left: 0;
     width: 100%;
     height: 100vh;
-    padding: 4rem 0 7rem;
+    padding: 4rem 0 6.5rem;
 
     @media (max-width: 800px) {
         padding: 3rem 0 5rem;
