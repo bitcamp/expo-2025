@@ -60,38 +60,43 @@ export default {
 
     @media (max-width: 800px) {
         width: calc(5rem + 65vw);
+        height: 25rem;
         margin: 2rem auto;
     }
 
     .no-submission-container {
-        height: 100%;
-        width: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .no-submission {
+        color: #FFFF;
+        font-family: 'Aleo';
         display: flex;
-        align-content: center;
+        align-items: center;
         justify-content: center;
-        flex-wrap: wrap;
+        text-align: center;
+        font-size: 3rem;
+        border-radius: 1.5rem;
+        padding: 5rem;
+        height: calc(4rem + 17.5vh);
+        width: calc(4rem + 30vw);
+        background-color: #FF8F28;
+        margin: auto; 
 
-        .no-submission {
-            color: #FFFF;
-            font-family: 'Aleo';
-            align-content: center;
-            text-align: center;
-            font-size: 3rem;
-            border-radius: 1.5rem;
-            padding: 5rem;
-            height: 15rem;
-            width: calc(4rem + 30vw);
-            background-color: #FF8F28;
-
-            @media (max-width: 800px) {
-                font-size: 2em;
-                height: calc(4rem + 30vw);
-                width: 44vw;
-                // margin: 2rem 2rem -2rem 2rem;
-
-            }
+        @media (max-width: 800px) {
+            width: calc(4rem + 28vw);
+            font-size: 2rem;
+            padding: 3rem;
         }
     }
+}
+
+
+
+
 }
 
 .top-row {
