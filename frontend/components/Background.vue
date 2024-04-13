@@ -59,12 +59,12 @@ provide('state', state);
     top: 0;
     left: 0;
     width: 100%;
-    height: 110vh;
+    height: 100vh;
     padding: 4rem 0 7rem;
 
     @media (max-width: 800px) {
-        padding: 3rem 0 7rem;
-        height: 175vh;
+        padding: 3rem 0 5rem;
+        height: 135vh;
     }
 }
 
