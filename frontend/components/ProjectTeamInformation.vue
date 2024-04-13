@@ -153,7 +153,6 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 .entire-container {
     background-color: #F6EBCC;
     border-radius: 2rem;
-    overflow-x: hidden;
 }
 
 .top-row {
