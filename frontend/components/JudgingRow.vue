@@ -48,8 +48,8 @@ export default {
     const fetchData = async () => {
       const response = await fetch("/expo_algorithm_results.json");
       const data = await response.json();
-      totalBlocks.value = Number(props.timing) * Math.floor(150 / data.total_times);
-      const baseTime = "10:45";
+      totalBlocks.value = Number(props.timing) * Math.floor(180 / data.total_times);
+      const baseTime = "10:15";
       newTime.value = addMinutesToTime(baseTime, totalBlocks.value);
       const [hours, minutes] = newTime.value.split(":").map(Number);
       if (Number(hours) < 12) {

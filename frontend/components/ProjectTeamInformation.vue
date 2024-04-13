@@ -25,7 +25,6 @@
                                     :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
                                     alt="Bitcamp sign" />
                             </div>
-
                         </button>
                         <button v-if="windowWidth < 800 && challengeDetails === ''" class="challenges-button-large"
                             @click="toggleButton(teamDetail[1])">
@@ -34,6 +33,10 @@
                                 alt="Bitcamp sign" />
 
                         </button>
+                    </div>
+                    <div v-if="teamDetail[2].length === 0"
+                        :class="{ 'no-challenges-hidden': !showChallenges.includes(teamDetail[1]), 'no-challenges-shown': showChallenges.includes(teamDetail[1]) }">
+                        No Challenges Selected
                     </div>
                     <div v-if="challengeDetails === ''"
                         :class="{ 'challenges-hidden': !showChallenges.includes(teamDetail[1]), 'challenges-shown': showChallenges.includes(teamDetail[1]) }">
@@ -247,6 +250,10 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     display: none;
 }
 
+.no-challenges-hidden {
+    display: none;
+}
+
 .challenges-shown {
     display: flex;
     flex-direction: column;
@@ -255,6 +262,20 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 
     @media (max-width: 800px) {
         padding-top: 1rem;
+    }
+}
+
+.no-challenges-shown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Inter';
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding-top: 1rem;
+
+    @media (max-width: 800px) {
+        text-align: center;
     }
 }
 
