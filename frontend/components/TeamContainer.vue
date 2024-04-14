@@ -1,16 +1,16 @@
 <template>
     <div class="entire-container">
-        <div class="no-submission-container" v-if="state.filteredTeamNames.length === 0">
+        <div class="no-submission-container" v-if="state.filteredTeamNames.length === 0 || filteredCombinedValues.length === 0">
             <div class="no-submission">No Submissions</div>
         </div>
         <!-- <div v-if="state.filteredTeamNames.length !== 0"> -->
-        <div class="top-row" v-if="state.filteredTeamNames.length > 0">
+        <div class="top-row" v-if="state.filteredTeamNames.length > 0 && filteredCombinedValues.length > 0">
             <div class="row-header-table"></div>
             <div class="row-header-project"></div>
             <div>{{ category_names }}</div>
         </div>
         <!-- <div class="content-row" v-if="state.filteredTeamNames.length > 0"> -->
-        <div class="content-row" :class="{ 'content-row-hidden': state.filteredTeamNames.length === 0 }">
+        <div class="content-row" :class="{ 'content-row-hidden': state.filteredTeamNames.length === 0 || filteredCombinedValues.length === 0 }">
             <ProjectTeamInformation :filtered="state.filteredTeamNames" :challengeDetails="state.filteredChallengeNames"
                 :projectType="state.projectType" :teamDetails="combinedValues" />
         </div>
@@ -21,14 +21,34 @@
 </template>
 
 <script>
-import { inject } from "vue";
+import { inject, computed } from "vue";
 import ProjectTeamInformation from "./ProjectTeamInformation.vue";
 export default {
     name: 'TeamContainer',
     setup() {
         const combinedValues = ref([]);
         const state = inject('state');
+        const filteredCombinedValues = computed(() => {
+            return combinedValues.value.filter(team => {
+                let condition;
+                if (state.projectType === 'in-person') {
+                    condition = team[0][0] === 'Yes';
+                } else if (state.projectType === 'virtual') {
+                    condition = team[0][0] === 'No';
+                } else {
+                    condition = team[0][0] === 'Yes' || team[0][0] === 'No';
+                }
 
+                let challengeCondition = true;
+                if (state.filteredChallengeNames != '') {
+                    challengeCondition = team[2].some(challenge => challenge[0] === state.filteredChallengeNames.split(' - ')[0]);
+                }
+
+                return condition && challengeCondition;
+            }).map(team => team[1]);
+        });
+
+        
         const fetchData = async () => {
             const response = await fetch("/expo_algorithm_results.json");
             const data = await response.json();
@@ -45,7 +65,7 @@ export default {
         watch(() => state.filteredTeamNames, (newValue) => {
         }, { immediate: true });
 
-        return { state, combinedValues };
+        return { state, combinedValues, filteredCombinedValues };
 
     },
 };
@@ -98,7 +118,6 @@ export default {
 
 
 
-}
 
 .top-row {
     height: fit-content;
