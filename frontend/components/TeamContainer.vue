@@ -44,9 +44,12 @@ export default {
                     challengeCondition = team[2].some(challenge => challenge[0] === state.filteredChallengeNames.split(' - ')[0]);
                 }
 
-                return condition && challengeCondition;
+                let teamNameCondition = state.filteredTeamNames.includes(team[1]);
+
+                return condition && challengeCondition && teamNameCondition;
             }).map(team => team[1]);
         });
+
 
         
         const fetchData = async () => {
