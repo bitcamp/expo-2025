@@ -103,24 +103,21 @@ export default {
         text-align: center;
         font-size: 3rem;
         border-radius: 1.5rem;
-        padding: 5rem;
-        height: calc(4rem + 17.5vh);
-        width: calc(4rem + 30vw);
+        padding: 10rem;
+        max-width: 13rem;
+        max-height: 5rem;
         background-color: #FF8F28;
-        margin: auto; 
+        margin: 2rem 0; 
 
             @media (max-width: 800px) {
                 font-size: 2em;
-                height: calc(4rem + 30vw);
-                width: 44vw;
+                height: 50%;
+                width: 50%;
+                padding: 8rem calc(2rem + 9vw);
             }
         }
     }
 }
-
-
-
-
 
 .top-row {
     height: fit-content;
