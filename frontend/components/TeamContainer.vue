@@ -100,7 +100,7 @@ export default {
       align-items: center;
       justify-content: center;
       text-align: center;
-      font-size: 3rem;
+      font-size: 2rem;
       border-radius: 1.5rem;
       padding: 10rem;
       background-color: #FF8F28;
@@ -110,11 +110,9 @@ export default {
       width: calc(4rem + 30vw);
 
       @media (max-width: 800px) {
-        font-size: 2em;
-        height: 20%;
-        width: 50%;
-        margin: 2rem 0;
-        padding: 18vh 15vw;
+        font-size: 1.4em;
+        height: calc(4rem + 9.5vh);
+        width: calc(4rem + 20vw);
       }
     }
   }
