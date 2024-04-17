@@ -52,9 +52,6 @@ def process(csv_file):
             hc.append(append)
             all_mlh.append(mlh)
         category_names = cap.copy()
-        #assume one judging group for each category
-        for i in range(0, len(cap)):
-            cap[i] = 1
 
         #check if group signed up for more than three bitcamp categories. if true, remove bitcamp categories until = 3
         for sub_arr in hc:
@@ -76,7 +73,10 @@ process(csv_file)
 # print()
 
 
-cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 4, 2, 4, 1, 4, 4, 1, 4, 1]
+# cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 1]
+cap = [2, 2, 2, 1, 1, 2, 2, 2,           4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+# for val in category_names:
+#     print(val)
 
 # print(len(cap))
 
@@ -175,7 +175,7 @@ def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
     H, J = solve_expo(t)
     return (t, H, J)
 
-t, H, J = abstract_expo_alg(hc, cap, 32)
+t, H, J = abstract_expo_alg(hc, cap, 69)
 # print(t)
 # print()
 # print(H)
@@ -294,7 +294,7 @@ for value in combined:
                         del repeats[challenge_key][idx]
                         break
 
-print(combined)
+# print(combined)
 
 data = {
     "t": t,
