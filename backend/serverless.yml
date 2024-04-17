@@ -1,5 +1,5 @@
 org: bitcamp
-app: expo
+app: 
 service: expo-backend
 
 provider:
@@ -9,6 +9,11 @@ provider:
   stage: ${opt:stage, 'dev'}
   environment:
     EXPO_TABLE: ${file(./config/${self:provider.stage}.json):EXPO_TABLE}
+  apiGateway:
+    restApiId:
+      'Fn::ImportValue': platform-${self:provider.stage}-apigw-restApiId
+    restApiRootResourceId:
+      'Fn::ImportValue': platform-${self:provider.stage}-apigw-rootResourceId
 
   iam:
     role:
@@ -47,7 +52,7 @@ functions:
     description: Pulls all scheduling data
     events:
       - http:
-          path: schedule
+          path: expo/schedule
           method: get
           cors: true
     memorySize: 256
@@ -58,7 +63,7 @@ functions:
     description: Posts all scheduling data
     events:
       - http:
-          path: schedule
+          path: expo/schedule
           method: post
           cors: true
     memorySize: 256
