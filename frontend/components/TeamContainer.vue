@@ -114,7 +114,7 @@ export default {
         height: 20%;
         width: 50%;
         margin: 2rem 0;
-        padding: 8rem calc(2rem + 9vw);
+        padding: 18vh 15vw;
       }
     }
   }
