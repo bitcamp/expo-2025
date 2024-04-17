@@ -104,13 +104,16 @@ export default {
       border-radius: 1.5rem;
       padding: 10rem;
       background-color: #FF8F28;
-      margin: 2rem 0;
-      width: 25vw;
-      height: 20%;
+      margin: auto;
+      padding: 5rem;
+      height: calc(4rem + 17.5vh);
+      width: calc(4rem + 30vw);
 
       @media (max-width: 800px) {
         font-size: 2em;
+        height: 20%;
         width: 50%;
+        margin: 2rem 0;
         padding: 8rem calc(2rem + 9vw);
       }
     }
