@@ -11,7 +11,7 @@ useHead({
         {
         name: 'description',
         content:
-            "Bitcamp's Expo is the thrilling finale to your 36-hour adventure of exploration and creation. Surrounded by mentors and fellow campers, it's your moment to showcase your creativity and passion. Join us by the fire and share your journey!",
+            "Bitcamp's Expo is the finale to your 36-hour adventure of exploration and creation. Surrounded by mentors and fellow campers, it's your moment to showcase your creativity and passion. Join us by the fire and share your journey!",
         },
         {
         property: 'og:title',
@@ -28,7 +28,7 @@ useHead({
         {
         property: 'og:description',
         content:
-            "Bitcamp's Expo is the thrilling finale to your 36-hour adventure of exploration and creation. Surrounded by mentors and fellow campers, it's your moment to showcase your creativity and passion. Join us by the fire and share your journey!",
+            "Bitcamp's Expo is the finale to your 36-hour adventure of exploration and creation. Surrounded by mentors and fellow campers, it's your moment to showcase your creativity and passion. Join us by the fire and share your journey!",
         },
         {
         property: 'og:type',
@@ -49,7 +49,7 @@ useHead({
         {
         property: 'twitter:description',
         content:
-            "Bitcamp's Expo is the thrilling finale to your 36-hour adventure of exploration and creation. Surrounded by mentors and fellow campers, it's your moment to showcase your creativity and passion. Join us by the fire and share your journey!",
+            "Bitcamp's Expo is the finale to your 36-hour adventure of exploration and creation. Surrounded by mentors and fellow campers, it's your moment to showcase your creativity and passion. Join us by the fire and share your journey!",
         },
         {
         name: 'msapplication-TileColor',
