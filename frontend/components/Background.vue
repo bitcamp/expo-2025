@@ -5,8 +5,7 @@
         </div>
         <div class="filter-and-competitions-content">
             <div class="filter-component">
-                <FilterComponent :teamNames="['Lakers', 'Clippers', 'Shared Spaces', 'Grizzlies', 'Cavs']"
-                    :challengeNames="['deez', 'doze', 'your', 'everyone']" />
+                <FilterComponent :teamNames="state.teamNames" :challengeNames="state.categoryNames" />
             </div>
             <div class="competitions-component">
                 <TeamContainer />
@@ -17,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, provide } from 'vue';
+import { reactive, provide, onMounted } from 'vue';
 import FilterComponent from "./FilterComponent.vue";
 import TeamContainer from "./TeamContainer.vue";
 
@@ -25,7 +24,19 @@ const state = reactive({
     filteredTeamNames: [],
     filteredChallengeNames: "",
     projectType: "",
+    challenges: [],
+    categoryNames: [],
+    teamNames: [],
 });
+
+const fetchData = async () => {
+    const response = await fetch("/expo_algorithm_results.json");
+    const data = await response.json();
+    state.categoryNames = data.category_names;
+    state.teamNames = data.team_names.map((team) => team[0]);
+};
+
+onMounted(fetchData);
 
 provide('state', state);
 </script>
@@ -48,12 +59,12 @@ provide('state', state);
     top: 0;
     left: 0;
     width: 100%;
-    height: 110vh;
-    padding: 4rem 0 7rem;
+    height: 100vh;
+    padding: 4rem 0 6.5rem;
 
     @media (max-width: 800px) {
-        padding: 3rem 0 7rem;
-        height: 175vh;
+        padding: 3rem 0 5rem;
+        height: 135vh;
     }
 }
 
