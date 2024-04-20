@@ -307,6 +307,3 @@ data = {
     "combined_values": combined,
     "total_times" : max
 }
-
-with open('../frontend/public/expo_algorithm_results.json', 'w') as json_file:
-    json.dump(data, json_file, indent=4)

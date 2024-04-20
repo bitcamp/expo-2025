@@ -1,11 +1,11 @@
 org: bitcamp
-app: 
+app: platform
 service: expo-backend
 
 provider:
   name: aws
   region: us-east-1
-  runtime: python3.9
+  runtime: nodejs16.x
   stage: ${opt:stage, 'dev'}
   environment:
     EXPO_TABLE: ${file(./config/${self:provider.stage}.json):EXPO_TABLE}
@@ -45,25 +45,24 @@ provider:
           Resource:
             - "arn:aws:s3:::*"
 
-# note: python vs js configuration file
 functions:
   getSchedule:
-    handler: schedule.get_schedule # GET placeholder for schedule.py
+    handler: handler.get_schedule 
     description: Pulls all scheduling data
     events:
       - http:
-          path: expo/schedule
+          path: expo-2024/schedule
           method: get
           cors: true
     memorySize: 256
     timeout: 15
     provisionedConcurrency: ${self:custom.provisionedConcurrency.${opt:stage}, self:custom.provisionedConcurrency.other}
   postSchedule:
-    handler: schedule.post_schedule # POST placeholder for schedule.py
+    handler: handler.post_schedule 
     description: Posts all scheduling data
     events:
       - http:
-          path: expo/schedule
+          path: expo-2024/schedule
           method: post
           cors: true
     memorySize: 256
