@@ -1,47 +1,55 @@
 <template>
-    <div class="entire-container" v-for="(teamDetail, index) in teamDetails" :key="index">
-        <div class="top-row" v-if="filtered.includes(teamDetail[1]) && (challengeDetails === '' || teamDetail[2].some(challenge => challengeDetails.includes(challenge[0]))) &&
-        (projectType === 'all' ||
-            (projectType === 'virtual' && teamDetail[0] === 'virtual') ||
-            (projectType === 'in-person' && teamDetail[0] !== 'virtual'))">
-            <div v-if="teamDetail[0] !== 'virtual'" class="table-header">{{ teamDetail[0] }}</div>
-            <div v-if="teamDetail[0] === 'virtual'" class="table-header">
-                <img src="../assets/images/filmCamera.svg" class="camera-style">
-            </div>
-            <div class="project-info-container">
-                <div class="button-container">
-                    <div class="project-header"> {{ teamDetail[1] }}</div>
-                    <button v-if="windowWidth > 800 && challengeDetails === ''" class="challenges-button"
-                        @click="toggleButton(teamDetail[1])">
-                        <div class="button-text">
-                            show challenges
-                        </div>
-                        <div class="image-container">
-                            <img src="../assets/images/openChallengesArrow.svg" class="arrow-image-small"
+    <div class="entire-container">
+
+        <div v-for="(teamDetail, index) in sortedTeamDetails" :key="index">
+            <div class="top-row" v-if="filtered.includes(teamDetail[1]) && (challengeDetails === '' || teamDetail[2].some(challenge => challengeDetails.includes(challenge[0]))) &&
+            (projectType === 'all' ||
+                (projectType === 'virtual' && teamDetail[0][0] === 'No') ||
+                (projectType === 'in-person' && teamDetail[0][0] !== 'No'))">
+                <div v-if="teamDetail[0][0] !== 'No'" class="table-header">{{ teamDetail[0][1] }}</div>
+                <div v-if="teamDetail[0][0] === 'No'" class="table-header">
+                    <img src="../assets/images/filmCamera.svg" class="camera-style">
+                </div>
+                <div class="project-info-container">
+                    <div class="button-container">
+                        <a :href="teamDetail[3]" target="_blank" class="team-url-style">
+                            <div class="project-header"> {{ teamDetail[1] }}</div>
+                        </a>
+                        <button v-if="windowWidth > 800 && challengeDetails === ''" class="challenges-button"
+                            @click="toggleButton(teamDetail[3])">
+                            <div class="button-text">
+                                show challenges
+                            </div>
+                            <div class="image-container">
+                                <img src="../assets/images/openChallengesArrow.svg" class="arrow-image-small"
+                                    :class="{ 'arrow-right': !showChallenges.includes(teamDetail[3]), 'arrow-down': showChallenges.includes(teamDetail[3]) }"
+                                    alt="Bitcamp sign" />
+                            </div>
+                        </button>
+                        <button v-if="windowWidth < 800 && challengeDetails === ''" class="challenges-button-large"
+                            @click="toggleButton(teamDetail[3])">
+                            <img src="../assets/images/openChallengesArrowLarge.svg" class="arrow-image-large"
                                 :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
                                 alt="Bitcamp sign" />
-                        </div>
 
-                    </button>
-                    <button v-if="windowWidth < 800 && challengeDetails === ''" class="challenges-button-large"
-                        @click="toggleButton(teamDetail[1])">
-                        <img src="../assets/images/openChallengesArrowLarge.svg" class="arrow-image-large"
-                            :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
-                            alt="Bitcamp sign" />
-
-                    </button>
-                </div>
-                <div v-if="challengeDetails === ''"
-                    :class="{ 'challenges-hidden': !showChallenges.includes(teamDetail[1]), 'challenges-shown': showChallenges.includes(teamDetail[1]) }">
-                    <JudgingRow v-for="(challenge, challengeIndex) in teamDetail[2]"
-                        :key="`challenge-${index}-${challengeIndex}`" :categoryName="challenge[0]"
-                        :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
-                </div>
-                <div v-if="challengeDetails !== ''" class="challenges-shown">
-                    <JudgingRow
-                        v-for="(challenge, challengeIndex) in teamDetail[2].filter(challenge => challengeDetails.includes(challenge[0]))"
-                        :key="`challenge-${index}-${challengeIndex}`" :categoryName="challenge[0]"
-                        :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
+                        </button>
+                    </div>
+                    <div v-if="teamDetail[2].length === 0"
+                        :class="{ 'no-challenges-hidden': !showChallenges.includes(teamDetail[3]), 'no-challenges-shown': showChallenges.includes(teamDetail[3]) }">
+                        No Challenges Selected
+                    </div>
+                    <div v-if="challengeDetails === ''"
+                        :class="{ 'challenges-hidden': !showChallenges.includes(teamDetail[3]), 'challenges-shown': showChallenges.includes(teamDetail[3]) }">
+                        <JudgingRow v-for="(challenge, challengeIndex) in teamDetail[2]"
+                            :key="`challenge-${index}-${challengeIndex}`" :categoryName="challenge[0]"
+                            :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
+                    </div>
+                    <div v-if="challengeDetails !== ''" class="challenges-shown">
+                        <JudgingRow
+                            v-for="(challenge, challengeIndex) in teamDetail[2].filter(challenge => challengeDetails.includes(challenge[0]))"
+                            :key="`challenge-${index}-${challengeIndex}`" :categoryName="challenge[0]"
+                            :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -50,39 +58,6 @@
 
 <script setup lang="ts">
 import { ref, watch, computed, onMounted, onUnmounted } from 'vue';
-
-const showChallenges = ref<string[]>([]);
-const windowWidth = ref(0);
-
-const toggleStates = ref([]);
-
-function toggleButton(name: string) {
-    const index = showChallenges.value.indexOf(name);
-    if (index !== -1) {
-        showChallenges.value.splice(index, 1);
-        toggleStates.value[index] = false;
-    } else {
-        showChallenges.value.push(name);
-        const teamIndex = props.teamDetails.findIndex(team => team[1] === name);
-        if (teamIndex !== -1) {
-            toggleStates.value[teamIndex] = true;
-        }
-    }
-}
-
-const updateWindowWidth = () => {
-    windowWidth.value = window.innerWidth;
-};
-
-onMounted(() => {
-    updateWindowWidth();
-    window.addEventListener('resize', updateWindowWidth);
-    toggleStates.value = props.teamDetails.map(team => showChallenges.value.includes(team[1]));
-});
-
-onUnmounted(() => {
-    window.removeEventListener('resize', updateWindowWidth);
-});
 
 const props = defineProps({
     filtered: {
@@ -103,6 +78,80 @@ const props = defineProps({
     },
 });
 
+const sortedTeamDetails = computed(() => {
+    if (props.challengeDetails !== "") {
+        return [...props.teamDetails].sort((a, b) => {
+            const aChallenge = a[2].find(challenge => props.challengeDetails.includes(challenge[0]));
+            const bChallenge = b[2].find(challenge => props.challengeDetails.includes(challenge[0]));
+
+            if (!aChallenge || !bChallenge) {
+                return !aChallenge ? 1 : -1;
+            }
+
+            return parseFloat(aChallenge[3]) - parseFloat(bChallenge[3]);
+        });
+    }
+    return props.teamDetails;
+});
+
+const showChallenges = ref<string[]>([]);
+const windowWidth = ref(0);
+
+const toggleStates = ref([]);
+
+function toggleButton(link: string) {
+    const index = showChallenges.value.indexOf(link);
+    if (index !== -1) {
+        showChallenges.value.splice(index, 1);
+        toggleStates.value[index] = false;
+    } else {
+        showChallenges.value.push(link);
+        var teamIndex = -1;
+        var i = 0;
+        while (i < 1) {
+            if (props.teamDetails[i][3] === link) {
+                teamIndex = i;
+            }
+            i = i + 1;
+        }
+        console.log(teamIndex);
+        if (teamIndex !== -1) {
+            toggleStates.value[teamIndex] = true;
+        }
+    }
+    console.log(showChallenges.value);
+}
+
+var teamURL = ref("");
+
+const fetchData = async () => {
+    const response = await fetch("/expo_algorithm_results.json");
+    const data = await response.json();
+    teamURL = data.team_names;
+};
+
+// const findTeamUrl = (teamName: string) => {
+//     if (teamName != "") {
+//         const match = teamURL.find(team => team[0] === teamName);
+//         return match[1];
+//     }
+// };
+
+const updateWindowWidth = () => {
+    windowWidth.value = window.innerWidth;
+};
+
+onMounted(() => {
+    updateWindowWidth();
+    fetchData();
+    window.addEventListener('resize', updateWindowWidth);
+    toggleStates.value = props.teamDetails.map(team => showChallenges.value.includes(team[3]));
+});
+
+onUnmounted(() => {
+    window.removeEventListener('resize', updateWindowWidth);
+});
+
 watch([() => props.filtered, () => props.challengeDetails, () => props.projectType], () => {
     showChallenges.value = [];
 }, { deep: true });
@@ -113,7 +162,6 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 .entire-container {
     background-color: #F6EBCC;
     border-radius: 2rem;
-    overflow-x: hidden;
 }
 
 .top-row {
@@ -124,11 +172,12 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 
     @media (max-width: 800px) {
         display: inline-block;
-        padding: 4rem 0 0;
+        padding: 3rem 0 0 calc(10vw - 2.5rem);
     }
 }
 
 .project-info-container {
+
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -155,7 +204,6 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     justify-content: center;
 
     @media (max-width: 800px) {
-        margin-right: 0;
         background-color: #FF8F28;
         color: #FFFFFF;
         border-radius: 7%;
@@ -171,7 +219,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     font-family: 'Aleo';
 
     @media (max-width: 800px) {
-        padding: 3rem 0 0;
+        padding: 1.5rem 0.5rem 0;
     }
 }
 
@@ -182,7 +230,6 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     background: none;
     text-align: left;
     padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -202,9 +249,14 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     width: fit-content;
     font-family: 'Inter';
     color: #FF8F28;
+    padding-bottom: 0.3rem;
 }
 
 .challenges-hidden {
+    display: none;
+}
+
+.no-challenges-hidden {
     display: none;
 }
 
@@ -213,6 +265,24 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     flex-direction: column;
     width: 100%;
     font-family: 'Inter';
+
+    @media (max-width: 800px) {
+        padding-top: 1rem;
+    }
+}
+
+.no-challenges-shown {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: 'Inter';
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding-top: 1rem;
+
+    @media (max-width: 800px) {
+        text-align: center;
+    }
 }
 
 .camera-style {
@@ -238,7 +308,12 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 
 .image-container {
     display: flex;
+}
 
+
+.team-url-style {
+    text-decoration: none;
+    color: inherit;
 }
 
 .button-text {

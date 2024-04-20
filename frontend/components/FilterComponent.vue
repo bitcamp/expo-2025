@@ -31,7 +31,7 @@
 </template>
 
 <script>
-import { inject } from "vue";
+import { inject, onMounted } from "vue";
 
 export default {
   name: "FilterComponent",
@@ -48,8 +48,11 @@ export default {
   setup(props) {
     const state = inject("state");
 
+    watch(() => props.teamNames, (newTeamNames) => {
+      state.filteredTeamNames = newTeamNames;
+    }, { immediate: true });
+
     onMounted(() => {
-      state.filteredTeamNames = props.teamNames;
       state.filteredChallengeNames = '';
       state.projectType = 'all';
     });
@@ -82,7 +85,6 @@ export default {
       const selectedProjectTypeIndex = event.target.value;
       const selectedProjectType = selectedProjectTypeIndex;
       state.projectType = selectedProjectType;
-      console.log(state.projectType);
     };
     return { searchTeamNames, searchChallengeNames, searchProjectType };
   },
@@ -103,6 +105,7 @@ export default {
   flex-direction: column;
   padding: 1.5rem 1.5rem 3.3rem;
   margin-right: 1rem;
+  overflow-x: hidden;
 
   @media (max-width: 800px) {
     width: calc(2rem + 65vw);
@@ -122,7 +125,7 @@ export default {
 }
 
 .search-box {
-  width: 80%;
+  width: 100%;
   padding: 0.5rem;
   border-radius: 2rem;
   border: 2px solid #ff8e3f;
@@ -131,6 +134,7 @@ export default {
   margin-bottom: 1rem;
   padding-inline: 1rem;
   outline: none;
+  box-sizing: border-box;
 }
 
 // to do make dropdown look nicer
@@ -169,7 +173,7 @@ export default {
 
 @media (max-width: 800px) {
   .search-box {
-    width: calc(45% + 32vw);
+    width: calc(54% + 32vw);
   }
 
   .filter-item {

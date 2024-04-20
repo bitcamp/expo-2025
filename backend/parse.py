@@ -9,24 +9,35 @@ from typing import List, Dict, Tuple, Optional
 import random
 import json
 
+
 hc = []
 cap = []
 #1 refers to index 0 (bloomberg), 2 refers to index 1 (costar)...
 category_names = []
 team_names = []
+links = []
+all_mlh = []
+in_person = []
 
 def process(csv_file):
-    global category_names, team_names
+    global category_names, team_names, links
     with open(csv_file, 'r', newline='', encoding='utf-8') as file:
         reader = csv.reader(file)
         next(reader)
         #for every each category row in the csv, split by commas to get each category
         for row in reader:
+            if (row[2].strip() == "Draft"):
+                continue
             team_name = row[0].strip()
             team_names.append(team_name)
+            link = row[1].strip()
+            links.append(link)
+
+            in_person.append(row[15].strip())
             
             categories = row[9].split(',')
             append = []
+            mlh = []
             for category in categories:
                 if category.strip():
                     #for every category, ignore MLH
@@ -36,11 +47,11 @@ def process(csv_file):
                         #if it isn't in the cap array, add it
                         if category.strip() not in cap:
                             cap.append(category.strip())
+                    else:
+                        mlh.append(category.strip())
             hc.append(append)
+            all_mlh.append(mlh)
         category_names = cap.copy()
-        #assume one judging group for each category
-        for i in range(0, len(cap)):
-            cap[i] = 1
 
         #check if group signed up for more than three bitcamp categories. if true, remove bitcamp categories until = 3
         for sub_arr in hc:
@@ -55,14 +66,19 @@ def process(csv_file):
             for j in range(0, len(hc[i])):
                 hc[i][j] = category_names.index(hc[i][j])
 
-
-csv_file = "bitcamp-2023-projects.csv"
+csv_file = "./bitcamp-2023-projects.csv"
 process(csv_file)
 # print(hc)
 # print(cap)
 # print()
 
-# print(team_names)
+
+# cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 1]
+cap = [2, 2, 2, 1, 1, 2, 2, 2,           4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
+for val in range(len(category_names)):
+    print(str(category_names[val]) + " " + str(cap[val]))
+
+# print(len(cap))
 
 def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
     # extracting sizes
@@ -159,7 +175,7 @@ def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
     H, J = solve_expo(t)
     return (t, H, J)
 
-t, H, J = abstract_expo_alg(hc, cap, 50)
+t, H, J = abstract_expo_alg(hc, cap, 69)
 # print(t)
 # print()
 # print(H)
@@ -168,7 +184,7 @@ t, H, J = abstract_expo_alg(hc, cap, 50)
 
 for i in range(len(H)):
     for j in range(len(H[i])):
-        H[i][j] = (category_names[H[i][j][0]], j)
+        H[i][j] = (category_names[H[i][j][0]], H[i][j][1])
 
 # print(H)
 
@@ -177,14 +193,119 @@ final_cat_names = []
 # print(category_names)
 
 for val in category_names:
-    final_cat_names.append(val[val.index("- ") + 2: ] + " - " + val[0:val.index(" -")])
+    if (val[val.index("- ") + 2: ] != "Bitcamp"):
+        final_cat_names.append(val[val.index("- ") + 2: ] + " - " + val[0:val.index(" -")])
+    else:
+        final_cat_names.append(val)
+        
+mlh_challenges = list(set([item for sublist in all_mlh for item in sublist]))
+final_cat_names = final_cat_names + mlh_challenges
+
+combined = []
+
+tables = []
+for i in range(20):
+    letter = chr(ord('A') + i)
+    if letter == 'K' or letter == 'L':
+        tables.extend([letter + str(j) for j in range(1, 13) if j not in (3, 4, 5)])
+    else:
+        tables.extend([letter + str(j) for j in range(1, 13)])
+
+judge = "Judge"
+max = 0
+
+tableCounter = 0
+in_person_count = 0
+for i in range(0, len(in_person)):
+    if in_person[i] == "Yes":
+        in_person_count += 1
+in_person_arr = random.sample(range(in_person_count), in_person_count)
+
+for i in range(len(team_names)):
+    H_new = []
+    if (H[i] != []):
+        for j in range(len(H[i])):
+            if (H[i][j][0][H[i][j][0].index("- ") + 2: ] == "Bitcamp"):
+                H_new.append([H[i][j][0][0:H[i][j][0].index(" -")], H[i][j][0][H[i][j][0].index("- ") + 2: ], judge, H[i][j][1]])
+            else:
+                H_new.append([H[i][j][0][H[i][j][0].index("- ") + 2: ], H[i][j][0][0:H[i][j][0].index(" -")], judge, H[i][j][1]])
+            
+            if H[i][j][1] > max:
+                max = H[i][j][1]
+    
+    H_new.sort(key=lambda x: x[-1])
+
+    for category in all_mlh[i]:
+        append = []
+        append.append(category.split(" - "))
+        H_new.append(append[0])
+
+
+    if in_person[i] == "Yes":
+        data = [
+            ["Yes", tables[in_person_arr[tableCounter]]],
+            team_names[i],
+            H_new,
+        ]
+        tableCounter += 1
+    else:
+        data = [
+            ["No"],
+            team_names[i],
+            H_new,
+        ]
+    combined.append(data)
+
+names_links = []
+for i in range(len(team_names)):
+    names_links.append([team_names[i], links[i]])
+    
+repeats = {}    
+
+for value in combined:
+    if value != []:
+        for challenge in value[2]:
+            if challenge[1] != "Major League Hacking":
+                challenge_key = str(challenge[0]) + " - " + str(challenge[1])
+                if challenge_key not in repeats:
+                    repeats[challenge_key] = [[challenge[3]]]
+                else:
+                    repeats[challenge_key].append([challenge[3]])
+
+for key, lists in repeats.items():
+    repeats[key] = sorted(lists, key=lambda x: x[0])
+
+for key in repeats:
+    curr = final_cat_names.index(key)
+    judgeCount = cap[curr]
+    inc = 0
+    for lst in repeats[key]:
+        lst.append((inc % judgeCount) + 1)
+        inc+=1
+
+for value in combined:
+    if value != []:
+        for challenge in value[2]:
+            if challenge[1] != "Major League Hacking":
+                challenge_key = str(challenge[0]) + " - " + str(challenge[1])
+                for idx, inner_list in enumerate(repeats[challenge_key]):
+                    if inner_list[0] == challenge[3]:
+                        challenge[2] = challenge[2] + " " + str(inner_list[1])
+                        del repeats[challenge_key][idx]
+                        break
+                    
+for value in combined:
+    if value != []:
+        name = value[1]
+        for lst in names_links:
+            if name == lst[0]:
+                value.append(lst[1])
 
 data = {
-    "t": t,
-    "H": H,
-    "J": J,
     "category_names": final_cat_names,
-    "team_names": team_names
+    "team_names": names_links,
+    "combined_values": combined,
+    "total_times" : max
 }
 
 with open('../frontend/public/expo_algorithm_results.json', 'w') as json_file:
