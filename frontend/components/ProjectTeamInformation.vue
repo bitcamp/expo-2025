@@ -12,22 +12,22 @@
                 </div>
                 <div class="project-info-container">
                     <div class="button-container">
-                        <a :href="findTeamUrl(teamDetail[1])" target="_blank" class="team-url-style">
+                        <a :href="teamDetail[3]" target="_blank" class="team-url-style">
                             <div class="project-header"> {{ teamDetail[1] }}</div>
                         </a>
                         <button v-if="windowWidth > 800 && challengeDetails === ''" class="challenges-button"
-                            @click="toggleButton(teamDetail[1])">
+                            @click="toggleButton(teamDetail[3])">
                             <div class="button-text">
                                 show challenges
                             </div>
                             <div class="image-container">
                                 <img src="../assets/images/openChallengesArrow.svg" class="arrow-image-small"
-                                    :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
+                                    :class="{ 'arrow-right': !showChallenges.includes(teamDetail[3]), 'arrow-down': showChallenges.includes(teamDetail[3]) }"
                                     alt="Bitcamp sign" />
                             </div>
                         </button>
                         <button v-if="windowWidth < 800 && challengeDetails === ''" class="challenges-button-large"
-                            @click="toggleButton(teamDetail[1])">
+                            @click="toggleButton(teamDetail[3])">
                             <img src="../assets/images/openChallengesArrowLarge.svg" class="arrow-image-large"
                                 :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
                                 alt="Bitcamp sign" />
@@ -35,11 +35,11 @@
                         </button>
                     </div>
                     <div v-if="teamDetail[2].length === 0"
-                        :class="{ 'no-challenges-hidden': !showChallenges.includes(teamDetail[1]), 'no-challenges-shown': showChallenges.includes(teamDetail[1]) }">
+                        :class="{ 'no-challenges-hidden': !showChallenges.includes(teamDetail[3]), 'no-challenges-shown': showChallenges.includes(teamDetail[3]) }">
                         No Challenges Selected
                     </div>
                     <div v-if="challengeDetails === ''"
-                        :class="{ 'challenges-hidden': !showChallenges.includes(teamDetail[1]), 'challenges-shown': showChallenges.includes(teamDetail[1]) }">
+                        :class="{ 'challenges-hidden': !showChallenges.includes(teamDetail[3]), 'challenges-shown': showChallenges.includes(teamDetail[3]) }">
                         <JudgingRow v-for="(challenge, challengeIndex) in teamDetail[2]"
                             :key="`challenge-${index}-${challengeIndex}`" :categoryName="challenge[0]"
                             :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
@@ -80,9 +80,7 @@ const props = defineProps({
 
 const sortedTeamDetails = computed(() => {
     if (props.challengeDetails !== "") {
-        // Create a deep copy to avoid mutating original props
         return [...props.teamDetails].sort((a, b) => {
-            // Find the relevant challenge based on challengeDetails for both teams
             const aChallenge = a[2].find(challenge => props.challengeDetails.includes(challenge[0]));
             const bChallenge = b[2].find(challenge => props.challengeDetails.includes(challenge[0]));
 
@@ -90,7 +88,6 @@ const sortedTeamDetails = computed(() => {
                 return !aChallenge ? 1 : -1;
             }
 
-            // Sort based on the numeric value of challenge[3]
             return parseFloat(aChallenge[3]) - parseFloat(bChallenge[3]);
         });
     }
@@ -102,18 +99,27 @@ const windowWidth = ref(0);
 
 const toggleStates = ref([]);
 
-function toggleButton(name: string) {
-    const index = showChallenges.value.indexOf(name);
+function toggleButton(link: string) {
+    const index = showChallenges.value.indexOf(link);
     if (index !== -1) {
         showChallenges.value.splice(index, 1);
         toggleStates.value[index] = false;
     } else {
-        showChallenges.value.push(name);
-        const teamIndex = props.teamDetails.findIndex(team => team[1] === name);
+        showChallenges.value.push(link);
+        var teamIndex = -1;
+        var i = 0;
+        while (i < 1) {
+            if (props.teamDetails[i][3] === link) {
+                teamIndex = i;
+            }
+            i = i + 1;
+        }
+        console.log(teamIndex);
         if (teamIndex !== -1) {
             toggleStates.value[teamIndex] = true;
         }
     }
+    console.log(showChallenges.value);
 }
 
 var teamURL = ref("");
@@ -124,12 +130,12 @@ const fetchData = async () => {
     teamURL = data.team_names;
 };
 
-const findTeamUrl = (teamName: string) => {
-    if (teamName != "") {
-        const match = teamURL.find(team => team[0] === teamName);
-        return match[1];
-    }
-};
+// const findTeamUrl = (teamName: string) => {
+//     if (teamName != "") {
+//         const match = teamURL.find(team => team[0] === teamName);
+//         return match[1];
+//     }
+// };
 
 const updateWindowWidth = () => {
     windowWidth.value = window.innerWidth;
@@ -139,7 +145,7 @@ onMounted(() => {
     updateWindowWidth();
     fetchData();
     window.addEventListener('resize', updateWindowWidth);
-    toggleStates.value = props.teamDetails.map(team => showChallenges.value.includes(team[1]));
+    toggleStates.value = props.teamDetails.map(team => showChallenges.value.includes(team[3]));
 });
 
 onUnmounted(() => {

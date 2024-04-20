@@ -75,8 +75,8 @@ process(csv_file)
 
 # cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 1]
 cap = [2, 2, 2, 1, 1, 2, 2, 2,           4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
-# for val in category_names:
-#     print(val)
+for val in range(len(category_names)):
+    print(str(category_names[val]) + " " + str(cap[val]))
 
 # print(len(cap))
 
@@ -293,13 +293,15 @@ for value in combined:
                         challenge[2] = challenge[2] + " " + str(inner_list[1])
                         del repeats[challenge_key][idx]
                         break
-
-# print(combined)
+                    
+for value in combined:
+    if value != []:
+        name = value[1]
+        for lst in names_links:
+            if name == lst[0]:
+                value.append(lst[1])
 
 data = {
-    "t": t,
-    "H": H,
-    "J": J,
     "category_names": final_cat_names,
     "team_names": names_links,
     "combined_values": combined,

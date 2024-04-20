@@ -50,8 +50,8 @@ export default {
       const response = await fetch("/expo_algorithm_results.json");
       const data = await response.json();
       var timeForHack = (150 / data.total_times);
-      timeForHack = (timeForHack % 1 > 0.5) ? Math.ceil(timeForHack) : Math.floor(timeForHack);
-      // timeForHack = Math.floor(timeForHack);
+      // timeForHack = (timeForHack % 1 > 0.5) ? Math.ceil(timeForHack) : Math.floor(timeForHack);
+      timeForHack = Math.floor(timeForHack);
       console.log(timeForHack)
       totalBlocks.value = Number(props.timing) * timeForHack;
       const baseTime = "10:15";
