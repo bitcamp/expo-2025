@@ -10,8 +10,7 @@ Old repo: https://github.com/bitcamp/hackathon-expo-app
 Our goal is to read the `.csv` Devpost submission file, scrape the projects + their prize categories, and create a schedule table for ecah team according to their chosen prize categories, the
 judging pool, and the allotted judging time (normally 2.5-3 hours). 
 
-This algorithm is nontrivial and quite complicated. We will document the methodology we use when we get to it.
-
+This algorithm is nontrivial and quite complicated. However, we do have a comprehensive [writeup](https://github.com/user-attachments/files/16184478/BitCamp.Expo.Algorithm.Development.pdf) on the basics of how the algorithm works. 
 # Tech Stack
 Our tech stack mimics the [portal](https://github.com/bitcamp/portal) registration app, but modernized to use the latest versions of Vue + AWS. We will be using Nuxt3 + Vue3 for the frontend and 
 Lambda API functions + DynamoDB for the backend (all controlled using https://serverless.com). 
