@@ -195,7 +195,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     width: 4rem;
     margin-right: 1.5rem;
     text-align: center;
-    color: #FFC226;
+    color: #FF3E00;
     font-family: 'Aleo';
     min-width: 100px;
     display: flex;
@@ -215,7 +215,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 
 .project-header {
     font-size: 1.5rem;
-    color: #E34E30;
+    color: #B94923;
     font-family: 'Aleo';
 
     @media (max-width: 800px) {

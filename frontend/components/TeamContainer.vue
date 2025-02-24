@@ -135,7 +135,7 @@ export default {
   width: 6rem;
   margin-right: 1.5rem;
   text-align: center;
-  color: #FF8F28;
+  color: #295111;
   font-family: 'Aleo';
   min-width: 100px;
 
@@ -146,7 +146,7 @@ export default {
 
 .row-header-project {
   font-size: 1.5rem;
-  color: #FF8F28;
+  color: #295111;
   font-family: 'Aleo';
 
   @media screen and (max-width: 800px) {
