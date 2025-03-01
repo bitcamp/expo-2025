@@ -1,4 +1,4 @@
 {
   "PLATFORM_BASE_URL": "localhost:8080",
-  "EXPO_TABLE": "expo-dev-schedule"
+  "EXPO_TABLE": "platform-dev-expo-schedule"
 }

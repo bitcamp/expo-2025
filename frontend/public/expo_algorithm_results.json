@@ -19,11 +19,11 @@
         "Best Digital Forensics Hack - Cipher Tech",
         "Advanced Quantum Track - Bitcamp",
         "Best Accessibility Hack sponsored by Fidelity - Major League Hacking",
+        "Most Creative Use of Twilio - Major League Hacking",
+        "Best Use of Microsoft Cloud for Your Community - Major League Hacking",
         "Best Use of MongoDB Atlas - Major League Hacking",
         "Best Domain Name from Domain.com - Major League Hacking",
-        "Most Creative Use of Twilio - Major League Hacking",
-        "Best Blockchain Project Using Hedera - Major League Hacking",
-        "Best Use of Microsoft Cloud for Your Community - Major League Hacking"
+        "Best Blockchain Project Using Hedera - Major League Hacking"
     ],
     "team_names": [
         [
@@ -531,45 +531,45 @@
         [
             [
                 "Yes",
-                "B8"
+                "I4"
             ],
             "Brisbane: Discover Your Data",
             [
                 [
                     "Best Financial Hack",
                     "Capital One",
-                    "Judge 2",
-                    5
-                ],
-                [
-                    "Best Use of Real Estate Data",
-                    "CoStar Group",
-                    "Judge 2",
-                    8
-                ],
-                [
-                    "Best Moonshot Hack",
-                    "Bitcamp",
                     "Judge 1",
-                    11
+                    6
                 ],
                 [
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
-                    "Judge 2",
-                    14
+                    "Judge 1",
+                    9
                 ],
                 [
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    22
+                    14
+                ],
+                [
+                    "Best Moonshot Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    16
                 ],
                 [
                     "Best Machine Learning Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    23
+                    "Judge 1",
+                    17
+                ],
+                [
+                    "Best Use of Real Estate Data",
+                    "CoStar Group",
+                    "Judge 1",
+                    20
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403163-brisbane-discover-your-data"
@@ -577,33 +577,33 @@
         [
             [
                 "Yes",
-                "A5"
+                "H3"
             ],
             "Savings app",
             [
                 [
-                    "Best Social Good Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    0
-                ],
-                [
                     "Best UI/UX Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    7
+                    "Judge 2",
+                    1
+                ],
+                [
+                    "Best Financial Hack",
+                    "Capital One",
+                    "Judge 2",
+                    3
                 ],
                 [
                     "Best First Time Hack",
                     "Bitcamp",
                     "Judge 2",
-                    24
+                    13
                 ],
                 [
-                    "Best Financial Hack",
-                    "Capital One",
-                    "Judge 1",
-                    25
+                    "Best Gamification Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    15
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403166-savings-app"
@@ -611,39 +611,39 @@
         [
             [
                 "Yes",
-                "C6"
+                "B12"
             ],
             "Housing Price Map",
             [
                 [
                     "Best Use of Real Estate Data",
                     "CoStar Group",
-                    "Judge 2",
-                    13
-                ],
-                [
-                    "Best First Time Hack",
-                    "Bitcamp",
                     "Judge 1",
-                    15
+                    7
                 ],
                 [
                     "Best UI/UX Hack",
                     "Bitcamp",
                     "Judge 1",
-                    16
-                ],
-                [
-                    "Best Bitcamp Hack",
-                    "Bitcamp",
-                    "Judge 4",
-                    18
+                    11
                 ],
                 [
                     "Best Use of CockroachDB Serverless",
                     "Cockroach Labs",
+                    "Judge 4",
+                    14
+                ],
+                [
+                    "Best Bitcamp Hack",
+                    "Bitcamp",
                     "Judge 1",
-                    20
+                    19
+                ],
+                [
+                    "People's Choice Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    21
                 ],
                 [
                     "Best Use of Microsoft Cloud for Your Community",
@@ -655,51 +655,51 @@
         [
             [
                 "Yes",
-                "H11"
+                "A2"
             ],
             "Shared Spaces",
             [
                 [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 1",
-                    0
-                ],
-                [
-                    "Best Public Sector Hack",
-                    "Bloomberg Industry Group",
-                    "Judge 2",
-                    11
-                ],
-                [
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    12
+                    1
                 ],
                 [
-                    "Best Financial Hack",
-                    "Capital One",
-                    "Judge 1",
-                    13
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 4",
+                    3
                 ],
                 [
                     "Best Use of Real Estate Data",
                     "CoStar Group",
                     "Judge 1",
-                    21
+                    10
+                ],
+                [
+                    "Best Financial Hack",
+                    "Capital One",
+                    "Judge 2",
+                    12
                 ],
                 [
                     "Best UI/UX Hack",
                     "Bitcamp",
                     "Judge 1",
-                    22
+                    16
                 ],
                 [
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    25
+                    17
+                ],
+                [
+                    "Best Public Sector Hack",
+                    "Bloomberg Industry Group",
+                    "Judge 1",
+                    22
                 ],
                 [
                     "Best Domain Name from Domain.com",
@@ -719,16 +719,16 @@
             "Mortgage Knapsack Calculator",
             [
                 [
+                    "Best Use of Real Estate Data",
+                    "CoStar Group",
+                    "Judge 2",
+                    12
+                ],
+                [
                     "Don\u2019t Put All Your Eggs in One Basket",
                     "Fannie Mae",
                     "Judge 2",
-                    1
-                ],
-                [
-                    "Best Use of Real Estate Data",
-                    "CoStar Group",
-                    "Judge 1",
-                    23
+                    21
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403181-mortgage-knapsack-calculator"
@@ -736,27 +736,27 @@
         [
             [
                 "Yes",
-                "F5"
+                "B2"
             ],
             "namaka",
             [
                 [
+                    "Best UI/UX Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    2
+                ],
+                [
                     "Best Razzle Dazzle Hack",
                     "Bitcamp",
-                    "Judge 4",
-                    3
+                    "Judge 2",
+                    7
                 ],
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
                     "Judge 3",
-                    5
-                ],
-                [
-                    "Best UI/UX Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    8
+                    21
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403184-namaka"
@@ -768,22 +768,22 @@
             "FitFlow",
             [
                 [
-                    "Best Bitcamp Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    3
-                ],
-                [
                     "Best Razzle Dazzle Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    7
+                    "Judge 1",
+                    1
                 ],
                 [
-                    "Best UI/UX Hack",
+                    "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    9
+                    "Judge 1",
+                    11
+                ],
+                [
+                    "Best Moonshot Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    13
                 ],
                 [
                     "Best Domain Name from Domain.com",
@@ -795,33 +795,33 @@
         [
             [
                 "Yes",
-                "C7"
+                "A4"
             ],
             "guesser.ai",
             [
                 [
-                    "Best Machine Learning Hack",
-                    "Bitcamp",
-                    "Judge 2",
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 1",
                     2
                 ],
                 [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 2",
-                    3
+                    "Best Gamification Hack",
+                    "Bitcamp",
+                    "Judge 4",
+                    6
                 ],
                 [
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    19
+                    7
                 ],
                 [
-                    "Best Gamification Hack",
+                    "Best Machine Learning Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    22
+                    "Judge 2",
+                    11
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -833,13 +833,13 @@
         [
             [
                 "Yes",
-                "I2"
+                "A1"
             ],
             "LUHQ",
             [
                 [
-                    "Best UI/UX Hack",
-                    "Bitcamp",
+                    "Best Financial Hack",
+                    "Capital One",
                     "Judge 1",
                     5
                 ],
@@ -847,13 +847,13 @@
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    14
+                    6
                 ],
                 [
-                    "Best Financial Hack",
-                    "Capital One",
+                    "Best UI/UX Hack",
+                    "Bitcamp",
                     "Judge 2",
-                    20
+                    8
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403210-luhq"
@@ -861,39 +861,39 @@
         [
             [
                 "Yes",
-                "A9"
+                "C7"
             ],
             "SHELFie",
             [
                 [
-                    "Best First Time Hack",
+                    "Best Social Good Hack",
                     "Bitcamp",
                     "Judge 1",
-                    7
+                    1
+                ],
+                [
+                    "Best Public Sector Hack",
+                    "Bloomberg Industry Group",
+                    "Judge 1",
+                    4
+                ],
+                [
+                    "Best Bitcamp Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    12
                 ],
                 [
                     "Most Philanthropic Hack",
                     "Bloomberg",
                     "Judge 4",
-                    17
+                    19
                 ],
                 [
-                    "Best Public Sector Hack",
-                    "Bloomberg Industry Group",
+                    "Best First Time Hack",
+                    "Bitcamp",
                     "Judge 2",
-                    20
-                ],
-                [
-                    "Best Social Good Hack",
-                    "Bitcamp",
-                    "Judge 4",
                     21
-                ],
-                [
-                    "Best Bitcamp Hack",
-                    "Bitcamp",
-                    "Judge 4",
-                    22
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403236-shelfie"
@@ -905,22 +905,22 @@
             "UMD Course Tracker",
             [
                 [
+                    "Best Bitcamp Hack",
+                    "Bitcamp",
+                    "Judge 3",
+                    9
+                ],
+                [
                     "Best First Time Hack",
                     "Bitcamp",
                     "Judge 1",
-                    10
+                    12
                 ],
                 [
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
                     "Judge 1",
-                    16
-                ],
-                [
-                    "Best Bitcamp Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    20
+                    13
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -932,21 +932,21 @@
         [
             [
                 "Yes",
-                "A1"
+                "G2"
             ],
             "Application Automata",
             [
                 [
+                    "Best Bitcamp Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    7
+                ],
+                [
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    4
-                ],
-                [
-                    "Best Bitcamp Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    23
+                    15
                 ],
                 [
                     "Most Creative Use of Twilio",
@@ -963,34 +963,34 @@
             "Purspect",
             [
                 [
-                    "Best Bitcamp Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    1
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 1",
+                    3
                 ],
                 [
                     "Best Machine Learning Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    5
+                    "Judge 2",
+                    4
                 ],
                 [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 1",
-                    7
+                    "Best UI/UX Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    6
                 ],
                 [
                     "Best Use of CockroachDB Serverless",
                     "Cockroach Labs",
-                    "Judge 4",
+                    "Judge 3",
                     9
                 ],
                 [
                     "Best Gamification Hack",
                     "Bitcamp",
-                    "Judge 4",
-                    17
+                    "Judge 3",
+                    13
                 ],
                 [
                     "Best Domain Name from Domain.com",
@@ -1006,27 +1006,27 @@
         [
             [
                 "Yes",
-                "A11"
+                "E11"
             ],
             "Sorting Simulator",
             [
                 [
+                    "Best Razzle Dazzle Hack",
+                    "Bitcamp",
+                    "Judge 3",
+                    3
+                ],
+                [
                     "Best Gamification Hack",
                     "Bitcamp",
                     "Judge 4",
-                    4
-                ],
-                [
-                    "Best Razzle Dazzle Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    12
+                    13
                 ],
                 [
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    25
+                    17
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403384-sorting-simulator"
@@ -1034,39 +1034,39 @@
         [
             [
                 "Yes",
-                "D7"
+                "D6"
             ],
             "KarenAI",
             [
                 [
-                    "Best Financial Hack",
-                    "Capital One",
-                    "Judge 1",
-                    1
-                ],
-                [
-                    "People's Choice Hack",
+                    "Best Social Good Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    7
-                ],
-                [
-                    "Best Machine Learning Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    12
+                    "Judge 4",
+                    5
                 ],
                 [
                     "Most Philanthropic Hack",
                     "Bloomberg",
                     "Judge 2",
+                    7
+                ],
+                [
+                    "People's Choice Hack",
+                    "Bitcamp",
+                    "Judge 1",
                     13
                 ],
                 [
-                    "Best Social Good Hack",
+                    "Best Financial Hack",
+                    "Capital One",
+                    "Judge 2",
+                    18
+                ],
+                [
+                    "Best Machine Learning Hack",
                     "Bitcamp",
-                    "Judge 4",
-                    17
+                    "Judge 1",
+                    21
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403389-karenai"
@@ -1074,7 +1074,7 @@
         [
             [
                 "Yes",
-                "B5"
+                "E6"
             ],
             "CoRide",
             [
@@ -1082,13 +1082,13 @@
                     "Best UI/UX Hack",
                     "Bitcamp",
                     "Judge 1",
-                    6
+                    3
                 ],
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    16
+                    "Judge 4",
+                    14
                 ],
                 [
                     "Most Creative Use of Twilio",
@@ -1100,27 +1100,27 @@
         [
             [
                 "Yes",
-                "A3"
+                "B7"
             ],
             "Explainable AI for Cancer w/ Quantum Transfer Learning? Yes!",
             [
                 [
-                    "Best Razzle Dazzle Hack",
-                    "Bitcamp",
-                    "Judge 4",
-                    15
-                ],
-                [
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    16
+                    14
+                ],
+                [
+                    "Best Razzle Dazzle Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    15
                 ],
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 4",
-                    21
+                    "Judge 1",
+                    20
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403419-explainable-ai-for-cancer-w-quantum-transfer-learning-yes"
@@ -1136,7 +1136,7 @@
         [
             [
                 "Yes",
-                "D11"
+                "B8"
             ],
             "temphouse",
             [
@@ -1144,25 +1144,25 @@
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    1
-                ],
-                [
-                    "Best Financial Hack",
-                    "Capital One",
-                    "Judge 1",
-                    8
+                    3
                 ],
                 [
                     "Best Use of Real Estate Data",
                     "CoStar Group",
                     "Judge 2",
-                    21
+                    14
                 ],
                 [
                     "Best UI/UX Hack",
                     "Bitcamp",
+                    "Judge 1",
+                    19
+                ],
+                [
+                    "Best Financial Hack",
+                    "Capital One",
                     "Judge 2",
-                    24
+                    20
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403436-temphouse"
@@ -1170,27 +1170,27 @@
         [
             [
                 "Yes",
-                "A6"
+                "E4"
             ],
             "StockByte",
             [
                 [
-                    "Best Public Sector Hack",
-                    "Bloomberg Industry Group",
-                    "Judge 2",
-                    12
+                    "Best Financial Hack",
+                    "Capital One",
+                    "Judge 1",
+                    9
                 ],
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
                     "Judge 4",
-                    19
+                    21
                 ],
                 [
-                    "Best Financial Hack",
-                    "Capital One",
+                    "Best Public Sector Hack",
+                    "Bloomberg Industry Group",
                     "Judge 2",
-                    21
+                    22
                 ],
                 [
                     "Best Use of MongoDB Atlas",
@@ -1202,33 +1202,33 @@
         [
             [
                 "Yes",
-                "F1"
+                "G5"
             ],
             "IncidentExposed",
             [
                 [
-                    "Best First Time Hack",
-                    "Bitcamp",
+                    "Best Public Sector Hack",
+                    "Bloomberg Industry Group",
                     "Judge 1",
-                    0
+                    5
                 ],
                 [
                     "Best Social Good Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    1
+                    "Judge 4",
+                    8
                 ],
                 [
-                    "Best Public Sector Hack",
-                    "Bloomberg Industry Group",
-                    "Judge 2",
-                    8
+                    "Best First Time Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    21
                 ],
                 [
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    16
+                    22
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -1240,39 +1240,39 @@
         [
             [
                 "Yes",
-                "F2"
+                "C3"
             ],
             "LocalHealth",
             [
                 [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
+                    "People's Choice Hack",
+                    "Bitcamp",
                     "Judge 1",
-                    4
+                    2
                 ],
                 [
                     "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    7
-                ],
-                [
-                    "Best Social Good Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    18
+                    "Judge 1",
+                    4
                 ],
                 [
                     "Best Financial Hack",
                     "Capital One",
                     "Judge 2",
-                    19
+                    5
                 ],
                 [
-                    "People's Choice Hack",
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 1",
+                    11
+                ],
+                [
+                    "Best Social Good Hack",
                     "Bitcamp",
                     "Judge 1",
-                    23
+                    20
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403475-localhealth"
@@ -1280,26 +1280,26 @@
         [
             [
                 "Yes",
-                "E10"
+                "F6"
             ],
             "SpotCharts",
             [
                 [
-                    "Best Razzle Dazzle Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    1
-                ],
-                [
-                    "Best Social Good Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    6
-                ],
-                [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 1",
+                    "Judge 3",
+                    4
+                ],
+                [
+                    "Best Razzle Dazzle Hack",
+                    "Bitcamp",
+                    "Judge 4",
+                    5
+                ],
+                [
+                    "Best UI/UX Hack",
+                    "Bitcamp",
+                    "Judge 2",
                     19
                 ],
                 [
@@ -1312,26 +1312,26 @@
         [
             [
                 "Yes",
-                "F11"
+                "E10"
             ],
             "Rizzulator",
             [
                 [
-                    "Best Gamification Hack",
+                    "Best Razzle Dazzle Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    2
+                    "Judge 3",
+                    7
                 ],
                 [
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    17
+                    10
                 ],
                 [
-                    "Best Razzle Dazzle Hack",
+                    "Best Gamification Hack",
                     "Bitcamp",
-                    "Judge 2",
+                    "Judge 3",
                     19
                 ]
             ],
@@ -1340,7 +1340,7 @@
         [
             [
                 "Yes",
-                "C1"
+                "H8"
             ],
             "Techy Domain names",
             [
@@ -1354,7 +1354,7 @@
         [
             [
                 "Yes",
-                "G3"
+                "A12"
             ],
             "G(PT)hosting",
             [
@@ -1368,15 +1368,15 @@
         [
             [
                 "Yes",
-                "H2"
+                "C5"
             ],
             "Fannie Mae Loan Solution",
             [
                 [
                     "Don\u2019t Put All Your Eggs in One Basket",
                     "Fannie Mae",
-                    "Judge 4",
-                    6
+                    "Judge 3",
+                    15
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403543-fannie-mae-loan-solution"
@@ -1391,25 +1391,25 @@
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    6
-                ],
-                [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 2",
-                    7
-                ],
-                [
-                    "Best Razzle Dazzle Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    16
+                    4
                 ],
                 [
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    21
+                    11
+                ],
+                [
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 2",
+                    12
+                ],
+                [
+                    "Best Razzle Dazzle Hack",
+                    "Bitcamp",
+                    "Judge 4",
+                    20
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403545-textassess"
@@ -1425,21 +1425,21 @@
         [
             [
                 "Yes",
-                "D12"
+                "I2"
             ],
             "Speechify",
             [
                 [
-                    "Best Social Good Hack",
-                    "Bitcamp",
-                    "Judge 4",
-                    7
-                ],
-                [
                     "Most Philanthropic Hack",
                     "Bloomberg",
-                    "Judge 4",
-                    22
+                    "Judge 3",
+                    12
+                ],
+                [
+                    "Best Social Good Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    20
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -1451,27 +1451,27 @@
         [
             [
                 "Yes",
-                "I5"
+                "H11"
             ],
             "Wisdom Tooth",
             [
                 [
-                    "Best Moonshot Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    6
-                ],
-                [
-                    "People's Choice Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    8
-                ],
-                [
                     "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    10
+                    "Judge 1",
+                    0
+                ],
+                [
+                    "Best Social Good Hack",
+                    "Bitcamp",
+                    "Judge 4",
+                    15
+                ],
+                [
+                    "Best Machine Learning Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    18
                 ],
                 [
                     "Best Use of MongoDB Atlas",
@@ -1483,33 +1483,33 @@
         [
             [
                 "Yes",
-                "G7"
+                "G3"
             ],
             "Mooneh",
             [
                 [
-                    "People's Choice Hack",
+                    "Best Financial Hack",
+                    "Capital One",
+                    "Judge 2",
+                    2
+                ],
+                [
+                    "Best First Time Hack",
                     "Bitcamp",
                     "Judge 1",
-                    3
+                    6
                 ],
                 [
                     "Best Gamification Hack",
                     "Bitcamp",
                     "Judge 4",
-                    8
+                    16
                 ],
                 [
-                    "Best Financial Hack",
-                    "Capital One",
-                    "Judge 2",
-                    12
-                ],
-                [
-                    "Best Moonshot Hack",
+                    "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    18
+                    19
                 ],
                 [
                     "Best Domain Name from Domain.com",
@@ -1521,27 +1521,27 @@
         [
             [
                 "Yes",
-                "F12"
+                "D7"
             ],
             "Steering the Hotdog",
             [
                 [
-                    "Best First Time Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    3
-                ],
-                [
                     "Best Hardware Hack",
                     "Bitcamp",
-                    "Judge 3",
-                    21
+                    "Judge 1",
+                    0
                 ],
                 [
                     "Best Gamification Hack",
                     "Bitcamp",
+                    "Judge 4",
+                    21
+                ],
+                [
+                    "Best First Time Hack",
+                    "Bitcamp",
                     "Judge 2",
-                    25
+                    22
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403555-steering-the-hotdog"
@@ -1549,21 +1549,21 @@
         [
             [
                 "Yes",
-                "H1"
+                "A3"
             ],
             "CallTrackr",
             [
                 [
-                    "Best First Time Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    9
-                ],
-                [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 3",
-                    17
+                    "Judge 1",
+                    6
+                ],
+                [
+                    "Best First Time Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    18
                 ],
                 [
                     "Most Creative Use of Twilio",
@@ -1575,33 +1575,33 @@
         [
             [
                 "Yes",
-                "E11"
+                "E5"
             ],
             "BitConnect",
             [
                 [
-                    "Best Moonshot Hack",
+                    "Best Razzle Dazzle Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    5
-                ],
-                [
-                    "Best Gamification Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    13
+                    "Judge 2",
+                    10
                 ],
                 [
                     "Most Philanthropic Hack",
                     "Bloomberg",
                     "Judge 1",
-                    20
+                    16
                 ],
                 [
-                    "Best Social Good Hack",
+                    "Best First Time Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    19
+                ],
+                [
+                    "Best UI/UX Hack",
                     "Bitcamp",
                     "Judge 1",
-                    24
+                    22
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -1620,7 +1620,7 @@
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
                     "Judge 2",
-                    5
+                    16
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403563-poker-flip-app"
@@ -1628,27 +1628,27 @@
         [
             [
                 "Yes",
-                "A4"
+                "G11"
             ],
             "InterviewIO",
             [
                 [
-                    "Best Moonshot Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    3
-                ],
-                [
                     "Best First Time Hack",
                     "Bitcamp",
                     "Judge 1",
-                    13
+                    1
+                ],
+                [
+                    "Best Moonshot Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    4
                 ],
                 [
                     "Best Social Good Hack",
                     "Bitcamp",
-                    "Judge 3",
-                    18
+                    "Judge 1",
+                    5
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -1660,7 +1660,7 @@
         [
             [
                 "Yes",
-                "G8"
+                "B4"
             ],
             "CurryCoolum",
             [
@@ -1668,7 +1668,7 @@
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    2
+                    7
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -1680,45 +1680,45 @@
         [
             [
                 "Yes",
-                "H8"
+                "C12"
             ],
             "Marshmallow Moonbase",
             [
                 [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 4",
-                    1
+                    "Best Gamification Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    7
                 ],
                 [
                     "Best Razzle Dazzle Hack",
                     "Bitcamp",
-                    "Judge 4",
-                    10
+                    "Judge 3",
+                    15
                 ],
                 [
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
                     "Judge 1",
-                    11
+                    16
                 ],
                 [
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    13
+                    18
                 ],
                 [
                     "Best Financial Hack",
                     "Capital One",
-                    "Judge 2",
-                    17
+                    "Judge 1",
+                    21
                 ],
                 [
-                    "Best Gamification Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    20
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 1",
+                    22
                 ],
                 [
                     "Best Domain Name from Domain.com",
@@ -1730,7 +1730,7 @@
         [
             [
                 "Yes",
-                "C2"
+                "F2"
             ],
             "Squat Rep Counter",
             [],
@@ -1739,33 +1739,33 @@
         [
             [
                 "Yes",
-                "C8"
+                "I5"
             ],
             "Photo Assassin",
             [
                 [
-                    "Best Gamification Hack",
+                    "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 3",
-                    2
-                ],
-                [
-                    "Best Use of CockroachDB Serverless",
-                    "Cockroach Labs",
-                    "Judge 3",
-                    12
+                    "Judge 2",
+                    0
                 ],
                 [
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    15
+                    2
                 ],
                 [
-                    "Best First Time Hack",
+                    "Best Gamification Hack",
                     "Bitcamp",
+                    "Judge 3",
+                    8
+                ],
+                [
+                    "Best Use of CockroachDB Serverless",
+                    "Cockroach Labs",
                     "Judge 1",
-                    16
+                    10
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403591-photo-assassin"
@@ -1773,18 +1773,18 @@
         [
             [
                 "Yes",
-                "H9"
+                "B6"
             ],
             "Safe & Secure",
             [
                 [
-                    "Best First Time Hack",
+                    "Best Machine Learning Hack",
                     "Bitcamp",
                     "Judge 1",
-                    1
+                    12
                 ],
                 [
-                    "Best Machine Learning Hack",
+                    "Best First Time Hack",
                     "Bitcamp",
                     "Judge 2",
                     17
@@ -1803,22 +1803,22 @@
             "DivyUp",
             [
                 [
-                    "Best Social Good Hack",
+                    "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 3",
-                    1
+                    "Judge 1",
+                    3
                 ],
                 [
                     "Most Philanthropic Hack",
                     "Bloomberg",
-                    "Judge 3",
-                    3
+                    "Judge 4",
+                    5
                 ],
                 [
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
-                    "Judge 1",
-                    5
+                    "Judge 2",
+                    7
                 ],
                 [
                     "Best Moonshot Hack",
@@ -1827,22 +1827,22 @@
                     9
                 ],
                 [
-                    "Best Digital Forensics Hack",
-                    "Cipher Tech",
-                    "Judge 2",
-                    11
+                    "Best Social Good Hack",
+                    "Bitcamp",
+                    "Judge 3",
+                    10
                 ],
                 [
                     "Best Financial Hack",
                     "Capital One",
                     "Judge 1",
-                    14
+                    16
                 ],
                 [
-                    "Best First Time Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    21
+                    "Best Digital Forensics Hack",
+                    "Cipher Tech",
+                    "Judge 3",
+                    19
                 ],
                 [
                     "Best Use of Microsoft Cloud for Your Community",
@@ -1864,20 +1864,20 @@
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 4",
-                    5
+                    "Judge 1",
+                    0
                 ],
                 [
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    15
+                    5
                 ],
                 [
                     "Best First Time Hack",
                     "Bitcamp",
                     "Judge 2",
-                    22
+                    16
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403612-pipe-bot-timer"
@@ -1885,27 +1885,27 @@
         [
             [
                 "Yes",
-                "B4"
+                "E1"
             ],
             "Audio Poet",
             [
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 4",
-                    4
+                    "Judge 3",
+                    13
                 ],
                 [
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    12
+                    19
                 ],
                 [
                     "Best Machine Learning Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    13
+                    "Judge 2",
+                    21
                 ],
                 [
                     "Most Creative Use of Twilio",
@@ -1921,7 +1921,7 @@
         [
             [
                 "Yes",
-                "E2"
+                "C1"
             ],
             "Blindspot",
             [
@@ -1929,31 +1929,31 @@
                     "Most Philanthropic Hack",
                     "Bloomberg",
                     "Judge 2",
-                    4
+                    2
                 ],
                 [
-                    "Best First Time Hack",
+                    "Best Machine Learning Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    8
+                    "Judge 2",
+                    10
+                ],
+                [
+                    "Best Hardware Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    12
                 ],
                 [
                     "Best Razzle Dazzle Hack",
                     "Bitcamp",
-                    "Judge 3",
-                    14
+                    "Judge 1",
+                    13
                 ],
                 [
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
-                    "Judge 2",
+                    "Judge 1",
                     18
-                ],
-                [
-                    "Best UI/UX Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    22
                 ],
                 [
                     "Best Use of Microsoft Cloud for Your Community",
@@ -1977,39 +1977,39 @@
         [
             [
                 "Yes",
-                "D2"
+                "D8"
             ],
             "IntelliDrive Drowsiness Detector",
             [
                 [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 3",
-                    4
-                ],
-                [
-                    "Best Hardware Hack",
-                    "Bitcamp",
-                    "Judge 4",
-                    12
-                ],
-                [
                     "Best Social Good Hack",
                     "Bitcamp",
-                    "Judge 3",
-                    13
-                ],
-                [
-                    "People's Choice Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    24
+                    "Judge 2",
+                    2
                 ],
                 [
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
+                    "Judge 2",
+                    4
+                ],
+                [
+                    "Best First Time Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    14
+                ],
+                [
+                    "Best Machine Learning Hack",
+                    "Bitcamp",
                     "Judge 1",
-                    25
+                    16
+                ],
+                [
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 1",
+                    19
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403624-intellidrive-drowsiness-detector"
@@ -2017,45 +2017,45 @@
         [
             [
                 "Yes",
-                "G5"
+                "G7"
             ],
             "Farm Buddy",
             [
                 [
-                    "Best UI/UX Hack",
-                    "Bitcamp",
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
                     "Judge 1",
-                    0
-                ],
-                [
-                    "Best Bitcamp Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    4
+                    6
                 ],
                 [
                     "Best Financial Hack",
                     "Capital One",
-                    "Judge 2",
-                    6
-                ],
-                [
-                    "Best Social Good Hack",
-                    "Bitcamp",
-                    "Judge 4",
-                    18
+                    "Judge 1",
+                    7
                 ],
                 [
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
-                    "Judge 2",
-                    19
+                    "Judge 1",
+                    8
                 ],
                 [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 3",
-                    21
+                    "Best UI/UX Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    12
+                ],
+                [
+                    "Best Social Good Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    18
+                ],
+                [
+                    "Best Bitcamp Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    19
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -2071,101 +2071,11 @@
             "Email Ahoy!",
             [
                 [
-                    "Best Public Sector Hack",
-                    "Bloomberg Industry Group",
-                    "Judge 1",
-                    0
-                ],
-                [
-                    "Best Razzle Dazzle Hack",
-                    "Bitcamp",
-                    "Judge 3",
-                    2
-                ],
-                [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 4",
-                    3
-                ],
-                [
-                    "Best First Time Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    5
-                ],
-                [
                     "Best Gamification Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    6
-                ]
-            ],
-            "https://bitcamp2023.devpost.com/submissions/403634-email-ahoy"
-        ],
-        [
-            [
-                "Yes",
-                "B3"
-            ],
-            "LectureGPT",
-            [
-                [
-                    "Best UI/UX Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    5
-                ],
-                [
-                    "People's Choice Hack",
-                    "Bitcamp",
                     "Judge 1",
-                    19
+                    3
                 ],
-                [
-                    "Best First Time Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    23
-                ]
-            ],
-            "https://bitcamp2023.devpost.com/submissions/403647-lecturegpt"
-        ],
-        [
-            [
-                "Yes",
-                "E4"
-            ],
-            "Frontier Fugue Fighters",
-            [
-                [
-                    "Best First Time Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    11
-                ],
-                [
-                    "Best UI/UX Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    20
-                ],
-                [
-                    "Best Razzle Dazzle Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    25
-                ]
-            ],
-            "https://bitcamp2023.devpost.com/submissions/403650-frontier-fugue-fighters"
-        ],
-        [
-            [
-                "Yes",
-                "B1"
-            ],
-            "Cookie Jar",
-            [
                 [
                     "Best First Time Hack",
                     "Bitcamp",
@@ -2173,16 +2083,106 @@
                     4
                 ],
                 [
+                    "Best Razzle Dazzle Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    5
+                ],
+                [
+                    "Best Public Sector Hack",
+                    "Bloomberg Industry Group",
+                    "Judge 2",
+                    11
+                ],
+                [
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 2",
+                    16
+                ]
+            ],
+            "https://bitcamp2023.devpost.com/submissions/403634-email-ahoy"
+        ],
+        [
+            [
+                "Yes",
+                "E2"
+            ],
+            "LectureGPT",
+            [
+                [
+                    "Best First Time Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    2
+                ],
+                [
+                    "People's Choice Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    9
+                ],
+                [
+                    "Best UI/UX Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    15
+                ]
+            ],
+            "https://bitcamp2023.devpost.com/submissions/403647-lecturegpt"
+        ],
+        [
+            [
+                "Yes",
+                "B11"
+            ],
+            "Frontier Fugue Fighters",
+            [
+                [
+                    "Best UI/UX Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    0
+                ],
+                [
+                    "Best First Time Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    16
+                ],
+                [
+                    "Best Razzle Dazzle Hack",
+                    "Bitcamp",
+                    "Judge 3",
+                    21
+                ]
+            ],
+            "https://bitcamp2023.devpost.com/submissions/403650-frontier-fugue-fighters"
+        ],
+        [
+            [
+                "Yes",
+                "I10"
+            ],
+            "Cookie Jar",
+            [
+                [
                     "Best Use of CockroachDB Serverless",
                     "Cockroach Labs",
                     "Judge 1",
-                    10
+                    0
+                ],
+                [
+                    "Best First Time Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    8
                 ],
                 [
                     "Best Social Good Hack",
                     "Bitcamp",
                     "Judge 2",
-                    12
+                    18
                 ],
                 [
                     "Best Domain Name from Domain.com",
@@ -2194,27 +2194,27 @@
         [
             [
                 "Yes",
-                "A10"
+                "D12"
             ],
             "Generalized Grover's Algorithm Color Graph Solver",
             [
                 [
-                    "Advanced Quantum Track",
-                    "Bitcamp",
-                    "Judge 3",
-                    2
-                ],
-                [
-                    "Best Bitcamp Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    3
-                ],
-                [
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    20
+                    10
+                ],
+                [
+                    "Best Razzle Dazzle Hack",
+                    "Bitcamp",
+                    "Judge 4",
+                    12
+                ],
+                [
+                    "Advanced Quantum Track",
+                    "Bitcamp",
+                    "Judge 4",
+                    19
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403664-generalized-grover-s-algorithm-color-graph-solver"
@@ -2222,7 +2222,7 @@
         [
             [
                 "Yes",
-                "F10"
+                "B5"
             ],
             "BASM",
             [
@@ -2230,13 +2230,13 @@
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    2
+                    15
                 ],
                 [
                     "Best UI/UX Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    14
+                    "Judge 2",
+                    18
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403743-basm"
@@ -2244,7 +2244,7 @@
         [
             [
                 "Yes",
-                "E12"
+                "A6"
             ],
             "Grover's Quantum Algorithm and its relation to graph theory",
             [
@@ -2260,27 +2260,27 @@
         [
             [
                 "Yes",
-                "D9"
+                "C8"
             ],
             "Playright",
             [
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 3",
+                    "Judge 1",
                     3
+                ],
+                [
+                    "Best Machine Learning Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    8
                 ],
                 [
                     "Best Gamification Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    10
-                ],
-                [
-                    "Best UI/UX Hack",
-                    "Bitcamp",
                     "Judge 1",
-                    23
+                    11
                 ],
                 [
                     "Best Domain Name from Domain.com",
@@ -2292,26 +2292,26 @@
         [
             [
                 "Yes",
-                "D3"
+                "C11"
             ],
             "Ripoff Bop-It",
             [
                 [
+                    "Best Bitcamp Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    0
+                ],
+                [
                     "Best Razzle Dazzle Hack",
                     "Bitcamp",
-                    "Judge 3",
-                    7
+                    "Judge 1",
+                    9
                 ],
                 [
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    13
-                ],
-                [
-                    "Best Bitcamp Hack",
-                    "Bitcamp",
-                    "Judge 2",
                     16
                 ]
             ],
@@ -2320,21 +2320,21 @@
         [
             [
                 "Yes",
-                "I3"
+                "D9"
             ],
             "Quantum Map Coloring Problem",
             [
                 [
-                    "Best Bitcamp Hack",
-                    "Bitcamp",
-                    "Judge 3",
-                    1
-                ],
-                [
                     "Advanced Quantum Track",
                     "Bitcamp",
+                    "Judge 3",
+                    3
+                ],
+                [
+                    "Best Bitcamp Hack",
+                    "Bitcamp",
                     "Judge 4",
-                    23
+                    5
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403790-quantum-map-coloring-problem"
@@ -2342,39 +2342,39 @@
         [
             [
                 "Yes",
-                "C4"
+                "D11"
             ],
             "So You Want to be a Realtor",
             [
                 [
-                    "Best Use of Real Estate Data",
-                    "CoStar Group",
+                    "Best Financial Hack",
+                    "Capital One",
                     "Judge 1",
                     4
                 ],
                 [
-                    "Best Gamification Hack",
-                    "Bitcamp",
-                    "Judge 4",
-                    12
-                ],
-                [
-                    "Best Financial Hack",
-                    "Capital One",
+                    "Best Use of Real Estate Data",
+                    "CoStar Group",
                     "Judge 2",
-                    14
+                    7
                 ],
                 [
                     "Best UI/UX Hack",
                     "Bitcamp",
+                    "Judge 2",
+                    15
+                ],
+                [
+                    "Best Gamification Hack",
+                    "Bitcamp",
                     "Judge 1",
-                    17
+                    16
                 ],
                 [
                     "Best Razzle Dazzle Hack",
                     "Bitcamp",
-                    "Judge 4",
-                    22
+                    "Judge 1",
+                    20
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403795-so-you-want-to-be-a-realtor"
@@ -2386,34 +2386,34 @@
             "SpiralScope-Parkinson's Spiral Disease Detection App",
             [
                 [
-                    "Don\u2019t Put All Your Eggs in One Basket",
-                    "Fannie Mae",
-                    "Judge 1",
-                    0
-                ],
-                [
-                    "Best First Time Hack",
+                    "Best Machine Learning Hack",
                     "Bitcamp",
                     "Judge 1",
                     2
                 ],
                 [
+                    "Best Public Sector Hack",
+                    "Bloomberg Industry Group",
+                    "Judge 1",
+                    6
+                ],
+                [
                     "Best Razzle Dazzle Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    11
+                    "Judge 4",
+                    7
+                ],
+                [
+                    "Don\u2019t Put All Your Eggs in One Basket",
+                    "Fannie Mae",
+                    "Judge 4",
+                    15
                 ],
                 [
                     "Best Social Good Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    15
-                ],
-                [
-                    "Best Public Sector Hack",
-                    "Bloomberg Industry Group",
-                    "Judge 2",
-                    25
+                    "Judge 3",
+                    20
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -2425,21 +2425,21 @@
         [
             [
                 "Yes",
-                "A7"
+                "D3"
             ],
             "tL;Dr",
             [
                 [
-                    "Best First Time Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    0
-                ],
-                [
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    24
+                    12
+                ],
+                [
+                    "Best First Time Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    19
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403802-tl-dr"
@@ -2447,7 +2447,7 @@
         [
             [
                 "Yes",
-                "H3"
+                "F8"
             ],
             "Group2Meet",
             [],
@@ -2462,26 +2462,26 @@
                 [
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
-                    "Judge 1",
+                    "Judge 2",
                     8
                 ],
                 [
                     "Best Social Good Hack",
                     "Bitcamp",
                     "Judge 2",
-                    15
-                ],
-                [
-                    "Best UI/UX Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    18
+                    14
                 ],
                 [
                     "Most Philanthropic Hack",
                     "Bloomberg",
+                    "Judge 3",
+                    16
+                ],
+                [
+                    "Best UI/UX Hack",
+                    "Bitcamp",
                     "Judge 1",
-                    22
+                    20
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403814-domicilium"
@@ -2493,28 +2493,28 @@
             "TerpStrong",
             [
                 [
-                    "Best First Time Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    4
-                ],
-                [
-                    "Best Social Good Hack",
-                    "Bitcamp",
-                    "Judge 4",
-                    13
-                ],
-                [
                     "Best Use of CockroachDB Serverless",
                     "Cockroach Labs",
-                    "Judge 4",
-                    14
+                    "Judge 2",
+                    5
                 ],
                 [
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
+                    11
+                ],
+                [
+                    "Best First Time Hack",
+                    "Bitcamp",
+                    "Judge 1",
                     18
+                ],
+                [
+                    "Best Social Good Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    21
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -2526,7 +2526,7 @@
         [
             [
                 "Yes",
-                "E6"
+                "G12"
             ],
             "Grover\u2019s Algorithm for Graph Coloring Challenge",
             [
@@ -2542,27 +2542,27 @@
         [
             [
                 "Yes",
-                "D8"
+                "D5"
             ],
             "WakeMe App",
             [
                 [
-                    "Best Gamification Hack",
+                    "Best Razzle Dazzle Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    4
+                    "Judge 2",
+                    1
                 ],
                 [
                     "Best UI/UX Hack",
                     "Bitcamp",
                     "Judge 1",
-                    11
+                    7
                 ],
                 [
-                    "Best Razzle Dazzle Hack",
+                    "Best Gamification Hack",
                     "Bitcamp",
                     "Judge 2",
-                    25
+                    18
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403842-wakeme-app"
@@ -2570,7 +2570,7 @@
         [
             [
                 "Yes",
-                "A8"
+                "D2"
             ],
             "Egg",
             [
@@ -2578,7 +2578,7 @@
                     "Don\u2019t Put All Your Eggs in One Basket",
                     "Fannie Mae",
                     "Judge 1",
-                    14
+                    16
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403843-egg"
@@ -2586,21 +2586,21 @@
         [
             [
                 "Yes",
-                "I7"
+                "B1"
             ],
             "StudyBrew",
             [
                 [
+                    "Best First Time Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    3
+                ],
+                [
                     "Best UI/UX Hack",
                     "Bitcamp",
                     "Judge 1",
-                    18
-                ],
-                [
-                    "Best First Time Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    21
+                    8
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403846-studybrew"
@@ -2608,7 +2608,7 @@
         [
             [
                 "Yes",
-                "D4"
+                "H2"
             ],
             "Malware Mayhem!",
             [
@@ -2621,20 +2621,20 @@
                 [
                     "Best UI/UX Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    7
+                    "Judge 1",
+                    4
                 ],
                 [
                     "Best Gamification Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    15
+                    "Judge 4",
+                    10
                 ],
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    18
+                    "Judge 3",
+                    19
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -2646,38 +2646,38 @@
         [
             [
                 "Yes",
-                "C5"
+                "H5"
             ],
             "College Food Finance",
             [
                 [
-                    "Best UI/UX Hack",
+                    "Best Gamification Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    1
+                    "Judge 3",
+                    5
                 ],
                 [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 3",
-                    7
+                    "Best UI/UX Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    10
                 ],
                 [
                     "Best Financial Hack",
                     "Capital One",
                     "Judge 1",
-                    10
+                    14
                 ],
                 [
-                    "Best Gamification Hack",
-                    "Bitcamp",
-                    "Judge 3",
-                    16
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 1",
+                    17
                 ],
                 [
                     "Best Razzle Dazzle Hack",
                     "Bitcamp",
-                    "Judge 3",
+                    "Judge 2",
                     20
                 ]
             ],
@@ -2692,8 +2692,8 @@
                 [
                     "Best Gamification Hack",
                     "Bitcamp",
-                    "Judge 3",
-                    6
+                    "Judge 1",
+                    21
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403854-gridlock"
@@ -2701,27 +2701,27 @@
         [
             [
                 "Yes",
-                "I1"
+                "E9"
             ],
             "TouchToneAI",
             [
                 [
-                    "People's Choice Hack",
+                    "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    0
+                    "Judge 2",
+                    6
                 ],
                 [
-                    "Best Moonshot Hack",
+                    "Best Machine Learning Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    14
+                    "Judge 2",
+                    12
                 ],
                 [
                     "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    18
+                    "Judge 1",
+                    13
                 ],
                 [
                     "Best Domain Name from Domain.com",
@@ -2737,33 +2737,33 @@
         [
             [
                 "Yes",
-                "E3"
+                "H1"
             ],
             "Expend Together",
             [
                 [
-                    "Best Bitcamp Hack",
+                    "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    0
+                    5
+                ],
+                [
+                    "Best Bitcamp Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    7
                 ],
                 [
                     "Best Financial Hack",
                     "Capital One",
                     "Judge 2",
-                    8
-                ],
-                [
-                    "Best Moonshot Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    23
+                    13
                 ],
                 [
                     "Best UI/UX Hack",
                     "Bitcamp",
                     "Judge 1",
-                    25
+                    21
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403867-expend-together"
@@ -2771,27 +2771,27 @@
         [
             [
                 "Yes",
-                "E5"
+                "H7"
             ],
             "WumPay",
             [
                 [
+                    "Best Financial Hack",
+                    "Capital One",
+                    "Judge 1",
+                    0
+                ],
+                [
                     "Best First Time Hack",
                     "Bitcamp",
                     "Judge 2",
-                    1
+                    2
                 ],
                 [
                     "Best Use of CockroachDB Serverless",
                     "Cockroach Labs",
-                    "Judge 4",
-                    12
-                ],
-                [
-                    "Best Financial Hack",
-                    "Capital One",
-                    "Judge 1",
-                    22
+                    "Judge 2",
+                    15
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403880-wumpay"
@@ -2799,39 +2799,39 @@
         [
             [
                 "Yes",
-                "F6"
+                "H9"
             ],
             "Sidewalk Optimizer",
             [
                 [
-                    "Best Social Good Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    3
-                ],
-                [
-                    "Best Bitcamp Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    4
-                ],
-                [
                     "Best First Time Hack",
                     "Bitcamp",
                     "Judge 1",
-                    14
-                ],
-                [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 4",
-                    18
+                    7
                 ],
                 [
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
                     "Judge 1",
-                    21
+                    10
+                ],
+                [
+                    "Best Social Good Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    15
+                ],
+                [
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 2",
+                    17
+                ],
+                [
+                    "Best Bitcamp Hack",
+                    "Bitcamp",
+                    "Judge 3",
+                    18
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -2843,27 +2843,27 @@
         [
             [
                 "Yes",
-                "B10"
+                "A11"
             ],
             "Heart Disease Prediction Using Logistic Regression",
             [
                 [
+                    "Best Machine Learning Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    1
+                ],
+                [
                     "Best Social Good Hack",
                     "Bitcamp",
-                    "Judge 3",
+                    "Judge 4",
                     4
                 ],
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 4",
-                    15
-                ],
-                [
-                    "Best Machine Learning Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    18
+                    "Judge 2",
+                    20
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403887-heart-disease-prediction-using-logistic-regression"
@@ -2871,27 +2871,27 @@
         [
             [
                 "Yes",
-                "B6"
+                "E3"
             ],
             "Terra-PIN",
             [
                 [
-                    "Best Gamification Hack",
-                    "Bitcamp",
-                    "Judge 3",
-                    21
-                ],
-                [
                     "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    22
+                    "Judge 2",
+                    7
+                ],
+                [
+                    "Best UI/UX Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    9
                 ],
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 4",
-                    25
+                    "Judge 1",
+                    21
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403890-terra-pin"
@@ -2899,21 +2899,21 @@
         [
             [
                 "Yes",
-                "G12"
+                "A9"
             ],
             "RecommendMe",
             [
                 [
+                    "Best Machine Learning Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    5
+                ],
+                [
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    9
-                ],
-                [
-                    "Best Machine Learning Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    10
+                    8
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403903-recommendme"
@@ -2921,7 +2921,7 @@
         [
             [
                 "Yes",
-                "G11"
+                "A5"
             ],
             "PrepMe",
             [
@@ -2929,25 +2929,25 @@
                     "Best Gamification Hack",
                     "Bitcamp",
                     "Judge 1",
-                    0
+                    6
                 ],
                 [
                     "Best Financial Hack",
                     "Capital One",
-                    "Judge 1",
+                    "Judge 2",
                     9
+                ],
+                [
+                    "Best Machine Learning Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    10
                 ],
                 [
                     "Best UI/UX Hack",
                     "Bitcamp",
                     "Judge 2",
-                    13
-                ],
-                [
-                    "Best Machine Learning Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    18
+                    12
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403906-prepme"
@@ -2955,39 +2955,39 @@
         [
             [
                 "Yes",
-                "G10"
+                "F5"
             ],
             "Hot Packets",
             [
                 [
-                    "Best Moonshot Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    1
-                ],
-                [
-                    "Best Bitcamp Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    12
-                ],
-                [
                     "Best Financial Hack",
                     "Capital One",
-                    "Judge 2",
-                    13
-                ],
-                [
-                    "Best Digital Forensics Hack",
-                    "Cipher Tech",
-                    "Judge 4",
-                    17
+                    "Judge 1",
+                    2
                 ],
                 [
                     "Best First Time Hack",
                     "Bitcamp",
                     "Judge 1",
-                    24
+                    5
+                ],
+                [
+                    "Best Digital Forensics Hack",
+                    "Cipher Tech",
+                    "Judge 4",
+                    11
+                ],
+                [
+                    "Best Bitcamp Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    21
+                ],
+                [
+                    "Best Moonshot Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    22
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403909-hot-packets"
@@ -2995,27 +2995,27 @@
         [
             [
                 "Yes",
-                "E9"
+                "G10"
             ],
             "I Owe U",
             [
                 [
-                    "Best Financial Hack",
-                    "Capital One",
-                    "Judge 2",
-                    9
-                ],
-                [
                     "Best Use of CockroachDB Serverless",
                     "Cockroach Labs",
                     "Judge 2",
-                    13
+                    10
                 ],
                 [
                     "Best First Time Hack",
                     "Bitcamp",
+                    "Judge 2",
+                    15
+                ],
+                [
+                    "Best Financial Hack",
+                    "Capital One",
                     "Judge 1",
-                    20
+                    18
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403910-i-owe-u"
@@ -3023,39 +3023,39 @@
         [
             [
                 "Yes",
-                "H7"
+                "F4"
             ],
             "Detouree",
             [
                 [
-                    "Best Use of CockroachDB Serverless",
-                    "Cockroach Labs",
-                    "Judge 1",
-                    2
-                ],
-                [
-                    "Best Razzle Dazzle Hack",
+                    "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    4
-                ],
-                [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
                     "Judge 3",
-                    14
-                ],
-                [
-                    "People's Choice Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    20
+                    1
                 ],
                 [
                     "Best Social Good Hack",
                     "Bitcamp",
                     "Judge 2",
-                    24
+                    5
+                ],
+                [
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 3",
+                    8
+                ],
+                [
+                    "Best Use of CockroachDB Serverless",
+                    "Cockroach Labs",
+                    "Judge 3",
+                    10
+                ],
+                [
+                    "Best UI/UX Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    14
                 ],
                 [
                     "Most Creative Use of Twilio",
@@ -3067,27 +3067,27 @@
         [
             [
                 "Yes",
-                "I6"
+                "I9"
             ],
             "Project SafeSight",
             [
                 [
-                    "Best Social Good Hack",
-                    "Bitcamp",
-                    "Judge 4",
-                    2
-                ],
-                [
                     "Best Machine Learning Hack",
                     "Bitcamp",
                     "Judge 2",
-                    15
+                    1
+                ],
+                [
+                    "Best Social Good Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    8
                 ],
                 [
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    22
+                    20
                 ],
                 [
                     "Best Use of Microsoft Cloud for Your Community",
@@ -3107,27 +3107,27 @@
         [
             [
                 "Yes",
-                "I9"
+                "C6"
             ],
             "SafetyNet",
             [
                 [
-                    "Best Financial Hack",
-                    "Capital One",
-                    "Judge 1",
-                    6
-                ],
-                [
                     "Best Social Good Hack",
                     "Bitcamp",
                     "Judge 1",
-                    13
+                    4
+                ],
+                [
+                    "Best Financial Hack",
+                    "Capital One",
+                    "Judge 1",
+                    12
                 ],
                 [
                     "Most Philanthropic Hack",
                     "Bloomberg",
-                    "Judge 1",
-                    17
+                    "Judge 4",
+                    20
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403927-safetynet"
@@ -3135,33 +3135,33 @@
         [
             [
                 "Yes",
-                "F3"
+                "F1"
             ],
             "Credit First",
             [
                 [
-                    "Best Moonshot Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    10
-                ],
-                [
                     "Best Social Good Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    18
+                    "Judge 3",
+                    3
                 ],
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    21
+                    "Judge 2",
+                    12
                 ],
                 [
                     "Best Financial Hack",
                     "Capital One",
                     "Judge 2",
-                    22
+                    14
+                ],
+                [
+                    "Best UI/UX Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    16
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403936-credit-first"
@@ -3169,33 +3169,33 @@
         [
             [
                 "Yes",
-                "F8"
+                "G4"
             ],
             "Testudo's Choice",
             [
                 [
-                    "Best Machine Learning Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    0
-                ],
-                [
                     "Best Use of CockroachDB Serverless",
                     "Cockroach Labs",
                     "Judge 3",
-                    6
+                    3
+                ],
+                [
+                    "Best Machine Learning Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    7
                 ],
                 [
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    11
+                    18
                 ],
                 [
                     "Best Social Good Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    19
+                    "Judge 4",
+                    20
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403937-testudo-s-choice"
@@ -3203,39 +3203,39 @@
         [
             [
                 "Yes",
-                "H6"
+                "E7"
             ],
             "Contract Solution",
             [
                 [
+                    "Best Digital Forensics Hack",
+                    "Cipher Tech",
+                    "Judge 2",
+                    2
+                ],
+                [
+                    "Best Use of CockroachDB Serverless",
+                    "Cockroach Labs",
+                    "Judge 1",
+                    4
+                ],
+                [
+                    "Don\u2019t Put All Your Eggs in One Basket",
+                    "Fannie Mae",
+                    "Judge 1",
+                    8
+                ],
+                [
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
                     "Judge 2",
-                    1
+                    17
                 ],
                 [
                     "Most Philanthropic Hack",
                     "Bloomberg",
                     "Judge 2",
-                    17
-                ],
-                [
-                    "Don\u2019t Put All Your Eggs in One Basket",
-                    "Fannie Mae",
-                    "Judge 2",
-                    21
-                ],
-                [
-                    "Best Digital Forensics Hack",
-                    "Cipher Tech",
-                    "Judge 1",
-                    22
-                ],
-                [
-                    "Best Use of CockroachDB Serverless",
-                    "Cockroach Labs",
-                    "Judge 3",
-                    23
+                    19
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403939-contract-solution"
@@ -3243,21 +3243,21 @@
         [
             [
                 "Yes",
-                "H4"
+                "I8"
             ],
             "Polar Low Identification",
             [
                 [
-                    "Best Machine Learning Hack",
+                    "Best Social Good Hack",
                     "Bitcamp",
                     "Judge 2",
                     8
                 ],
                 [
-                    "Best Social Good Hack",
+                    "Best Machine Learning Hack",
                     "Bitcamp",
                     "Judge 2",
-                    13
+                    17
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403940-polar-low-identification"
@@ -3265,45 +3265,45 @@
         [
             [
                 "Yes",
-                "D5"
+                "H12"
             ],
             "REFerence Sheet (Real Estate Financial)",
             [
                 [
                     "Best Financial Hack",
                     "Capital One",
-                    "Judge 1",
-                    5
-                ],
-                [
-                    "Best Use of Real Estate Data",
-                    "CoStar Group",
                     "Judge 2",
-                    6
+                    4
                 ],
                 [
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    7
+                    8
                 ],
                 [
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
+                    "Judge 2",
+                    9
+                ],
+                [
+                    "Best Use of Real Estate Data",
+                    "CoStar Group",
                     "Judge 1",
-                    13
+                    17
+                ],
+                [
+                    "Best Machine Learning Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    20
                 ],
                 [
                     "Best UI/UX Hack",
                     "Bitcamp",
                     "Judge 2",
-                    16
-                ],
-                [
-                    "Best Machine Learning Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    20
+                    21
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -3315,33 +3315,33 @@
         [
             [
                 "Yes",
-                "E7"
+                "I7"
             ],
             "Petsily",
             [
                 [
-                    "Best UI/UX Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    3
-                ],
-                [
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    8
-                ],
-                [
-                    "Best Use of CockroachDB Serverless",
-                    "Cockroach Labs",
-                    "Judge 3",
-                    13
+                    0
                 ],
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
+                    "Judge 2",
+                    16
+                ],
+                [
+                    "Best Use of CockroachDB Serverless",
+                    "Cockroach Labs",
+                    "Judge 4",
+                    17
+                ],
+                [
+                    "Best Social Good Hack",
+                    "Bitcamp",
                     "Judge 3",
-                    20
+                    18
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403959-petsily"
@@ -3353,34 +3353,34 @@
             "bit.mortgage",
             [
                 [
-                    "Best First Time Hack",
+                    "Best Financial Hack",
+                    "Capital One",
+                    "Judge 2",
+                    7
+                ],
+                [
+                    "Best UI/UX Hack",
                     "Bitcamp",
                     "Judge 1",
-                    5
+                    9
                 ],
                 [
                     "Best Use of Real Estate Data",
                     "CoStar Group",
                     "Judge 1",
-                    8
+                    12
                 ],
                 [
-                    "Best UI/UX Hack",
+                    "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    15
-                ],
-                [
-                    "Best Financial Hack",
-                    "Capital One",
                     "Judge 1",
-                    17
+                    14
                 ],
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    18
+                    "Judge 4",
+                    19
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403969-bit-mortgage"
@@ -3388,27 +3388,27 @@
         [
             [
                 "Yes",
-                "D6"
+                "C2"
             ],
             "PE headers parser",
             [
                 [
-                    "People's Choice Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    5
-                ],
-                [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    21
+                    "Judge 4",
+                    1
                 ],
                 [
                     "Best Digital Forensics Hack",
                     "Cipher Tech",
-                    "Judge 2",
-                    25
+                    "Judge 3",
+                    10
+                ],
+                [
+                    "People's Choice Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    20
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403979-pe-headers-parser"
@@ -3416,33 +3416,33 @@
         [
             [
                 "Yes",
-                "H10"
+                "C9"
             ],
             "MoneyMe",
             [
                 [
-                    "Best Bitcamp Hack",
+                    "People's Choice Hack",
                     "Bitcamp",
-                    "Judge 4",
-                    2
-                ],
-                [
-                    "Best UI/UX Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    3
+                    "Judge 1",
+                    0
                 ],
                 [
                     "Best Financial Hack",
                     "Capital One",
                     "Judge 1",
-                    19
+                    1
                 ],
                 [
-                    "People's Choice Hack",
+                    "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    21
+                    "Judge 4",
+                    8
+                ],
+                [
+                    "Best UI/UX Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    20
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403981-moneyme"
@@ -3450,26 +3450,26 @@
         [
             [
                 "Yes",
-                "G1"
+                "I6"
             ],
             "SportConnect",
             [
                 [
-                    "Best Social Good Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    2
-                ],
-                [
-                    "Best First Time Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    19
-                ],
-                [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 1",
+                    "Judge 4",
+                    9
+                ],
+                [
+                    "Best Social Good Hack",
+                    "Bitcamp",
+                    "Judge 4",
+                    18
+                ],
+                [
+                    "Best UI/UX Hack",
+                    "Bitcamp",
+                    "Judge 2",
                     22
                 ]
             ],
@@ -3478,14 +3478,14 @@
         [
             [
                 "Yes",
-                "H12"
+                "A7"
             ],
             "Tic Tac Toe Game",
             [
                 [
                     "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 2",
+                    "Judge 1",
                     15
                 ]
             ],
@@ -3494,33 +3494,33 @@
         [
             [
                 "Yes",
-                "D1"
+                "F3"
             ],
             "Roomie Swipe",
             [
                 [
-                    "Best Social Good Hack",
+                    "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 4",
-                    4
-                ],
-                [
-                    "Best Use of Real Estate Data",
-                    "CoStar Group",
-                    "Judge 1",
+                    "Judge 3",
                     7
                 ],
                 [
                     "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    17
+                    "Judge 2",
+                    11
                 ],
                 [
-                    "Best Bitcamp Hack",
+                    "Best Social Good Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    25
+                    "Judge 3",
+                    14
+                ],
+                [
+                    "Best Use of Real Estate Data",
+                    "CoStar Group",
+                    "Judge 2",
+                    18
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/403990-roomie-swipe"
@@ -3528,33 +3528,33 @@
         [
             [
                 "Yes",
-                "B11"
+                "I1"
             ],
             "Audivision",
             [
                 [
-                    "Best Hardware Hack",
+                    "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    3
+                    "Judge 2",
+                    1
                 ],
                 [
                     "Best Social Good Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    17
+                    "Judge 2",
+                    15
                 ],
                 [
                     "Most Philanthropic Hack",
                     "Bloomberg",
-                    "Judge 2",
-                    23
+                    "Judge 3",
+                    17
                 ],
                 [
-                    "Best First Time Hack",
+                    "Best Hardware Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    25
+                    "Judge 3",
+                    22
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/404003-audivision"
@@ -3562,15 +3562,15 @@
         [
             [
                 "Yes",
-                "C10"
+                "G8"
             ],
             "Password Manager",
             [
                 [
                     "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    2
+                    "Judge 1",
+                    9
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/404004-password-manager"
@@ -3578,21 +3578,21 @@
         [
             [
                 "Yes",
-                "I11"
+                "F12"
             ],
             "Cagnus Marlsen (Chessbot AI)",
             [
                 [
-                    "Best Razzle Dazzle Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    1
-                ],
-                [
                     "Best Bitcamp Hack",
                     "Bitcamp",
                     "Judge 3",
-                    18
+                    6
+                ],
+                [
+                    "Best Razzle Dazzle Hack",
+                    "Bitcamp",
+                    "Judge 3",
+                    11
                 ],
                 [
                     "Best Domain Name from Domain.com",
@@ -3604,7 +3604,7 @@
         [
             [
                 "Yes",
-                "H5"
+                "A10"
             ],
             "AnonPlay",
             [],
@@ -3613,27 +3613,27 @@
         [
             [
                 "Yes",
-                "A2"
+                "E12"
             ],
             "Lively",
             [
                 [
-                    "Best UI/UX Hack",
+                    "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    1
+                    "Judge 1",
+                    10
                 ],
                 [
                     "Best Social Good Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    6
+                    "Judge 1",
+                    13
                 ],
                 [
-                    "Best First Time Hack",
+                    "Best UI/UX Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    23
+                    "Judge 2",
+                    14
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/404016-lively"
@@ -3641,45 +3641,45 @@
         [
             [
                 "Yes",
-                "G9"
+                "F9"
             ],
             "BitTales",
             [
                 [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 4",
-                    4
-                ],
-                [
-                    "Best Machine Learning Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    5
-                ],
-                [
-                    "Best Social Good Hack",
-                    "Bitcamp",
-                    "Judge 3",
-                    6
-                ],
-                [
                     "Best First Time Hack",
                     "Bitcamp",
                     "Judge 2",
-                    9
+                    8
                 ],
                 [
                     "Best Use of CockroachDB Serverless",
                     "Cockroach Labs",
+                    "Judge 4",
+                    9
+                ],
+                [
+                    "Best Social Good Hack",
+                    "Bitcamp",
+                    "Judge 4",
+                    10
+                ],
+                [
+                    "Best Machine Learning Hack",
+                    "Bitcamp",
                     "Judge 1",
-                    12
+                    13
                 ],
                 [
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
-                    "Judge 1",
-                    18
+                    "Judge 2",
+                    21
+                ],
+                [
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 2",
+                    22
                 ],
                 [
                     "Best Use of Microsoft Cloud for Your Community",
@@ -3699,39 +3699,39 @@
         [
             [
                 "Yes",
-                "F4"
+                "C10"
             ],
             "TweetWatch",
             [
                 [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 1",
-                    1
-                ],
-                [
-                    "Best Machine Learning Hack",
+                    "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    3
+                    "Judge 2",
+                    5
                 ],
                 [
                     "Best Digital Forensics Hack",
                     "Cipher Tech",
-                    "Judge 3",
+                    "Judge 1",
                     13
                 ],
                 [
-                    "Best First Time Hack",
+                    "Best Machine Learning Hack",
                     "Bitcamp",
                     "Judge 2",
-                    19
+                    14
                 ],
                 [
                     "Best Social Good Hack",
                     "Bitcamp",
                     "Judge 3",
-                    20
+                    15
+                ],
+                [
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 3",
+                    19
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/404021-tweetwatch"
@@ -3739,39 +3739,39 @@
         [
             [
                 "Yes",
-                "B12"
+                "I3"
             ],
             "Helper from Instructors",
             [
                 [
-                    "Don\u2019t Put All Your Eggs in One Basket",
-                    "Fannie Mae",
-                    "Judge 3",
-                    3
-                ],
-                [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 1",
-                    11
-                ],
-                [
-                    "Best Use of CockroachDB Serverless",
-                    "Cockroach Labs",
-                    "Judge 2",
-                    21
-                ],
-                [
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
                     "Judge 2",
-                    22
+                    3
+                ],
+                [
+                    "Don\u2019t Put All Your Eggs in One Basket",
+                    "Fannie Mae",
+                    "Judge 2",
+                    9
                 ],
                 [
                     "Best Digital Forensics Hack",
                     "Cipher Tech",
-                    "Judge 3",
-                    25
+                    "Judge 2",
+                    13
+                ],
+                [
+                    "Best Use of CockroachDB Serverless",
+                    "Cockroach Labs",
+                    "Judge 1",
+                    14
+                ],
+                [
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 4",
+                    15
                 ],
                 [
                     "Best Use of Microsoft Cloud for Your Community",
@@ -3787,21 +3787,21 @@
         [
             [
                 "Yes",
-                "C11"
+                "B10"
             ],
             "Mercury",
             [
                 [
+                    "Best Bitcamp Hack",
+                    "Bitcamp",
+                    "Judge 4",
+                    6
+                ],
+                [
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    17
-                ],
-                [
-                    "Best Bitcamp Hack",
-                    "Bitcamp",
-                    "Judge 3",
-                    24
+                    21
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/404024-mercury"
@@ -3809,26 +3809,26 @@
         [
             [
                 "Yes",
-                "C12"
+                "F10"
             ],
             "Occupan-See",
             [
                 [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 2",
-                    0
+                    "Best Machine Learning Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    4
                 ],
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 3",
-                    14
+                    "Judge 1",
+                    8
                 ],
                 [
-                    "Best Machine Learning Hack",
-                    "Bitcamp",
-                    "Judge 1",
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 4",
                     16
                 ]
             ],
@@ -3837,7 +3837,7 @@
         [
             [
                 "Yes",
-                "I4"
+                "F11"
             ],
             "Space Cop 7: Return of the Fraudulent Monetary Gains",
             [],
@@ -3846,7 +3846,7 @@
         [
             [
                 "Yes",
-                "E8"
+                "D1"
             ],
             "BinSort",
             [
@@ -3854,7 +3854,7 @@
                     "Best Use of CockroachDB Serverless",
                     "Cockroach Labs",
                     "Judge 2",
-                    3
+                    0
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/404035-binsort"
@@ -3862,21 +3862,21 @@
         [
             [
                 "Yes",
-                "C9"
+                "D4"
             ],
             "The Beginner Arduino Experience",
             [
                 [
-                    "Best Hardware Hack",
-                    "Bitcamp",
-                    "Judge 3",
-                    11
-                ],
-                [
                     "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 1",
-                    25
+                    "Judge 2",
+                    9
+                ],
+                [
+                    "Best Hardware Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    21
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/404036-the-beginner-arduino-experience"
@@ -3891,25 +3891,25 @@
                     "Best UI/UX Hack",
                     "Bitcamp",
                     "Judge 2",
-                    6
+                    3
                 ],
                 [
                     "Best First Time Hack",
                     "Bitcamp",
                     "Judge 2",
-                    16
+                    10
                 ],
                 [
                     "Best Gamification Hack",
                     "Bitcamp",
-                    "Judge 4",
-                    21
+                    "Judge 2",
+                    11
                 ],
                 [
                     "Best Use of CockroachDB Serverless",
                     "Cockroach Labs",
-                    "Judge 4",
-                    25
+                    "Judge 3",
+                    15
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -3921,33 +3921,33 @@
         [
             [
                 "Yes",
-                "F9"
+                "A8"
             ],
             "lemonaid",
             [
                 [
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 2",
+                    3
+                ],
+                [
                     "Best Social Good Hack",
                     "Bitcamp",
-                    "Judge 3",
-                    15
+                    "Judge 2",
+                    4
                 ],
                 [
                     "Best Gamification Hack",
                     "Bitcamp",
                     "Judge 1",
-                    18
+                    14
                 ],
                 [
                     "Best UI/UX Hack",
                     "Bitcamp",
                     "Judge 1",
-                    21
-                ],
-                [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 3",
-                    25
+                    17
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -3959,27 +3959,27 @@
         [
             [
                 "Yes",
-                "G2"
+                "H4"
             ],
             "Planet Plant",
             [
                 [
-                    "Best Gamification Hack",
+                    "Best UI/UX Hack",
                     "Bitcamp",
                     "Judge 1",
-                    8
+                    1
                 ],
                 [
                     "Best Social Good Hack",
                     "Bitcamp",
                     "Judge 3",
-                    14
+                    4
                 ],
                 [
-                    "Best UI/UX Hack",
+                    "Best Gamification Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    21
+                    "Judge 3",
+                    15
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/404043-planet-plant"
@@ -3987,27 +3987,27 @@
         [
             [
                 "Yes",
-                "I10"
+                "F7"
             ],
             "Nutri AI Scan",
             [
                 [
-                    "Best First Time Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    11
-                ],
-                [
                     "Best Social Good Hack",
                     "Bitcamp",
-                    "Judge 4",
-                    14
+                    "Judge 3",
+                    5
                 ],
                 [
                     "Most Philanthropic Hack",
                     "Bloomberg",
-                    "Judge 3",
-                    17
+                    "Judge 4",
+                    10
+                ],
+                [
+                    "Best First Time Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    22
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/404044-nutri-ai-scan"
@@ -4015,33 +4015,33 @@
         [
             [
                 "Yes",
-                "B7"
+                "G6"
             ],
             "SignLanguageTranslator",
             [
                 [
                     "Best Machine Learning Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    3
+                    "Judge 1",
+                    9
+                ],
+                [
+                    "Best Social Good Hack",
+                    "Bitcamp",
+                    "Judge 4",
+                    17
                 ],
                 [
                     "Best First Time Hack",
                     "Bitcamp",
                     "Judge 2",
-                    8
-                ],
-                [
-                    "Best Social Good Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    11
+                    20
                 ],
                 [
                     "Most Philanthropic Hack",
                     "Bloomberg",
-                    "Judge 2",
-                    20
+                    "Judge 3",
+                    22
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -4053,21 +4053,21 @@
         [
             [
                 "Yes",
-                "F7"
+                "E8"
             ],
             "Anit-Theft Phone Charging Hub",
             [
                 [
-                    "Best Hardware Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    18
-                ],
-                [
                     "Best Bitcamp Hack",
                     "Bitcamp",
                     "Judge 2",
-                    25
+                    3
+                ],
+                [
+                    "Best Hardware Hack",
+                    "Bitcamp",
+                    "Judge 4",
+                    16
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/404055-anit-theft-phone-charging-hub"
@@ -4075,7 +4075,7 @@
         [
             [
                 "Yes",
-                "G4"
+                "B3"
             ],
             "Travel Buddy",
             [],
@@ -4084,15 +4084,15 @@
         [
             [
                 "Yes",
-                "G6"
+                "H10"
             ],
             "Testudo#",
             [
                 [
-                    "Best UI/UX Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    0
+                    "Best Use of CockroachDB Serverless",
+                    "Cockroach Labs",
+                    "Judge 4",
+                    3
                 ],
                 [
                     "Best First Time Hack",
@@ -4101,8 +4101,8 @@
                     6
                 ],
                 [
-                    "Best Use of CockroachDB Serverless",
-                    "Cockroach Labs",
+                    "Best UI/UX Hack",
+                    "Bitcamp",
                     "Judge 2",
                     11
                 ]
@@ -4112,45 +4112,45 @@
         [
             [
                 "Yes",
-                "B9"
+                "C4"
             ],
             "Mr. FAT (Management and Reporting Feedback Analysis Tool)",
             [
                 [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 3",
+                    "Best Financial Hack",
+                    "Capital One",
+                    "Judge 2",
                     0
+                ],
+                [
+                    "Best Public Sector Hack",
+                    "Bloomberg Industry Group",
+                    "Judge 2",
+                    5
                 ],
                 [
                     "Best Moonshot Hack",
                     "Bitcamp",
                     "Judge 1",
-                    4
+                    6
                 ],
                 [
                     "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    14
-                ],
-                [
-                    "Best Financial Hack",
-                    "Capital One",
                     "Judge 1",
-                    16
-                ],
-                [
-                    "Best Public Sector Hack",
-                    "Bloomberg Industry Group",
-                    "Judge 1",
-                    19
+                    17
                 ],
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
-                    "Judge 3",
-                    25
+                    "Judge 4",
+                    18
+                ],
+                [
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 4",
+                    22
                 ],
                 [
                     "Most Creative Use of Twilio",
@@ -4174,7 +4174,7 @@
         [
             [
                 "Yes",
-                "A12"
+                "H6"
             ],
             "TerpTally",
             [
@@ -4182,29 +4182,29 @@
                     "Best Public Sector Hack",
                     "Bloomberg Industry Group",
                     "Judge 1",
-                    2
+                    0
                 ],
                 [
                     "Best Gamification Hack",
                     "Bitcamp",
-                    "Judge 3",
-                    10
+                    "Judge 2",
+                    3
+                ],
+                [
+                    "Best Financial Hack",
+                    "Capital One",
+                    "Judge 1",
+                    11
                 ],
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
                     "Judge 1",
-                    11
+                    14
                 ],
                 [
                     "Best First Time Hack",
                     "Bitcamp",
-                    "Judge 2",
-                    13
-                ],
-                [
-                    "Best Financial Hack",
-                    "Capital One",
                     "Judge 1",
                     20
                 ]
@@ -4214,27 +4214,27 @@
         [
             [
                 "Yes",
-                "I8"
+                "G9"
             ],
             "Detective Deductible",
             [
                 [
-                    "Best Machine Learning Hack",
-                    "Bitcamp",
-                    "Judge 1",
-                    6
+                    "Most Philanthropic Hack",
+                    "Bloomberg",
+                    "Judge 3",
+                    2
                 ],
                 [
                     "Best Financial Hack",
                     "Capital One",
                     "Judge 2",
-                    7
+                    6
                 ],
                 [
-                    "Most Philanthropic Hack",
-                    "Bloomberg",
-                    "Judge 4",
-                    25
+                    "Best Machine Learning Hack",
+                    "Bitcamp",
+                    "Judge 2",
+                    16
                 ],
                 [
                     "Best Accessibility Hack sponsored by Fidelity",
@@ -4246,7 +4246,7 @@
         [
             [
                 "Yes",
-                "E1"
+                "I11"
             ],
             "Quiz App",
             [],
@@ -4255,21 +4255,21 @@
         [
             [
                 "Yes",
-                "B2"
+                "B9"
             ],
             "At the Wheel",
             [
                 [
-                    "Best Hardware Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    5
-                ],
-                [
                     "People's Choice Hack",
                     "Bitcamp",
                     "Judge 1",
-                    10
+                    12
+                ],
+                [
+                    "Best Hardware Hack",
+                    "Bitcamp",
+                    "Judge 1",
+                    19
                 ],
                 [
                     "Most Creative Use of Twilio",
@@ -4281,27 +4281,27 @@
         [
             [
                 "Yes",
-                "C3"
+                "G1"
             ],
             "Using LiDAR in Heavy Machinery",
             [
                 [
                     "Most Philanthropic Hack",
                     "Bloomberg",
-                    "Judge 4",
-                    7
-                ],
-                [
-                    "Best Hardware Hack",
-                    "Bitcamp",
-                    "Judge 2",
-                    20
+                    "Judge 3",
+                    3
                 ],
                 [
                     "Best Bitcamp Hack",
                     "Bitcamp",
+                    "Judge 2",
+                    8
+                ],
+                [
+                    "Best Hardware Hack",
+                    "Bitcamp",
                     "Judge 3",
-                    21
+                    13
                 ]
             ],
             "https://bitcamp2023.devpost.com/submissions/404089-using-lidar-in-heavy-machinery"
@@ -4315,5 +4315,5 @@
             "https://bitcamp2023.devpost.com/submissions/404102-climate-control"
         ]
     ],
-    "total_times": 25
+    "total_times": 22
 }
