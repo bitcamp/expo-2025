@@ -1,0 +1,347 @@
+import csv
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import scipy
+from scipy import optimize
+import itertools
+from typing import List, Dict, Tuple, Optional
+import random
+import json
+
+# hardcoded dictionary mapping category names to cap values
+category_cap_dict = {
+    "Bloomberg Industry Group - Best Public Sector Hack": 2,
+    "CoStar Group - Best Use of Real Estate Data": 2,
+    "Capital One - Best Financial Hack": 2,
+    "Best Moonshot Hack - Bitcamp": 1,
+    "People's Choice Hack - Bitcamp": 1,
+    "Best Machine Learning Hack - Bitcamp": 2,
+    "Best First Time Hack - Bitcamp": 2,
+    "Best UI/UX Hack - Bitcamp": 2,
+    "Best Social Good Hack - Bitcamp": 4,
+    "Best Gamification Hack - Bitcamp": 4,
+    "Cockroach Labs - Best Use of CockroachDB Serverless": 4,
+    "Best Bitcamp Hack - Bitcamp": 4,
+    "Bloomberg - Most Philanthropic Hack": 4,
+    "Fannie Mae - Don't Put All Your Eggs in One Basket": 4,
+    "Best Razzle Dazzle Hack - Bitcamp": 4,
+    "Best Hardware Hack - Bitcamp": 4,
+    "Cipher Tech - Best Digital Forensics Hack": 4,
+    "Advanced Quantum Track - Bitcamp": 4,
+}
+
+hc = []
+cap = []
+#1 refers to index 0 (bloomberg), 2 refers to index 1 (costar)...
+category_names = []
+team_names = []
+links = []
+all_mlh = []
+in_person = []
+
+def process(csv_file):
+    global category_names, team_names, links
+    with open(csv_file, 'r', newline='', encoding='utf-8') as file:
+        reader = csv.reader(file)
+        next(reader)
+        #for every each category row in the csv, split by commas to get each category
+        for row in reader:
+            if (row[2].strip() == "Draft"):
+                continue
+            team_name = row[0].strip()
+            team_names.append(team_name)
+            link = row[1].strip()
+            links.append(link)
+
+            in_person.append(row[15].strip())
+            
+            categories = row[9].split(',')
+            append = []
+            mlh = []
+            for category in categories:
+                if category.strip():
+                    #for every category, ignore MLH
+                    if not category.strip().endswith("Major League Hacking"):
+                        #append it to the array for that hack
+                        append.append(category.strip())
+                        #if it isn't in the cap array, add it
+                        if category.strip() not in category_names:
+                            category_names.append(category.strip())
+                    else:
+                        mlh.append(category.strip())
+            hc.append(append)
+            all_mlh.append(mlh)
+        category_names = category_names.copy()
+
+
+        #check if group signed up for more than three bitcamp categories. if true, remove bitcamp categories until = 3
+        for sub_arr in hc:
+            bitcamp_count = sum(1 for s in sub_arr if s.endswith('Bitcamp'))
+            if bitcamp_count > 3:
+                bitcamp_indices = [i for i, s in enumerate(sub_arr) if s.endswith('Bitcamp')]
+                indices_to_remove = random.sample(bitcamp_indices, bitcamp_count - 3)
+                sub_arr[:] = [s for i, s in enumerate(sub_arr) if i not in indices_to_remove]
+
+        #change hc to index numbering
+        for i in range(0, len(hc)):
+            for j in range(0, len(hc[i])):
+                hc[i][j] = category_names.index(hc[i][j])
+
+csv_file = "/Users/eilee/coding-stuff/bitcamp/expo-2025/backend/bitcamp-2023-projects.csv"
+process(csv_file)
+# print(hc)
+# print(cap)
+# print()
+
+
+# print out values of caps per category
+for index, (name, cap_val) in enumerate(category_cap_dict.items()):
+    print(name, " ", str(cap_val))
+# print(len(cap))
+
+def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
+    # extracting sizes
+    M = len(hc)
+    N = len(category_cap_dict)
+    
+    # bookkeeping for valid (h, j) pairs
+    valid_hj = set()
+    for h, req_cat in enumerate(hc):
+        for j in req_cat:
+            valid_hj.add((h, j))
+    hj_to_i_base = dict(map(tuple, map(lambda t: t[::-1], list(enumerate(valid_hj)))))
+
+    def solve_expo(T: int):
+        # index bookkeeping
+        num_var = len(valid_hj) * T
+        def hjt_to_i(h: int, j: int, t: int) -> int:
+            return len(valid_hj) * (t-1) + hj_to_i_base[(h, j)]
+
+        # first condition
+        A1 = np.zeros((len(valid_hj), num_var))
+        for x, (h, j) in enumerate(valid_hj):
+            for t in range(T):
+                A1[x, hjt_to_i(h, j, t)] = 1
+        b1= np.ones(len(valid_hj))
+
+        # second condition
+        A2 = np.zeros((N*T, num_var))
+        for x, (j, t) in enumerate(itertools.product(range(N), range(T))):
+            for h in range(M):
+                if (h, j) not in valid_hj:
+                    continue
+                A2[x, hjt_to_i(h, j, t)] = 1
+        b2 = np.repeat(list(category_cap_dict.values()), T)
+
+        # third condition
+        A3 = np.zeros((M*T, num_var))
+        for x, (h, t) in enumerate(itertools.product(range(M), range(T))):
+            for j in range(N):
+                if (h, j) not in valid_hj:
+                    continue
+                A3[x, hjt_to_i(h, j, t)] = 1
+        b3 = np.ones(M*T)
+
+        # solve linear program
+        x = scipy.optimize.milp(
+            c=-np.ones(num_var),
+            constraints=[
+                scipy.optimize.LinearConstraint(A1, 0, b1),
+                scipy.optimize.LinearConstraint(A2, 0, b2),
+                scipy.optimize.LinearConstraint(A3, 0, b3)
+            ],
+            bounds=scipy.optimize.Bounds(lb=0, ub=1),
+            integrality=1
+        ).x
+        if int(sum(x)) < len(valid_hj):
+            return None
+
+        # interpret solution
+        H = [list() for _ in range(M)]
+        J = [list() for _ in range(N)]
+        for j in range(N):
+            J[j] = [list() for _ in range(T)]
+            for h in range(M):
+                if (h, j) not in valid_hj:
+                    continue
+                for t in range(T):
+                    if x[hjt_to_i(h, j, t)] == 1.0:
+                        H[h].append((j, t))
+                        J[j][t].append(h)
+        return (H, J)
+
+    # return solve_expo(t_max)
+    # binary search:
+    a, b = 1, t_max
+    while a < b-1:
+        m = int(np.ceil((a+b)/2))
+        soln = solve_expo(m)
+        if soln is None: # failure
+            a = m+1
+        else: # success
+            b = m
+
+    # check when 2 left
+    if a == b:
+        t = a
+    else:
+        if solve_expo(a) is None:
+            t = b
+        else:
+            t = a
+
+    # return optimal solution
+    H, J = solve_expo(t)
+    return (t, H, J)
+
+t, H, J = abstract_expo_alg(hc, list(category_cap_dict.values()), 69)
+# print(t)
+# print()
+# print(H)
+# print()
+# print(J)
+
+for i in range(len(H)):
+    for j in range(len(H[i])):
+        H[i][j] = (category_names[H[i][j][0]], H[i][j][1])
+
+# print(H)
+
+final_cat_names = []
+
+# print(category_names)
+
+for val in category_names:
+    if (val[val.index("- ") + 2: ] != "Bitcamp"):
+        final_cat_names.append(val[val.index("- ") + 2: ] + " - " + val[0:val.index(" -")])
+    else:
+        final_cat_names.append(val)
+        
+mlh_challenges = list(set([item for sublist in all_mlh for item in sublist]))
+final_cat_names = final_cat_names + mlh_challenges
+
+combined = []
+
+tables = []
+for i in range(20):
+    letter = chr(ord('A') + i)
+    if letter == 'K' or letter == 'L':
+        tables.extend([letter + str(j) for j in range(1, 13) if j not in (3, 4, 5)])
+    else:
+        tables.extend([letter + str(j) for j in range(1, 13)])
+
+judge = "Judge"
+max = 0
+
+tableCounter = 0
+in_person_count = 0
+for i in range(0, len(in_person)):
+    if in_person[i] == "Yes":
+        in_person_count += 1
+in_person_arr = random.sample(range(in_person_count), in_person_count)
+
+for i in range(len(team_names)):
+    H_new = []
+    if (H[i] != []):
+        for j in range(len(H[i])):
+            if (H[i][j][0][H[i][j][0].index("- ") + 2: ] == "Bitcamp"):
+                H_new.append([H[i][j][0][0:H[i][j][0].index(" -")], H[i][j][0][H[i][j][0].index("- ") + 2: ], judge, H[i][j][1]])
+            else:
+                H_new.append([H[i][j][0][H[i][j][0].index("- ") + 2: ], H[i][j][0][0:H[i][j][0].index(" -")], judge, H[i][j][1]])
+            
+            if H[i][j][1] > max:
+                max = H[i][j][1]
+    
+    H_new.sort(key=lambda x: x[-1])
+
+    for category in all_mlh[i]:
+        append = []
+        append.append(category.split(" - "))
+        H_new.append(append[0])
+
+
+    if in_person[i] == "Yes":
+        data = [
+            ["Yes", tables[in_person_arr[tableCounter]]],
+            team_names[i],
+            H_new,
+        ]
+        tableCounter += 1
+    else:
+        data = [
+            ["No"],
+            team_names[i],
+            H_new,
+        ]
+    combined.append(data)
+
+names_links = []
+for i in range(len(team_names)):
+    names_links.append([team_names[i], links[i]])
+    
+repeats = {}    
+
+for value in combined:
+    if value != []:
+        for challenge in value[2]:
+            if challenge[1] != "Major League Hacking":
+                challenge_key = str(challenge[0]) + " - " + str(challenge[1])
+                if challenge_key not in repeats:
+                    repeats[challenge_key] = [[challenge[3]]]
+                else:
+                    repeats[challenge_key].append([challenge[3]])
+
+for key, lists in repeats.items():
+    repeats[key] = sorted(lists, key=lambda x: x[0])
+
+for key in repeats:
+    curr = final_cat_names.index(key)
+    judgeCount = list(category_cap_dict.values())[curr]
+    inc = 0
+    for lst in repeats[key]:
+        lst.append((inc % judgeCount) + 1)
+        inc += 1
+
+bitcamp_counts = {}
+
+for value in combined:
+    if value != []:
+        for challenge in value[2]:
+            if challenge[1] != "Major League Hacking":
+                challenge_key = str(challenge[0]) + " - " + str(challenge[1])
+
+                if "Bitcamp" in challenge_key:
+                    if challenge_key in bitcamp_counts:
+                        bitcamp_counts[challenge_key] += 1
+                    else:
+                        bitcamp_counts[challenge_key] = 1
+
+                for idx, inner_list in enumerate(repeats[challenge_key]):
+                    if inner_list[0] == challenge[3]:
+                        challenge[2] = challenge[2] + " " + str(inner_list[1])
+                        del repeats[challenge_key][idx]
+                        break
+                    
+for value in combined:
+    if value != []:
+        name = value[1]
+        for lst in names_links:
+            if name == lst[0]:
+                value.append(lst[1])
+
+data = {
+    "category_names": final_cat_names,
+    "team_names": names_links,
+    "combined_values": combined,
+    "total_times" : max
+}
+
+with open('../frontend/public/expo_algorithm_results.json', 'w') as json_file:
+    json.dump(data, json_file, indent=4)
+
+sorted_bitcamp_counts = sorted(bitcamp_counts.items(), key=lambda x: x[1], reverse=True)
+
+print("Bitcamp Categories Sorted by Number of Submissions:")
+for category, count in sorted_bitcamp_counts:
+    print(f"{category}: {count} submissions")
