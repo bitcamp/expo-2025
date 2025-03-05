@@ -44,10 +44,31 @@ module.exports.post_schedule = withSentry(async (event) => {
     };
   }
 
-  body.id = emailToUserId(body.email);
+  // body.combined_values.forEach(entry => {
+  //   const is_in_person = entry[0][0]; 
+  //   const table_assignment = "";
+  //   if (is_in_person === "Yes"){
+  //     table = entry[0][1];
+  //   }
+  //   const team_name = entry[1];
+
+
+  // });
 
   const params = {
-    TableName: process.env.USERS_TABLE,
+    TableName: process.env.EXPO_TABLE,
+    // Item: {
+    //   id: ,
+    //   challenge_name: ,
+    //   Emails: ,
+    //   is_in_person: ,
+    //   judge: ,
+    //   project_link: ,
+    //   sponsor_name: ,
+    //   table_assignment: ,
+    //   team_name: ,
+    //   time_slot: 
+    // },
     Item: {},
   };
 
