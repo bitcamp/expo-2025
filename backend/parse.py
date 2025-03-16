@@ -158,6 +158,7 @@ def get_challenge_maps(full_challenge_list):
 CHALLENGE_TO_ID, ID_TO_CHALLENGE = get_challenge_maps(FULL_CHALLENGE_LIST)
 
 def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
+    print("in expo")
     # extracting sizes
     M = len(hc)
     N = len(cap)
@@ -169,11 +170,14 @@ def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
             valid_hj.add((h, j))
     hj_to_i_base = dict(map(tuple, map(lambda t: t[::-1], list(enumerate(valid_hj)))))
 
+    print(f"bookepeing done {hj_to_i_base}")
+
     def solve_expo(T: int):
         # index bookkeeping
         num_var = len(valid_hj) * T
         def hjt_to_i(h: int, j: int, t: int) -> int:
             return len(valid_hj) * (t-1) + hj_to_i_base[(h, j)]
+        print("indexed bookeping done")
 
         # first condition
         A1 = np.zeros((len(valid_hj), num_var))
@@ -181,6 +185,7 @@ def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
             for t in range(T):
                 A1[x, hjt_to_i(h, j, t)] = 1
         b1= np.ones(len(valid_hj))
+        print("first condition done")
 
         # second condition
         A2 = np.zeros((N*T, num_var))
@@ -190,6 +195,7 @@ def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
                     continue
                 A2[x, hjt_to_i(h, j, t)] = 1
         b2 = np.repeat(cap, T)
+        print("second condition done")
 
         # third condition
         A3 = np.zeros((M*T, num_var))
@@ -199,8 +205,10 @@ def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
                     continue
                 A3[x, hjt_to_i(h, j, t)] = 1
         b3 = np.ones(M*T)
+        print("third condition done")
 
         # solve linear program
+        print('starting linear program')
         x = scipy.optimize.milp(
             c=-np.ones(num_var),
             constraints=[
@@ -211,6 +219,8 @@ def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
             bounds=scipy.optimize.Bounds(lb=0, ub=1),
             integrality=1
         ).x
+
+        print("solved linear program")
         if int(sum(x)) < len(valid_hj):
             return None
 
@@ -398,25 +408,29 @@ def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges)
 
 def main():
     # csv_file = "./projects-2024-teammates.csv"
+    print("here")
     csv_file = "./final10am.csv"
+    print("processing csv")
     team_names, links, in_person, challenges, MLH_challenges, hc = process(csv_file)
-
+    print("processed csv")
     # cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 1]
     cap = [2, 2, 2, 1, 1, 2, 2, 2,           4, 4, 4, 4, 4, 4, 4, 4, 4, 4,  1,1,1,1,1,1,1,1,1]
 
-    # print(len(cap))
-    # print(len(FULL_CHALLENGE_LIST))
-    # print(len(CHALLENGE_TO_ID))
-    # print(len(ID_TO_CHALLENGE))
-    # for challenge_name, id in CHALLENGE_TO_ID.items():
-    #     print(f'{challenge_name} - {cap[id]}')
+    print(len(cap))
+    print(len(FULL_CHALLENGE_LIST))
+    print(len(CHALLENGE_TO_ID))
+    print(len(ID_TO_CHALLENGE))
+    for challenge_name, id in CHALLENGE_TO_ID.items():
+        print(f'{challenge_name} - {cap[id]}')
 
-    # print(len(cap))
+    print(len(cap))
 
-    # print(hc)
+    print(hc)
+
+    print("running expo")
 
     t, H, J = abstract_expo_alg(hc, cap, 69)
-
+    print("ran expo")
     print(t)
     print(150 // t)
     print(H)
@@ -433,3 +447,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    

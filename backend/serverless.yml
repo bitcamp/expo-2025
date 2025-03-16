@@ -7,13 +7,14 @@ provider:
   region: us-east-1
   runtime: nodejs16.x
   stage: ${opt:stage, 'dev'}
+  versionFunctions: true
   environment:
     EXPO_TABLE: ${file(./config/${self:provider.stage}.json):EXPO_TABLE}
   apiGateway:
     restApiId:
-      'Fn::ImportValue': platform-${self:provider.stage}-apigw-restApiId
+      "Fn::ImportValue": platform-${self:provider.stage}-apigw-restApiId
     restApiRootResourceId:
-      'Fn::ImportValue': platform-${self:provider.stage}-apigw-rootResourceId
+      "Fn::ImportValue": platform-${self:provider.stage}-apigw-rootResourceId
 
   iam:
     role:
@@ -47,7 +48,7 @@ provider:
 
 functions:
   getSchedule:
-    handler: handler.get_schedule 
+    handler: handler.get_schedule
     description: Pulls all scheduling data
     events:
       - http:
@@ -56,9 +57,9 @@ functions:
           cors: true
     memorySize: 256
     timeout: 15
-    provisionedConcurrency: ${self:custom.provisionedConcurrency.${opt:stage}, self:custom.provisionedConcurrency.other}
+    # provisionedConcurrency: ${self:custom.provisionedConcurrency.${opt:stage}, self:custom.provisionedConcurrency.other}
   postSchedule:
-    handler: handler.post_schedule 
+    handler: handler.post_schedule
     description: Posts all scheduling data
     events:
       - http:
@@ -67,7 +68,7 @@ functions:
           cors: true
     memorySize: 256
     timeout: 15
-    provisionedConcurrency: ${self:custom.provisionedConcurrency.${opt:stage}, self:custom.provisionedConcurrency.other}
+    # provisionedConcurrency: ${self:custom.provisionedConcurrency.${opt:stage}, self:custom.provisionedConcurrency.other}
 
 # portal stuff
 resources: # define DynamoDB tables within serverless
@@ -86,7 +87,10 @@ resources: # define DynamoDB tables within serverless
       DeletionPolicy: Retain
 
 package:
-  exclude: node_modules/**
+  exclude:
+    - node_modules/**
+  include:
+    - node_modules/serverless-sentry-lib/**
 
 custom:
   provisionedConcurrency:
