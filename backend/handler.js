@@ -2,6 +2,7 @@ const withSentry = require('serverless-sentry-lib');
 const AWS = require('aws-sdk');
 const csv = require('csvtojson');
 const UUID = require('uuid');
+const fs = require('fs');
 
 AWS.config.update({region: 'us-east-1'});
 
@@ -27,6 +28,56 @@ module.exports.get_schedule = withSentry(async (event) => {
     headers: HEADERS,
   };
 });
+
+// Read the JSON data from the file
+fs.readFile('./components/alg.json', 'utf8', (err, data) => {
+  if (err) {
+    console.error('Error reading the file:', err);
+    return;
+  }
+
+  // Parse the JSON data
+  const parsedData = JSON.parse(data);
+
+  // Function to format the time to "HH:MM"
+  function formatTime(timeString) {
+    const date = new Date(timeString);
+    const hours = date.getHours().toString().padStart(2, '0');
+    const minutes = date.getMinutes().toString().padStart(2, '0');
+    return `${hours}:${minutes}`;
+  }
+
+  // Process the data into the required format for DynamoDB
+  const processedData = parsedData.map(item => {
+    const challenges = item.challenges.map(challenge => {
+      const formattedStartTime = formatTime(challenge.start_time); // Get the formatted time
+
+      return {
+        M: {
+          judge: { S: challenge.judge },
+          sponsor_name: { S: challenge.company },
+          challenge_name: { S: challenge.challenge_name },
+          time_slot: { S: formattedStartTime }, // Use the formatted time
+        },
+      };
+    });
+
+    const emails = Array.isArray(item.emails) ? item.emails.filter(email => email !== "").map(email => ({ S: email })) : [];
+
+    return {
+      id: item.id.toString() , 
+      challenges: challenges , 
+      emails: emails, 
+      is_in_person: item.in_person ,
+      project_link: item.link ,
+      table_assignment: item.table ,
+      team_name: item.team_name ,
+    };
+  });
+
+  console.log(JSON.stringify(processedData, null, 2));
+});
+
 
 module.exports.post_schedule = withSentry(async (event) => {
   const ddb = new AWS.DynamoDB.DocumentClient();

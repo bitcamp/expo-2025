@@ -307,12 +307,12 @@ def process(csv_file):
     links = submitted_projects[LINK_COLUMN_NAME].tolist()
     in_person = (submitted_projects[IN_PERSON_COLUMN_NAME] == 'Yes').tolist()
     challenge_fields = submitted_projects[CHALLENGES_COLUMN_NAME].tolist()
-
+    emails = [list(tup) for tup in zip(submitted_projects.iloc[:,24].tolist(),submitted_projects.iloc[:,27].tolist(),submitted_projects.iloc[:,30].tolist(),submitted_projects.iloc[:,33].tolist() )]
     # Separate MLH and other challenges
     
     temp_challenges, MLH_challenges = process_challenges(challenge_fields)
 
-    # Get track challenge and limit bitcamp challenges to MAX 3
+    # Get track challenge and limit bitcamp challenges to MAX 3 
     track_response = submitted_projects[TRACK_CHALLENGE_COLUMN_NAME].tolist()
 
     challenges = []
@@ -328,13 +328,13 @@ def process(csv_file):
             ind_hc.append(CHALLENGE_TO_ID[challenge])
         hc.append(ind_hc)
     
-    return team_names, links, in_person, challenges, MLH_challenges, hc
+    return team_names, links, in_person, challenges, MLH_challenges, hc, emails
 
 
 def parse_challenge_name(challenge_name):
     return challenge_name.split(" - ")
 
-def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges):
+def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges, emails):
     eastern = pytz.timezone('US/Eastern')
 
     EXPO_START_TIME = "2024-04-21 11:00:00"
@@ -351,6 +351,7 @@ def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges)
             "table": TABLES.pop() if in_person_list[id] else "virtual",
             "in_person": in_person_list[id],
             "link": links[id],
+            "emails": emails[id]
         }
 
         challenges = []
@@ -391,6 +392,7 @@ def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges)
             challenges.append(challenge_json)
         
         team_json["challenges"] = challenges
+        print(team_json)
         result.append(team_json)
                 
     return result
@@ -399,7 +401,7 @@ def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges)
 def main():
     # csv_file = "./projects-2024-teammates.csv"
     csv_file = "./final10am.csv"
-    team_names, links, in_person, challenges, MLH_challenges, hc = process(csv_file)
+    team_names, links, in_person, challenges, MLH_challenges, hc, emails = process(csv_file)
 
     # cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 1]
     cap = [2, 2, 2, 1, 1, 2, 2, 2,           4, 4, 4, 4, 4, 4, 4, 4, 4, 4,  1,1,1,1,1,1,1,1,1]
@@ -421,7 +423,7 @@ def main():
     print(150 // t)
     print(H)
 
-    expo_output = expo_output_to_json(t, H, team_names, links, in_person, MLH_challenges)
+    expo_output = expo_output_to_json(t, H, team_names, links, in_person, MLH_challenges, emails)
 
     output_path = '../frontend/public/expo_algorithm_results.json'
 
