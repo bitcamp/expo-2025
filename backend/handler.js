@@ -4,7 +4,7 @@ const csv = require('csvtojson');
 const UUID = require('uuid');
 const fs = require('fs');
 
-AWS.config.update({region: 'us-east-1'});
+AWS.config.update({ region: 'us-east-1' });
 
 const HEADERS = {
   'Access-Control-Allow-Origin': '*',
@@ -65,79 +65,106 @@ fs.readFile('./components/alg.json', 'utf8', (err, data) => {
     const emails = Array.isArray(item.emails) ? item.emails.filter(email => email !== "").map(email => ({ S: email })) : [];
 
     return {
-      id: item.id.toString() , 
-      challenges: challenges , 
-      emails: emails, 
-      is_in_person: item.in_person ,
-      project_link: item.link ,
-      table_assignment: item.table ,
-      team_name: item.team_name ,
+      id: item.id.toString(),
+      challenges: challenges,
+      emails: emails,
+      is_in_person: item.in_person,
+      project_link: item.link,
+      table_assignment: item.table,
+      team_name: item.team_name,
     };
   });
 
   console.log(JSON.stringify(processedData, null, 2));
 });
 
+function unmarshallDynamoDB(attribute) {
+  if (attribute === null || attribute === undefined) {
+    return attribute;
+  }
+  // 1) Strings
+  if (attribute.S !== undefined) {
+    return attribute.S;
+  }
+  // 2) Numbers
+  if (attribute.N !== undefined) {
+    return Number(attribute.N);
+  }
+  // 3) Booleans
+  if (attribute.BOOL !== undefined) {
+    return attribute.BOOL;
+  }
+  // 4) Null
+  if (attribute.NULL !== undefined) {
+    return null;
+  }
+  // 5) Lists
+  if (attribute.L !== undefined) {
+    return attribute.L.map(unmarshallDynamoDB);
+  }
+  // 6) Maps
+  if (attribute.M !== undefined) {
+    const obj = {};
+    for (const [key, val] of Object.entries(attribute.M)) {
+      obj[key] = unmarshallDynamoDB(val);
+    }
+    return obj;
+  }
+  // 7) String sets, number sets, etc. (if needed)
+  if (attribute.SS !== undefined) {
+    return attribute.SS;
+  }
+  if (attribute.NS !== undefined) {
+    return attribute.NS.map(Number);
+  }
+
+  // fallback:
+  return attribute;
+}
 
 module.exports.post_schedule = withSentry(async (event) => {
   const ddb = new AWS.DynamoDB.DocumentClient();
-  const body = JSON.parse(event.body);
+  try {
 
-    // checks if any field is missing to create a  user
-  if (!body.email
-    || !body.full_name
-    || !body.access_level // TODO refactor to `role` instead of `access_level`?
-    || !body.group
-    || !body.campfire_team) { // Campfire team is a Bitcamp-specific field ('red' | 'green' | 'blue')
+    const processedData = JSON.parse(event.body);
+    for (const team of processedData) {
+      const convertedChallenges = (team.challenges || []).map((challengeObj) =>
+        unmarshallDynamoDB(challengeObj) 
+      );
+
+      const convertedEmails = (team.emails || []).map((emailObj) =>
+        unmarshallDynamoDB(emailObj)
+      );
+
+      const params = {
+        TableName: process.env.EXPO_TABLE,
+        Item: {
+          id: team.id, 
+          team_name: team.team_name,
+          table_assignment: team.table_assignment,
+          is_in_person: team.is_in_person, 
+          project_link: team.project_link,
+          challenges: convertedChallenges,  
+          emails: convertedEmails,         
+        },
+      };
+
+      await ddb.put(params).promise();
+    }
+
     return {
-      statusCode: 400,
-      body: ' is missing a field',
+      statusCode: 200,
+      headers: HEADERS,
+      body: JSON.stringify({
+        message: 'All teams inserted successfully using DocumentClient!',
+      }),
+    };
+  } catch (error) {
+    console.error('Error inserting teams:', error);
+    return {
+      statusCode: 500,
+      headers: HEADERS,
+      body: JSON.stringify({ error: 'Failed to insert teams' }),
     };
   }
-
-  // body.combined_values.forEach(entry => {
-  //   const is_in_person = entry[0][0]; 
-  //   const table_assignment = "";
-  //   if (is_in_person === "Yes"){
-  //     table = entry[0][1];
-  //   }
-  //   const team_name = entry[1];
-
-
-  // });
-
-  const params = {
-    TableName: process.env.EXPO_TABLE,
-    // Item: {
-    //   id: ,
-    //   challenge_name: ,
-    //   Emails: ,
-    //   is_in_person: ,
-    //   judge: ,
-    //   project_link: ,
-    //   sponsor_name: ,
-    //   table_assignment: ,
-    //   team_name: ,
-    //   time_slot: 
-    // },
-    Item: {},
-  };
-
-  // dynamically add post request body params to document
-  Object.keys(body).forEach((k) => {
-    params.Item[k] = body[k];
-  });
-  
-
-  body.setRegistrationStatus = true;
-
-  // Send the user an invite email (for Bitcamp, we send the invite emails separately from adding users)
-  // await sendLoginLinkEmail(body.id, true, false);
-
-  // Returns status code 200 and JSON string of 'result'
-  return {
-    statusCode: 200,
-    body: JSON.stringify(params.Item),
-    headers: HEADERS,
-  };
 });

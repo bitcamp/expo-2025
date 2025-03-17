@@ -1,3 +1,107 @@
+# org: bitcamp
+# app: platform
+# service: expo-backend
+
+# provider:
+#   name: aws
+#   region: us-east-1
+#   runtime: nodejs16.x
+#   stage: ${opt:stage, 'dev'}
+#   versionFunctions: true
+#   environment:
+#     EXPO_TABLE: ${file(./config/${self:provider.stage}.json):EXPO_TABLE}
+#   apiGateway:
+#     restApiId:
+#       "Fn::ImportValue": platform-${self:provider.stage}-apigw-restApiId
+#     restApiRootResourceId:
+#       "Fn::ImportValue": platform-${self:provider.stage}-apigw-rootResourceId
+
+#   iam:
+#     role:
+#       statements:
+#         - Effect: "Allow"
+#           Action:
+#             - dynamodb:Query
+#             - dynamodb:Scan
+#             - dynamodb:GetItem
+#             - dynamodb:PutItem
+#             - dynamodb:UpdateItem
+#             - dynamodb:DeleteItem
+#           Resource: "arn:aws:dynamodb:us-east-1:*"
+#         - Effect: "Allow"
+#           Action:
+#             - secretsmanager:DescribeSecret
+#             - secretsmanager:GetSecretValue
+#           Resource: "arn:aws:secretsmanager:us-east-1:*"
+#         - Effect: "Allow"
+#           Action:
+#             - ses:SendTemplatedEmail
+#           Resource: "arn:aws:ses:us-east-1:*"
+#         - Effect: Allow
+#           Action:
+#             - s3:PutObject
+#             - s3:GetObject
+#             - s3:ListBucket
+#             - s3:ListBucketVersions
+#           Resource:
+#             - "arn:aws:s3:::*"
+
+# functions:
+#   getSchedule:
+#     handler: handler.get_schedule
+#     description: Pulls all scheduling data
+#     events:
+#       - http:
+#           path: expo-2024/schedule
+#           method: get
+#           cors: true
+#     memorySize: 256
+#     timeout: 15
+#     # provisionedConcurrency: ${self:custom.provisionedConcurrency.${opt:stage}, self:custom.provisionedConcurrency.other}
+#   postSchedule:
+#     handler: handler.post_schedule
+#     description: Posts all scheduling data
+#     events:
+#       - http:
+#           path: expo-2024/schedule
+#           method: post
+#           cors: true
+#     memorySize: 256
+#     timeout: 15
+#     # provisionedConcurrency: ${self:custom.provisionedConcurrency.${opt:stage}, self:custom.provisionedConcurrency.other}
+
+# # portal stuff
+# resources: # define DynamoDB tables within serverless
+#   Resources:
+#     scheduleTable:
+#       Type: AWS::DynamoDB::Table
+#       Properties:
+#         TableName: ${file(./config/${self:provider.stage}.json):EXPO_TABLE}
+#         BillingMode: PAY_PER_REQUEST
+#         AttributeDefinitions:
+#           - AttributeName: id
+#             AttributeType: S
+#         KeySchema:
+#           - AttributeName: id
+#             KeyType: HASH
+#       DeletionPolicy: Retain
+
+# package:
+#   exclude:
+#     - node_modules/**
+#   include:
+#     - node_modules/serverless-sentry-lib/**
+
+# custom:
+#   provisionedConcurrency:
+#     prd: 0
+#     dev: 1
+#     other: 0
+#   updateEnabled:
+#     prd: true
+#     other: false
+#   # serverless-layers:
+#   #   dependenciesPath: ./package.json
 org: bitcamp
 app: platform
 service: expo-backend
@@ -12,10 +116,9 @@ provider:
     EXPO_TABLE: ${file(./config/${self:provider.stage}.json):EXPO_TABLE}
   apiGateway:
     restApiId:
-      "Fn::ImportValue": platform-${self:provider.stage}-apigw-restApiId
+      "Fn::ImportValue": "platform-${self:provider.stage}-apigw-restApiId"
     restApiRootResourceId:
-      "Fn::ImportValue": platform-${self:provider.stage}-apigw-rootResourceId
-
+      "Fn::ImportValue": "platform-${self:provider.stage}-apigw-rootResourceId"
   iam:
     role:
       statements:
@@ -37,7 +140,7 @@ provider:
           Action:
             - ses:SendTemplatedEmail
           Resource: "arn:aws:ses:us-east-1:*"
-        - Effect: Allow
+        - Effect: "Allow"
           Action:
             - s3:PutObject
             - s3:GetObject
@@ -57,7 +160,8 @@ functions:
           cors: true
     memorySize: 256
     timeout: 15
-    # provisionedConcurrency: ${self:custom.provisionedConcurrency.${opt:stage}, self:custom.provisionedConcurrency.other}
+    # If you want to use provisioned concurrency, you might use:
+    # provisionedConcurrency: ${self:custom.provisionedConcurrency["${opt:stage, 'other'}"]}
   postSchedule:
     handler: handler.post_schedule
     description: Posts all scheduling data
@@ -68,10 +172,9 @@ functions:
           cors: true
     memorySize: 256
     timeout: 15
-    # provisionedConcurrency: ${self:custom.provisionedConcurrency.${opt:stage}, self:custom.provisionedConcurrency.other}
+    # provisionedConcurrency: ${self:custom.provisionedConcurrency["${opt:stage, 'other'}"]}
 
-# portal stuff
-resources: # define DynamoDB tables within serverless
+resources:
   Resources:
     scheduleTable:
       Type: AWS::DynamoDB::Table
@@ -86,11 +189,11 @@ resources: # define DynamoDB tables within serverless
             KeyType: HASH
       DeletionPolicy: Retain
 
-package:
-  exclude:
-    - node_modules/**
-  include:
-    - node_modules/serverless-sentry-lib/**
+# package:
+#   exclude:
+#     - node_modules/**
+#   include:
+#     - node_modules/serverless-sentry-lib/**
 
 custom:
   provisionedConcurrency:
@@ -100,5 +203,3 @@ custom:
   updateEnabled:
     prd: true
     other: false
-  # serverless-layers:
-  #   dependenciesPath: ./package.json
