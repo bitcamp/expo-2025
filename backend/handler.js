@@ -1,4 +1,4 @@
-const withSentry = require('serverless-sentry-lib');
+// const withSentry = require('serverless-sentry-lib');
 const AWS = require('aws-sdk');
 const csv = require('csvtojson');
 const UUID = require('uuid');
@@ -13,7 +13,7 @@ const HEADERS = {
 };
 
 
-module.exports.get_schedule = withSentry(async (event) => {
+module.exports.get_schedule = async (event) => {
   const ddb = new AWS.DynamoDB.DocumentClient();
   const params = {
     TableName: process.env.EXPO_TABLE,
@@ -27,10 +27,10 @@ module.exports.get_schedule = withSentry(async (event) => {
     body: JSON.stringify(result.Items),
     headers: HEADERS,
   };
-});
+};
 
 // Read the JSON data from the file
-fs.readFile('./components/alg.json', 'utf8', (err, data) => {
+fs.readFile('expo_algorithm_results.json', 'utf8', (err, data) => {
   if (err) {
     console.error('Error reading the file:', err);
     return;
@@ -122,11 +122,17 @@ function unmarshallDynamoDB(attribute) {
   return attribute;
 }
 
-module.exports.post_schedule = withSentry(async (event) => {
+module.exports.post_schedule = async (event) => {
   const ddb = new AWS.DynamoDB.DocumentClient();
   try {
+    const fileContents = fs.readFileSync('expo_algorithm_results.json', 'utf8');
+    console.log('Full fileContents:', fileContents);
 
-    const processedData = JSON.parse(event.body);
+    const processedData = JSON.parse(fileContents);
+    console.log('Is array?', Array.isArray(processedData));
+    console.log('processedData length:', processedData.length);
+
+
     for (const team of processedData) {
       const convertedChallenges = (team.challenges || []).map((challengeObj) =>
         unmarshallDynamoDB(challengeObj) 
@@ -136,10 +142,12 @@ module.exports.post_schedule = withSentry(async (event) => {
         unmarshallDynamoDB(emailObj)
       );
 
+      console.log(`About to put item with id=`, team.id, typeof team.id);
+
       const params = {
         TableName: process.env.EXPO_TABLE,
         Item: {
-          id: team.id, 
+          id: String(team.id), 
           team_name: team.team_name,
           table_assignment: team.table_assignment,
           is_in_person: team.is_in_person, 
@@ -164,7 +172,11 @@ module.exports.post_schedule = withSentry(async (event) => {
     return {
       statusCode: 500,
       headers: HEADERS,
-      body: JSON.stringify({ error: 'Failed to insert teams' }),
+      body: JSON.stringify({
+        error: 'Failed to insert teams',
+        message: error.message,
+        stack: error.stack
+      }),
     };
   }
-});
+};

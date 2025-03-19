@@ -189,11 +189,9 @@ resources:
             KeyType: HASH
       DeletionPolicy: Retain
 
-# package:
-#   exclude:
-#     - node_modules/**
-#   include:
-#     - node_modules/serverless-sentry-lib/**
+package:
+  include:
+    - expo_algorithm_results.json
 
 custom:
   provisionedConcurrency:
