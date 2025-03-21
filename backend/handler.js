@@ -1,8 +1,7 @@
-// const withSentry = require('serverless-sentry-lib');
 const AWS = require('aws-sdk');
-const csv = require('csvtojson');
-const UUID = require('uuid');
 const fs = require('fs');
+const bcrypt = require('bcryptjs');
+const crypto = require('crypto');
 
 AWS.config.update({ region: 'us-east-1' });
 
@@ -11,6 +10,30 @@ const HEADERS = {
   'Access-Control-Allow-Credentials': true,
   'Access-Control-Allow-Headers': '*',
 };
+
+function formatTime(timeString) {
+  const date = new Date(timeString);
+  const hours = date.getHours().toString().padStart(2, '0');
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+  return `${hours}:${minutes}`;
+}
+
+function generateSecureRandomPassword(length = 5) {
+  const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  const randomBytes = crypto.randomBytes(length);
+  let password = "";
+  for (let i = 0; i < length; i++) {
+    password += charset.charAt(randomBytes[i] % charset.length);
+  }
+  return password;
+}
+
+async function generateHashedPassword() {
+  const saltRounds = 3;
+  const plain = generateSecureRandomPassword();
+  const salt = await bcrypt.genSalt(saltRounds);
+  return bcrypt.hash(plain, salt);
+}
 
 
 module.exports.get_schedule = async (event) => {
@@ -21,7 +44,6 @@ module.exports.get_schedule = async (event) => {
 
   const result = await ddb.scan(params).promise();
 
-  // Returns status code 200 and JSON string of 'result'
   return {
     statusCode: 200,
     body: JSON.stringify(result.Items),
@@ -29,80 +51,53 @@ module.exports.get_schedule = async (event) => {
   };
 };
 
-// Read the JSON data from the file
-fs.readFile('expo_algorithm_results.json', 'utf8', (err, data) => {
-  if (err) {
-    console.error('Error reading the file:', err);
-    return;
-  }
+// fs.readFile('expo_algorithm_results.json', 'utf8', (err, data) => {
+//   if (err) {
+//     console.error('Error reading the file:', err);
+//     return;
+//   }
 
-  // Parse the JSON data
-  const parsedData = JSON.parse(data);
+//   const parsedData = JSON.parse(data);
 
-  // Function to format the time to "HH:MM"
-  function formatTime(timeString) {
-    const date = new Date(timeString);
-    const hours = date.getHours().toString().padStart(2, '0');
-    const minutes = date.getMinutes().toString().padStart(2, '0');
-    return `${hours}:${minutes}`;
-  }
+//   const processedData = await Promise.all(rawData.map(async item => {
+//     const challenges = item.challenges.map(challenge => {
+//       const formattedStartTime = formatTime(challenge.start_time);
+//       return {
+//         M: {
+//           judge: { S: challenge.judge },
+//           sponsor_name: { S: challenge.company },
+//           challenge_name: { S: challenge.challenge_name },
+//           time_slot: { S: formattedStartTime },
+//         },
+//       };
+//     });
 
-  // Process the data into the required format for DynamoDB
-  const processedData = parsedData.map(item => {
-    const challenges = item.challenges.map(challenge => {
-      const formattedStartTime = formatTime(challenge.start_time); // Get the formatted time
+//     const emails = Array.isArray(item.emails)      ? item.emails.filter(email => email !== "").map(email => ({ S: email }))
+//       : [];
 
-      return {
-        M: {
-          judge: { S: challenge.judge },
-          sponsor_name: { S: challenge.company },
-          challenge_name: { S: challenge.challenge_name },
-          time_slot: { S: formattedStartTime }, // Use the formatted time
-        },
-      };
-    });
+//     const password = await generateHashedPassword();
 
-    const emails = Array.isArray(item.emails) ? item.emails.filter(email => email !== "").map(email => ({ S: email })) : [];
+//     return {
+//       id: item.id.toString(),
+//       team_name: item.team_name,
+//       table_assignment: item.table,
+//       is_in_person: item.in_person,
+//       project_link: item.link,
+//       challenges: challenges,
+//       emails: emails,
+//       password: password,
+//     };
+//   }));
 
-    return {
-      id: item.id.toString(),
-      challenges: challenges,
-      emails: emails,
-      is_in_person: item.in_person,
-      project_link: item.link,
-      table_assignment: item.table,
-      team_name: item.team_name,
-    };
-  });
-
-  console.log(JSON.stringify(processedData, null, 2));
-});
+// });
 
 function unmarshallDynamoDB(attribute) {
-  if (attribute === null || attribute === undefined) {
-    return attribute;
-  }
-  // 1) Strings
-  if (attribute.S !== undefined) {
-    return attribute.S;
-  }
-  // 2) Numbers
-  if (attribute.N !== undefined) {
-    return Number(attribute.N);
-  }
-  // 3) Booleans
-  if (attribute.BOOL !== undefined) {
-    return attribute.BOOL;
-  }
-  // 4) Null
-  if (attribute.NULL !== undefined) {
-    return null;
-  }
-  // 5) Lists
-  if (attribute.L !== undefined) {
-    return attribute.L.map(unmarshallDynamoDB);
-  }
-  // 6) Maps
+  if (attribute === null || attribute === undefined) return attribute;
+  if (attribute.S !== undefined) return attribute.S;
+  if (attribute.N !== undefined) return Number(attribute.N);
+  if (attribute.BOOL !== undefined) return attribute.BOOL;
+  if (attribute.NULL !== undefined) return null;
+  if (attribute.L !== undefined) return attribute.L.map(unmarshallDynamoDB);
   if (attribute.M !== undefined) {
     const obj = {};
     for (const [key, val] of Object.entries(attribute.M)) {
@@ -110,15 +105,8 @@ function unmarshallDynamoDB(attribute) {
     }
     return obj;
   }
-  // 7) String sets, number sets, etc. (if needed)
-  if (attribute.SS !== undefined) {
-    return attribute.SS;
-  }
-  if (attribute.NS !== undefined) {
-    return attribute.NS.map(Number);
-  }
-
-  // fallback:
+  if (attribute.SS !== undefined) return attribute.SS;
+  if (attribute.NS !== undefined) return attribute.NS.map(Number);
   return attribute;
 }
 
@@ -126,34 +114,57 @@ module.exports.post_schedule = async (event) => {
   const ddb = new AWS.DynamoDB.DocumentClient();
   try {
     const fileContents = fs.readFileSync('expo_algorithm_results.json', 'utf8');
-    console.log('Full fileContents:', fileContents);
+    const rawData = JSON.parse(fileContents);
 
-    const processedData = JSON.parse(fileContents);
-    console.log('Is array?', Array.isArray(processedData));
-    console.log('processedData length:', processedData.length);
+    const processedData = await Promise.all(rawData.map(async item => {
+      const challenges = item.challenges.map(challenge => {
+        const formattedStartTime = formatTime(challenge.start_time);
+        return {
+          M: {
+            judge: { S: challenge.judge },
+            sponsor_name: { S: challenge.company },
+            challenge_name: { S: challenge.challenge_name },
+            time_slot: { S: formattedStartTime },
+          },
+        };
+      });
+      const emails = Array.isArray(item.emails)
+        ? item.emails.filter(email => email !== "").map(email => ({ S: email }))
+        : [];
 
+      const hashed = await generateHashedPassword();
+
+      return {
+        id: item.id.toString(),
+        team_name: item.team_name,
+        table_assignment: item.table,
+        is_in_person: item.in_person,
+        project_link: item.link,
+        challenges: challenges,
+        emails: emails,
+        password: hashed,
+      };
+    }));
 
     for (const team of processedData) {
-      const convertedChallenges = (team.challenges || []).map((challengeObj) =>
-        unmarshallDynamoDB(challengeObj) 
+      const convertedChallenges = (team.challenges || []).map(challengeObj =>
+        unmarshallDynamoDB(challengeObj)
       );
-
-      const convertedEmails = (team.emails || []).map((emailObj) =>
+      const convertedEmails = (team.emails || []).map(emailObj =>
         unmarshallDynamoDB(emailObj)
       );
-
-      console.log(`About to put item with id=`, team.id, typeof team.id);
 
       const params = {
         TableName: process.env.EXPO_TABLE,
         Item: {
-          id: String(team.id), 
+          id: team.id,
           team_name: team.team_name,
           table_assignment: team.table_assignment,
-          is_in_person: team.is_in_person, 
+          is_in_person: team.is_in_person,
           project_link: team.project_link,
-          challenges: convertedChallenges,  
-          emails: convertedEmails,         
+          challenges: convertedChallenges,
+          emails: convertedEmails,
+          password: team.password
         },
       };
 
@@ -165,6 +176,8 @@ module.exports.post_schedule = async (event) => {
       headers: HEADERS,
       body: JSON.stringify({
         message: 'All teams inserted successfully using DocumentClient!',
+        count: processedData.length,
+        data: processedData
       }),
     };
   } catch (error) {
