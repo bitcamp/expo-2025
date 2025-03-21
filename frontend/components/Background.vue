@@ -1,7 +1,7 @@
 <template>
     <div class="wrapper">
         <div class="hero">
-            <img src="../assets/images/background/HeroSign.svg" class="svgStyle" alt="Bitcamp sign" />
+            <img src="../assets/images/background/bitcamp.svg" class="svgStyle" alt="Bitcamp sign" />
         </div>
         <div class="filter-and-competitions-content">
             <div class="filter-component">
@@ -11,6 +11,7 @@
                 <TeamContainer />
             </div>
         </div>
+        <img src="../assets/images/TRexFossil.svg" class="right-img" alt="Dino" />
     </div>
 
 </template>
@@ -55,7 +56,12 @@ provide('state', state);
 
 .wrapper {
     position: absolute;
-    background-image: linear-gradient(180deg, #7C3B35, #E26F3C, #F0984C);
+    background-image: url('@/assets/images/background/Background.svg'), linear-gradient(#FF5D00, #E6A52D)
+                    ;
+    background-size: 220% auto;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -68,10 +74,23 @@ provide('state', state);
     }
 }
 
+.right-img {
+    position: absolute;
+    right: 0;
+    bottom: 300px;
+    width: 150px;  /* Adjust size as needed */
+    height: auto;
+    z-index: 0; 
+    pointer-events: none;
+
+}
+
 .filter-and-competitions-content {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: relative;
+    z-index: 10;
 
     @media (max-width: 800px) {
         display: flex;
