@@ -115,7 +115,7 @@ export default {
 
 .filter-header {
   font-family: "Aleo";
-  color: #fa9747;
+  color: #295111;
   font-weight: 400;
   font-size: 1.5rem;
 }
@@ -142,8 +142,8 @@ export default {
   width: 100%;
   padding: 0.5rem;
   border-radius: 2rem;
-  background-color: #ff8e3f;
-  border: 2px solid #ff8e3f;
+  background-color: #B94923;
+  border: 2px solid #B94923;
   font-family: "Inter";
   margin-bottom: 1rem;
   color: white;
