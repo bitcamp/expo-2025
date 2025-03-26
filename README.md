@@ -1,7 +1,7 @@
-# Expo App 2024
-This is the repository for the Expo App for Bitcamp 2024. 
+# Expo App 2025
+This is the repository for the Expo App for Bitcamp 2025. 
 
-The purpose of expo is to automate the reading and loading of Bitcamp hack submissions in order to create the judging schedule during the hack judging period. For Bitcamp 2023, we used Technica's stack 
+The purpose of expo is to automate the reading and loading of Bitcamp hack submissions in order to create the judging schedule during the hack judging period. For Bitcamp 2025, we used Technica's stack 
 with React, Mongo, Docker, and Flask; however, given our pivot to Vue + AWS, we felt that the recreation of the project was necessary. 
 
 Old repo: https://github.com/bitcamp/hackathon-expo-app
