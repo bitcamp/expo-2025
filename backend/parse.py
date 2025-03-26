@@ -425,7 +425,7 @@ def main():
 
     expo_output = expo_output_to_json(t, H, team_names, links, in_person, MLH_challenges, emails)
 
-    output_path = '../frontend/public/expo_algorithm_results.json'
+    output_path = '/expo_algorithm_results.json'
 
     with open(output_path, 'w') as f:
         json.dump(expo_output, f, indent=4)
