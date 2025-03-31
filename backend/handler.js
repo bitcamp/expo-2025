@@ -1,7 +1,11 @@
+// Curl command to push to aws table:
+// curl --ssl-no-revoke -X POST "https://tnmksukfo2.execute-api.us-east-1.amazonaws.com/dev/expo-2025/schedule" -H "Content-Type: application/json" -d "[]"
+
+
 const AWS = require('aws-sdk');
 const fs = require('fs');
-const bcrypt = require('bcryptjs');
-const crypto = require('crypto');
+// const bcrypt = require('bcryptjs');
+// const crypto = require('crypto');
 
 AWS.config.update({ region: 'us-east-1' });
 
@@ -18,22 +22,22 @@ function formatTime(timeString) {
   return `${hours}:${minutes}`;
 }
 
-function generateSecureRandomPassword(length = 5) {
-  const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-  const randomBytes = crypto.randomBytes(length);
-  let password = "";
-  for (let i = 0; i < length; i++) {
-    password += charset.charAt(randomBytes[i] % charset.length);
-  }
-  return password;
-}
+// function generateSecureRandomPassword(length = 5) {
+//   const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+//   const randomBytes = crypto.randomBytes(length);
+//   let password = "";
+//   for (let i = 0; i < length; i++) {
+//     password += charset.charAt(randomBytes[i] % charset.length);
+//   }
+//   return password;
+// }
 
-async function generateHashedPassword() {
-  const saltRounds = 3;
-  const plain = generateSecureRandomPassword();
-  const salt = await bcrypt.genSalt(saltRounds);
-  return bcrypt.hash(plain, salt);
-}
+// async function generateHashedPassword() {
+//   const saltRounds = 3;
+//   const plain = generateSecureRandomPassword();
+//   const salt = await bcrypt.genSalt(saltRounds);
+//   return bcrypt.hash(plain, salt);
+// }
 
 
 module.exports.get_schedule = async (event) => {
@@ -132,7 +136,7 @@ module.exports.post_schedule = async (event) => {
         ? item.emails.filter(email => email !== "").map(email => ({ S: email }))
         : [];
 
-      const hashed = await generateHashedPassword();
+      // const hashed = await generateHashedPassword();
 
       return {
         id: item.id.toString(),
@@ -142,7 +146,7 @@ module.exports.post_schedule = async (event) => {
         project_link: item.link,
         challenges: challenges,
         emails: emails,
-        password: hashed,
+        // password: hashed,
       };
     }));
 
@@ -164,7 +168,7 @@ module.exports.post_schedule = async (event) => {
           project_link: team.project_link,
           challenges: convertedChallenges,
           emails: convertedEmails,
-          password: team.password
+          // password: team.password
         },
       };
 

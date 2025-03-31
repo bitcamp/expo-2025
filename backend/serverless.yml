@@ -155,7 +155,7 @@ functions:
     description: Pulls all scheduling data
     events:
       - http:
-          path: expo-2024/schedule
+          path: expo-2025/schedule
           method: get
           cors: true
     memorySize: 256
@@ -167,7 +167,7 @@ functions:
     description: Posts all scheduling data
     events:
       - http:
-          path: expo-2024/schedule
+          path: expo-2025/schedule
           method: post
           cors: true
     memorySize: 256
