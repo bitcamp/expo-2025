@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Welcome to the Expo Backend. This will be very similar to [portal](https://github.com/bitcamp/portal), but with some differences.",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "argon2": "^0.41.1",
+    "bcryptjs": "^3.0.2",
+    "csvtojson": "^2.0.10",
+    "fs": "^0.0.1-security",
+    "uuid": "^11.1.0"
+  }
+}
