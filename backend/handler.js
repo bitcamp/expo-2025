@@ -1,7 +1,6 @@
 // Curl command to push to aws table:
 // curl --ssl-no-revoke -X POST "https://tnmksukfo2.execute-api.us-east-1.amazonaws.com/dev/expo-2025/schedule" -H "Content-Type: application/json" -d "[]"
 
-
 const AWS = require('aws-sdk');
 const fs = require('fs');
 // const bcrypt = require('bcryptjs');
@@ -13,6 +12,49 @@ const HEADERS = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Credentials': true,
   'Access-Control-Allow-Headers': '*',
+};
+
+const sendConfirmationEmail = async (team) => {
+  console.log('Starting to send email for team:', team.team_name);
+  const ses = new AWS.SES();
+
+  const validEmails = team.emails.filter(email => email && email.trim() !== "");
+
+  if (validEmails.length === 0) {
+    return;
+  }
+
+  // const testEmails = [
+  //   "agijare@terpmail.umd.edu",
+  //   "sgupta7@terpmail.umd.edu",
+  //   "thiru.seth@gmail.com",
+  //   "srujana.theerthala@gmail.com",
+  //   "harrisonp664@gmail.com",
+  // ];
+
+  console.log('Sending to emails:', testEmails);
+
+  const params = {
+    Destination: { ToAddresses: validEmails },
+    // Destination: { 'ToAddresses': testEmails },
+    Source: "Bitcamp <hello@bit.camp>",
+    ConfigurationSetName: "expo-2025",
+    Template: "provideId",
+    TemplateData: JSON.stringify({
+      teamName: team.team_name,
+      username: team.id
+    })
+  };
+
+  try {
+    console.log('Attempting to send email with params:', JSON.stringify(params, null, 2));
+    const result = await ses.sendTemplatedEmail(params).promise();
+    console.log('Email sent successfully:', result);
+    return result;
+  } catch (error) {
+    console.error('Error sending email:', error);
+    throw error;
+  }
 };
 
 function formatTime(timeString) {
@@ -167,12 +209,14 @@ module.exports.post_schedule = async (event) => {
           is_in_person: team.is_in_person,
           project_link: team.project_link,
           challenges: convertedChallenges,
-          emails: convertedEmails,
-          // password: team.password
+          emails: convertedEmails
         },
       };
 
-      await ddb.put(params).promise();
+      await Promise.all([
+        ddb.put(params).promise(),
+        sendConfirmationEmail(params.Item),
+      ]);
     }
 
     return {

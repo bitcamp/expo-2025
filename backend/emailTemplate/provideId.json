@@ -1,0 +1,8 @@
+{
+  "Template": {
+    "TemplateName": "provideId",
+    "SubjectPart": "Your Expo Login Credentials for Bitcamp 2025",
+    "HtmlPart": "<!DOCTYPE html><html><head><meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Your Expo Login Credentials</title><style>body{margin:0;padding:0;font-family:Arial,sans-serif;background-color:#f4f4f4}.container{max-width:600px;margin:40px auto;background-color:#ffffff;padding:20px;border:1px solid #ddd}h1{color:#333333}p{color:#555555;line-height:1.5}.credentials{font-size:18px;font-weight:bold;margin:20px 0}a{color:#1a73e8;text-decoration:none}</style></head><body><div class=\"container\"><h1>Hello {{teamName}},</h1><p>Thank you for submitting your project to Bitcamp 2025!</p><p>Your Expo login credentials for accessing the mobile app are below:</p><p class=\"credentials\">Username/ID: {{username}}</p><p>Please use the above credentials to sign in to the Hackathon Expo app. If you experience any issues or have questions, feel free to talk to our organizers!</p><p>Best regards,<br>Bitcamp Organizing Team</p></div></body></html>",
+    "TextPart": "Hello {{teamName}},\n\nThank you for submitting your project to Bitcamp 2025!\n\nYour Expo login credentials for accessing the mobile app are:\n\nUsername/ID: {{username}}\n\nPlease use these credentials to sign in to the Bitcamp Expo app. If you experience any issues or have questions, feel free to talk to our organizers!\n\nBest regards,\nBitcamp Organizing Team"
+  }
+}
