@@ -14,29 +14,26 @@ const HEADERS = {
   'Access-Control-Allow-Headers': '*',
 };
 
-const sendConfirmationEmail = async (team) => {
+async function sendConfirmationEmail(team) {
   console.log('Starting to send email for team:', team.team_name);
   const ses = new AWS.SES();
 
-  const validEmails = team.emails.filter(email => email && email.trim() !== "");
 
+  // For testing, override with  your test emails:
+  // const validEmails = [
+  //   "test@bitcamp.org",
+  // ];
+
+  const validEmails = (team.emails || []).filter(email => email && email.trim() !== "");
   if (validEmails.length === 0) {
+    console.log('No valid emails for team:', team.team_name);
     return;
   }
 
-  // const testEmails = [
-  //   "agijare@terpmail.umd.edu",
-  //   "sgupta7@terpmail.umd.edu",
-  //   "thiru.seth@gmail.com",
-  //   "srujana.theerthala@gmail.com",
-  //   "harrisonp664@gmail.com",
-  // ];
 
-  console.log('Sending to emails:', testEmails);
 
   const params = {
     Destination: { ToAddresses: validEmails },
-    // Destination: { 'ToAddresses': testEmails },
     Source: "Bitcamp <hello@bit.camp>",
     ConfigurationSetName: "expo-2025",
     Template: "provideId",
@@ -46,16 +43,16 @@ const sendConfirmationEmail = async (team) => {
     })
   };
 
+  console.log('SES params:', params);
+
   try {
-    console.log('Attempting to send email with params:', JSON.stringify(params, null, 2));
     const result = await ses.sendTemplatedEmail(params).promise();
-    console.log('Email sent successfully:', result);
+    console.log('Email sent successfully for team:', team.team_name, result);
     return result;
   } catch (error) {
-    console.error('Error sending email:', error);
-    throw error;
+    console.error(`Error sending email for team ${team.team_name}:`, error);
   }
-};
+}
 
 function formatTime(timeString) {
   const date = new Date(timeString);
@@ -192,31 +189,38 @@ module.exports.post_schedule = async (event) => {
       };
     }));
 
-    for (const team of processedData) {
-      const convertedChallenges = (team.challenges || []).map(challengeObj =>
-        unmarshallDynamoDB(challengeObj)
-      );
-      const convertedEmails = (team.emails || []).map(emailObj =>
-        unmarshallDynamoDB(emailObj)
+    const chunkSize = 10;
+
+    for (let i = 0; i < processedData.length; i += chunkSize) {
+      const chunk = processedData.slice(i, i + chunkSize);
+      await Promise.all(
+        chunk.map(async (team) => {
+          const convertedChallenges = (team.challenges || []).map(challengeObj =>
+            unmarshallDynamoDB(challengeObj)
+          );
+          const convertedEmails = (team.emails || []).map(emailObj =>
+            unmarshallDynamoDB(emailObj)
+          );
+
+          const params = {
+            TableName: process.env.EXPO_TABLE,
+            Item: {
+              id: team.id,
+              team_name: team.team_name,
+              table_assignment: team.table_assignment,
+              is_in_person: team.is_in_person,
+              project_link: team.project_link,
+              challenges: convertedChallenges,
+              emails: convertedEmails
+            },
+          };
+
+          await ddb.put(params).promise();
+          await sendConfirmationEmail(params.Item);
+        })
       );
 
-      const params = {
-        TableName: process.env.EXPO_TABLE,
-        Item: {
-          id: team.id,
-          team_name: team.team_name,
-          table_assignment: team.table_assignment,
-          is_in_person: team.is_in_person,
-          project_link: team.project_link,
-          challenges: convertedChallenges,
-          emails: convertedEmails
-        },
-      };
-
-      await Promise.all([
-        ddb.put(params).promise(),
-        sendConfirmationEmail(params.Item),
-      ]);
+      console.log(`Processed chunk from index ${i} to ${i + chunkSize - 1}`);
     }
 
     return {
@@ -241,3 +245,4 @@ module.exports.post_schedule = async (event) => {
     };
   }
 };
+
