@@ -1,7 +1,6 @@
 // Curl command to push to aws table:
 // curl --ssl-no-revoke -X POST "https://tnmksukfo2.execute-api.us-east-1.amazonaws.com/dev/expo-2025/schedule" -H "Content-Type: application/json" -d "[]"
 
-
 const AWS = require('aws-sdk');
 const fs = require('fs');
 // const bcrypt = require('bcryptjs');
@@ -14,6 +13,46 @@ const HEADERS = {
   'Access-Control-Allow-Credentials': true,
   'Access-Control-Allow-Headers': '*',
 };
+
+async function sendConfirmationEmail(team) {
+  console.log('Starting to send email for team:', team.team_name);
+  const ses = new AWS.SES();
+
+
+  // For testing, override with  your test emails:
+  // const validEmails = [
+  //   "test@bitcamp.org",
+  // ];
+
+  const validEmails = (team.emails || []).filter(email => email && email.trim() !== "");
+  if (validEmails.length === 0) {
+    console.log('No valid emails for team:', team.team_name);
+    return;
+  }
+
+
+
+  const params = {
+    Destination: { ToAddresses: validEmails },
+    Source: "Bitcamp <hello@bit.camp>",
+    ConfigurationSetName: "expo-2025",
+    Template: "provideId",
+    TemplateData: JSON.stringify({
+      teamName: team.team_name,
+      username: team.id
+    })
+  };
+
+  console.log('SES params:', params);
+
+  try {
+    const result = await ses.sendTemplatedEmail(params).promise();
+    console.log('Email sent successfully for team:', team.team_name, result);
+    return result;
+  } catch (error) {
+    console.error(`Error sending email for team ${team.team_name}:`, error);
+  }
+}
 
 function formatTime(timeString) {
   const date = new Date(timeString);
@@ -150,29 +189,38 @@ module.exports.post_schedule = async (event) => {
       };
     }));
 
-    for (const team of processedData) {
-      const convertedChallenges = (team.challenges || []).map(challengeObj =>
-        unmarshallDynamoDB(challengeObj)
-      );
-      const convertedEmails = (team.emails || []).map(emailObj =>
-        unmarshallDynamoDB(emailObj)
+    const chunkSize = 10;
+
+    for (let i = 0; i < processedData.length; i += chunkSize) {
+      const chunk = processedData.slice(i, i + chunkSize);
+      await Promise.all(
+        chunk.map(async (team) => {
+          const convertedChallenges = (team.challenges || []).map(challengeObj =>
+            unmarshallDynamoDB(challengeObj)
+          );
+          const convertedEmails = (team.emails || []).map(emailObj =>
+            unmarshallDynamoDB(emailObj)
+          );
+
+          const params = {
+            TableName: process.env.EXPO_TABLE,
+            Item: {
+              id: team.id,
+              team_name: team.team_name,
+              table_assignment: team.table_assignment,
+              is_in_person: team.is_in_person,
+              project_link: team.project_link,
+              challenges: convertedChallenges,
+              emails: convertedEmails
+            },
+          };
+
+          await ddb.put(params).promise();
+          await sendConfirmationEmail(params.Item);
+        })
       );
 
-      const params = {
-        TableName: process.env.EXPO_TABLE,
-        Item: {
-          id: team.id,
-          team_name: team.team_name,
-          table_assignment: team.table_assignment,
-          is_in_person: team.is_in_person,
-          project_link: team.project_link,
-          challenges: convertedChallenges,
-          emails: convertedEmails,
-          // password: team.password
-        },
-      };
-
-      await ddb.put(params).promise();
+      console.log(`Processed chunk from index ${i} to ${i + chunkSize - 1}`);
     }
 
     return {
@@ -197,3 +245,4 @@ module.exports.post_schedule = async (event) => {
     };
   }
 };
+

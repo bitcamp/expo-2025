@@ -160,7 +160,6 @@ functions:
           cors: true
     memorySize: 256
     timeout: 15
-    # If you want to use provisioned concurrency, you might use:
     # provisionedConcurrency: ${self:custom.provisionedConcurrency["${opt:stage, 'other'}"]}
   postSchedule:
     handler: handler.post_schedule
