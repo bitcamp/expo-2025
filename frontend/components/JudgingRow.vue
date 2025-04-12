@@ -2,87 +2,77 @@
   <div class="entry">
     <div class="project-description">
       <div class="category-name">{{ categoryName }}</div>
-      <!-- <div class="middle-char"></div> -->
     </div>
-    <div class="judging-description" v-if="companyName !== 'Major League Hacking'">
+
+    <!-- If this challenge is MLH, show "Consult MLH" -->
+    <div class="judging-description-mlh" v-if="isMLH">
+      <div>Major League Hacking</div>
+      <div>Consult MLH</div>
+    </div>
+
+    <!-- Otherwise show company + judge + startTime -->
+    <div class="judging-description" v-else>
       <div>{{ companyName }}</div>
       <div class="judging-description-inner">
         <div>{{ judgeName }}</div>
         <div class="middle-char">-</div>
-        <div>{{ newTime }}</div>
-        <!-- <div>{{ timing }}</div> -->
+        <div>{{ displayTime }}</div>
       </div>
-    </div>
-    <div class="judging-description-mlh" v-if="companyName === 'Major League Hacking'">
-      <div>{{ companyName }}</div>
-      <div>Consult MLH</div>
     </div>
   </div>
 </template>
 
-
 <script>
+import { computed } from 'vue'
+
 export default {
   name: 'JudgingRow',
   props: {
     categoryName: {
       type: String,
-      required: true,
+      required: true
     },
     companyName: {
       type: String,
-      required: true,
+      required: true
     },
     judgeName: {
       type: String,
-      required: true,
+      required: true
     },
-    timing: {
+    startTime: {
       type: String,
-      required: true,
+      required: true
     },
+    isMLH: {
+      type: Boolean,
+      default: false
+    }
   },
   setup(props) {
-    const totalBlocks = ref(0);
-    const newTime = ref(0);
-
-    const fetchData = async () => {
-      const response = await fetch("/expo_algorithm_results.json");
-      const data = await response.json();
-      var timeForHack = (150 / data.total_times);
-      // timeForHack = (timeForHack % 1 > 0.5) ? Math.ceil(timeForHack) : Math.floor(timeForHack);
-      timeForHack = Math.floor(timeForHack);
-      console.log(timeForHack)
-      totalBlocks.value = Number(props.timing) * timeForHack;
-      const baseTime = "10:15";
-      newTime.value = addMinutesToTime(baseTime, totalBlocks.value);
-      let [hours, minutes] = newTime.value.split(":").map(Number);
-      let period = 'AM';
-      if (hours >= 12) {
-        period = 'PM';
-        if (hours > 12) {
-          hours -= 12;
-        }
+    // Optionally parse the 2024-04-21 11:00:00-04:00 string to a friendlier time
+    const displayTime = computed(() => {
+      if (!props.startTime) return ''
+      // If there's no time (maybe for an MLH challenge?), might be empty
+      // Otherwise, parse or format it
+      try {
+        const d = new Date(props.startTime)
+        // e.g. "11:00 AM"
+        const hours = d.getHours() % 12 || 12
+        const minutes = d.getMinutes().toString().padStart(2, '0')
+        const ampm = d.getHours() >= 12 ? 'PM' : 'AM'
+        return `${hours}:${minutes} ${ampm}`
+      } catch (err) {
+        // fallback
+        return props.startTime
       }
-      newTime.value = `${hours}:${minutes.toString().padStart(2, '0')} ${period}`;
-    };
+    })
 
-    const addMinutesToTime = (baseTime, minutesToAdd) => {
-      const [hours, minutes] = baseTime.split(":").map(Number);
-      const totalMinutes = hours * 60 + minutes + minutesToAdd;
-      var resultHours = Math.floor(totalMinutes / 60);
-      const resultMinutes = totalMinutes % 60;
-      return `${resultHours}:${resultMinutes.toString().padStart(2, '0')}`;
-    };
-
-    onMounted(() => {
-      fetchData();
-    });
-
-    return { totalBlocks, newTime };
-
-  },
-};
+    return {
+      displayTime
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">
@@ -109,7 +99,7 @@ export default {
     }
 
     .middle-char::before {
-      content: "|";
+      content: '|';
     }
 
     @media screen and (max-width: 800px) {

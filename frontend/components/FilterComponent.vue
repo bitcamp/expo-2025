@@ -4,22 +4,25 @@
       <div class="filter-header">Filter</div>
     </div>
     <div class="filters">
+      <!-- Filter by Team Name -->
       <div class="filter-item">
         <div class="filter-title">Name</div>
         <input class="search-box" type="text" placeholder="Search..." @input="searchTeamNames($event)" />
       </div>
+      <!-- Filter by Challenge -->
       <div class="filter-item">
         <div class="filter-title">Challenges</div>
-        <select name="challenge" class="select-box" id="challenge" v-on:change="searchChallengeNames($event)">
+        <select name="challenge" class="select-box" id="challenge" @change="searchChallengeNames($event)">
           <option value="none">All Challenges</option>
-          <option v-for="(name, index) in challengeNames" :key="index" :value="index">
+          <option v-for="(name, idx) in challengeNames" :key="idx" :value="name">
             {{ name }}
           </option>
         </select>
       </div>
+      <!-- Filter by Project Type -->
       <div class="filter-item">
         <div class="filter-title">Project Type</div>
-        <select name="project-type" class="select-box" id="project-type" v-on:change="searchProjectType($event)">
+        <select name="project-type" class="select-box" id="project-type" @change="searchProjectType($event)">
           <option value="all">All Projects</option>
           <option value="in-person">In-Person Projects</option>
           <option value="virtual">Virtual Projects</option>
@@ -31,70 +34,74 @@
 </template>
 
 <script>
-import { inject, onMounted } from "vue";
+import { inject, watch, onMounted } from 'vue'
 
 export default {
-  name: "FilterComponent",
+  name: 'FilterComponent',
   props: {
     challengeNames: {
       type: Array,
-      required: true,
+      required: true
     },
     teamNames: {
       type: Array,
-      required: true,
-    },
+      required: true
+    }
   },
   setup(props) {
-    const state = inject("state");
+    const state = inject('state')
 
-    watch(() => props.teamNames, (newTeamNames) => {
-      state.filteredTeamNames = newTeamNames;
-    }, { immediate: true });
+    // Whenever the full list of team names changes, reset the filtered list
+    watch(
+      () => props.teamNames,
+      (newVal) => {
+        state.filteredTeamNames = newVal
+      },
+      { immediate: true }
+    )
 
     onMounted(() => {
-      state.filteredChallengeNames = '';
-      state.projectType = 'all';
-    });
+      // Reset these on load
+      state.filteredChallengeNames = ''
+      state.projectType = 'all'
+    })
 
     const searchTeamNames = (event) => {
-      const searchTerm = event.target.value.toLowerCase();
-      if (searchTerm === "") {
-        state.filteredTeamNames = props.teamNames;
+      const searchTerm = event.target.value.toLowerCase()
+      if (!searchTerm) {
+        // no search
+        state.filteredTeamNames = props.teamNames
       } else {
         state.filteredTeamNames = props.teamNames.filter((name) =>
           name.toLowerCase().includes(searchTerm)
-        );
+        )
       }
-    };
+    }
+
     const searchChallengeNames = (event) => {
-      const selectedChallengeIndex = event.target.value;
-      const selectedChallenge =
-        selectedChallengeIndex !== "none"
-          ? props.challengeNames[selectedChallengeIndex]
-          : "";
-      if (!selectedChallenge) {
-        state.filteredChallengeNames = "";
+      const selected = event.target.value
+      if (selected === 'none') {
+        state.filteredChallengeNames = ''
       } else {
-        state.filteredChallengeNames = props.challengeNames
-          .filter((name) => name.includes(selectedChallenge))
-          .toString();
+        // just store the chosen challenge name
+        state.filteredChallengeNames = selected
       }
-    };
+    }
+
     const searchProjectType = (event) => {
-      const selectedProjectTypeIndex = event.target.value;
-      const selectedProjectType = selectedProjectTypeIndex;
-      state.projectType = selectedProjectType;
-    };
-    return { searchTeamNames, searchChallengeNames, searchProjectType };
-  },
-};
+      state.projectType = event.target.value
+    }
+
+    return {
+      searchTeamNames,
+      searchChallengeNames,
+      searchProjectType
+    }
+  }
+}
 </script>
 
 <style scoped lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
-
 .entire-container-filter {
   background-color: #f6ebcc;
   width: calc(5rem + 10vw);
@@ -114,7 +121,7 @@ export default {
 }
 
 .filter-header {
-  font-family: "Aleo";
+  font-family: 'Aleo';
   color: #295111;
   font-weight: 400;
   font-size: 1.5rem;
@@ -126,28 +133,25 @@ export default {
 
 .search-box {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 2rem;
   border: 2px solid #ff8e3f;
   background-color: #fff9ed;
-  font-family: "Inter";
+  font-family: 'Inter';
   margin-bottom: 1rem;
-  padding-inline: 1rem;
   outline: none;
   box-sizing: border-box;
 }
 
-// to do make dropdown look nicer
 .select-box {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-radius: 2rem;
-  background-color: #B94923;
-  border: 2px solid #B94923;
-  font-family: "Inter";
+  background-color: #b94923;
+  border: 2px solid #b94923;
+  font-family: 'Inter';
   margin-bottom: 1rem;
   color: white;
-  padding-inline: 1rem;
   border-right: 0.75rem solid transparent;
   cursor: pointer;
 }
@@ -155,7 +159,7 @@ export default {
 .filter-title {
   margin-bottom: 0.5rem;
   margin-left: 1rem;
-  font-family: "Inter";
+  font-family: 'Inter';
   font-weight: 300;
 }
 
