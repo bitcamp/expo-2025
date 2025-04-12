@@ -1,81 +1,77 @@
 <template>
   <div class="entire-container">
-    <div class="no-submission-container" v-if="state.filteredTeamNames.length === 0 || filteredCombinedValues.length === 0">
+    <!-- If no teams pass the filter, show "No Submissions" -->
+    <div class="no-submission-container" v-if="filteredCombinedValues.length === 0">
       <div class="no-submission">No Submissions</div>
     </div>
-    <!-- <div v-if="state.filteredTeamNames.length !== 0"> -->
-    <div class="top-row" v-if="state.filteredTeamNames.length > 0 && filteredCombinedValues.length > 0">
+
+    <!-- If we have results, show the header row, then the content -->
+    <div class="top-row" v-else>
       <div class="row-header-table"></div>
       <div class="row-header-project"></div>
-      <div>{{ category_names }}</div>
     </div>
-    <!-- <div class="content-row" v-if="state.filteredTeamNames.length > 0"> -->
-    <div class="content-row" :class="{ 'content-row-hidden': state.filteredTeamNames.length === 0 || filteredCombinedValues.length === 0 }">
-      <ProjectTeamInformation :filtered="state.filteredTeamNames" :challengeDetails="state.filteredChallengeNames" :projectType="state.projectType" :teamDetails="combinedValues" />
+
+    <div class="content-row" :class="{ 'content-row-hidden': filteredCombinedValues.length === 0 }">
+      <ProjectTeamInformation :filtered="state.filteredTeamNames" :challengeDetails="state.filteredChallengeNames"
+        :projectType="state.projectType" :teamDetails="filteredCombinedValues" />
     </div>
-    <!-- </div> -->
-    <div class="bottom-row">
-    </div>
+    <div class="bottom-row"></div>
   </div>
 </template>
 
 <script>
-import { inject, computed } from "vue";
-import ProjectTeamInformation from "./ProjectTeamInformation.vue";
+import { inject, computed } from 'vue'
+import ProjectTeamInformation from './ProjectTeamInformation.vue'
+
 export default {
   name: 'TeamContainer',
-  setup() {
-    const combinedValues = ref([]);
-    const state = inject('state');
-    const filteredCombinedValues = computed(() => {
-      return combinedValues.value.filter(team => {
-        let condition;
-        if (state.projectType === 'in-person') {
-          condition = team[0][0] === 'Yes';
-        } else if (state.projectType === 'virtual') {
-          condition = team[0][0] === 'No';
-        } else {
-          condition = team[0][0] === 'Yes' || team[0][0] === 'No';
-        }
-
-        let challengeCondition = true;
-        if (state.filteredChallengeNames != '') {
-          challengeCondition = team[2].some(challenge => challenge[0] === state.filteredChallengeNames.split(' - ')[0]);
-        }
-
-        let teamNameCondition = state.filteredTeamNames.includes(team[1]);
-
-        return condition && challengeCondition && teamNameCondition;
-      }).map(team => team[1]);
-    });
-
-
-
-    const fetchData = async () => {
-      const response = await fetch("/expo_algorithm_results.json");
-      const data = await response.json();
-      combinedValues.value = data.combined_values.filter((entry) => {
-        const title = entry[1];
-        return title !== "Untitled";
-      });
-    };
-
-    onMounted(() => {
-      fetchData();
-    });
-
-    watch(() => state.filteredTeamNames, (newValue) => {
-    }, { immediate: true });
-
-    return { state, combinedValues, filteredCombinedValues };
-
+  components: {
+    ProjectTeamInformation
   },
-};
+  setup() {
+    const state = inject('state')
+
+    // We’ll filter state.teams here
+    const filteredCombinedValues = computed(() => {
+      if (!state.teams || state.teams.length === 0) return []
+
+      return state.teams.filter((team) => {
+        // 1) Project type check
+        let typeCheck = true
+        if (state.projectType === 'in-person') {
+          typeCheck = team.in_person === true
+        } else if (state.projectType === 'virtual') {
+          typeCheck = team.in_person === false
+        }
+
+        // 2) Team name check
+        // Only show this team if its name is in the filteredTeamNames
+        const nameCheck = state.filteredTeamNames.includes(team.team_name)
+
+        // 3) Challenge check
+        // If no challenge was picked, or if the team has a challenge with that name
+        let challengeCheck = true
+        if (state.filteredChallengeNames) {
+          // If user picked something, we only keep teams that have that challenge
+          if (state.filteredChallengeNames !== '') {
+            challengeCheck = team.challenges.some(
+              (ch) => ch.challenge_name === state.filteredChallengeNames
+            )
+          }
+        }
+
+        return typeCheck && nameCheck && challengeCheck
+      })
+    })
+
+    return { state, filteredCombinedValues }
+  }
+}
 </script>
 
 <style scoped lang="scss">
 .entire-container {
-  background-color: #F6EBCC;
+  background-color: #f6ebcc;
   border-radius: 1.5rem;
   width: calc(20rem + 30vw);
   height: 30rem;
@@ -94,8 +90,8 @@ export default {
     justify-content: center;
 
     .no-submission {
-      color: #FFFF;
-      font-family: "Aleo";
+      color: #ffff;
+      font-family: 'Aleo';
       display: flex;
       align-items: center;
       justify-content: center;
@@ -103,7 +99,7 @@ export default {
       font-size: 2rem;
       border-radius: 1.5rem;
       padding: 10rem;
-      background-color: #FF8F28;
+      background-color: #ff8f28;
       margin: auto;
       padding: 5rem;
       height: calc(4rem + 17.5vh);
@@ -125,7 +121,7 @@ export default {
   margin-inline: 1.25rem;
   padding: 1rem 0 0;
   padding-bottom: 0.5rem;
-  border-bottom-color: #FF8F28;
+  border-bottom-color: #ff8f28;
   border-bottom-width: 0.069rem;
   border-bottom-style: solid;
 }
@@ -155,11 +151,11 @@ export default {
 }
 
 .row-header-table::before {
-  content: "Table";
+  content: 'Table';
 }
 
 .row-header-project::before {
-  content: "Project";
+  content: 'Project';
 }
 
 @media screen and (max-width: 800px) {
@@ -168,7 +164,7 @@ export default {
   }
 
   .row-header-project::before {
-    content: "Project Information";
+    content: 'Project Information';
   }
 }
 
@@ -176,16 +172,11 @@ export default {
   overflow-x: hidden;
   overflow-y: auto;
   max-height: 81%;
-  // height: 30rem;
 }
 
 .content-row-hidden {
   display: none;
   height: 0;
   overflow: hidden;
-}
-
-.no-submission-active .row-header-project::before {
-  content: "";
 }
 </style>

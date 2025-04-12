@@ -1,54 +1,82 @@
 <template>
     <div class="entire-container">
-
-        <div v-for="(teamDetail, index) in sortedTeamDetails" :key="index">
-            <div class="top-row" v-if="filtered.includes(teamDetail[1]) && (challengeDetails === '' || teamDetail[2].some(challenge => challengeDetails.includes(challenge[0]))) &&
-            (projectType === 'all' ||
-                (projectType === 'virtual' && teamDetail[0][0] === 'No') ||
-                (projectType === 'in-person' && teamDetail[0][0] !== 'No'))">
-                <div v-if="teamDetail[0][0] !== 'No'" class="table-header">{{ teamDetail[0][1] }}</div>
-                <div v-if="teamDetail[0][0] === 'No'" class="table-header">
-                    <img src="../assets/images/filmCamera.svg" class="camera-style">
+        <!-- For each team in sorted order -->
+        <div v-for="(team, index) in sortedTeamDetails" :key="team.id">
+            <!-- We'll only show if the user’s text-filter includes team_name,
+             the challenge filter is satisfied, and projectType is satisfied.
+             That logic is already in your parent, so typically everything here
+             is guaranteed to pass. You can do a final check if you'd like. -->
+            <div class="top-row" v-if="
+                filtered.includes(team.team_name) &&
+                (challengeDetails === '' || team.challenges.some(ch => challengeDetails.includes(ch.challenge_name))) &&
+                (projectType === 'all' ||
+                    (projectType === 'virtual' && team.in_person === false) ||
+                    (projectType === 'in-person' && team.in_person === true))
+            ">
+                <!-- If in-person, show table number; if not in-person, show camera icon. -->
+                <div v-if="team.in_person" class="table-header">
+                    {{ team.table }}
                 </div>
+                <div v-else class="table-header">
+                    <img src="../assets/images/filmCamera.svg" class="camera-style" />
+                </div>
+
                 <div class="project-info-container">
                     <div class="button-container">
-                        <a :href="teamDetail[3]" target="_blank" class="team-url-style">
-                            <div class="project-header"> {{ teamDetail[1] }}</div>
+                        <!-- Link to Devpost, or wherever. -->
+                        <a :href="team.link" target="_blank" class="team-url-style">
+                            <div class="project-header">{{ team.team_name }}</div>
                         </a>
+
+                        <!-- Toggle the challenges drop-down (for wide screens) -->
                         <button v-if="windowWidth > 800 && challengeDetails === ''" class="challenges-button"
-                            @click="toggleButton(teamDetail[3])">
-                            <div class="button-text">
-                                show challenges
-                            </div>
+                            @click="toggleButton(team.id)">
+                            <div class="button-text">show challenges</div>
                             <div class="image-container">
-                                <img src="../assets/images/openChallengesArrow.svg" class="arrow-image-small"
-                                    :class="{ 'arrow-right': !showChallenges.includes(teamDetail[3]), 'arrow-down': showChallenges.includes(teamDetail[3]) }"
-                                    alt="Bitcamp sign" />
+                                <img src="../assets/images/openChallengesArrow.svg" class="arrow-image-small" :class="{
+                                    'arrow-right': !showChallenges.includes(team.id),
+                                    'arrow-down': showChallenges.includes(team.id)
+                                }" alt="open" />
                             </div>
                         </button>
-                        <button v-if="windowWidth < 800 && challengeDetails === ''" class="challenges-button-large"
-                            @click="toggleButton(teamDetail[3])">
-                            <img src="../assets/images/openChallengesArrowLarge.svg" class="arrow-image-large"
-                                :class="{ 'arrow-right': !showChallenges.includes(teamDetail[1]), 'arrow-down': showChallenges.includes(teamDetail[1]) }"
-                                alt="Bitcamp sign" />
 
+                        <!-- For smaller screens, just a bigger arrow icon -->
+                        <button v-if="windowWidth < 800 && challengeDetails === ''" class="challenges-button-large"
+                            @click="toggleButton(team.id)">
+                            <img src="../assets/images/openChallengesArrowLarge.svg" class="arrow-image-large" :class="{
+                                'arrow-right': !showChallenges.includes(team.id),
+                                'arrow-down': showChallenges.includes(team.id)
+                            }" alt="open" />
                         </button>
                     </div>
-                    <div v-if="teamDetail[2].length === 0"
-                        :class="{ 'no-challenges-hidden': !showChallenges.includes(teamDetail[3]), 'no-challenges-shown': showChallenges.includes(teamDetail[3]) }">
+
+                    <!-- Show "No Challenges Selected" if team has no challenges at all -->
+                    <div v-if="team.challenges.length === 0" :class="{
+                        'no-challenges-hidden': !showChallenges.includes(team.id),
+                        'no-challenges-shown': showChallenges.includes(team.id)
+                    }">
                         No Challenges Selected
                     </div>
-                    <div v-if="challengeDetails === ''"
-                        :class="{ 'challenges-hidden': !showChallenges.includes(teamDetail[3]), 'challenges-shown': showChallenges.includes(teamDetail[3]) }">
-                        <JudgingRow v-for="(challenge, challengeIndex) in teamDetail[2]"
-                            :key="`challenge-${index}-${challengeIndex}`" :categoryName="challenge[0]"
-                            :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
+
+                    <!-- If no specific filter challenge is selected, show entire list (conditionally hidden) -->
+                    <div v-if="challengeDetails === ''" :class="{
+                        'challenges-hidden': !showChallenges.includes(team.id),
+                        'challenges-shown': showChallenges.includes(team.id)
+                    }">
+                        <JudgingRow v-for="(challenge, challengeIndex) in team.challenges" :key="challengeIndex"
+                            :categoryName="challenge.challenge_name"
+                            :companyName="challenge.is_mlh ? 'Major League Hacking' : challenge.company"
+                            :judgeName="challenge.judge" :startTime="challenge.start_time" :isMLH="challenge.is_mlh" />
                     </div>
+
+                    <!-- If the user specifically picked a challenge name in filter,
+                 show only that challenge for each team. -->
                     <div v-if="challengeDetails !== ''" class="challenges-shown">
                         <JudgingRow
-                            v-for="(challenge, challengeIndex) in teamDetail[2].filter(challenge => challengeDetails.includes(challenge[0]))"
-                            :key="`challenge-${index}-${challengeIndex}`" :categoryName="challenge[0]"
-                            :companyName="challenge[1]" :judgeName="challenge[2]" :timing="challenge[3]" />
+                            v-for="(challenge, chIndex) in team.challenges.filter(ch => challengeDetails.includes(ch.challenge_name))"
+                            :key="chIndex" :categoryName="challenge.challenge_name"
+                            :companyName="challenge.is_mlh ? 'Major League Hacking' : challenge.company"
+                            :judgeName="challenge.judge" :startTime="challenge.start_time" :isMLH="challenge.is_mlh" />
                     </div>
                 </div>
             </div>
@@ -57,110 +85,96 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, computed, onMounted, onUnmounted } from 'vue';
+import { ref, watch, computed, onMounted, onUnmounted } from 'vue'
+import JudgingRow from './JudgingRow.vue'
 
-const props = defineProps({
-    filtered: {
-        type: Array,
-        required: true,
-    },
-    teamDetails: {
-        type: Array,
-        required: true,
-    },
-    challengeDetails: {
-        type: Array,
-        required: true,
-    },
-    projectType: {
-        type: Array,
-        required: true,
-    },
-});
-
-const sortedTeamDetails = computed(() => {
-    if (props.challengeDetails !== "") {
-        return [...props.teamDetails].sort((a, b) => {
-            const aChallenge = a[2].find(challenge => props.challengeDetails.includes(challenge[0]));
-            const bChallenge = b[2].find(challenge => props.challengeDetails.includes(challenge[0]));
-
-            if (!aChallenge || !bChallenge) {
-                return !aChallenge ? 1 : -1;
-            }
-
-            return parseFloat(aChallenge[3]) - parseFloat(bChallenge[3]);
-        });
-    }
-    return props.teamDetails;
-});
-
-const showChallenges = ref<string[]>([]);
-const windowWidth = ref(0);
-
-const toggleStates = ref([]);
-
-function toggleButton(link: string) {
-    const index = showChallenges.value.indexOf(link);
-    if (index !== -1) {
-        showChallenges.value.splice(index, 1);
-        toggleStates.value[index] = false;
-    } else {
-        showChallenges.value.push(link);
-        var teamIndex = -1;
-        var i = 0;
-        while (i < 1) {
-            if (props.teamDetails[i][3] === link) {
-                teamIndex = i;
-            }
-            i = i + 1;
-        }
-        console.log(teamIndex);
-        if (teamIndex !== -1) {
-            toggleStates.value[teamIndex] = true;
-        }
-    }
-    console.log(showChallenges.value);
+interface Team {
+    id: string
+    team_name: string
+    in_person: boolean
+    table: string
+    link: string
+    challenges: Array<{
+        is_mlh: boolean
+        challenge_name: string
+        company: string
+        judge: string
+        start_time: string
+    }>
 }
 
-var teamURL = ref("");
+// props from the parent
+const props = defineProps<{
+    filtered: string[]
+    teamDetails: Team[]
+    challengeDetails: string
+    projectType: string
+}>()
 
-const fetchData = async () => {
-    const response = await fetch("/expo_algorithm_results.json");
-    const data = await response.json();
-    teamURL = data.team_names;
-};
+// keep track of which team’s challenges are “expanded”
+const showChallenges = ref<string[]>([])
+const windowWidth = ref<number>(0)
 
-// const findTeamUrl = (teamName: string) => {
-//     if (teamName != "") {
-//         const match = teamURL.find(team => team[0] === teamName);
-//         return match[1];
-//     }
-// };
+// sort teams if the user has chosen a specific challenge
+const sortedTeamDetails = computed<Team[]>(() => {
+    // if no particular challenge filter, just return as is
+    if (props.challengeDetails === '') {
+        return props.teamDetails
+    }
+
+    // Otherwise sort by the start_time of the chosen challenge (earliest first)
+    return [...props.teamDetails].sort((a, b) => {
+        const aChallenge = a.challenges.find(ch => ch.challenge_name === props.challengeDetails)
+        const bChallenge = b.challenges.find(ch => ch.challenge_name === props.challengeDetails)
+
+        // If either does not have it, put them at the bottom
+        if (!aChallenge && !bChallenge) return 0
+        if (!aChallenge) return 1
+        if (!bChallenge) return -1
+
+        // Compare times
+        const aTime = aChallenge.start_time ? Date.parse(aChallenge.start_time) : Infinity
+        const bTime = bChallenge.start_time ? Date.parse(bChallenge.start_time) : Infinity
+        return aTime - bTime
+    })
+})
+
+function toggleButton(teamId: string) {
+    const index = showChallenges.value.indexOf(teamId)
+    if (index !== -1) {
+        showChallenges.value.splice(index, 1)
+    } else {
+        showChallenges.value.push(teamId)
+    }
+}
 
 const updateWindowWidth = () => {
-    windowWidth.value = window.innerWidth;
-};
+    windowWidth.value = window.innerWidth
+}
 
 onMounted(() => {
-    updateWindowWidth();
-    fetchData();
-    window.addEventListener('resize', updateWindowWidth);
-    toggleStates.value = props.teamDetails.map(team => showChallenges.value.includes(team[3]));
-});
+    updateWindowWidth()
+    window.addEventListener('resize', updateWindowWidth)
+})
 
 onUnmounted(() => {
-    window.removeEventListener('resize', updateWindowWidth);
-});
+    window.removeEventListener('resize', updateWindowWidth)
+})
 
-watch([() => props.filtered, () => props.challengeDetails, () => props.projectType], () => {
-    showChallenges.value = [];
-}, { deep: true });
+// If the user changes filters, close all open expansions
+watch(
+    [() => props.filtered, () => props.challengeDetails, () => props.projectType],
+    () => {
+        showChallenges.value = []
+    },
+    { deep: true }
+)
+
 </script>
-<style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
 
+<style scoped lang="scss">
 .entire-container {
-    background-color: #F6EBCC;
+    background-color: #f6ebcc;
     border-radius: 2rem;
 }
 
@@ -177,9 +191,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 }
 
 .project-info-container {
-
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     position: relative;
     flex-grow: 1;
@@ -195,7 +207,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     width: 4rem;
     margin-right: 1.5rem;
     text-align: center;
-    color: #FF3E00;
+    color: #ff3e00;
     font-family: 'Aleo';
     min-width: 100px;
     display: flex;
@@ -204,8 +216,8 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     justify-content: center;
 
     @media (max-width: 800px) {
-        background-color: #FF8F28;
-        color: #FFFFFF;
+        background-color: #ff8f28;
+        color: #ffffff;
         border-radius: 7%;
         height: 6rem;
         align-content: center;
@@ -215,7 +227,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 
 .project-header {
     font-size: 1.5rem;
-    color: #B94923;
+    color: #b94923;
     font-family: 'Aleo';
 
     @media (max-width: 800px) {
@@ -223,20 +235,7 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     }
 }
 
-.challenges-button {
-    padding: 0;
-    margin: 0;
-    border: none;
-    background: none;
-    text-align: left;
-    padding-top: 0.5rem;
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    font-family: 'Inter';
-    color: #A49B83;
-}
-
+.challenges-button,
 .challenges-button-large {
     padding: 0;
     margin: 0;
@@ -248,8 +247,12 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     flex-direction: row;
     width: fit-content;
     font-family: 'Inter';
-    color: #FF8F28;
-    padding-bottom: 0.3rem;
+    color: #ff8f28;
+}
+
+.challenges-button {
+    padding-top: 0.5rem;
+    color: #a49b83;
 }
 
 .challenges-hidden {
@@ -294,22 +297,15 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     flex-direction: column;
 
     @media (max-width: 800px) {
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-end;
     }
 }
 
-.toggle-size {
-    transform: scale(0.8);
-    transform-origin: center;
-}
-
 .image-container {
     display: flex;
 }
-
 
 .team-url-style {
     text-decoration: none;
@@ -331,7 +327,6 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
     margin-inline: 0.35rem;
     width: 1rem;
     transition: transform 0.2s ease;
-    color: #FF8F28;
 }
 
 .arrow-right {
@@ -340,9 +335,5 @@ watch([() => props.filtered, () => props.challengeDetails, () => props.projectTy
 
 .arrow-down {
     transform: rotate(90deg);
-}
-
-.arrow-half {
-    transform: rotate(45deg);
 }
 </style>
