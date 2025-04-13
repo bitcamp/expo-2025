@@ -88,28 +88,28 @@ OTHER_HACKS = set([
 
 EXCLUDED_CHALLENGES = set([
     "People's Choice Hack - Bitcamp",
-    "Beginner Quantum Track Hacks - Bitcamp"
+    "Beginner Quantum Track Hacks - Bitcamp",
 ])
 
 'Best First-Time Hack', 'Best Advanced Quantum Track Hack', 'Best Hardware Hack', 'Best Razzle Dazzle Hack', 'Best Gamification Hack', 'Best Beginner Quantum Track Hack', 'Best Bitcamp Hack', 'Best Moonshot Hack', 'Best Sustainability Hack', 'Best Social Good Hack', 'Best UI/UX Hack', 'Best Cybersecurity Track Hack', 'Best Machine Learning Track Hack', 'Best App Dev Track Hack', 'MOST LIT HACK', 'Hack That Made You Smile', 'Prettiest Hack', 'Best Digital Forensics Related Hack - Cipher Tech Solutions', 'Best Use of GenAI in Business - Cloudforce/Microsoft', 'Best Hack Promoting Public Health - Bloomberg', 'Best Web Hack Using React - Peraton', 'Best Financial Hack - Capital One'
 CHALLENGE_JUDGE_GROUPS = [
-    2,  # Best First-Time Hack
-    1,  # Best Advanced Quantum Track Hack
-    2,  # Best Hardware Hack
-    2,  # Best Razzle Dazzle Hack
-    2,  # Best Gamification Hack
-    1,  # Best Beginner Quantum Track Hack
-    2,  # Best Bitcamp Hack
-    2,  # Best Moonshot Hack
-    2,  # Best Sustainability Hack
-    2,  # Best Social Good Hack
-    2,  # Best UI/UX Hack
-    1,  # Best Cybersecurity Track Hack
-    2,  # Best Machine Learning Track Hack
-    2,  # Best App Dev Track Hack
+    4,  # Best First-Time Hack
+    2,  # Best Advanced Quantum Track Hack
+    4,  # Best Hardware Hack
+    4,  # Best Razzle Dazzle Hack
+    4,  # Best Gamification Hack
+    2,  # Best Beginner Quantum Track Hack
+    4,  # Best Bitcamp Hack
+    4,  # Best Moonshot Hack
+    4,  # Best Sustainability Hack
+    4,  # Best Social Good Hack
+    4,  # Best UI/UX Hack
+    2,  # Best Cybersecurity Track Hack
+    4,  # Best Machine Learning Track Hack
+    4,  # Best App Dev Track Hack
     2,  # MOST LIT HACK
-    2,  # Hack That Made You Smile
-    2,  # Prettiest Hack
+    4,  # Hack That Made You Smile
+    4,  # Prettiest Hack
     1,  # Best Digital Forensics Related Hack - Cipher Tech Solutions
     2,  # Best Use of GenAI in Business - Cloudforce/Microsoft
     2,  # Best Hack Promoting Public Health - Bloomberg
@@ -380,11 +380,11 @@ def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges,
 # def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges):
     eastern = pytz.timezone('US/Eastern')
 
-    EXPO_START_TIME = "2024-04-21 11:00:00"
+    EXPO_START_TIME = "2024-04-21 12:15:00"
     EXPO_START = eastern.localize(datetime.strptime(
         EXPO_START_TIME, "%Y-%m-%d %H:%M:%S"))
 
-    HACK_TIME = 5
+    HACK_TIME = 2
     judgetime_seen = defaultdict(lambda: 1)
 
     result = []
@@ -472,16 +472,16 @@ def main():
 
     # print(hc)
 
-    # t, H, J = abstract_expo_alg(hc, CHALLENGE_JUDGE_GROUPS, 75)
+    t, H, J = abstract_expo_alg(hc, CHALLENGE_JUDGE_GROUPS, 125)
 
     print(t)
     print(150 // t)
-    print(H)
+    # print(H)
 
     expo_output = expo_output_to_json(
         t, H, team_names, links, in_person, challenges + MLH_challenges, emails)
 
-    output_path = './expo_algorithm_results.json'
+    output_path = '../frontend/public/expo_algorithm_results.json'
 
     with open(output_path, 'w') as f:
         json.dump(expo_output, f, indent=4)
