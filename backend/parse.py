@@ -338,24 +338,25 @@ def process(csv_file):
 
     challenges = []
     for i in range(len(temp_challenges)):
+        ind_challenges = []
         if bitcamp_prize_1[i]: 
-            challenges.append(bitcamp_prize_1[i])
+            ind_challenges.append(bitcamp_prize_1[i])
         if bitcamp_prize_2[i]: 
-            challenges.append(bitcamp_prize_2[i])
+            ind_challenges.append(bitcamp_prize_2[i])
         if bitcamp_prize_3[i]:
-            challenges.append(bitcamp_prize_3[i])
+            ind_challenges.append(bitcamp_prize_3[i])
         if alumni_prize_1[i]:
-            challenges.append(alumni_prize_1[i])
+            ind_challenges.append(alumni_prize_1[i])
         if alumni_prize_2[i]:
-            challenges.append(alumni_prize_2[i])
-            
-        challenges += temp_challenges[i]
+            ind_challenges.append(alumni_prize_2[i])
+
+        ind_challenges += temp_challenges[i]     
+        challenges.append(ind_challenges)
 
     hc = []
     for ind_challenges in challenges:
         ind_hc = []
         for challenge in ind_challenges:
-            print(challenge)
             ind_hc.append(CHALLENGE_TO_ID[challenge])
         hc.append(ind_hc)
 
@@ -464,6 +465,7 @@ def main():
 
     # print(hc)
 
+    print('here')
     t, H, J = abstract_expo_alg(hc, CHALLENGE_JUDGE_GROUPS, 75)
 
     print(t)
