@@ -320,10 +320,12 @@ def process(csv_file):
     links = submitted_projects[LINK_COLUMN_NAME].tolist()
     in_person = (submitted_projects[IN_PERSON_COLUMN_NAME] == 'Yes').tolist()
     challenge_fields = submitted_projects[CHALLENGES_COLUMN_NAME].tolist()
-    emails = submitted_projects['Submitter Email'].tolist()
-    emails = [[email] for email in emails]
-    # emails = [list(tup) for tup in zip(submitted_projects.iloc[:, 30].tolist(), submitted_projects.iloc[:, 33].tolist(
-    # ), submitted_projects.iloc[:, 36].tolist(), submitted_projects.iloc[:, 39].tolist())]
+    # emails = submitted_projects['Submitter Email'].tolist()
+    # emails = submitted_projects.iloc[:, 24].tolist()
+    # emails = [[email] for email in emails]
+    # print(submitted_projects.shape[1] - 1)
+    emails = [list(tup) for tup in zip(submitted_projects.iloc[:, 24].tolist(), submitted_projects.iloc[:, 27].tolist(
+    ), submitted_projects.iloc[:, 30].tolist(), submitted_projects.iloc[:, 33].tolist())]
     # emails = ["dn"]
     # Separate MLH and other challenges
 
