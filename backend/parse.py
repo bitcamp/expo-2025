@@ -416,7 +416,7 @@ def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges,
 
 def main():
     # csv_file = "./projects-2024-teammates.csv"
-    csv_file = "./final10am.csv"
+    csv_file = "./2024Test.csv"
     team_names, links, in_person, challenges, MLH_challenges, hc, emails = process(
         csv_file)
 

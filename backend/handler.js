@@ -216,7 +216,7 @@ module.exports.post_schedule = async (event) => {
           };
 
           await ddb.put(params).promise();
-          await sendConfirmationEmail(params.Item);
+          // await sendConfirmationEmail(params.Item);
         })
       );
 
