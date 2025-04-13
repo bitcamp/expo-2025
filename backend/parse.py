@@ -319,8 +319,8 @@ def process(csv_file):
     links = submitted_projects[LINK_COLUMN_NAME].tolist()
     in_person = (submitted_projects[IN_PERSON_COLUMN_NAME] == 'Yes').tolist()
     challenge_fields = submitted_projects[CHALLENGES_COLUMN_NAME].tolist()
-    emails = [list(tup) for tup in zip(submitted_projects.iloc[:, 24].tolist(), submitted_projects.iloc[:, 27].tolist(
-    ), submitted_projects.iloc[:, 30].tolist(), submitted_projects.iloc[:, 33].tolist())]
+    emails = [list(tup) for tup in zip(submitted_projects.iloc[:, 27].tolist(), submitted_projects.iloc[:, 30].tolist(
+    ), submitted_projects.iloc[:, 33].tolist(), submitted_projects.iloc[:, 36].tolist())]
     # Separate MLH and other challenges
 
     temp_challenges, MLH_challenges = process_challenges(challenge_fields)
