@@ -321,12 +321,12 @@ def process(csv_file):
     alumni_prize_1 = submitted_projects[ALUMNI_PRIZE_1].tolist()
     alumni_prize_2 = submitted_projects[ALUMNI_PRIZE_2].tolist()
 
-    # emails = submitted_projects['Submitter Email'].tolist()
+    emails = submitted_projects['Team Member 1 Email'].tolist()
     # emails = submitted_projects.iloc[:, 24].tolist()
-    # emails = [[email] for email in emails]
+    emails = [[email] for email in emails]
     # print(submitted_projects.shape[1] - 1)
-    emails = [list(tup) for tup in zip(submitted_projects.iloc[:, 24].tolist(), submitted_projects.iloc[:, 27].tolist(
-    ), submitted_projects.iloc[:, 30].tolist(), submitted_projects.iloc[:, 33].tolist())]
+    # emails = [list(tup) for tup in zip(submitted_projects.iloc[:, 29].tolist(), submitted_projects.iloc[:, 32].tolist(
+    # ), submitted_projects.iloc[:, 35].tolist(), submitted_projects.iloc[:, 38].tolist())]
     # emails = ["dn"]
     # Separate MLH and other challenges
 
@@ -355,6 +355,7 @@ def process(csv_file):
     for ind_challenges in challenges:
         ind_hc = []
         for challenge in ind_challenges:
+            print(challenge)
             ind_hc.append(CHALLENGE_TO_ID[challenge])
         hc.append(ind_hc)
 
@@ -444,7 +445,7 @@ def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges,
 
 def main():
     # csv_file = "./projects-2024-teammates.csv"
-    csv_file = "./projects-2025.csv"
+    csv_file = "./projects-2025-new.csv"
     team_names, links, in_person, challenges, MLH_challenges, hc, emails = process(
     # team_names, links, in_person, challenges, MLH_challenges, hc = process(
         csv_file)
