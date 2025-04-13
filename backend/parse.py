@@ -1,3 +1,4 @@
+# pylint: disable=invalid-name
 import csv
 import numpy as np
 import pandas as pd
@@ -319,8 +320,11 @@ def process(csv_file):
     links = submitted_projects[LINK_COLUMN_NAME].tolist()
     in_person = (submitted_projects[IN_PERSON_COLUMN_NAME] == 'Yes').tolist()
     challenge_fields = submitted_projects[CHALLENGES_COLUMN_NAME].tolist()
-    emails = [list(tup) for tup in zip(submitted_projects.iloc[:, 27].tolist(), submitted_projects.iloc[:, 30].tolist(
-    ), submitted_projects.iloc[:, 33].tolist(), submitted_projects.iloc[:, 36].tolist())]
+    emails = submitted_projects['Submitter Email'].tolist()
+    emails = [[email] for email in emails]
+    # emails = [list(tup) for tup in zip(submitted_projects.iloc[:, 30].tolist(), submitted_projects.iloc[:, 33].tolist(
+    # ), submitted_projects.iloc[:, 36].tolist(), submitted_projects.iloc[:, 39].tolist())]
+    # emails = ["dn"]
     # Separate MLH and other challenges
 
     temp_challenges, MLH_challenges = process_challenges(challenge_fields)
@@ -342,6 +346,7 @@ def process(csv_file):
         hc.append(ind_hc)
 
     return team_names, links, in_person, challenges, MLH_challenges, hc, emails
+    # return team_names, links, in_person, challenges, MLH_challenges, hc
 
 
 def parse_challenge_name(challenge_name):
@@ -349,6 +354,7 @@ def parse_challenge_name(challenge_name):
 
 
 def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges, emails):
+# def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges):
     eastern = pytz.timezone('US/Eastern')
 
     EXPO_START_TIME = "2024-04-21 11:00:00"
@@ -408,7 +414,7 @@ def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges,
             challenges.append(challenge_json)
 
         team_json["challenges"] = challenges
-        print(team_json)
+        # print(team_json)
         result.append(team_json)
 
     return result
@@ -418,6 +424,7 @@ def main():
     # csv_file = "./projects-2024-teammates.csv"
     csv_file = "./2024Test.csv"
     team_names, links, in_person, challenges, MLH_challenges, hc, emails = process(
+    # team_names, links, in_person, challenges, MLH_challenges, hc = process(
         csv_file)
 
     # cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 1]
@@ -444,7 +451,7 @@ def main():
     expo_output = expo_output_to_json(
         t, H, team_names, links, in_person, MLH_challenges, emails)
 
-    output_path = '/expo_algorithm_results.json'
+    output_path = './expo_algorithm_results.json'
 
     with open(output_path, 'w') as f:
         json.dump(expo_output, f, indent=4)
