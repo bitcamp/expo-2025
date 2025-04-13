@@ -21,7 +21,7 @@ random.seed(10)
 DRAFT_COLUMN_NAME = 'Project Status'
 TEAM_COLUMN_NAME = 'Project Title'
 LINK_COLUMN_NAME = 'Submission Url'
-IN_PERSON_COLUMN_NAME = 'Will You Be Present To Demo In Person On Sunday?'
+# IN_PERSON_COLUMN_NAME = 'Will You Be Present To Demo In Person On Sunday?'
 CHALLENGES_COLUMN_NAME = 'Opt-In Prizes'
 TRACK_CHALLENGE_COLUMN_NAME = 'Bitcamp Track Challenge'
 TRACK_HACK_OPT_OUT_RESPONSE = "I don't want to submit to a Bitcamp track challenge. I understand that I can still submit to the other Bitcamp sponsored challenges."
@@ -318,7 +318,7 @@ def process(csv_file):
 
     team_names = submitted_projects[TEAM_COLUMN_NAME].tolist()
     links = submitted_projects[LINK_COLUMN_NAME].tolist()
-    in_person = (submitted_projects[IN_PERSON_COLUMN_NAME] == 'Yes').tolist()
+    in_person = [True for i in submitted_projects]
     challenge_fields = submitted_projects[CHALLENGES_COLUMN_NAME].tolist()
     # emails = submitted_projects['Submitter Email'].tolist()
     # emails = submitted_projects.iloc[:, 24].tolist()
@@ -424,7 +424,8 @@ def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges,
 
 def main():
     # csv_file = "./projects-2024-teammates.csv"
-    csv_file = "./2024Test.csv"
+    # csv_file = "./2024Test.csv"
+    csv_file = "./2025-prelim.csv"
     team_names, links, in_person, challenges, MLH_challenges, hc, emails = process(
     # team_names, links, in_person, challenges, MLH_challenges, hc = process(
         csv_file)
