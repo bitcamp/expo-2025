@@ -91,38 +91,37 @@ EXCLUDED_CHALLENGES = set([
     "Beginner Quantum Track Hacks - Bitcamp"
 ])
 
+'Best First-Time Hack', 'Best Advanced Quantum Track Hack', 'Best Hardware Hack', 'Best Razzle Dazzle Hack', 'Best Gamification Hack', 'Best Beginner Quantum Track Hack', 'Best Bitcamp Hack', 'Best Moonshot Hack', 'Best Sustainability Hack', 'Best Social Good Hack', 'Best UI/UX Hack', 'Best Cybersecurity Track Hack', 'Best Machine Learning Track Hack', 'Best App Dev Track Hack', 'MOST LIT HACK', 'Hack That Made You Smile', 'Prettiest Hack', 'Best Digital Forensics Related Hack - Cipher Tech Solutions', 'Best Use of GenAI in Business - Cloudforce/Microsoft', 'Best Hack Promoting Public Health - Bloomberg', 'Best Web Hack Using React - Peraton', 'Best Financial Hack - Capital One'
 CHALLENGE_JUDGE_GROUPS = [
-    3,  # "Best Machine Learning Track Hack - Bitcamp", (3+4)
-    4,  # "Best App Dev Track Hack - Bitcamp", (9+2)
-    2,  # "Best Cybersecurity Track Hack - Bitcamp", (3+2)
-    4,  # "Beginner Quantum Track Hacks - Bitcamp", (4+2)
-    3,  # "Best Advanced Quantum Track Hack - Bitcamp", (4+2)
-
-    2,  # "Best Hardware Hack - Bitcamp",
-    2,  # "Best Bitcamp Hack - Bitcamp",
-    2,  # "Best First Time Hack - Bitcamp",
-    2,  # "Best UI/UX Hack - Bitcamp",
-    2,  # "Best Moonshot Hack - Bitcamp",
-    2,  # "Best Razzle Dazzle Hack - Bitcamp",
-    2,  # "Best Social Good Hack - Bitcamp",
-    2,  # "Best Gamification Hack - Bitcamp",
-    2,  # "People's Choice Hack - Bitcamp",
-    2,  # "Best Sustainability Hack - Bitcamp",
-
-    2,  # "Best use of AI/ML Innovation for the Francis Scott Key Bridge Recovery Efforts - Cloudforce",
-    2,  # "Most Philanthropic Hack - Bloomberg",
-    1,  # "Best Digital Forensics Related Hack - Cipher Tech",
-    2,  # "Best Use of APIs related to Housing/Climate Change - Fannie Mae",
-    2,  # "Best AI Powered Solution for Defense Contracts - Bloomberg Industry Group",
-    2,  # "Best Financial Hack - Capital One",
-    2  # "University Course Catalog Data Extraction and Query Challenge - Xficient",
+    2, # Best First-Time Hack],
+    2, # Best Advanced Quantum Track Hack],
+    2, # Best Hardware Hack],
+    2, # Best Razzle Dazzle Hack],
+    2, # Best Gamification Hack],
+    2, # Best Beginner Quantum Track Hack],
+    2, # Best Bitcamp Hack],
+    2, # Best Moonshot Hack],
+    2, # Best Sustainability Hack],
+    2, # Best Social Good Hack],
+    2, # Best UI/UX Hack],
+    2, # Best Cybersecurity Track Hack],
+    2, # Best Machine Learning Track Hack],
+    2, # Best App Dev Track Hack],
+    2, # MOST LIT HACK],
+    2, # Hack That Made You Smile],
+    2, # Prettiest Hack],
+    2, # Best Digital Forensics Related Hack - Cipher Tech Solutions],
+    2, # Best Use of GenAI in Business - Cloudforce/Microsoft],
+    2, # Best Hack Promoting Public Health - Bloomberg],
+    2, # Best Web Hack Using React - Peraton],
+    2, # Best Financial Hack - Capital One],
 ]
 
 TABLES = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'E1', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7', 'E8', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'G8',
          'L1', 'L2', 'L5', 'L6', 'L7', 'L8', 'M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'O1', 'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'O8', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8']
 random.shuffle(TABLES)
 
-FULL_CHALLENGE_LIST = list(BITCAMP_HACKS) + list(ALUMNI_HACKS) + list(MLH_HACKS) + list(OTHER_HACKS) 
+FULL_CHALLENGE_LIST = list(BITCAMP_HACKS) + list(ALUMNI_HACKS) + list(OTHER_HACKS) 
 
 def get_challenge_maps(full_challenge_list):
     challenge_to_id = {}
@@ -451,8 +450,9 @@ def main():
     # team_names, links, in_person, challenges, MLH_challenges, hc = process(
         csv_file)
 
-    # cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 1]
-    cap = [2] * len(FULL_CHALLENGE_LIST)
+    print(FULL_CHALLENGE_LIST)
+    print(len(FULL_CHALLENGE_LIST))
+    print(len(CHALLENGE_JUDGE_GROUPS))
 
     # print(len(cap))
     # print(len(FULL_CHALLENGE_LIST))
@@ -465,8 +465,7 @@ def main():
 
     # print(hc)
 
-    print('here')
-    t, H, J = abstract_expo_alg(hc, CHALLENGE_JUDGE_GROUPS, 75)
+    t, H, J = abstract_expo_alg(hc, CHALLENGE_JUDGE_GROUPS, 150)
 
     print(t)
     print(150 // t)
