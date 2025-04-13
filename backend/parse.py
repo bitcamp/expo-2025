@@ -452,30 +452,34 @@ def main():
     team_names, links, in_person, challenges, MLH_challenges, hc, emails = process(
     # team_names, links, in_person, challenges, MLH_challenges, hc = process(
         csv_file)
+    
+    # count number of teams per challenge
+    challenge_counts = defaultdict(lambda: 0)
+    for challenge in challenges:
+        for c in challenge:
+            challenge_counts[c] += 1
+    print(challenge_counts)
 
+    print(len(challenges))
+    print(len(hc))
     print(FULL_CHALLENGE_LIST)
-    print(len(FULL_CHALLENGE_LIST))
+    print(len(CHALLENGE_TO_ID))
+    print(len(ID_TO_CHALLENGE))
     print(len(CHALLENGE_JUDGE_GROUPS))
 
-    # print(len(cap))
-    # print(len(FULL_CHALLENGE_LIST))
-    # print(len(CHALLENGE_TO_ID))
-    # print(len(ID_TO_CHALLENGE))
-    # for challenge_name, id in CHALLENGE_TO_ID.items():
-    #     print(f'{challenge_name} - {cap[id]}')
-
-    # print(len(cap))
+    for challenge_name, id in CHALLENGE_TO_ID.items():
+        print(f'{challenge_name} - {CHALLENGE_JUDGE_GROUPS[id]}')
 
     # print(hc)
 
-    t, H, J = abstract_expo_alg(hc, CHALLENGE_JUDGE_GROUPS, 150)
+    # t, H, J = abstract_expo_alg(hc, CHALLENGE_JUDGE_GROUPS, 75)
 
     print(t)
     print(150 // t)
     print(H)
 
     expo_output = expo_output_to_json(
-        t, H, team_names, links, in_person, MLH_challenges, emails)
+        t, H, team_names, links, in_person, challenges + MLH_challenges, emails)
 
     output_path = './expo_algorithm_results.json'
 
