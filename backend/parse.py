@@ -25,6 +25,11 @@ IN_PERSON_COLUMN_NAME = 'Will You Be Present To Demo In Person On Sunday?'
 CHALLENGES_COLUMN_NAME = 'Opt-In Prizes'
 TRACK_CHALLENGE_COLUMN_NAME = 'Bitcamp Track Challenge'
 TRACK_HACK_OPT_OUT_RESPONSE = "I don't want to submit to a Bitcamp track challenge. I understand that I can still submit to the other Bitcamp sponsored challenges."
+BITCAMP_PRIZE_1 = "Bitcamp Sponsored Prize Category #1"
+BITCAMP_PRIZE_2 = "Bitcamp Sponsored Prize Category #2"
+BITCAMP_PRIZE_3 = "Bitcamp Sponsored Prize Category #3"
+ALUMNI_PRIZE_1 = "Alumni Team Prize Category #1"
+ALUMNI_PRIZE_2 = "Alumni Team Prize Category #2"
 
 hc = []
 cap = []
@@ -36,12 +41,10 @@ all_mlh = []
 in_person = []
 
 MLH_HACKS = set([
-    "Best Domain Name from GoDaddy Registry - MLH",
-    "Best DEI Hack sponsored by Fidelity - MLH",
-    "Best Use of Taipy - MLH",
-    "Best Use of PropelAuth - MLH",
-    "Best Use of Kintone - MLH",
-    "Best Use of Starknet - MLH",
+    "[MLH] Best Use of .Tech",
+    "[MLH] Best AI Application Built with Cloudflare",
+    "[MLH] Best Use of MongoDB Atlas",
+    "[MLH] Best Use of Gemimi API",
 ])
 
 BITCAMP_TRACK_HACKS = set([
@@ -52,17 +55,35 @@ BITCAMP_TRACK_HACKS = set([
     "Best Advanced Quantum Track Hack - Bitcamp"
 ])
 
+ALUMNI_HACKS = set([
+    "MOST LIT HACK",
+    "Prettiest Hack",
+    "Hack That Made You Smile"
+])
+
 BITCAMP_HACKS = set([
-    "Best Hardware Hack - Bitcamp",
-    "Best Bitcamp Hack - Bitcamp",
-    "Best First Time Hack - Bitcamp",
-    "Best UI/UX Hack - Bitcamp",
-    "Best Moonshot Hack - Bitcamp",
-    "Best Razzle Dazzle Hack - Bitcamp",
-    "Best Social Good Hack - Bitcamp",
-    "Best Gamification Hack - Bitcamp",
-    "People's Choice Hack - Bitcamp",
-    "Best Sustainability Hack - Bitcamp"
+    "Best App Dev Track Hack",
+    "Best Cybersecurity Track Hack",
+    "Best Machine Learning Track Hack",
+    "Best Beginner Quantum Track Hack",
+    "Best Advanced Quantum Track Hack",
+    "Best Bitcamp Hack",
+    "Best First-Time Hack",
+    "Best Gamification Hack",
+    "Best Hardware Hack",
+    "Best Moonshot Hack",
+    "Best Razzle Dazzle Hack",
+    "Best Social Good Hack",
+    "Best Sustainability Hack",
+    "Best UI/UX Hack",
+])
+
+OTHER_HACKS = set([
+    "Best Hack Promoting Public Health - Bloomberg",
+    "Best Financial Hack - Capital One",
+    "Best Digital Forensics Related Hack - Cipher Tech Solutions",
+    "Best Use of GenAI in Business - Cloudforce/Microsoft",
+    "Best Web Hack Using React - Peraton",
 ])
 
 EXCLUDED_CHALLENGES = set([
@@ -101,54 +122,7 @@ TABLES = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4'
          'L1', 'L2', 'L5', 'L6', 'L7', 'L8', 'M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'O1', 'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'O8', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8']
 random.shuffle(TABLES)
 
-FULL_CHALLENGE_LIST = [
-    "Best Machine Learning Track Hack - Bitcamp",
-    "Best App Dev Track Hack - Bitcamp",
-    "Best Cybersecurity Track Hack - Bitcamp",
-    "Beginner Quantum Track Hacks - Bitcamp",
-    "Best Advanced Quantum Track Hack - Bitcamp",
-
-    "Best Hardware Hack - Bitcamp",
-    "Best Bitcamp Hack - Bitcamp",
-    "Best First Time Hack - Bitcamp",
-    "Best UI/UX Hack - Bitcamp",
-    "Best Moonshot Hack - Bitcamp",
-    "Best Razzle Dazzle Hack - Bitcamp",
-    "Best Social Good Hack - Bitcamp",
-    "Best Gamification Hack - Bitcamp",
-    "People's Choice Hack - Bitcamp",
-    "Best Sustainability Hack - Bitcamp",
-
-    "Best use of AI/ML Innovation for the Francis Scott Key Bridge Recovery Efforts - Cloudforce",
-    "Most Philanthropic Hack - Bloomberg",
-    "Best Digital Forensics Related Hack - Cipher Tech",
-    "Best Use of APIs related to Housing/Climate Change - Fannie Mae",
-    "Best AI Powered Solution for Defense Contracts - Bloomberg Industry Group",
-    "Best Financial Hack - Capital One",
-    "University Course Catalog Data Extraction and Query Challenge - Xficient",
-
-    #     "Best use of AI/ML Innovation for the Francis Scott Key Bridge Recovery Efforts - Cloudforce",
-    # "Best Digital Forensics Related Hack - Cipher Tech",
-    # "Best Use of APIs related to Housing/Climate Change - Fannie Mae",
-    # "Best AI Powered Solution for Defense Contracts - Bloomberg Industry Group",
-    # "Best Bitcamp Hack - Bitcamp",
-    # "Best UI/UX Hack - Bitcamp",
-    # "Best Social Good Hack - Bitcamp",
-    # "Best Financial Hack - Capital One",
-    # "Beginner Quantum Track Hacks - Bitcamp",
-    # "Best use of AI/ML Innovation for the Francis Scott Key Bridge Recovery Efforts - Cloudforce",
-    # "Best Digital Forensics Related Hack - Cipher Tech",
-    # "Best Use of APIs related to Housing/Climate Change - Fannie Mae",
-    # "Best AI Powered Solution for Defense Contracts - Bloomberg Industry Group",
-    # "Best Bitcamp Hack - Bitcamp",
-    # "Best UI/UX Hack - Bitcamp",
-    # "Best Financial Hack - Capital One",
-    # "Best use of AI/ML Innovation for the Francis Scott Key Bridge Recovery Efforts - Cloudforce",
-    # "Best AI Powered Solution for Defense Contracts - Bloomberg Industry Group",
-    # "Best UI/UX Hack - Bitcamp",
-    # "Beginner Quantum Track Hacks - Bitcamp"
-]
-
+FULL_CHALLENGE_LIST = list(BITCAMP_HACKS) + list(ALUMNI_HACKS) + list(MLH_HACKS) + list(OTHER_HACKS) 
 
 def get_challenge_maps(full_challenge_list):
     challenge_to_id = {}
@@ -262,6 +236,22 @@ def abstract_expo_alg(hc: List[List[int]], cap: List[int], t_max: int):
     H, J = solve_expo(t)
     return (t, H, J)
 
+def process_challenges_2025(challenges):
+    result = []
+    MLH_challenges = []
+    for challenge in challenges:
+        team_challenges = challenge.split(",")
+        current_challenges = []
+        current_mlh_challenges = []
+
+        for tc in team_challenges:
+            tc = tc.strip()
+            if tc in MLH_HACKS:
+                current_mlh_challenges.append(tc)
+        result.append(current_challenges)
+        MLH_challenges.append(current_mlh_challenges)
+
+    return result, MLH_challenges
 
 def process_challenges(challenges):
     result = []
@@ -318,8 +308,19 @@ def process(csv_file):
 
     team_names = submitted_projects[TEAM_COLUMN_NAME].tolist()
     links = submitted_projects[LINK_COLUMN_NAME].tolist()
-    in_person = (submitted_projects[IN_PERSON_COLUMN_NAME] == 'Yes').tolist()
+    # in_person = (submitted_projects[IN_PERSON_COLUMN_NAME] == 'Yes').tolist()
+    # 2025
+    in_person = [True for _ in range(len(team_names))]
     challenge_fields = submitted_projects[CHALLENGES_COLUMN_NAME].tolist()
+
+    # 2025 Form Parse
+    bitcamp_prize_1 = submitted_projects[BITCAMP_PRIZE_1].tolist()
+    bitcamp_prize_2 = submitted_projects[BITCAMP_PRIZE_2].tolist()
+    bitcamp_prize_3 = submitted_projects[BITCAMP_PRIZE_3].tolist()
+
+    alumni_prize_1 = submitted_projects[ALUMNI_PRIZE_1].tolist()
+    alumni_prize_2 = submitted_projects[ALUMNI_PRIZE_2].tolist()
+
     # emails = submitted_projects['Submitter Email'].tolist()
     # emails = submitted_projects.iloc[:, 24].tolist()
     # emails = [[email] for email in emails]
@@ -329,16 +330,26 @@ def process(csv_file):
     # emails = ["dn"]
     # Separate MLH and other challenges
 
-    temp_challenges, MLH_challenges = process_challenges(challenge_fields)
+    temp_challenges, MLH_challenges = process_challenges_2025(challenge_fields)
 
     # Get track challenge and limit bitcamp challenges to MAX 3
-    track_response = submitted_projects[TRACK_CHALLENGE_COLUMN_NAME].tolist()
+    # Not needed for 2025
+    # track_response = submitted_projects[TRACK_CHALLENGE_COLUMN_NAME].tolist()
 
     challenges = []
-    for i, track in enumerate(track_response):
-        nc = process_bitcamp_hacks(track, temp_challenges[i])
-        # print(nc)
-        challenges.append(nc)
+    for i in range(len(temp_challenges)):
+        if bitcamp_prize_1[i]: 
+            challenges.append(bitcamp_prize_1[i])
+        if bitcamp_prize_2[i]: 
+            challenges.append(bitcamp_prize_2[i])
+        if bitcamp_prize_3[i]:
+            challenges.append(bitcamp_prize_3[i])
+        if alumni_prize_1[i]:
+            challenges.append(alumni_prize_1[i])
+        if alumni_prize_2[i]:
+            challenges.append(alumni_prize_2[i])
+            
+        challenges += temp_challenges[i]
 
     hc = []
     for ind_challenges in challenges:
@@ -352,7 +363,16 @@ def process(csv_file):
 
 
 def parse_challenge_name(challenge_name):
-    return challenge_name.split(" - ")
+    if challenge_name in OTHER_HACKS:
+        return challenge_name.split(" - ")
+    elif challenge_name in BITCAMP_HACKS:
+        return challenge_name, "Bitcamp"
+    elif challenge_name in ALUMNI_HACKS:
+        return challenge_name, "Alumni"
+    elif challenge_name in MLH_HACKS:
+        return challenge_name, "MLH"
+    
+    return challenge_name, "Other"
 
 
 def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges, emails):
@@ -424,14 +444,13 @@ def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges,
 
 def main():
     # csv_file = "./projects-2024-teammates.csv"
-    csv_file = "./2024Test.csv"
+    csv_file = "./projects-2025.csv"
     team_names, links, in_person, challenges, MLH_challenges, hc, emails = process(
     # team_names, links, in_person, challenges, MLH_challenges, hc = process(
         csv_file)
 
     # cap = [5, 2, 5, 4, 4, 4, 4, 4, 4, 4, 2, 4, 4, 2, 4, 4, 4, 1]
-    cap = [2, 2, 2, 1, 1, 2, 2, 2,           4, 4, 4,
-           4, 4, 4, 4, 4, 4, 4,  1, 1, 1, 1, 1, 1, 1, 1, 1]
+    cap = [2] * len(FULL_CHALLENGE_LIST)
 
     # print(len(cap))
     # print(len(FULL_CHALLENGE_LIST))
@@ -444,7 +463,7 @@ def main():
 
     # print(hc)
 
-    t, H, J = abstract_expo_alg(hc, CHALLENGE_JUDGE_GROUPS, 69)
+    t, H, J = abstract_expo_alg(hc, CHALLENGE_JUDGE_GROUPS, 75)
 
     print(t)
     print(150 // t)
