@@ -1,6 +1,6 @@
 [
     {
-        "id": "ce5a0",
+        "id": "477e0",
         "team_name": "QAOA for the kidney exchange problem",
         "table": "N2",
         "in_person": true,
@@ -14,19 +14,19 @@
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:10:00-04:00"
+                "start_time": "2025-04-13 13:58:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Advanced Quantum Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:42:00-04:00"
+                "start_time": "2025-04-13 14:04:00-04:00"
             }
         ]
     },
     {
-        "id": "36b81",
+        "id": "ec0f1",
         "team_name": "Keyless Campus",
         "table": "F4",
         "in_person": true,
@@ -45,7 +45,7 @@
         ]
     },
     {
-        "id": "d5462",
+        "id": "77042",
         "team_name": "Eyes of Expression",
         "table": "R7",
         "in_person": true,
@@ -59,12 +59,12 @@
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:38:00-04:00"
+                "start_time": "2025-04-13 13:32:00-04:00"
             }
         ]
     },
     {
-        "id": "0bb03",
+        "id": "90443",
         "team_name": "Dino Docs",
         "table": "T2",
         "in_person": true,
@@ -78,7 +78,7 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:42:00-04:00"
+                "start_time": "2025-04-13 13:46:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -90,7 +90,7 @@
         ]
     },
     {
-        "id": "d6a74",
+        "id": "db3b4",
         "team_name": "Unhookd",
         "table": "C3",
         "in_person": true,
@@ -101,22 +101,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Hack Promoting Public Health",
-                "company": "Bloomberg",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:26:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:54:00-04:00"
+                "start_time": "2025-04-13 13:30:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Hack Promoting Public Health",
+                "company": "Bloomberg",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:10:00-04:00"
             }
         ]
     },
     {
-        "id": "8b285",
+        "id": "29fc5",
         "team_name": "NeuraCoach",
         "table": "F3",
         "in_person": true,
@@ -130,14 +130,14 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:40:00-04:00"
+                "start_time": "2025-04-13 13:04:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:04:00-04:00"
+                "start_time": "2025-04-13 14:12:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -156,7 +156,7 @@
         ]
     },
     {
-        "id": "38cd6",
+        "id": "90c46",
         "team_name": "AidenAI: Your AI Financial Aid Advisor",
         "table": "O5",
         "in_person": true,
@@ -167,31 +167,31 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:10:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:30:00-04:00"
+                "start_time": "2025-04-13 13:06:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:08:00-04:00"
+                "start_time": "2025-04-13 13:30:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:16:00-04:00"
+                "start_time": "2025-04-13 14:18:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:40:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -210,7 +210,7 @@
         ]
     },
     {
-        "id": "a92b7",
+        "id": "9cc97",
         "team_name": "Image Steganalysis: Detect Hidden Text with Machine Learning",
         "table": "T3",
         "in_person": true,
@@ -224,19 +224,19 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:20:00-04:00"
+                "start_time": "2025-04-13 13:56:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Digital Forensics Related Hack",
                 "company": "Cipher Tech Solutions",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:30:00-04:00"
+                "start_time": "2025-04-13 14:42:00-04:00"
             }
         ]
     },
     {
-        "id": "3f878",
+        "id": "03b78",
         "team_name": "Species Tracker",
         "table": "H5",
         "in_person": true,
@@ -250,12 +250,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:40:00-04:00"
+                "start_time": "2025-04-13 13:26:00-04:00"
             }
         ]
     },
     {
-        "id": "ba4c9",
+        "id": "105e9",
         "team_name": "StrataGem",
         "table": "B7",
         "in_person": true,
@@ -269,14 +269,14 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:28:00-04:00"
+                "start_time": "2025-04-13 13:50:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:44:00-04:00"
+                "start_time": "2025-04-13 14:38:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -288,7 +288,7 @@
         ]
     },
     {
-        "id": "fa6f10",
+        "id": "644410",
         "team_name": "NOVA",
         "table": "F5",
         "in_person": true,
@@ -299,31 +299,31 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Financial Hack",
-                "company": "Capital One",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:04:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:20:00-04:00"
+                "start_time": "2025-04-13 14:00:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Machine Learning Track Hack",
-                "company": "Bitcamp",
+                "challenge_name": "Best Financial Hack",
+                "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:04:00-04:00"
+                "start_time": "2025-04-13 14:04:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:38:00-04:00"
+                "start_time": "2025-04-13 14:28:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Machine Learning Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:42:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -335,7 +335,7 @@
         ]
     },
     {
-        "id": "deb811",
+        "id": "87f711",
         "team_name": "pocketPenny",
         "table": "C1",
         "in_person": true,
@@ -349,7 +349,7 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:02:00-04:00"
+                "start_time": "2025-04-13 13:44:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -368,7 +368,7 @@
         ]
     },
     {
-        "id": "d11912",
+        "id": "caaf12",
         "team_name": "Payment Protect",
         "table": "E8",
         "in_person": true,
@@ -379,24 +379,24 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:08:00-04:00"
+                "start_time": "2025-04-13 13:12:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:24:00-04:00"
+                "start_time": "2025-04-13 13:34:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:48:00-04:00"
+                "start_time": "2025-04-13 14:48:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -408,7 +408,7 @@
         ]
     },
     {
-        "id": "b62b13",
+        "id": "46df13",
         "team_name": "CarbonQapture",
         "table": "G3",
         "in_person": true,
@@ -419,29 +419,29 @@
         "challenges": [
             {
                 "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:06:00-04:00"
+            },
+            {
+                "is_mlh": false,
                 "challenge_name": "Best Advanced Quantum Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:28:00-04:00"
+                "start_time": "2025-04-13 13:32:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:34:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:36:00-04:00"
+                "start_time": "2025-04-13 14:34:00-04:00"
             }
         ]
     },
     {
-        "id": "213714",
+        "id": "343b14",
         "team_name": "SayPass",
         "table": "C6",
         "in_person": true,
@@ -452,17 +452,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Cybersecurity Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:58:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Digital Forensics Related Hack",
                 "company": "Cipher Tech Solutions",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:26:00-04:00"
+                "start_time": "2025-04-13 13:00:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Cybersecurity Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:22:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -474,7 +474,7 @@
         ]
     },
     {
-        "id": "f28b15",
+        "id": "f93415",
         "team_name": "Finfig",
         "table": "N6",
         "in_person": true,
@@ -488,26 +488,26 @@
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:00:00-04:00"
+                "start_time": "2025-04-13 13:54:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:46:00-04:00"
+                "start_time": "2025-04-13 14:08:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:58:00-04:00"
+                "start_time": "2025-04-13 14:18:00-04:00"
             }
         ]
     },
     {
-        "id": "d8e816",
+        "id": "db1916",
         "team_name": "Gaadi",
         "table": "A3",
         "in_person": true,
@@ -521,12 +521,12 @@
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:50:00-04:00"
+                "start_time": "2025-04-13 14:26:00-04:00"
             }
         ]
     },
     {
-        "id": "71ab17",
+        "id": "828e17",
         "team_name": "Tariffix",
         "table": "H7",
         "in_person": true,
@@ -537,31 +537,31 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
+                "challenge_name": "Best Financial Hack",
+                "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:18:00-04:00"
+                "start_time": "2025-04-13 13:10:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:34:00-04:00"
+                "start_time": "2025-04-13 13:12:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:30:00-04:00"
+                "start_time": "2025-04-13 13:38:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Financial Hack",
-                "company": "Capital One",
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:46:00-04:00"
+                "start_time": "2025-04-13 13:56:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -587,7 +587,7 @@
         ]
     },
     {
-        "id": "82ff18",
+        "id": "90c918",
         "team_name": "SmartSave",
         "table": "N7",
         "in_person": true,
@@ -601,7 +601,7 @@
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:12:00-04:00"
+                "start_time": "2025-04-13 14:12:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -613,7 +613,7 @@
         ]
     },
     {
-        "id": "11b619",
+        "id": "667e19",
         "team_name": "Buddy",
         "table": "D2",
         "in_person": true,
@@ -627,7 +627,7 @@
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:24:00-04:00"
+                "start_time": "2025-04-13 13:48:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -639,7 +639,7 @@
         ]
     },
     {
-        "id": "0ba420",
+        "id": "96e720",
         "team_name": "The Dino Game",
         "table": "A2",
         "in_person": true,
@@ -650,7 +650,7 @@
         "challenges": []
     },
     {
-        "id": "af4921",
+        "id": "7d7b21",
         "team_name": "Sudoku Mobile App Solver",
         "table": "H2",
         "in_person": true,
@@ -661,7 +661,7 @@
         "challenges": []
     },
     {
-        "id": "f17622",
+        "id": "af4322",
         "team_name": "Unravel",
         "table": "P3",
         "in_person": true,
@@ -675,12 +675,12 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:36:00-04:00"
+                "start_time": "2025-04-13 14:46:00-04:00"
             }
         ]
     },
     {
-        "id": "747e23",
+        "id": "cde423",
         "team_name": "Dino Money",
         "table": "P8",
         "in_person": true,
@@ -691,24 +691,24 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Financial Hack",
-                "company": "Capital One",
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:00:00-04:00"
+                "start_time": "2025-04-13 13:50:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:02:00-04:00"
+                "start_time": "2025-04-13 14:02:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
+                "challenge_name": "Best Financial Hack",
+                "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:18:00-04:00"
+                "start_time": "2025-04-13 14:42:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -720,7 +720,7 @@
         ]
     },
     {
-        "id": "057f24",
+        "id": "fb9124",
         "team_name": "Mapify",
         "table": "B6",
         "in_person": true,
@@ -734,14 +734,14 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:50:00-04:00"
+                "start_time": "2025-04-13 13:02:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:06:00-04:00"
+                "start_time": "2025-04-13 14:04:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -753,7 +753,7 @@
         ]
     },
     {
-        "id": "d02625",
+        "id": "a3ad25",
         "team_name": "StudyRight",
         "table": "E1",
         "in_person": true,
@@ -767,21 +767,21 @@
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:40:00-04:00"
+                "start_time": "2025-04-13 14:30:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:04:00-04:00"
+                "start_time": "2025-04-13 14:32:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:06:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:48:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -793,7 +793,7 @@
         ]
     },
     {
-        "id": "78a526",
+        "id": "069126",
         "team_name": "OutTheGC",
         "table": "S7",
         "in_person": true,
@@ -812,7 +812,7 @@
         ]
     },
     {
-        "id": "716927",
+        "id": "2a8d27",
         "team_name": "LifexAI",
         "table": "T7",
         "in_person": true,
@@ -823,45 +823,45 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Digital Forensics Related Hack",
-                "company": "Cipher Tech Solutions",
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:20:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Financial Hack",
-                "company": "Capital One",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:32:00-04:00"
+                "start_time": "2025-04-13 13:08:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:50:00-04:00"
+                "start_time": "2025-04-13 13:46:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:12:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Financial Hack",
+                "company": "Capital One",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:14:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:22:00-04:00"
+                "start_time": "2025-04-13 14:16:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:32:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
+                "challenge_name": "Best Digital Forensics Related Hack",
+                "company": "Cipher Tech Solutions",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:38:00-04:00"
+                "start_time": "2025-04-13 14:42:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -894,7 +894,7 @@
         ]
     },
     {
-        "id": "0c2028",
+        "id": "cf2e28",
         "team_name": "FinePrintasaurus",
         "table": "N4",
         "in_person": true,
@@ -907,15 +907,15 @@
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:58:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:40:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:38:00-04:00"
+                "start_time": "2025-04-13 14:18:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -934,7 +934,7 @@
         ]
     },
     {
-        "id": "63e329",
+        "id": "f34d29",
         "team_name": "FoodShare",
         "table": "L8",
         "in_person": true,
@@ -948,12 +948,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:48:00-04:00"
+                "start_time": "2025-04-13 14:16:00-04:00"
             }
         ]
     },
     {
-        "id": "4f4930",
+        "id": "407730",
         "team_name": "Quaran.Tech",
         "table": "P7",
         "in_person": true,
@@ -967,7 +967,7 @@
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:36:00-04:00"
+                "start_time": "2025-04-13 14:26:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1000,7 +1000,7 @@
         ]
     },
     {
-        "id": "0a7931",
+        "id": "f34731",
         "team_name": "SmartSplit",
         "table": "E6",
         "in_person": true,
@@ -1011,29 +1011,29 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
+                "challenge_name": "Best Financial Hack",
+                "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:46:00-04:00"
+                "start_time": "2025-04-13 13:38:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:42:00-04:00"
+                "start_time": "2025-04-13 13:44:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Financial Hack",
-                "company": "Capital One",
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:48:00-04:00"
+                "start_time": "2025-04-13 14:28:00-04:00"
             }
         ]
     },
     {
-        "id": "159e32",
+        "id": "477632",
         "team_name": "zombs.tech",
         "table": "F8",
         "in_person": true,
@@ -1052,7 +1052,7 @@
         ]
     },
     {
-        "id": "faaf33",
+        "id": "f88133",
         "team_name": " TerpMatch: LLM-Powered Research Connector",
         "table": "C4",
         "in_person": true,
@@ -1063,45 +1063,45 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
+                "challenge_name": "Best Digital Forensics Related Hack",
+                "company": "Cipher Tech Solutions",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:02:00-04:00"
+                "start_time": "2025-04-13 13:04:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:20:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:10:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Digital Forensics Related Hack",
-                "company": "Cipher Tech Solutions",
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:26:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Hack Promoting Public Health",
-                "company": "Bloomberg",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:00:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Machine Learning Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:26:00-04:00"
+                "start_time": "2025-04-13 13:26:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:42:00-04:00"
+                "start_time": "2025-04-13 13:42:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Machine Learning Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:14:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Hack Promoting Public Health",
+                "company": "Bloomberg",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:48:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1134,7 +1134,7 @@
         ]
     },
     {
-        "id": "4db034",
+        "id": "546234",
         "team_name": "DebateGuard",
         "table": "D6",
         "in_person": true,
@@ -1148,21 +1148,21 @@
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:20:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best App Dev Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:30:00-04:00"
+                "start_time": "2025-04-13 13:04:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:04:00-04:00"
+                "start_time": "2025-04-13 13:18:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best App Dev Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:22:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1174,7 +1174,7 @@
         ]
     },
     {
-        "id": "6c0f35",
+        "id": "4a4235",
         "team_name": "Mealbot",
         "table": "O3",
         "in_person": true,
@@ -1188,7 +1188,7 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:22:00-04:00"
+                "start_time": "2025-04-13 13:20:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1200,7 +1200,7 @@
         ]
     },
     {
-        "id": "c9ea36",
+        "id": "2c0636",
         "team_name": "AlphaMutate",
         "table": "M8",
         "in_person": true,
@@ -1214,21 +1214,21 @@
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:04:00-04:00"
+                "start_time": "2025-04-13 13:44:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:12:00-04:00"
+                "start_time": "2025-04-13 14:14:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:26:00-04:00"
+                "start_time": "2025-04-13 14:24:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1240,7 +1240,7 @@
         ]
     },
     {
-        "id": "331537",
+        "id": "bf1837",
         "team_name": "Sustainable Earth (Eco-Finance)",
         "table": "B4",
         "in_person": true,
@@ -1254,7 +1254,7 @@
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:52:00-04:00"
+                "start_time": "2025-04-13 13:20:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1266,7 +1266,7 @@
         ]
     },
     {
-        "id": "463e38",
+        "id": "f4e038",
         "team_name": "NeuroScan.AI",
         "table": "H6",
         "in_person": true,
@@ -1277,7 +1277,7 @@
         "challenges": []
     },
     {
-        "id": "c47139",
+        "id": "c5ce39",
         "team_name": "BiasGPT",
         "table": "R5",
         "in_person": true,
@@ -1288,22 +1288,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:16:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:40:00-04:00"
+                "start_time": "2025-04-13 13:40:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:04:00-04:00"
             }
         ]
     },
     {
-        "id": "7c8a40",
+        "id": "2cd040",
         "team_name": "Switch lane ",
         "table": "R3",
         "in_person": true,
@@ -1314,7 +1314,7 @@
         "challenges": []
     },
     {
-        "id": "7ce041",
+        "id": "565341",
         "team_name": "Schr\u00f6dinger's Catch: TROUT of This World!",
         "table": "B8",
         "in_person": true,
@@ -1328,7 +1328,7 @@
                 "challenge_name": "Best Advanced Quantum Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:38:00-04:00"
+                "start_time": "2025-04-13 13:56:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1340,7 +1340,7 @@
         ]
     },
     {
-        "id": "5c1842",
+        "id": "51df42",
         "team_name": "Sprout It!",
         "table": "P6",
         "in_person": true,
@@ -1351,7 +1351,7 @@
         "challenges": []
     },
     {
-        "id": "a87443",
+        "id": "1bc643",
         "team_name": "Quanta",
         "table": "D3",
         "in_person": true,
@@ -1362,17 +1362,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:18:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Advanced Quantum Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:48:00-04:00"
+                "start_time": "2025-04-13 13:24:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:02:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1384,7 +1384,7 @@
         ]
     },
     {
-        "id": "8e5944",
+        "id": "841e44",
         "team_name": "Moody Ring",
         "table": "D4",
         "in_person": true,
@@ -1397,8 +1397,8 @@
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:38:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:00:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1410,7 +1410,7 @@
         ]
     },
     {
-        "id": "465845",
+        "id": "b50445",
         "team_name": "LaunchMate",
         "table": "Q8",
         "in_person": true,
@@ -1421,17 +1421,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:30:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:40:00-04:00"
+                "start_time": "2025-04-13 14:20:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:44:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1457,7 +1457,7 @@
         ]
     },
     {
-        "id": "2e9946",
+        "id": "b26246",
         "team_name": "NeoVisr",
         "table": "B5",
         "in_person": true,
@@ -1471,14 +1471,14 @@
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:14:00-04:00"
+                "start_time": "2025-04-13 13:22:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:22:00-04:00"
+                "start_time": "2025-04-13 14:26:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1490,7 +1490,7 @@
         ]
     },
     {
-        "id": "224847",
+        "id": "574f47",
         "team_name": "Meal Planner App",
         "table": "B3",
         "in_person": true,
@@ -1504,7 +1504,7 @@
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:24:00-04:00"
+                "start_time": "2025-04-13 13:40:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1516,7 +1516,7 @@
         ]
     },
     {
-        "id": "2fa348",
+        "id": "648848",
         "team_name": "DinoLearn",
         "table": "O2",
         "in_person": true,
@@ -1527,24 +1527,24 @@
         "challenges": [
             {
                 "is_mlh": false,
+                "challenge_name": "Best App Dev Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:20:00-04:00"
+            },
+            {
+                "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:14:00-04:00"
+                "start_time": "2025-04-13 13:32:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:22:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best App Dev Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:18:00-04:00"
+                "start_time": "2025-04-13 13:36:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1570,7 +1570,7 @@
         ]
     },
     {
-        "id": "bf6e49",
+        "id": "06a349",
         "team_name": "DMPN: Developer Monitoring & Productivity Nexus",
         "table": "A7",
         "in_person": true,
@@ -1584,7 +1584,7 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:08:00-04:00"
+                "start_time": "2025-04-13 13:22:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1596,7 +1596,7 @@
         ]
     },
     {
-        "id": "893950",
+        "id": "972550",
         "team_name": "Seismic Sense",
         "table": "G4",
         "in_person": true,
@@ -1610,12 +1610,12 @@
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:52:00-04:00"
+                "start_time": "2025-04-13 13:24:00-04:00"
             }
         ]
     },
     {
-        "id": "f17b51",
+        "id": "394f51",
         "team_name": "PhishNet AI",
         "table": "G2",
         "in_person": true,
@@ -1629,7 +1629,7 @@
                 "challenge_name": "Best Cybersecurity Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:00:00-04:00"
+                "start_time": "2025-04-13 14:16:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1641,7 +1641,7 @@
         ]
     },
     {
-        "id": "ef3452",
+        "id": "c8dc52",
         "team_name": "MoneyTrail",
         "table": "A8",
         "in_person": true,
@@ -1655,14 +1655,14 @@
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:04:00-04:00"
+                "start_time": "2025-04-13 13:32:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:28:00-04:00"
+                "start_time": "2025-04-13 14:12:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1674,7 +1674,7 @@
         ]
     },
     {
-        "id": "212853",
+        "id": "f7aa53",
         "team_name": "MealMap",
         "table": "S6",
         "in_person": true,
@@ -1685,22 +1685,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:22:00-04:00"
+                "challenge_name": "Best Hack Promoting Public Health",
+                "company": "Bloomberg",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:20:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Hack Promoting Public Health",
-                "company": "Bloomberg",
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:38:00-04:00"
+                "start_time": "2025-04-13 14:12:00-04:00"
             }
         ]
     },
     {
-        "id": "b13154",
+        "id": "811654",
         "team_name": "Gesture Based Music Controller",
         "table": "N3",
         "in_person": true,
@@ -1711,7 +1711,7 @@
         "challenges": []
     },
     {
-        "id": "0c1255",
+        "id": "338755",
         "team_name": "Cipherzoic",
         "table": "C8",
         "in_person": true,
@@ -1725,14 +1725,14 @@
                 "challenge_name": "Best Digital Forensics Related Hack",
                 "company": "Cipher Tech Solutions",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:54:00-04:00"
+                "start_time": "2025-04-13 13:44:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Cybersecurity Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:42:00-04:00"
+                "start_time": "2025-04-13 14:46:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1744,7 +1744,7 @@
         ]
     },
     {
-        "id": "56b056",
+        "id": "584356",
         "team_name": "PosePilot",
         "table": "H1",
         "in_person": true,
@@ -1758,19 +1758,19 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:32:00-04:00"
+                "start_time": "2025-04-13 13:06:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:12:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:32:00-04:00"
             }
         ]
     },
     {
-        "id": "482757",
+        "id": "777257",
         "team_name": "CircuLens",
         "table": "O8",
         "in_person": true,
@@ -1781,17 +1781,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:52:00-04:00"
+                "challenge_name": "Best Machine Learning Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:02:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Machine Learning Track Hack",
-                "company": "Bitcamp",
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:20:00-04:00"
+                "start_time": "2025-04-13 14:44:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1803,7 +1803,7 @@
         ]
     },
     {
-        "id": "bdb558",
+        "id": "39fe58",
         "team_name": "Lighthouse",
         "table": "M4",
         "in_person": true,
@@ -1817,12 +1817,12 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:30:00-04:00"
+                "start_time": "2025-04-13 13:24:00-04:00"
             }
         ]
     },
     {
-        "id": "31d459",
+        "id": "ad5f59",
         "team_name": "SoberSide",
         "table": "P5",
         "in_person": true,
@@ -1833,17 +1833,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:54:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:32:00-04:00"
+                "start_time": "2025-04-13 14:18:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:22:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1862,7 +1862,7 @@
         ]
     },
     {
-        "id": "df0f60",
+        "id": "859e60",
         "team_name": "Askit",
         "table": "G7",
         "in_person": true,
@@ -1873,7 +1873,7 @@
         "challenges": []
     },
     {
-        "id": "c8a361",
+        "id": "ce1d61",
         "team_name": "World Racing",
         "table": "L6",
         "in_person": true,
@@ -1886,13 +1886,13 @@
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:58:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:28:00-04:00"
             }
         ]
     },
     {
-        "id": "8ce862",
+        "id": "06a262",
         "team_name": "BoxBot - The Dancing Robot!",
         "table": "E3",
         "in_person": true,
@@ -1903,7 +1903,7 @@
         "challenges": []
     },
     {
-        "id": "4cce63",
+        "id": "d01d63",
         "team_name": "Natch",
         "table": "S8",
         "in_person": true,
@@ -1914,22 +1914,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:50:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:48:00-04:00"
+                "start_time": "2025-04-13 13:44:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:42:00-04:00"
             }
         ]
     },
     {
-        "id": "8ddf64",
+        "id": "6b1a64",
         "team_name": "CallerIDK",
         "table": "Q5",
         "in_person": true,
@@ -1940,38 +1940,38 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Cybersecurity Track Hack",
-                "company": "Bitcamp",
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:02:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:24:00-04:00"
+                "start_time": "2025-04-13 13:16:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Digital Forensics Related Hack",
                 "company": "Cipher Tech Solutions",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:38:00-04:00"
+                "start_time": "2025-04-13 13:18:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:08:00-04:00"
+                "start_time": "2025-04-13 13:22:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
+                "challenge_name": "Best Cybersecurity Track Hack",
+                "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:32:00-04:00"
+                "start_time": "2025-04-13 13:38:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:42:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -1983,7 +1983,7 @@
         ]
     },
     {
-        "id": "7bae65",
+        "id": "370065",
         "team_name": "Pangaea DDE",
         "table": "M2",
         "in_person": true,
@@ -1997,7 +1997,7 @@
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:20:00-04:00"
+                "start_time": "2025-04-13 14:16:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -2009,7 +2009,7 @@
         ]
     },
     {
-        "id": "385b66",
+        "id": "9e8466",
         "team_name": "Raccoon's Port Scanner",
         "table": "M6",
         "in_person": true,
@@ -2023,12 +2023,12 @@
                 "challenge_name": "Best Cybersecurity Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:22:00-04:00"
+                "start_time": "2025-04-13 13:48:00-04:00"
             }
         ]
     },
     {
-        "id": "b20367",
+        "id": "a08467",
         "team_name": "TerpOracle",
         "table": "T4",
         "in_person": true,
@@ -2041,8 +2041,8 @@
                 "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:22:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:44:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -2054,7 +2054,7 @@
         ]
     },
     {
-        "id": "e55168",
+        "id": "d27768",
         "team_name": "AlphaParse",
         "table": "O4",
         "in_person": true,
@@ -2065,24 +2065,24 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:28:00-04:00"
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:04:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:38:00-04:00"
+                "start_time": "2025-04-13 13:16:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:44:00-04:00"
+                "start_time": "2025-04-13 13:26:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -2101,7 +2101,7 @@
         ]
     },
     {
-        "id": "dd8169",
+        "id": "bbd269",
         "team_name": "BizCamp",
         "table": "H4",
         "in_person": true,
@@ -2115,21 +2115,21 @@
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:50:00-04:00"
+                "start_time": "2025-04-13 13:48:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:30:00-04:00"
+                "start_time": "2025-04-13 14:10:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:34:00-04:00"
+                "start_time": "2025-04-13 14:34:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -2148,7 +2148,7 @@
         ]
     },
     {
-        "id": "d25670",
+        "id": "c49270",
         "team_name": "Bytecamp",
         "table": "D5",
         "in_person": true,
@@ -2159,7 +2159,7 @@
         "challenges": []
     },
     {
-        "id": "3bca71",
+        "id": "a58871",
         "team_name": "Impause",
         "table": "T5",
         "in_person": true,
@@ -2170,31 +2170,31 @@
         "challenges": [
             {
                 "is_mlh": false,
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:16:00-04:00"
+            },
+            {
+                "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:20:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:42:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:56:00-04:00"
+                "start_time": "2025-04-13 13:36:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:34:00-04:00"
+                "start_time": "2025-04-13 14:02:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:10:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -2227,7 +2227,7 @@
         ]
     },
     {
-        "id": "59d572",
+        "id": "144572",
         "team_name": "Hiding in Plain Sight",
         "table": "M3",
         "in_person": true,
@@ -2241,19 +2241,19 @@
                 "challenge_name": "Best Cybersecurity Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:04:00-04:00"
+                "start_time": "2025-04-13 13:58:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Digital Forensics Related Hack",
                 "company": "Cipher Tech Solutions",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:50:00-04:00"
+                "start_time": "2025-04-13 14:14:00-04:00"
             }
         ]
     },
     {
-        "id": "80fa73",
+        "id": "324a73",
         "team_name": "SnortEduGuard \u2013 Student Integrity Surveillance System",
         "table": "H3",
         "in_person": true,
@@ -2264,24 +2264,24 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Cybersecurity Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:00:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:46:00-04:00"
+                "start_time": "2025-04-13 13:24:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Digital Forensics Related Hack",
                 "company": "Cipher Tech Solutions",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:16:00-04:00"
+                "start_time": "2025-04-13 14:02:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Cybersecurity Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:08:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -2293,7 +2293,7 @@
         ]
     },
     {
-        "id": "814874",
+        "id": "458b74",
         "team_name": "Therassist",
         "table": "P4",
         "in_person": true,
@@ -2304,17 +2304,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Hack Promoting Public Health",
-                "company": "Bloomberg",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:24:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:44:00-04:00"
+                "start_time": "2025-04-13 13:28:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Hack Promoting Public Health",
+                "company": "Bloomberg",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:42:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -2333,7 +2333,7 @@
         ]
     },
     {
-        "id": "fc2475",
+        "id": "57c875",
         "team_name": "Control Flow",
         "table": "H8",
         "in_person": true,
@@ -2344,7 +2344,7 @@
         "challenges": []
     },
     {
-        "id": "562e76",
+        "id": "3f2676",
         "team_name": "Qubikel",
         "table": "L7",
         "in_person": true,
@@ -2355,17 +2355,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:08:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Advanced Quantum Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:12:00-04:00"
+                "start_time": "2025-04-13 14:00:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:40:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -2384,7 +2384,7 @@
         ]
     },
     {
-        "id": "43de77",
+        "id": "a93a77",
         "team_name": "BoxBoxBot- AI Generated F1 Commentary",
         "table": "G8",
         "in_person": true,
@@ -2398,12 +2398,12 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:44:00-04:00"
+                "start_time": "2025-04-13 13:16:00-04:00"
             }
         ]
     },
     {
-        "id": "c0e278",
+        "id": "be6778",
         "team_name": "EchoLens",
         "table": "L2",
         "in_person": true,
@@ -2414,22 +2414,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Hack Promoting Public Health",
-                "company": "Bloomberg",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:00:00-04:00"
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:14:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:28:00-04:00"
+                "challenge_name": "Best Hack Promoting Public Health",
+                "company": "Bloomberg",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:46:00-04:00"
             }
         ]
     },
     {
-        "id": "681b79",
+        "id": "749779",
         "team_name": "Whole Lotta Stonks",
         "table": "N1",
         "in_person": true,
@@ -2443,12 +2443,12 @@
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:28:00-04:00"
+                "start_time": "2025-04-13 13:54:00-04:00"
             }
         ]
     },
     {
-        "id": "46fa80",
+        "id": "0d9180",
         "team_name": "InfoGrab",
         "table": "F1",
         "in_person": true,
@@ -2462,12 +2462,12 @@
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:44:00-04:00"
+                "start_time": "2025-04-13 13:28:00-04:00"
             }
         ]
     },
     {
-        "id": "bb8881",
+        "id": "ae2b81",
         "team_name": "Binary Classifier in C++",
         "table": "Q7",
         "in_person": true,
@@ -2478,7 +2478,7 @@
         "challenges": []
     },
     {
-        "id": "27a182",
+        "id": "9a1282",
         "team_name": "fin-sights.tech",
         "table": "Q4",
         "in_person": true,
@@ -2492,21 +2492,21 @@
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:14:00-04:00"
+                "start_time": "2025-04-13 13:04:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:38:00-04:00"
+                "start_time": "2025-04-13 13:38:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:34:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:20:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -2539,7 +2539,7 @@
         ]
     },
     {
-        "id": "ca9e83",
+        "id": "f55983",
         "team_name": "Memento",
         "table": "M7",
         "in_person": true,
@@ -2550,24 +2550,24 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:08:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:36:00-04:00"
+                "start_time": "2025-04-13 13:36:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:58:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:46:00-04:00"
+                "start_time": "2025-04-13 14:40:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -2579,7 +2579,7 @@
         ]
     },
     {
-        "id": "3a0984",
+        "id": "6a7a84",
         "team_name": "Room Bloom",
         "table": "Q6",
         "in_person": true,
@@ -2590,7 +2590,7 @@
         "challenges": []
     },
     {
-        "id": "4a9085",
+        "id": "e28285",
         "team_name": "Vibelist",
         "table": "D1",
         "in_person": true,
@@ -2603,13 +2603,13 @@
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:18:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:30:00-04:00"
             }
         ]
     },
     {
-        "id": "560986",
+        "id": "4d4986",
         "team_name": "StakeHouse",
         "table": "Q3",
         "in_person": true,
@@ -2623,12 +2623,12 @@
                 "challenge_name": "Best Cybersecurity Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:06:00-04:00"
+                "start_time": "2025-04-13 14:20:00-04:00"
             }
         ]
     },
     {
-        "id": "9d9987",
+        "id": "317687",
         "team_name": "UncompliGrow",
         "table": "Q1",
         "in_person": true,
@@ -2639,29 +2639,29 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
+                "challenge_name": "Best App Dev Track Hack",
+                "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:02:00-04:00"
+                "start_time": "2025-04-13 13:50:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:54:00-04:00"
+                "start_time": "2025-04-13 13:52:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best App Dev Track Hack",
-                "company": "Bitcamp",
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:20:00-04:00"
+                "start_time": "2025-04-13 14:26:00-04:00"
             }
         ]
     },
     {
-        "id": "c88888",
+        "id": "208688",
         "team_name": "MedSave",
         "table": "A1",
         "in_person": true,
@@ -2672,29 +2672,29 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Hack Promoting Public Health",
-                "company": "Bloomberg",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:20:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:54:00-04:00"
+                "start_time": "2025-04-13 13:06:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:12:00-04:00"
+                "start_time": "2025-04-13 13:14:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Hack Promoting Public Health",
+                "company": "Bloomberg",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:30:00-04:00"
             }
         ]
     },
     {
-        "id": "e13289",
+        "id": "455489",
         "team_name": "Knowledge Quest",
         "table": "N5",
         "in_person": true,
@@ -2713,7 +2713,7 @@
         ]
     },
     {
-        "id": "eb6d90",
+        "id": "022a90",
         "team_name": "BattleTask",
         "table": "S4",
         "in_person": true,
@@ -2732,7 +2732,7 @@
         ]
     },
     {
-        "id": "b0d291",
+        "id": "68ba91",
         "team_name": "Terpsicle",
         "table": "R6",
         "in_person": true,
@@ -2743,22 +2743,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best App Dev Track Hack",
-                "company": "Bitcamp",
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:52:00-04:00"
+                "start_time": "2025-04-13 13:32:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:48:00-04:00"
+                "challenge_name": "Best App Dev Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:42:00-04:00"
             }
         ]
     },
     {
-        "id": "990c92",
+        "id": "38d392",
         "team_name": "Riffs",
         "table": "O1",
         "in_person": true,
@@ -2769,22 +2769,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best App Dev Track Hack",
-                "company": "Bitcamp",
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:18:00-04:00"
+                "start_time": "2025-04-13 13:00:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
+                "challenge_name": "Best App Dev Track Hack",
+                "company": "Bitcamp",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:24:00-04:00"
+                "start_time": "2025-04-13 14:40:00-04:00"
             }
         ]
     },
     {
-        "id": "ff7e93",
+        "id": "f6f893",
         "team_name": "Pantry Pal",
         "table": "L1",
         "in_person": true,
@@ -2795,7 +2795,7 @@
         "challenges": []
     },
     {
-        "id": "6aef94",
+        "id": "0fdc94",
         "team_name": "GeoGuard",
         "table": "D7",
         "in_person": true,
@@ -2806,38 +2806,38 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Machine Learning Track Hack",
-                "company": "Bitcamp",
+                "challenge_name": "Best Digital Forensics Related Hack",
+                "company": "Cipher Tech Solutions",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:26:00-04:00"
+                "start_time": "2025-04-13 13:08:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:30:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:20:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Hack Promoting Public Health",
-                "company": "Bloomberg",
+                "challenge_name": "Best Machine Learning Track Hack",
+                "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:42:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Digital Forensics Related Hack",
-                "company": "Cipher Tech Solutions",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:14:00-04:00"
+                "start_time": "2025-04-13 13:28:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:40:00-04:00"
+                "start_time": "2025-04-13 14:06:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Hack Promoting Public Health",
+                "company": "Bloomberg",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:40:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -2849,7 +2849,7 @@
         ]
     },
     {
-        "id": "7b0595",
+        "id": "fbdc95",
         "team_name": "MacroTerpitech",
         "table": "R1",
         "in_person": true,
@@ -2862,15 +2862,15 @@
                 "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:20:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:02:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:50:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:30:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -2889,7 +2889,7 @@
         ]
     },
     {
-        "id": "83aa96",
+        "id": "958596",
         "team_name": "TerpFit",
         "table": "S2",
         "in_person": true,
@@ -2902,13 +2902,13 @@
                 "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:46:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:36:00-04:00"
             }
         ]
     },
     {
-        "id": "314997",
+        "id": "48af97",
         "team_name": "\u03bcTeX (MuTeX)",
         "table": "S5",
         "in_person": true,
@@ -2927,7 +2927,7 @@
         ]
     },
     {
-        "id": "b4eb98",
+        "id": "2e4398",
         "team_name": "DataVision",
         "table": "O7",
         "in_person": true,
@@ -2941,28 +2941,28 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:14:00-04:00"
+                "start_time": "2025-04-13 13:38:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:42:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:32:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:12:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:42:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:24:00-04:00"
+                "start_time": "2025-04-13 14:38:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -2981,7 +2981,7 @@
         ]
     },
     {
-        "id": "a28b99",
+        "id": "b5aa99",
         "team_name": "Keep It Up!",
         "table": "E7",
         "in_person": true,
@@ -2995,12 +2995,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:44:00-04:00"
+                "start_time": "2025-04-13 14:46:00-04:00"
             }
         ]
     },
     {
-        "id": "afce100",
+        "id": "f53f100",
         "team_name": "Jesture",
         "table": "P2",
         "in_person": true,
@@ -3014,7 +3014,7 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:44:00-04:00"
+                "start_time": "2025-04-13 13:48:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3026,7 +3026,7 @@
         ]
     },
     {
-        "id": "c5d2101",
+        "id": "8ba0101",
         "team_name": "ChatGPT Bookmarker",
         "table": "C7",
         "in_person": true,
@@ -3039,13 +3039,13 @@
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:14:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:38:00-04:00"
             }
         ]
     },
     {
-        "id": "222e102",
+        "id": "e2f5102",
         "team_name": "Cyber Sentinel",
         "table": "L5",
         "in_person": true,
@@ -3058,15 +3058,15 @@
                 "is_mlh": false,
                 "challenge_name": "Best Digital Forensics Related Hack",
                 "company": "Cipher Tech Solutions",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:14:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:20:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Cybersecurity Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:24:00-04:00"
+                "start_time": "2025-04-13 13:50:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3085,7 +3085,7 @@
         ]
     },
     {
-        "id": "9960103",
+        "id": "961d103",
         "team_name": "QuantumDecider",
         "table": "E2",
         "in_person": true,
@@ -3099,7 +3099,7 @@
                 "challenge_name": "Best Advanced Quantum Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:20:00-04:00"
+                "start_time": "2025-04-13 14:34:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3118,7 +3118,7 @@
         ]
     },
     {
-        "id": "b8f8104",
+        "id": "749c104",
         "team_name": "Prod",
         "table": "P1",
         "in_person": true,
@@ -3129,17 +3129,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:52:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:16:00-04:00"
+                "start_time": "2025-04-13 13:54:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:48:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3158,7 +3158,7 @@
         ]
     },
     {
-        "id": "e3ce105",
+        "id": "6d99105",
         "team_name": "AI Resume Coach",
         "table": "E5",
         "in_person": true,
@@ -3171,13 +3171,13 @@
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:38:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:42:00-04:00"
             }
         ]
     },
     {
-        "id": "1be9106",
+        "id": "9a5b106",
         "team_name": "CreditGuard",
         "table": "S3",
         "in_person": true,
@@ -3190,15 +3190,15 @@
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:14:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:22:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:26:00-04:00"
+                "start_time": "2025-04-13 14:36:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3210,7 +3210,7 @@
         ]
     },
     {
-        "id": "8d37107",
+        "id": "dce6107",
         "team_name": "Netflix Summary Extension",
         "table": "G1",
         "in_person": true,
@@ -3229,7 +3229,7 @@
         ]
     },
     {
-        "id": "b9ba108",
+        "id": "d09d108",
         "team_name": "TerraCare",
         "table": "F6",
         "in_person": true,
@@ -3248,7 +3248,7 @@
         ]
     },
     {
-        "id": "8944109",
+        "id": "3517109",
         "team_name": "BizLingo",
         "table": "N8",
         "in_person": true,
@@ -3259,29 +3259,29 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:00:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:40:00-04:00"
+                "start_time": "2025-04-13 13:08:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:16:00-04:00"
+                "start_time": "2025-04-13 14:04:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:46:00-04:00"
             }
         ]
     },
     {
-        "id": "2f7f110",
+        "id": "2850110",
         "team_name": "MarlowOS",
         "table": "C2",
         "in_person": true,
@@ -3292,7 +3292,7 @@
         "challenges": []
     },
     {
-        "id": "eba1111",
+        "id": "0977111",
         "team_name": "YummyBytesAI",
         "table": "S1",
         "in_person": true,
@@ -3311,7 +3311,7 @@
         ]
     },
     {
-        "id": "6853112",
+        "id": "088e112",
         "team_name": "CapitalClarity",
         "table": "G6",
         "in_person": true,
@@ -3322,24 +3322,24 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best App Dev Track Hack",
-                "company": "Bitcamp",
+                "challenge_name": "Best Financial Hack",
+                "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:36:00-04:00"
+                "start_time": "2025-04-13 13:14:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:16:00-04:00"
+                "start_time": "2025-04-13 14:18:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Financial Hack",
-                "company": "Capital One",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:30:00-04:00"
+                "challenge_name": "Best App Dev Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:24:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3351,7 +3351,7 @@
         ]
     },
     {
-        "id": "f262113",
+        "id": "be14113",
         "team_name": "oto hana.",
         "table": "A6",
         "in_person": true,
@@ -3364,22 +3364,22 @@
                 "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:20:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:04:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:14:00-04:00"
+                "start_time": "2025-04-13 14:22:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:46:00-04:00"
+                "start_time": "2025-04-13 14:24:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3391,7 +3391,7 @@
         ]
     },
     {
-        "id": "a1bc114",
+        "id": "ca02114",
         "team_name": "TravelBuddy",
         "table": "F7",
         "in_person": true,
@@ -3404,13 +3404,13 @@
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:26:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:36:00-04:00"
             }
         ]
     },
     {
-        "id": "d47c115",
+        "id": "ea87115",
         "team_name": "BudgetBuddy",
         "table": "Q2",
         "in_person": true,
@@ -3421,31 +3421,31 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:46:00-04:00"
+                "challenge_name": "Best Financial Hack",
+                "company": "Capital One",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:06:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:54:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:38:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Financial Hack",
-                "company": "Capital One",
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:14:00-04:00"
+                "start_time": "2025-04-13 14:34:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:40:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:46:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3464,7 +3464,7 @@
         ]
     },
     {
-        "id": "3fc3116",
+        "id": "19c8116",
         "team_name": "campfireify",
         "table": "D8",
         "in_person": true,
@@ -3475,7 +3475,7 @@
         "challenges": []
     },
     {
-        "id": "68ee117",
+        "id": "789e117",
         "team_name": "Moodify",
         "table": "B2",
         "in_person": true,
@@ -3486,7 +3486,7 @@
         "challenges": []
     },
     {
-        "id": "2b0f118",
+        "id": "f3cc118",
         "team_name": "Corporate Chaos",
         "table": "F2",
         "in_person": true,
@@ -3500,12 +3500,12 @@
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:56:00-04:00"
+                "start_time": "2025-04-13 13:28:00-04:00"
             }
         ]
     },
     {
-        "id": "b41b119",
+        "id": "53e2119",
         "team_name": "Roameo",
         "table": "M1",
         "in_person": true,
@@ -3516,24 +3516,24 @@
         "challenges": [
             {
                 "is_mlh": false,
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:06:00-04:00"
+            },
+            {
+                "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:32:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:18:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:34:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:24:00-04:00"
+                "start_time": "2025-04-13 14:32:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3566,7 +3566,7 @@
         ]
     },
     {
-        "id": "d8b1120",
+        "id": "2cf5120",
         "team_name": "BarNone",
         "table": "M5",
         "in_person": true,
@@ -3579,8 +3579,8 @@
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:38:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:50:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3592,7 +3592,7 @@
         ]
     },
     {
-        "id": "3236121",
+        "id": "3e31121",
         "team_name": "API - A Prehistoric Island",
         "table": "A5",
         "in_person": true,
@@ -3606,7 +3606,7 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:56:00-04:00"
+                "start_time": "2025-04-13 14:38:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3625,7 +3625,7 @@
         ]
     },
     {
-        "id": "66d3122",
+        "id": "0823122",
         "team_name": "MetaVAULT",
         "table": "C5",
         "in_person": true,
@@ -3639,7 +3639,7 @@
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:48:00-04:00"
+                "start_time": "2025-04-13 14:22:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3651,7 +3651,7 @@
         ]
     },
     {
-        "id": "861e123",
+        "id": "3100123",
         "team_name": "Clear Jobs",
         "table": "R2",
         "in_person": true,
@@ -3665,12 +3665,12 @@
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:18:00-04:00"
+                "start_time": "2025-04-13 13:50:00-04:00"
             }
         ]
     },
     {
-        "id": "3e1e124",
+        "id": "1a1d124",
         "team_name": "CyberSafe HUB",
         "table": "O6",
         "in_person": true,
@@ -3684,19 +3684,19 @@
                 "challenge_name": "Best Digital Forensics Related Hack",
                 "company": "Cipher Tech Solutions",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:56:00-04:00"
+                "start_time": "2025-04-13 13:14:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Cybersecurity Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:48:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:16:00-04:00"
             }
         ]
     },
     {
-        "id": "08ff125",
+        "id": "56bb125",
         "team_name": "TerpNotes",
         "table": "E4",
         "in_person": true,
@@ -3707,17 +3707,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:20:00-04:00"
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:04:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:56:00-04:00"
+                "start_time": "2025-04-13 13:50:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3750,7 +3750,7 @@
         ]
     },
     {
-        "id": "c168126",
+        "id": "2af1126",
         "team_name": "ShadowScan",
         "table": "R4",
         "in_person": true,
@@ -3761,22 +3761,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Cybersecurity Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:38:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Digital Forensics Related Hack",
                 "company": "Cipher Tech Solutions",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:40:00-04:00"
+                "start_time": "2025-04-13 13:36:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Cybersecurity Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:26:00-04:00"
             }
         ]
     },
     {
-        "id": "4851127",
+        "id": "60e6127",
         "team_name": "BitBoxer",
         "table": "T8",
         "in_person": true,
@@ -3790,7 +3790,7 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:22:00-04:00"
+                "start_time": "2025-04-13 13:48:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3802,7 +3802,7 @@
         ]
     },
     {
-        "id": "7f18128",
+        "id": "bcdd128",
         "team_name": "Cook Mate",
         "table": "T1",
         "in_person": true,
@@ -3816,7 +3816,7 @@
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:34:00-04:00"
+                "start_time": "2025-04-13 13:28:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3835,7 +3835,7 @@
         ]
     },
     {
-        "id": "7cac129",
+        "id": "a43a129",
         "team_name": "Bye Bye Study Blues",
         "table": "G5",
         "in_person": true,
@@ -3846,7 +3846,7 @@
         "challenges": []
     },
     {
-        "id": "4f65130",
+        "id": "240a130",
         "team_name": "tomatocode.xyz",
         "table": "A4",
         "in_person": true,
@@ -3865,7 +3865,7 @@
         ]
     },
     {
-        "id": "7ce6131",
+        "id": "84c5131",
         "team_name": "Portalyzer",
         "table": "T6",
         "in_person": true,
@@ -3876,29 +3876,29 @@
         "challenges": [
             {
                 "is_mlh": false,
+                "challenge_name": "Best Financial Hack",
+                "company": "Capital One",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:16:00-04:00"
+            },
+            {
+                "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:10:00-04:00"
+                "start_time": "2025-04-13 14:30:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:44:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Financial Hack",
-                "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:24:00-04:00"
+                "start_time": "2025-04-13 14:48:00-04:00"
             }
         ]
     },
     {
-        "id": "afd1132",
+        "id": "4786132",
         "team_name": "The Nest",
         "table": "R8",
         "in_person": true,
@@ -3912,12 +3912,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:42:00-04:00"
+                "start_time": "2025-04-13 14:36:00-04:00"
             }
         ]
     },
     {
-        "id": "d526133",
+        "id": "47de133",
         "team_name": "Defend",
         "table": "B1",
         "in_person": true,
@@ -3928,7 +3928,7 @@
         "challenges": []
     },
     {
-        "id": "45a3134",
+        "id": "4aa2134",
         "team_name": "Circa",
         "table": "N2",
         "in_person": true,
@@ -3942,12 +3942,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:40:00-04:00"
+                "start_time": "2025-04-13 14:40:00-04:00"
             }
         ]
     },
     {
-        "id": "717c135",
+        "id": "3e57135",
         "team_name": "SkillMatchAI",
         "table": "F4",
         "in_person": true,
@@ -3960,15 +3960,15 @@
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:04:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:20:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:46:00-04:00"
+                "start_time": "2025-04-13 13:48:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -3987,7 +3987,7 @@
         ]
     },
     {
-        "id": "6fd7136",
+        "id": "fcd5136",
         "team_name": "SNOM",
         "table": "R7",
         "in_person": true,
@@ -4000,8 +4000,8 @@
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:42:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:42:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4013,7 +4013,7 @@
         ]
     },
     {
-        "id": "ebfb137",
+        "id": "e674137",
         "team_name": "Bounce",
         "table": "T2",
         "in_person": true,
@@ -4027,12 +4027,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:58:00-04:00"
+                "start_time": "2025-04-13 13:10:00-04:00"
             }
         ]
     },
     {
-        "id": "db0c138",
+        "id": "e9a2138",
         "team_name": "Money Hog",
         "table": "C3",
         "in_person": true,
@@ -4046,19 +4046,19 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:02:00-04:00"
+                "start_time": "2025-04-13 13:00:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:22:00-04:00"
+                "start_time": "2025-04-13 14:34:00-04:00"
             }
         ]
     },
     {
-        "id": "6e8c139",
+        "id": "f7e6139",
         "team_name": "FinGuard",
         "table": "F3",
         "in_person": true,
@@ -4069,17 +4069,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Financial Hack",
-                "company": "Capital One",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:20:00-04:00"
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:04:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
+                "challenge_name": "Best Financial Hack",
+                "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:26:00-04:00"
+                "start_time": "2025-04-13 13:18:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4098,7 +4098,7 @@
         ]
     },
     {
-        "id": "07ba140",
+        "id": "ed64140",
         "team_name": "Tetherboard",
         "table": "O5",
         "in_person": true,
@@ -4112,14 +4112,14 @@
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:32:00-04:00"
+                "start_time": "2025-04-13 14:02:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:54:00-04:00"
+                "start_time": "2025-04-13 14:32:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4131,7 +4131,7 @@
         ]
     },
     {
-        "id": "e4ef141",
+        "id": "0a96141",
         "team_name": "Quantum vs Classical Portfolio Optimization",
         "table": "T3",
         "in_person": true,
@@ -4142,22 +4142,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Financial Hack",
-                "company": "Capital One",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:30:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Advanced Quantum Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:14:00-04:00"
+                "start_time": "2025-04-13 13:02:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Financial Hack",
+                "company": "Capital One",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:32:00-04:00"
             }
         ]
     },
     {
-        "id": "87a3142",
+        "id": "800b142",
         "team_name": "PepperAssistant",
         "table": "H5",
         "in_person": true,
@@ -4171,12 +4171,12 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:38:00-04:00"
+                "start_time": "2025-04-13 13:12:00-04:00"
             }
         ]
     },
     {
-        "id": "5116143",
+        "id": "2ff2143",
         "team_name": "CosmicCV",
         "table": "B7",
         "in_person": true,
@@ -4187,17 +4187,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:08:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:32:00-04:00"
+                "start_time": "2025-04-13 13:56:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:46:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4216,7 +4216,7 @@
         ]
     },
     {
-        "id": "f191144",
+        "id": "38df144",
         "team_name": "See with me ",
         "table": "F5",
         "in_person": true,
@@ -4227,31 +4227,31 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:02:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Digital Forensics Related Hack",
                 "company": "Cipher Tech Solutions",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:08:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:00:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:16:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:24:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Cybersecurity Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:22:00-04:00"
+                "start_time": "2025-04-13 13:26:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:26:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4263,7 +4263,7 @@
         ]
     },
     {
-        "id": "8338145",
+        "id": "668e145",
         "team_name": "Permits, Please",
         "table": "C1",
         "in_person": true,
@@ -4282,7 +4282,7 @@
         ]
     },
     {
-        "id": "b666146",
+        "id": "3ab1146",
         "team_name": "CookHub",
         "table": "E8",
         "in_person": true,
@@ -4293,22 +4293,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Financial Hack",
-                "company": "Capital One",
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:28:00-04:00"
+                "start_time": "2025-04-13 13:02:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:44:00-04:00"
+                "challenge_name": "Best Financial Hack",
+                "company": "Capital One",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:58:00-04:00"
             }
         ]
     },
     {
-        "id": "4347147",
+        "id": "95f4147",
         "team_name": "Super Shell",
         "table": "G3",
         "in_person": true,
@@ -4319,7 +4319,7 @@
         "challenges": []
     },
     {
-        "id": "b9a4148",
+        "id": "d288148",
         "team_name": "EvaStudy",
         "table": "C6",
         "in_person": true,
@@ -4330,17 +4330,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:10:00-04:00"
+                "challenge_name": "Best Machine Learning Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:28:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Machine Learning Track Hack",
-                "company": "Bitcamp",
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:24:00-04:00"
+                "start_time": "2025-04-13 14:32:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4352,7 +4352,7 @@
         ]
     },
     {
-        "id": "cbe9149",
+        "id": "1fa2149",
         "team_name": "Testudo Match ",
         "table": "N6",
         "in_person": true,
@@ -4366,7 +4366,7 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:26:00-04:00"
+                "start_time": "2025-04-13 14:48:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4378,7 +4378,7 @@
         ]
     },
     {
-        "id": "033b150",
+        "id": "595c150",
         "team_name": "Crossing Counties",
         "table": "A3",
         "in_person": true,
@@ -4389,7 +4389,7 @@
         "challenges": []
     },
     {
-        "id": "bc06151",
+        "id": "2d09151",
         "team_name": "Roomlytics",
         "table": "H7",
         "in_person": true,
@@ -4400,7 +4400,7 @@
         "challenges": []
     },
     {
-        "id": "4a0f152",
+        "id": "85e5152",
         "team_name": "Koalafied",
         "table": "N7",
         "in_person": true,
@@ -4414,7 +4414,7 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:10:00-04:00"
+                "start_time": "2025-04-13 14:08:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4433,7 +4433,7 @@
         ]
     },
     {
-        "id": "9e4f153",
+        "id": "65af153",
         "team_name": "Cinder",
         "table": "D2",
         "in_person": true,
@@ -4452,7 +4452,7 @@
         ]
     },
     {
-        "id": "8535154",
+        "id": "62b8154",
         "team_name": "Gather",
         "table": "A2",
         "in_person": true,
@@ -4463,45 +4463,45 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Digital Forensics Related Hack",
-                "company": "Cipher Tech Solutions",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:02:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:16:00-04:00"
+                "start_time": "2025-04-13 13:16:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best App Dev Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 3",
-                "start_time": "2025-04-13 02:18:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Financial Hack",
-                "company": "Capital One",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:36:00-04:00"
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:26:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:38:00-04:00"
+                "start_time": "2025-04-13 13:36:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
+                "challenge_name": "Best Digital Forensics Related Hack",
+                "company": "Cipher Tech Solutions",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:46:00-04:00"
+                "start_time": "2025-04-13 13:38:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Financial Hack",
+                "company": "Capital One",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:52:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best App Dev Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:26:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4534,7 +4534,7 @@
         ]
     },
     {
-        "id": "2015155",
+        "id": "ae45155",
         "team_name": "PRI$M",
         "table": "H2",
         "in_person": true,
@@ -4545,17 +4545,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:14:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:32:00-04:00"
+                "start_time": "2025-04-13 13:24:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:34:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4574,7 +4574,7 @@
         ]
     },
     {
-        "id": "1ac5156",
+        "id": "5ac1156",
         "team_name": "VisuWorld",
         "table": "P3",
         "in_person": true,
@@ -4585,17 +4585,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Machine Learning Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:18:00-04:00"
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:26:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:20:00-04:00"
+                "challenge_name": "Best Machine Learning Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 3",
+                "start_time": "2025-04-13 13:44:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4614,7 +4614,7 @@
         ]
     },
     {
-        "id": "0320157",
+        "id": "baa3157",
         "team_name": "Forens.tech",
         "table": "P8",
         "in_person": true,
@@ -4627,15 +4627,15 @@
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:04:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:18:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Digital Forensics Related Hack",
                 "company": "Cipher Tech Solutions",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:48:00-04:00"
+                "start_time": "2025-04-13 13:52:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4654,7 +4654,7 @@
         ]
     },
     {
-        "id": "0e9e158",
+        "id": "0a9e158",
         "team_name": "Steg Detector",
         "table": "B6",
         "in_person": true,
@@ -4668,12 +4668,12 @@
                 "challenge_name": "Best Cybersecurity Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:46:00-04:00"
+                "start_time": "2025-04-13 13:08:00-04:00"
             }
         ]
     },
     {
-        "id": "c075159",
+        "id": "e1aa159",
         "team_name": "Mammoth Maze",
         "table": "E1",
         "in_person": true,
@@ -4684,7 +4684,7 @@
         "challenges": []
     },
     {
-        "id": "6cc8160",
+        "id": "6bb4160",
         "team_name": "Airwaves",
         "table": "S7",
         "in_person": true,
@@ -4697,13 +4697,13 @@
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:04:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:06:00-04:00"
             }
         ]
     },
     {
-        "id": "5d09161",
+        "id": "d77f161",
         "team_name": "JeffAI",
         "table": "T7",
         "in_person": true,
@@ -4714,17 +4714,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Machine Learning Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:26:00-04:00"
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 3",
+                "start_time": "2025-04-13 13:04:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:40:00-04:00"
+                "challenge_name": "Best Machine Learning Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:40:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4736,7 +4736,7 @@
         ]
     },
     {
-        "id": "1210162",
+        "id": "5600162",
         "team_name": "The Tomato Trade",
         "table": "N4",
         "in_person": true,
@@ -4747,7 +4747,7 @@
         "challenges": []
     },
     {
-        "id": "78eb163",
+        "id": "46d4163",
         "team_name": "ShapeShift",
         "table": "L8",
         "in_person": true,
@@ -4760,8 +4760,8 @@
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:36:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:26:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4787,7 +4787,7 @@
         ]
     },
     {
-        "id": "4e87164",
+        "id": "bfe4164",
         "team_name": "NeedleDrop",
         "table": "P7",
         "in_person": true,
@@ -4800,8 +4800,8 @@
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:06:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:02:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4813,7 +4813,7 @@
         ]
     },
     {
-        "id": "3729165",
+        "id": "2997165",
         "team_name": "Ares.AI",
         "table": "E6",
         "in_person": true,
@@ -4826,15 +4826,15 @@
                 "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:28:00-04:00"
+                "judge": "Judge 3",
+                "start_time": "2025-04-13 13:38:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:32:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:46:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4846,7 +4846,7 @@
         ]
     },
     {
-        "id": "1bff166",
+        "id": "4f29166",
         "team_name": "Sort Analyzer",
         "table": "F8",
         "in_person": true,
@@ -4860,12 +4860,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:24:00-04:00"
+                "start_time": "2025-04-13 13:12:00-04:00"
             }
         ]
     },
     {
-        "id": "7eb1167",
+        "id": "67d0167",
         "team_name": "Code Confession",
         "table": "C4",
         "in_person": true,
@@ -4876,7 +4876,7 @@
         "challenges": []
     },
     {
-        "id": "2608168",
+        "id": "6771168",
         "team_name": "Foot Finder - Plant Your Foot to Find your Path",
         "table": "D6",
         "in_person": true,
@@ -4887,29 +4887,29 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:48:00-04:00"
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:22:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:30:00-04:00"
+                "start_time": "2025-04-13 14:36:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:42:00-04:00"
+                "start_time": "2025-04-13 14:38:00-04:00"
             }
         ]
     },
     {
-        "id": "eda4169",
+        "id": "dbf3169",
         "team_name": "Asklepian",
         "table": "O3",
         "in_person": true,
@@ -4923,12 +4923,12 @@
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:20:00-04:00"
+                "start_time": "2025-04-13 13:10:00-04:00"
             }
         ]
     },
     {
-        "id": "7340170",
+        "id": "7599170",
         "team_name": "Rekindle",
         "table": "M8",
         "in_person": true,
@@ -4941,13 +4941,13 @@
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:28:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:38:00-04:00"
             }
         ]
     },
     {
-        "id": "fd0a171",
+        "id": "d288171",
         "team_name": "Techmate",
         "table": "B4",
         "in_person": true,
@@ -4961,12 +4961,12 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:44:00-04:00"
+                "start_time": "2025-04-13 13:56:00-04:00"
             }
         ]
     },
     {
-        "id": "ad42172",
+        "id": "763c172",
         "team_name": "Recipez",
         "table": "H6",
         "in_person": true,
@@ -4980,7 +4980,7 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:08:00-04:00"
+                "start_time": "2025-04-13 13:20:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -4992,7 +4992,7 @@
         ]
     },
     {
-        "id": "5679173",
+        "id": "994b173",
         "team_name": "Patch",
         "table": "R5",
         "in_person": true,
@@ -5003,22 +5003,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
+                "challenge_name": "Best App Dev Track Hack",
+                "company": "Bitcamp",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:10:00-04:00"
+                "start_time": "2025-04-13 13:10:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best App Dev Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:24:00-04:00"
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:54:00-04:00"
             }
         ]
     },
     {
-        "id": "0fe2174",
+        "id": "ebe4174",
         "team_name": "Terp Trials",
         "table": "R3",
         "in_person": true,
@@ -5029,24 +5029,24 @@
         "challenges": [
             {
                 "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:08:00-04:00"
+            },
+            {
+                "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:50:00-04:00"
+                "start_time": "2025-04-13 13:16:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:04:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:22:00-04:00"
+                "start_time": "2025-04-13 14:14:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -5065,7 +5065,7 @@
         ]
     },
     {
-        "id": "1c9b175",
+        "id": "72d8175",
         "team_name": "Rizz Lab",
         "table": "B8",
         "in_person": true,
@@ -5079,12 +5079,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:14:00-04:00"
+                "start_time": "2025-04-13 13:46:00-04:00"
             }
         ]
     },
     {
-        "id": "fdea176",
+        "id": "a55d176",
         "team_name": "SurfSmart",
         "table": "P6",
         "in_person": true,
@@ -5117,7 +5117,7 @@
         ]
     },
     {
-        "id": "664f177",
+        "id": "f0ed177",
         "team_name": "Helpr",
         "table": "D3",
         "in_person": true,
@@ -5128,24 +5128,24 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Machine Learning Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 3",
-                "start_time": "2025-04-13 01:32:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:12:00-04:00"
+                "judge": "Judge 3",
+                "start_time": "2025-04-13 13:26:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:06:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Machine Learning Track Hack",
+                "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:14:00-04:00"
+                "start_time": "2025-04-13 14:28:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -5157,7 +5157,7 @@
         ]
     },
     {
-        "id": "1b2e178",
+        "id": "0749178",
         "team_name": "SmileySpotify",
         "table": "D4",
         "in_person": true,
@@ -5171,12 +5171,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:36:00-04:00"
+                "start_time": "2025-04-13 13:20:00-04:00"
             }
         ]
     },
     {
-        "id": "430e179",
+        "id": "f46d179",
         "team_name": "ClearGaze",
         "table": "Q8",
         "in_person": true,
@@ -5187,24 +5187,24 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Hack Promoting Public Health",
-                "company": "Bloomberg",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:00:00-04:00"
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:30:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:04:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:04:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
+                "challenge_name": "Best Hack Promoting Public Health",
+                "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:32:00-04:00"
+                "start_time": "2025-04-13 14:38:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -5216,7 +5216,7 @@
         ]
     },
     {
-        "id": "4fff180",
+        "id": "ec38180",
         "team_name": "Petals of Progress",
         "table": "B5",
         "in_person": true,
@@ -5242,7 +5242,7 @@
         ]
     },
     {
-        "id": "fda6181",
+        "id": "70d6181",
         "team_name": "Out with the Old, In with the News",
         "table": "B3",
         "in_person": true,
@@ -5256,7 +5256,7 @@
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:00:00-04:00"
+                "start_time": "2025-04-13 14:26:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -5268,7 +5268,7 @@
         ]
     },
     {
-        "id": "6940182",
+        "id": "81a5182",
         "team_name": "Class Topper",
         "table": "O2",
         "in_person": true,
@@ -5279,38 +5279,38 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Financial Hack",
-                "company": "Capital One",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:22:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:24:00-04:00"
+                "start_time": "2025-04-13 13:00:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:32:00-04:00"
+                "challenge_name": "Best Financial Hack",
+                "company": "Capital One",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:30:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:02:00-04:00"
+                "start_time": "2025-04-13 13:34:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:04:00-04:00"
+                "start_time": "2025-04-13 13:48:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:52:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -5322,7 +5322,7 @@
         ]
     },
     {
-        "id": "24c8183",
+        "id": "b384183",
         "team_name": "PodQuirk",
         "table": "A7",
         "in_person": true,
@@ -5336,12 +5336,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:36:00-04:00"
+                "start_time": "2025-04-13 13:58:00-04:00"
             }
         ]
     },
     {
-        "id": "086e184",
+        "id": "e3d3184",
         "team_name": "StudyEZ [AI Study Tool]",
         "table": "G4",
         "in_person": true,
@@ -5354,8 +5354,8 @@
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:34:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:34:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -5374,7 +5374,7 @@
         ]
     },
     {
-        "id": "cf4a185",
+        "id": "df7a185",
         "team_name": "HallHopper",
         "table": "G2",
         "in_person": true,
@@ -5388,12 +5388,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:06:00-04:00"
+                "start_time": "2025-04-13 14:08:00-04:00"
             }
         ]
     },
     {
-        "id": "4845186",
+        "id": "5970186",
         "team_name": "Golden Standard",
         "table": "A8",
         "in_person": true,
@@ -5404,24 +5404,24 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Financial Hack",
-                "company": "Capital One",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:08:00-04:00"
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:22:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:18:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:22:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:44:00-04:00"
+                "challenge_name": "Best Financial Hack",
+                "company": "Capital One",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:28:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -5433,7 +5433,7 @@
         ]
     },
     {
-        "id": "11e4187",
+        "id": "6fe0187",
         "team_name": "BurnoutBuddy",
         "table": "S6",
         "in_person": true,
@@ -5444,24 +5444,24 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Hack Promoting Public Health",
-                "company": "Bloomberg",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:12:00-04:00"
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:40:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:50:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:00:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:20:00-04:00"
+                "challenge_name": "Best Hack Promoting Public Health",
+                "company": "Bloomberg",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:20:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -5480,7 +5480,7 @@
         ]
     },
     {
-        "id": "77bf188",
+        "id": "6490188",
         "team_name": "Polaris",
         "table": "N3",
         "in_person": true,
@@ -5493,8 +5493,8 @@
                 "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:22:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:48:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -5513,7 +5513,7 @@
         ]
     },
     {
-        "id": "0167189",
+        "id": "43f4189",
         "team_name": "Trace",
         "table": "C8",
         "in_person": true,
@@ -5526,22 +5526,22 @@
                 "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:30:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:08:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:54:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:18:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:02:00-04:00"
+                "judge": "Judge 3",
+                "start_time": "2025-04-13 13:50:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -5553,7 +5553,7 @@
         ]
     },
     {
-        "id": "eb28190",
+        "id": "8903190",
         "team_name": "subpoenAI.tech",
         "table": "H1",
         "in_person": true,
@@ -5566,8 +5566,8 @@
                 "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 3",
-                "start_time": "2025-04-13 01:28:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:48:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -5586,7 +5586,7 @@
         ]
     },
     {
-        "id": "9c90191",
+        "id": "cda5191",
         "team_name": "Locked Out",
         "table": "O8",
         "in_person": true,
@@ -5600,12 +5600,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:10:00-04:00"
+                "start_time": "2025-04-13 13:16:00-04:00"
             }
         ]
     },
     {
-        "id": "0ca5192",
+        "id": "988c192",
         "team_name": "OCRganise",
         "table": "M4",
         "in_person": true,
@@ -5631,7 +5631,7 @@
         ]
     },
     {
-        "id": "4230193",
+        "id": "8469193",
         "team_name": "cram.cam",
         "table": "P5",
         "in_person": true,
@@ -5644,13 +5644,13 @@
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:26:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:14:00-04:00"
             }
         ]
     },
     {
-        "id": "2581194",
+        "id": "6738194",
         "team_name": "Keyzz",
         "table": "G7",
         "in_person": true,
@@ -5663,20 +5663,20 @@
                 "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:26:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:10:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:28:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:30:00-04:00"
             }
         ]
     },
     {
-        "id": "058b195",
+        "id": "1c86195",
         "team_name": "Dino Game",
         "table": "L6",
         "in_person": true,
@@ -5690,12 +5690,12 @@
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:40:00-04:00"
+                "start_time": "2025-04-13 14:10:00-04:00"
             }
         ]
     },
     {
-        "id": "34c8196",
+        "id": "5ee3196",
         "team_name": "Most Complicated NOT Gate Ever",
         "table": "E3",
         "in_person": true,
@@ -5709,12 +5709,12 @@
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:50:00-04:00"
+                "start_time": "2025-04-13 14:48:00-04:00"
             }
         ]
     },
     {
-        "id": "4f61197",
+        "id": "e3f8197",
         "team_name": "GitGraph",
         "table": "S8",
         "in_person": true,
@@ -5725,7 +5725,7 @@
         "challenges": []
     },
     {
-        "id": "217e198",
+        "id": "4948198",
         "team_name": "City Notes",
         "table": "Q5",
         "in_person": true,
@@ -5739,12 +5739,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:02:00-04:00"
+                "start_time": "2025-04-13 13:22:00-04:00"
             }
         ]
     },
     {
-        "id": "5d02199",
+        "id": "0f51199",
         "team_name": "CollabCart",
         "table": "M2",
         "in_person": true,
@@ -5755,36 +5755,36 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Hack Promoting Public Health",
-                "company": "Bloomberg",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:14:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best App Dev Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:22:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:38:00-04:00"
+                "start_time": "2025-04-13 13:44:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Hack Promoting Public Health",
+                "company": "Bloomberg",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:06:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:12:00-04:00"
+                "start_time": "2025-04-13 14:14:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best App Dev Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:18:00-04:00"
             }
         ]
     },
     {
-        "id": "052b200",
+        "id": "10fe200",
         "team_name": "Sentra",
         "table": "M6",
         "in_person": true,
@@ -5795,7 +5795,7 @@
         "challenges": []
     },
     {
-        "id": "6b3c201",
+        "id": "b7a8201",
         "team_name": "Podchat.ai",
         "table": "T4",
         "in_person": true,
@@ -5814,7 +5814,7 @@
         ]
     },
     {
-        "id": "f3d0202",
+        "id": "3d69202",
         "team_name": "QuantumFiller",
         "table": "O4",
         "in_person": true,
@@ -5825,22 +5825,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Advanced Quantum Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:24:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Digital Forensics Related Hack",
                 "company": "Cipher Tech Solutions",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:42:00-04:00"
+                "start_time": "2025-04-13 13:54:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Advanced Quantum Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:42:00-04:00"
             }
         ]
     },
     {
-        "id": "05b5203",
+        "id": "7c43203",
         "team_name": "EDU-HUB",
         "table": "H4",
         "in_person": true,
@@ -5853,8 +5853,8 @@
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:12:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:16:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -5866,7 +5866,7 @@
         ]
     },
     {
-        "id": "f32b204",
+        "id": "607a204",
         "team_name": "Zentrail ",
         "table": "D5",
         "in_person": true,
@@ -5880,19 +5880,19 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:00:00-04:00"
+                "start_time": "2025-04-13 13:44:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 3",
-                "start_time": "2025-04-13 01:34:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:08:00-04:00"
             }
         ]
     },
     {
-        "id": "e13a205",
+        "id": "ff8d205",
         "team_name": "HealthBridge",
         "table": "T5",
         "in_person": true,
@@ -5903,22 +5903,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Hack Promoting Public Health",
-                "company": "Bloomberg",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:52:00-04:00"
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 3",
+                "start_time": "2025-04-13 13:22:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:22:00-04:00"
+                "challenge_name": "Best Hack Promoting Public Health",
+                "company": "Bloomberg",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:30:00-04:00"
             }
         ]
     },
     {
-        "id": "59b0206",
+        "id": "a588206",
         "team_name": "Drink Happy",
         "table": "M3",
         "in_person": true,
@@ -5931,22 +5931,22 @@
                 "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:40:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:00:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:00:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:16:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:46:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:02:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -5979,7 +5979,7 @@
         ]
     },
     {
-        "id": "c83c207",
+        "id": "8e31207",
         "team_name": "Bird Box",
         "table": "H3",
         "in_person": true,
@@ -5993,19 +5993,19 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:34:00-04:00"
+                "start_time": "2025-04-13 13:38:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:12:00-04:00"
+                "start_time": "2025-04-13 14:38:00-04:00"
             }
         ]
     },
     {
-        "id": "3902208",
+        "id": "3fd6208",
         "team_name": "Vizier",
         "table": "P4",
         "in_person": true,
@@ -6016,22 +6016,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Machine Learning Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:06:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:44:00-04:00"
+                "start_time": "2025-04-13 13:28:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Machine Learning Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 3",
+                "start_time": "2025-04-13 14:48:00-04:00"
             }
         ]
     },
     {
-        "id": "5c20209",
+        "id": "d9a9209",
         "team_name": "SkinForReal",
         "table": "H8",
         "in_person": true,
@@ -6042,17 +6042,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:00:00-04:00"
+                "challenge_name": "Best App Dev Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:24:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best App Dev Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 4",
-                "start_time": "2025-04-13 01:34:00-04:00"
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:38:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -6064,7 +6064,7 @@
         ]
     },
     {
-        "id": "1ee6210",
+        "id": "360f210",
         "team_name": "ThriveUSA",
         "table": "L7",
         "in_person": true,
@@ -6075,36 +6075,36 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:10:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:08:00-04:00"
+                "start_time": "2025-04-13 13:24:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best App Dev Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:26:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:00:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:38:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best App Dev Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 02:48:00-04:00"
+                "start_time": "2025-04-13 14:48:00-04:00"
             }
         ]
     },
     {
-        "id": "3ea8211",
+        "id": "db07211",
         "team_name": "Bit-Cat",
         "table": "G8",
         "in_person": true,
@@ -6115,7 +6115,7 @@
         "challenges": []
     },
     {
-        "id": "d9be212",
+        "id": "25ef212",
         "team_name": "Fas, Fast & Faster",
         "table": "L2",
         "in_person": true,
@@ -6126,7 +6126,7 @@
         "challenges": []
     },
     {
-        "id": "a76d213",
+        "id": "4a66213",
         "team_name": "Browser Buddy",
         "table": "N1",
         "in_person": true,
@@ -6137,24 +6137,24 @@
         "challenges": [
             {
                 "is_mlh": false,
+                "challenge_name": "Best Use of GenAI in Business",
+                "company": "Cloudforce/Microsoft",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:34:00-04:00"
+            },
+            {
+                "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:04:00-04:00"
+                "start_time": "2025-04-13 13:50:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:24:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Use of GenAI in Business",
-                "company": "Cloudforce/Microsoft",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:34:00-04:00"
+                "start_time": "2025-04-13 14:10:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -6166,7 +6166,7 @@
         ]
     },
     {
-        "id": "ae13214",
+        "id": "e677214",
         "team_name": "Myndful",
         "table": "F1",
         "in_person": true,
@@ -6179,8 +6179,8 @@
                 "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 3",
-                "start_time": "2025-04-13 02:26:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:48:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -6192,7 +6192,7 @@
         ]
     },
     {
-        "id": "9014215",
+        "id": "27db215",
         "team_name": "Silk",
         "table": "Q7",
         "in_person": true,
@@ -6206,7 +6206,7 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:18:00-04:00"
+                "start_time": "2025-04-13 13:32:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -6218,7 +6218,7 @@
         ]
     },
     {
-        "id": "b12c216",
+        "id": "a35e216",
         "team_name": "FrameSleuth",
         "table": "Q4",
         "in_person": true,
@@ -6229,36 +6229,36 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Machine Learning Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:04:00-04:00"
-            },
-            {
-                "is_mlh": false,
-                "challenge_name": "Best Web Hack Using React",
-                "company": "Peraton",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:12:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:16:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:04:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Machine Learning Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 3",
+                "start_time": "2025-04-13 13:20:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Digital Forensics Related Hack",
                 "company": "Cipher Tech Solutions",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:32:00-04:00"
+                "start_time": "2025-04-13 13:42:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Web Hack Using React",
+                "company": "Peraton",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 14:24:00-04:00"
             }
         ]
     },
     {
-        "id": "eb30217",
+        "id": "ea4b217",
         "team_name": "Peer Pop - A Peer-to-Peer Learning Network",
         "table": "M7",
         "in_person": true,
@@ -6271,13 +6271,13 @@
                 "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:02:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:24:00-04:00"
             }
         ]
     },
     {
-        "id": "086f218",
+        "id": "ff97218",
         "team_name": "SpendSmart",
         "table": "Q6",
         "in_person": true,
@@ -6291,26 +6291,26 @@
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:16:00-04:00"
+                "start_time": "2025-04-13 13:02:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:54:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:40:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:00:00-04:00"
+                "start_time": "2025-04-13 14:42:00-04:00"
             }
         ]
     },
     {
-        "id": "3837219",
+        "id": "448b219",
         "team_name": "Visionary",
         "table": "D1",
         "in_person": true,
@@ -6324,12 +6324,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:14:00-04:00"
+                "start_time": "2025-04-13 14:44:00-04:00"
             }
         ]
     },
     {
-        "id": "7603220",
+        "id": "a0be220",
         "team_name": "FastPass",
         "table": "Q3",
         "in_person": true,
@@ -6343,12 +6343,12 @@
                 "challenge_name": "Best Cybersecurity Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:48:00-04:00"
+                "start_time": "2025-04-13 14:20:00-04:00"
             }
         ]
     },
     {
-        "id": "c843221",
+        "id": "3fdf221",
         "team_name": "Anchor: Grounded in Nature",
         "table": "Q1",
         "in_person": true,
@@ -6359,17 +6359,17 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best App Dev Track Hack",
-                "company": "Bitcamp",
-                "judge": "Judge 3",
-                "start_time": "2025-04-13 01:44:00-04:00"
+                "challenge_name": "Best Hack Promoting Public Health",
+                "company": "Bloomberg",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:20:00-04:00"
             },
             {
                 "is_mlh": false,
-                "challenge_name": "Best Hack Promoting Public Health",
-                "company": "Bloomberg",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:34:00-04:00"
+                "challenge_name": "Best App Dev Track Hack",
+                "company": "Bitcamp",
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:48:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -6381,7 +6381,7 @@
         ]
     },
     {
-        "id": "41eb222",
+        "id": "a861222",
         "team_name": "Jiggy",
         "table": "A1",
         "in_person": true,
@@ -6392,22 +6392,22 @@
         "challenges": [
             {
                 "is_mlh": false,
-                "challenge_name": "Best Hack Promoting Public Health",
-                "company": "Bloomberg",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:14:00-04:00"
-            },
-            {
-                "is_mlh": false,
                 "challenge_name": "Best App Dev Track Hack",
                 "company": "Bitcamp",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:40:00-04:00"
+                "start_time": "2025-04-13 13:12:00-04:00"
+            },
+            {
+                "is_mlh": false,
+                "challenge_name": "Best Hack Promoting Public Health",
+                "company": "Bloomberg",
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 14:04:00-04:00"
             }
         ]
     },
     {
-        "id": "33b2223",
+        "id": "95b9223",
         "team_name": "FridgeBuddy",
         "table": "N5",
         "in_person": true,
@@ -6421,7 +6421,7 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:52:00-04:00"
+                "start_time": "2025-04-13 13:52:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -6433,7 +6433,7 @@
         ]
     },
     {
-        "id": "2dfe224",
+        "id": "c867224",
         "team_name": "FitBrawl",
         "table": "S4",
         "in_person": true,
@@ -6447,12 +6447,12 @@
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:10:00-04:00"
+                "start_time": "2025-04-13 13:28:00-04:00"
             }
         ]
     },
     {
-        "id": "6c9e225",
+        "id": "cdb8225",
         "team_name": "Purromodoro",
         "table": "R6",
         "in_person": true,
@@ -6466,12 +6466,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:40:00-04:00"
+                "start_time": "2025-04-13 14:30:00-04:00"
             }
         ]
     },
     {
-        "id": "2368226",
+        "id": "e390226",
         "team_name": "Jobsearch URL",
         "table": "O1",
         "in_person": true,
@@ -6484,13 +6484,13 @@
                 "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 02:34:00-04:00"
+                "judge": "Judge 4",
+                "start_time": "2025-04-13 13:38:00-04:00"
             }
         ]
     },
     {
-        "id": "ced4227",
+        "id": "eeb4227",
         "team_name": "Bitcamp",
         "table": "L1",
         "in_person": true,
@@ -6503,15 +6503,15 @@
                 "is_mlh": false,
                 "challenge_name": "Best Cybersecurity Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 2",
-                "start_time": "2025-04-13 01:02:00-04:00"
+                "judge": "Judge 1",
+                "start_time": "2025-04-13 13:00:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Hack Promoting Public Health",
                 "company": "Bloomberg",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:12:00-04:00"
+                "start_time": "2025-04-13 14:12:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -6523,7 +6523,7 @@
         ]
     },
     {
-        "id": "8c21228",
+        "id": "5234228",
         "team_name": "SignToText",
         "table": "D7",
         "in_person": true,
@@ -6537,12 +6537,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 01:26:00-04:00"
+                "start_time": "2025-04-13 13:40:00-04:00"
             }
         ]
     },
     {
-        "id": "8271229",
+        "id": "62f9229",
         "team_name": "Buttercup Corner",
         "table": "R1",
         "in_person": true,
@@ -6556,12 +6556,12 @@
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:30:00-04:00"
+                "start_time": "2025-04-13 14:38:00-04:00"
             }
         ]
     },
     {
-        "id": "b3a1230",
+        "id": "9f12230",
         "team_name": "ProxyForce",
         "table": "S2",
         "in_person": true,
@@ -6575,14 +6575,14 @@
                 "challenge_name": "Best Use of GenAI in Business",
                 "company": "Cloudforce/Microsoft",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 02:06:00-04:00"
+                "start_time": "2025-04-13 13:30:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Web Hack Using React",
                 "company": "Peraton",
                 "judge": "Judge 2",
-                "start_time": "2025-04-13 02:42:00-04:00"
+                "start_time": "2025-04-13 13:34:00-04:00"
             },
             {
                 "is_mlh": true,
@@ -6594,7 +6594,7 @@
         ]
     },
     {
-        "id": "59b3231",
+        "id": "1570231",
         "team_name": "TaxWow",
         "table": "S5",
         "in_person": true,
@@ -6607,15 +6607,15 @@
                 "is_mlh": false,
                 "challenge_name": "Best Machine Learning Track Hack",
                 "company": "Bitcamp",
-                "judge": "Judge 1",
-                "start_time": "2025-04-13 01:16:00-04:00"
+                "judge": "Judge 2",
+                "start_time": "2025-04-13 13:24:00-04:00"
             },
             {
                 "is_mlh": false,
                 "challenge_name": "Best Financial Hack",
                 "company": "Capital One",
                 "judge": "Judge 1",
-                "start_time": "2025-04-13 01:36:00-04:00"
+                "start_time": "2025-04-13 14:06:00-04:00"
             },
             {
                 "is_mlh": true,

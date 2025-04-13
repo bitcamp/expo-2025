@@ -391,7 +391,7 @@ def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges,
 # def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges):
     eastern = pytz.timezone('US/Eastern')
 
-    EXPO_START_TIME = "2025-04-13 01:00:00"
+    EXPO_START_TIME = "2025-04-13 13:00:00"
     EXPO_START = eastern.localize(datetime.strptime(
         EXPO_START_TIME, "%Y-%m-%d %H:%M:%S"))
 
