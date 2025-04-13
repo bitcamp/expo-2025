@@ -315,7 +315,9 @@ def process(csv_file):
 
     # Only grab submitted projects
     submitted_projects = projects[projects[DRAFT_COLUMN_NAME] != 'Draft']
-
+    emails = [list(tup) for tup in zip(submitted_projects.iloc[:, 31].tolist(), submitted_projects.iloc[:, 34].tolist(
+    ), submitted_projects.iloc[:, 37].tolist(), submitted_projects.iloc[:, 40].tolist())]
+    print(emails)
     team_names = submitted_projects[TEAM_COLUMN_NAME].tolist()
     links = submitted_projects[LINK_COLUMN_NAME].tolist()
     in_person = [True for i in submitted_projects]
@@ -324,8 +326,8 @@ def process(csv_file):
     # emails = submitted_projects.iloc[:, 24].tolist()
     # emails = [[email] for email in emails]
     # print(submitted_projects.shape[1] - 1)
-    emails = [list(tup) for tup in zip(submitted_projects.iloc[:, 24].tolist(), submitted_projects.iloc[:, 27].tolist(
-    ), submitted_projects.iloc[:, 30].tolist(), submitted_projects.iloc[:, 33].tolist())]
+    emails = [list(tup) for tup in zip(submitted_projects.iloc[:, 31].tolist(), submitted_projects.iloc[:, 34].tolist(
+    ), submitted_projects.iloc[:, 37].tolist(), submitted_projects.iloc[:, 40].tolist())]
     # emails = ["dn"]
     # Separate MLH and other challenges
 
