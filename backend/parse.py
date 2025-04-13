@@ -44,7 +44,7 @@ MLH_HACKS = set([
     "[MLH] Best Use of .Tech",
     "[MLH] Best AI Application Built with Cloudflare",
     "[MLH] Best Use of MongoDB Atlas",
-    "[MLH] Best Use of Gemimi API",
+    "[MLH] Best Use of Gemini API",
 ])
 
 BITCAMP_TRACK_HACKS = set([
@@ -59,6 +59,13 @@ ALUMNI_HACKS = set([
     "MOST LIT HACK",
     "Prettiest Hack",
     "Hack That Made You Smile"
+])
+
+TRACKS_HACKS = set([
+    "Best App Dev Track Hack",
+    "Best Cybersecurity Track Hack",
+    "Best Machine Learning Track Hack",
+    "Best Advanced Quantum Track Hack",
 ])
 
 BITCAMP_HACKS = set([
@@ -247,6 +254,8 @@ def process_challenges_2025(challenges):
             tc = tc.strip()
             if tc in MLH_HACKS:
                 current_mlh_challenges.append(tc)
+            elif tc:
+                current_challenges.append(tc)
         result.append(current_challenges)
         MLH_challenges.append(current_mlh_challenges)
 
@@ -336,7 +345,7 @@ def process(csv_file):
     # track_response = submitted_projects[TRACK_CHALLENGE_COLUMN_NAME].tolist()
 
     challenges = []
-    for i in range(len(temp_challenges)):
+    for i in range(len(team_names)):
         ind_challenges = []
         if bitcamp_prize_1[i]: 
             ind_challenges.append(bitcamp_prize_1[i])
@@ -349,7 +358,9 @@ def process(csv_file):
         if alumni_prize_2[i]:
             ind_challenges.append(alumni_prize_2[i])
 
-        ind_challenges += temp_challenges[i]     
+        ind_challenges += temp_challenges[i]  
+        ind_challenges = [challenge for challenge in ind_challenges if challenge in OTHER_HACKS or challenge in TRACKS_HACKS]
+
         challenges.append(ind_challenges)
 
     hc = []
@@ -380,7 +391,7 @@ def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges,
 # def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges):
     eastern = pytz.timezone('US/Eastern')
 
-    EXPO_START_TIME = "2024-04-21 12:15:00"
+    EXPO_START_TIME = "2025-04-13 01:00:00"
     EXPO_START = eastern.localize(datetime.strptime(
         EXPO_START_TIME, "%Y-%m-%d %H:%M:%S"))
 
@@ -460,26 +471,19 @@ def main():
             challenge_counts[c] += 1
     print(challenge_counts)
 
-    print(len(challenges))
-    print(len(hc))
-    print(FULL_CHALLENGE_LIST)
-    print(len(CHALLENGE_TO_ID))
-    print(len(ID_TO_CHALLENGE))
-    print(len(CHALLENGE_JUDGE_GROUPS))
-
-    for challenge_name, id in CHALLENGE_TO_ID.items():
-        print(f'{challenge_name} - {CHALLENGE_JUDGE_GROUPS[id]}')
+    # for challenge_name, id in CHALLENGE_TO_ID.items():
+    #     print(f'{challenge_name} - {CHALLENGE_JUDGE_GROUPS[id]}')
+    print(challenges)
 
     # print(hc)
 
     t, H, J = abstract_expo_alg(hc, CHALLENGE_JUDGE_GROUPS, 125)
-
     print(t)
     print(150 // t)
     # print(H)
 
     expo_output = expo_output_to_json(
-        t, H, team_names, links, in_person, challenges + MLH_challenges, emails)
+        t, H, team_names, links, in_person, MLH_challenges, emails)
 
     output_path = '../frontend/public/expo_algorithm_results.json'
 
