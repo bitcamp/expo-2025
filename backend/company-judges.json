@@ -1,0 +1,33 @@
+{
+    "companies": [
+      {
+        "name": "Cloudforce",
+        "judges": ["Ryland DeGregory", "Don Mann", "Mike Ryan", "Husein Sharaf"]
+      },
+      {
+        "name": "Bloomberg",
+        "judges": ["Ananya Uniyal", "Amod Mathur", "Michael Vincent Mannino", "Ray Song", "Jakub Bialas"]
+      },
+      {
+        "name": "Cipher Tech",
+        "judges": ["Eric Shirk"]
+      },
+      {
+        "name": "Fannie Mae",
+        "judges": ["?"]
+      },
+      {
+        "name": "Bloomberg Industry Group",
+        "judges": ["Subash John", "Alekhya Sthalam", "Joel D'Cruz", "Jasneet Kaur"]
+      },
+      {
+        "name": "Capital One",
+        "judges": ["Xinyi Yang", "Bhavani Vegesna", "Reshmi Ranjith", "Sam Bai", "Rahul Ramkumar"]
+      },
+      {
+        "name": "FM Global",
+        "judges": ["N/A (judged by Bitcamp organizers)"]
+      }
+    ]
+  }
+  
