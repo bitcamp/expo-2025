@@ -93,32 +93,32 @@ EXCLUDED_CHALLENGES = set([
 
 'Best First-Time Hack', 'Best Advanced Quantum Track Hack', 'Best Hardware Hack', 'Best Razzle Dazzle Hack', 'Best Gamification Hack', 'Best Beginner Quantum Track Hack', 'Best Bitcamp Hack', 'Best Moonshot Hack', 'Best Sustainability Hack', 'Best Social Good Hack', 'Best UI/UX Hack', 'Best Cybersecurity Track Hack', 'Best Machine Learning Track Hack', 'Best App Dev Track Hack', 'MOST LIT HACK', 'Hack That Made You Smile', 'Prettiest Hack', 'Best Digital Forensics Related Hack - Cipher Tech Solutions', 'Best Use of GenAI in Business - Cloudforce/Microsoft', 'Best Hack Promoting Public Health - Bloomberg', 'Best Web Hack Using React - Peraton', 'Best Financial Hack - Capital One'
 CHALLENGE_JUDGE_GROUPS = [
-    2, # Best First-Time Hack],
-    2, # Best Advanced Quantum Track Hack],
-    2, # Best Hardware Hack],
-    2, # Best Razzle Dazzle Hack],
-    2, # Best Gamification Hack],
-    2, # Best Beginner Quantum Track Hack],
-    2, # Best Bitcamp Hack],
-    2, # Best Moonshot Hack],
-    2, # Best Sustainability Hack],
-    2, # Best Social Good Hack],
-    2, # Best UI/UX Hack],
-    2, # Best Cybersecurity Track Hack],
-    2, # Best Machine Learning Track Hack],
-    2, # Best App Dev Track Hack],
-    2, # MOST LIT HACK],
-    2, # Hack That Made You Smile],
-    2, # Prettiest Hack],
-    2, # Best Digital Forensics Related Hack - Cipher Tech Solutions],
-    2, # Best Use of GenAI in Business - Cloudforce/Microsoft],
-    2, # Best Hack Promoting Public Health - Bloomberg],
-    2, # Best Web Hack Using React - Peraton],
-    2, # Best Financial Hack - Capital One],
+    2,  # Best First-Time Hack
+    1,  # Best Advanced Quantum Track Hack
+    2,  # Best Hardware Hack
+    2,  # Best Razzle Dazzle Hack
+    2,  # Best Gamification Hack
+    1,  # Best Beginner Quantum Track Hack
+    2,  # Best Bitcamp Hack
+    2,  # Best Moonshot Hack
+    2,  # Best Sustainability Hack
+    2,  # Best Social Good Hack
+    2,  # Best UI/UX Hack
+    1,  # Best Cybersecurity Track Hack
+    2,  # Best Machine Learning Track Hack
+    2,  # Best App Dev Track Hack
+    2,  # MOST LIT HACK
+    2,  # Hack That Made You Smile
+    2,  # Prettiest Hack
+    1,  # Best Digital Forensics Related Hack - Cipher Tech Solutions
+    2,  # Best Use of GenAI in Business - Cloudforce/Microsoft
+    2,  # Best Hack Promoting Public Health - Bloomberg
+    3,  # Best Web Hack Using React - Peraton
+    2,  # Best Financial Hack - Capital One
 ]
 
 TABLES = ['A1', 'A2', 'A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'B1', 'B2', 'B3', 'B4', 'B5', 'B6', 'B7', 'B8', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'C7', 'C8', 'D1', 'D2', 'D3', 'D4', 'D5', 'D6', 'D7', 'D8', 'E1', 'E2', 'E3', 'E4', 'E5', 'E6', 'E7', 'E8', 'F1', 'F2', 'F3', 'F4', 'F5', 'F6', 'F7', 'F8', 'G1', 'G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'G8',
-         'L1', 'L2', 'L5', 'L6', 'L7', 'L8', 'M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'O1', 'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'O8', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8']
+         'L1', 'L2', 'L5', 'L6', 'L7', 'L8', 'M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'N1', 'N2', 'N3', 'N4', 'N5', 'N6', 'N7', 'N8', 'O1', 'O2', 'O3', 'O4', 'O5', 'O6', 'O7', 'O8', 'P1', 'P2', 'P3', 'P4', 'P5', 'P6', 'P7', 'P8', 'Q1', 'Q2', 'Q3', 'Q4', 'Q5', 'Q6', 'Q7', 'Q8', 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7', 'R8', 'S1', 'S2', 'S3', 'S4', 'S5', 'S6', 'S7', 'S8', 'T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'H7', "H8"]
 random.shuffle(TABLES)
 
 FULL_CHALLENGE_LIST = list(BITCAMP_HACKS) + list(ALUMNI_HACKS) + list(OTHER_HACKS) 
@@ -388,11 +388,14 @@ def expo_output_to_json(t, H, team_names, links, in_person_list, MLH_challenges,
     judgetime_seen = defaultdict(lambda: 1)
 
     result = []
+    table_count = len(TABLES)
     for id, team in enumerate(H):
+        team_table = TABLES[id % table_count] if in_person_list[id] else "virtual"
         team_json = {
             "id": uuid.uuid4().hex[:4] + str(id),
             "team_name": team_names[id],
-            "table": TABLES.pop() if in_person_list[id] else "virtual",
+            # "table": TABLES.pop() if in_person_list[id] else "virtual",
+            "table": team_table,
             "in_person": in_person_list[id],
             "link": links[id],
             "emails": emails[id]
