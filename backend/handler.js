@@ -14,45 +14,46 @@ const HEADERS = {
   'Access-Control-Allow-Headers': '*',
 };
 
-async function sendConfirmationEmail(team) {
-  console.log('Starting to send email for team:', team.team_name);
-  const ses = new AWS.SES();
+// async function sendConfirmationEmail(team) {
+//   console.log('Starting to send email for team:', team.team_name);
+//   const ses = new AWS.SES();
 
 
-  // For testing, override with  your test emails:
-  // const validEmails = [
-  //   "test@bitcamp.org",
-  // ];
+//   // For testing, override with  your test emails:
+//   // const validEmails = [
+//   //   "test@bitcamp.org",
+//   // ];
 
-  const validEmails = (team.emails || []).filter(email => email && email.trim() !== "");
-  if (validEmails.length === 0) {
-    console.log('No valid emails for team:', team.team_name);
-    return;
-  }
+//   const validEmails = (team.emails || []).filter(email => email && email.trim() !== "");
+//   validEmails.push("moheedeenuni@gmail.com");
+//   if (validEmails.length === 0) {
+//     console.log('No valid emails for team:', team.team_name);
+//     return;
+//   }
 
 
 
-  const params = {
-    Destination: { ToAddresses: validEmails },
-    Source: "Bitcamp <hello@bit.camp>",
-    ConfigurationSetName: "expo-2025",
-    Template: "provideId",
-    TemplateData: JSON.stringify({
-      teamName: team.team_name,
-      username: team.id
-    })
-  };
+//   const params = {
+//     Destination: { ToAddresses: validEmails },
+//     Source: "Bitcamp <hello@bit.camp>",
+//     ConfigurationSetName: "expo-2025",
+//     Template: "provideId",
+//     TemplateData: JSON.stringify({
+//       teamName: team.team_name,
+//       username: team.id
+//     })
+//   };
 
-  console.log('SES params:', params);
+//   console.log('SES params:', params);
 
-  try {
-    const result = await ses.sendTemplatedEmail(params).promise();
-    console.log('Email sent successfully for team:', team.team_name, result);
-    return result;
-  } catch (error) {
-    console.error(`Error sending email for team ${team.team_name}:`, error);
-  }
-}
+//   try {
+//     const result = await ses.sendTemplatedEmail(params).promise();
+//     console.log('Email sent successfully for team:', team.team_name, result);
+//     return result;
+//   } catch (error) {
+//     console.error(`Error sending email for team ${team.team_name}:`, error);
+//   }
+// }
 
 function formatTime(timeString) {
   const date = new Date(timeString);
